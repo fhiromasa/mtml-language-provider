@@ -1,0 +1,33 @@
+{
+    "name": "mtml",
+    "displayName": "Movable Type Markup Language Syntax",
+    "description": "Provides MTML (Movable Type Markup Language) syntax highlight for Visual Studio Code",
+    "version": "0.1.0",
+    "engines": {
+        "vscode": "^1.59.0"
+    },
+    "publisher": "yupyom",
+    "icon": "images/icon.png",
+	"license": "MIT",
+	"homepage": "https://github.com/yupyom/vscode-movabletype/blob/master/README.md",
+    "categories": [
+        "Programming Languages"
+    ],
+	"keywords": [
+		"movable type",
+        "mtml"
+	],
+    "contributes": {
+        "languages": [{
+            "id": "mtml",
+            "aliases": ["Movable Type Markup Language", "mtml"],
+            "extensions": [".mtml"],
+            "configuration": "./language-configuration.json"
+        }],
+        "grammars": [{
+            "language": "mtml",
+            "scopeName": "source.mtml",
+            "path": "./syntaxes/mtml.tmLanguage.json"
+        }]
+    }
+}

@@ -46,7 +46,7 @@
     "snippets": [
       {
         "language": "mtml",
-        "path": "./snippets/snippets.json"
+        "path": "./snippets/snippets.jsonc"
       }
     ]
   }

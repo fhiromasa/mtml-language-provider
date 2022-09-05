@@ -15,7 +15,8 @@
         "url": "https://github.com/yupyom/vscode-movabletype.git"
     },
     "categories": [
-        "Programming Languages"
+        "Programming Languages",
+        "Snippets"
     ],
 	"keywords": [
 		"movable type",
@@ -32,6 +33,12 @@
             "language": "mtml",
             "scopeName": "source.mtml",
             "path": "./syntaxes/mtml.tmLanguage.json"
-        }]
+        }],
+        "snippets": [
+            {
+                "language": "mtml",
+                "path": "./snippets/snippets.json"
+            }
+        ]
     }
 }

@@ -505,8 +505,7 @@
 
   "mt:GroupBlogsWebsites": {
     "prefix": "GroupBlogsWebsites",
-    "body": ["<mt:GroupBlogsWebsites${1: group=\"\"}${2: group_id=\"\"}${3: blog_id=\"\"}>${4}</mt:GroupBlogsWebsites>"
-    ]
+    "body": ["<mt:GroupBlogsWebsites${1: group=\"\"}${2: group_id=\"\"}${3: blog_id=\"\"}>${4}</mt:GroupBlogsWebsites>"]
   },
 
   "mt:GroupWebsitester": {
@@ -521,8 +520,7 @@
 
   "mt:GroupWebsites": {
     "prefix": "GroupWebsites",
-    "body": ["<mt:GroupWebsites${1: group=\"\"}${2: group_id=\"\"}${3: blog_id=\"\"}>${4}</mt:GroupWebsites>"
-    ]
+    "body": ["<mt:GroupWebsites${1: group=\"\"}${2: group_id=\"\"}${3: blog_id=\"\"}>${4}</mt:GroupWebsites>"]
   },
 
   "mt:GroupBlogster": {
@@ -537,26 +535,22 @@
 
   "mt:GroupBlogs": {
     "prefix": "GroupBlogs",
-    "body": ["<mt:GroupBlogs${1: group=\"\"}${2: group_id=\"\"}${3: blog_id=\"\"}>${4}</mt:GroupBlogs>"
-    ]
+    "body": ["<mt:GroupBlogs${1: group=\"\"}${2: group_id=\"\"}${3: blog_id=\"\"}>${4}</mt:GroupBlogs>"]
   },
 
   "mt:GroupCategoriesFolderster": {
     "prefix": "GroupCategoriesFolderster",
-    "body": ["<mt:GroupCategoriesFolderster>${1}</mt:GroupCategoriesFolderster>"
-    ]
+    "body": ["<mt:GroupCategoriesFolderster>${1}</mt:GroupCategoriesFolderster>"]
   },
 
   "mt:GroupCategoriesFoldersHeader": {
     "prefix": "GroupCategoriesFoldersHeader",
-    "body": ["<mt:GroupCategoriesFoldersHeader>${1}</mt:GroupCategoriesFoldersHeader>"
-    ]
+    "body": ["<mt:GroupCategoriesFoldersHeader>${1}</mt:GroupCategoriesFoldersHeader>"]
   },
 
   "mt:GroupCategoriesFolders": {
     "prefix": "GroupCategoriesFolders",
-    "body": ["<mt:GroupCategoriesFolders${1: group=\"\"}${2: group_id=\"\"}${3: blog_id=\"\"}>${4}</mt:GroupCategoriesFolders>"
-    ]
+    "body": ["<mt:GroupCategoriesFolders${1: group=\"\"}${2: group_id=\"\"}${3: blog_id=\"\"}>${4}</mt:GroupCategoriesFolders>"]
   },
 
   "mt:GroupFolderster": {
@@ -571,8 +565,7 @@
 
   "mt:GroupFolders": {
     "prefix": "GroupFolders",
-    "body": ["<mt:GroupFolders${1: group=\"\"}${2: group_id=\"\"}${3: blog_id=\"\"}>${4}</mt:GroupFolders>"
-    ]
+    "body": ["<mt:GroupFolders${1: group=\"\"}${2: group_id=\"\"}${3: blog_id=\"\"}>${4}</mt:GroupFolders>"]
   },
 
   "mt:GroupCategoriester": {
@@ -587,8 +580,7 @@
 
   "mt:GroupCategories": {
     "prefix": "GroupCategories",
-    "body": ["<mt:GroupCategories${1: group=\"\"}${2: group_id=\"\"}${3: blog_id=\"\"}>${4}</mt:GroupCategories>"
-    ]
+    "body": ["<mt:GroupCategories${1: group=\"\"}${2: group_id=\"\"}${3: blog_id=\"\"}>${4}</mt:GroupCategories>"]
   },
 
   "mt:GroupEntriesPagester": {
@@ -603,8 +595,7 @@
 
   "mt:GroupEntriesPages": {
     "prefix": "GroupEntriesPages",
-    "body": ["<mt:GroupEntriesPages${1: group=\"\"}${2: group_id=\"\"}${3: blog_id=\"\"}>${4}</mt:GroupEntriesPages>"
-    ]
+    "body": ["<mt:GroupEntriesPages${1: group=\"\"}${2: group_id=\"\"}${3: blog_id=\"\"}>${4}</mt:GroupEntriesPages>"]
   },
 
   "mt:GroupPagester": {
@@ -619,8 +610,7 @@
 
   "mt:GroupPages": {
     "prefix": "GroupPages",
-    "body": ["<mt:GroupPages${1: group=\"\"}${2: group_id=\"\"}${3: blog_id=\"\"}>${4}</mt:GroupPages>"
-    ]
+    "body": ["<mt:GroupPages${1: group=\"\"}${2: group_id=\"\"}${3: blog_id=\"\"}>${4}</mt:GroupPages>"]
   },
 
   "mt:GroupEntriester": {
@@ -635,8 +625,7 @@
 
   "mt:GroupEntries": {
     "prefix": "GroupEntries",
-    "body": ["<mt:GroupEntries${1: group=\"\"}${2: group_id=\"\"}${3: blog_id=\"\"}>${4}</mt:GroupEntries>"
-    ]
+    "body": ["<mt:GroupEntries${1: group=\"\"}${2: group_id=\"\"}${3: blog_id=\"\"}>${4}</mt:GroupEntries>"]
   },
 
   "zero_pad=\"\"": {
@@ -1381,8 +1370,7 @@
 
   "mt:IfObjectGroupItemIsEntry": {
     "prefix": "IfObjectGroupItemIsEntry",
-    "body": ["<mt:IfObjectGroupItemIsEntry${1}>${2}</mt:IfObjectGroupItemIsEntry>"
-    ]
+    "body": ["<mt:IfObjectGroupItemIsEntry${1}>${2}</mt:IfObjectGroupItemIsEntry>"]
   },
 
   "mt:OGCategories": {
@@ -1397,8 +1385,7 @@
 
   "mt:IfObjectGroupItemIsCategory": {
     "prefix": "IfObjectGroupItemIsCategory",
-    "body": ["<mt:IfObjectGroupItemIsCategory${1}>${2}</mt:IfObjectGroupItemIsCategory>"
-    ]
+    "body": ["<mt:IfObjectGroupItemIsCategory${1}>${2}</mt:IfObjectGroupItemIsCategory>"]
   },
 
   "mt:IfObjectGroupItemIsBlog": {
@@ -1753,14 +1740,12 @@
 
   "mt:KeitaiContentPageListter": {
     "prefix": "KeitaiContentPageListter",
-    "body": ["<mt:KeitaiContentPageListter>${1}</mt:KeitaiContentPageListter>"
-    ]
+    "body": ["<mt:KeitaiContentPageListter>${1}</mt:KeitaiContentPageListter>"]
   },
 
   "mt:KeitaiContentPageListHeader": {
     "prefix": "KeitaiContentPageListHeader",
-    "body": ["<mt:KeitaiContentPageListHeader>${1}</mt:KeitaiContentPageListHeader>"
-    ]
+    "body": ["<mt:KeitaiContentPageListHeader>${1}</mt:KeitaiContentPageListHeader>"]
   },
 
   "mt:IfKeitai": {
@@ -2395,8 +2380,7 @@
 
   "mt:IfBlogDynamicConditional": {
     "prefix": "IfBlogDynamicConditional",
-    "body": ["<mt:IfBlogDynamicConditional${1}>${2}</mt:IfBlogDynamicConditional>"
-    ]
+    "body": ["<mt:IfBlogDynamicConditional${1}>${2}</mt:IfBlogDynamicConditional>"]
   },
 
   "mt:EntryCategoryBlock": {
@@ -2756,8 +2740,7 @@
 
   "mt:ItemGroupCategoryPrevious": {
     "prefix": "ItemGroupCategoryPrevious",
-    "body": ["<mt:ItemGroupCategoryPrevious${1}>${2}</mt:ItemGroupCategoryPrevious>"
-    ]
+    "body": ["<mt:ItemGroupCategoryPrevious${1}>${2}</mt:ItemGroupCategoryPrevious>"]
   },
 
   "mt:CustomGroups": {
@@ -3597,8 +3580,7 @@
 
   "mt:IfBlogTreeEntryPublished": {
     "prefix": "IfBlogTreeEntryPublished",
-    "body": ["<mt:IfBlogTreeEntryPublished${1}>${2}</mt:IfBlogTreeEntryPublished>"
-    ]
+    "body": ["<mt:IfBlogTreeEntryPublished${1}>${2}</mt:IfBlogTreeEntryPublished>"]
   },
 
   "mt:BlogTreeAssetster": {
@@ -3943,14 +3925,12 @@
 
   "mt:IfAltsearchCurrentCategories": {
     "prefix": "IfAltsearchCurrentCategories",
-    "body": ["<mt:IfAltsearchCurrentCategories${1}>${2}</mt:IfAltsearchCurrentCategories>"
-    ]
+    "body": ["<mt:IfAltsearchCurrentCategories${1}>${2}</mt:IfAltsearchCurrentCategories>"]
   },
 
   "mt:IfAltsearchResultCurrent": {
     "prefix": "IfAltsearchResultCurrent",
-    "body": ["<mt:IfAltsearchResultCurrent${1}>${2}</mt:IfAltsearchResultCurrent>"
-    ]
+    "body": ["<mt:IfAltsearchResultCurrent${1}>${2}</mt:IfAltsearchResultCurrent>"]
   },
 
   "mt:IfAltsearchSort_order": {
@@ -3965,8 +3945,7 @@
 
   "mt:IfAltsearchCurrentCategory": {
     "prefix": "IfAltsearchCurrentCategory",
-    "body": ["<mt:IfAltsearchCurrentCategory${1}>${2}</mt:IfAltsearchCurrentCategory>"
-    ]
+    "body": ["<mt:IfAltsearchCurrentCategory${1}>${2}</mt:IfAltsearchCurrentCategory>"]
   },
 
   "mt:IfAltsearchDate": {
@@ -3976,8 +3955,7 @@
 
   "mt:IfAltsearchMetadatasHeader": {
     "prefix": "IfAltsearchMetadatasHeader",
-    "body": ["<mt:IfAltsearchMetadatasHeader>${1}</mt:IfAltsearchMetadatasHeader>"
-    ]
+    "body": ["<mt:IfAltsearchMetadatasHeader>${1}</mt:IfAltsearchMetadatasHeader>"]
   },
 
   "mt:IfAltsearchMatchQuery": {
@@ -3987,8 +3965,7 @@
 
   "mt:IfAltsearchModeIsCategories": {
     "prefix": "IfAltsearchModeIsCategories",
-    "body": ["<mt:IfAltsearchModeIsCategories${1}>${2}</mt:IfAltsearchModeIsCategories>"
-    ]
+    "body": ["<mt:IfAltsearchModeIsCategories${1}>${2}</mt:IfAltsearchModeIsCategories>"]
   },
 
   "mt:IfAltsearchQuery": {
@@ -4013,14 +3990,12 @@
 
   "mt:IfAltsearchModeIsSubCategory": {
     "prefix": "IfAltsearchModeIsSubCategory",
-    "body": ["<mt:IfAltsearchModeIsSubCategory${1}>${2}</mt:IfAltsearchModeIsSubCategory>"
-    ]
+    "body": ["<mt:IfAltsearchModeIsSubCategory${1}>${2}</mt:IfAltsearchModeIsSubCategory>"]
   },
 
   "mt:IfAltsearchCategories_and_or": {
     "prefix": "IfAltsearchCategories_and_or",
-    "body": ["<mt:IfAltsearchCategories_and_or${1}>${2}</mt:IfAltsearchCategories_and_or>"
-    ]
+    "body": ["<mt:IfAltsearchCategories_and_or${1}>${2}</mt:IfAltsearchCategories_and_or>"]
   },
 
   "mt:IfAltsearchSort_by": {
@@ -4050,14 +4025,12 @@
 
   "mt:IfAltsearchModeIsCategory": {
     "prefix": "IfAltsearchModeIsCategory",
-    "body": ["<mt:IfAltsearchModeIsCategory${1}>${2}</mt:IfAltsearchModeIsCategory>"
-    ]
+    "body": ["<mt:IfAltsearchModeIsCategory${1}>${2}</mt:IfAltsearchModeIsCategory>"]
   },
 
   "mt:IfAltsearchMetadataster": {
     "prefix": "IfAltsearchMetadataster",
-    "body": ["<mt:IfAltsearchMetadataster>${1}</mt:IfAltsearchMetadataster>"
-    ]
+    "body": ["<mt:IfAltsearchMetadataster>${1}</mt:IfAltsearchMetadataster>"]
   },
 
   "mt:AltSearchMetadata": {
@@ -4537,8 +4510,7 @@
 
   "mt:SetVarTemplate": {
     "prefix": "SetVarTemplate",
-    "body": ["<mt:SetVarTemplate name=\"${1:Variable Name}\">${2}</mt:SetVarTemplate>"
-    ]
+    "body": ["<mt:SetVarTemplate name=\"${1:Variable Name}\">${2}</mt:SetVarTemplate>"]
   },
 
   "mt:SetVar": {
@@ -4953,8 +4925,7 @@
 
   "mt:Loop": {
     "prefix": "Loop",
-    "body": ["<mt:Loop name=\"${1:VariableName}\"${2: sort_by=\"\"}${3: glue=\"\"}>${4}</mt:Loop>"
-    ]
+    "body": ["<mt:Loop name=\"${1:VariableName}\"${2: sort_by=\"\"}${3: glue=\"\"}>${4}</mt:Loop>"]
   },
 
   "mt:Link": {
@@ -5069,8 +5040,7 @@
 
   "mt:IfRegistrationNotRequired": {
     "prefix": "IfRegistrationNotRequired",
-    "body": ["<mt:IfRegistrationNotRequired${1}>${2}</mt:IfRegistrationNotRequired>"
-    ]
+    "body": ["<mt:IfRegistrationNotRequired${1}>${2}</mt:IfRegistrationNotRequired>"]
   },
 
   "mt:IfRegistrationAllowed": {
@@ -5190,8 +5160,7 @@
 
   "mt:IfCommenterIsEntryAuthor": {
     "prefix": "IfCommenterIsEntryAuthor",
-    "body": ["<mt:IfCommenterIsEntryAuthor${1}>${2}</mt:IfCommenterIsEntryAuthor>"
-    ]
+    "body": ["<mt:IfCommenterIsEntryAuthor${1}>${2}</mt:IfCommenterIsEntryAuthor>"]
   },
 
   "mt:IfCommenterIsAuthor": {
@@ -5231,8 +5200,7 @@
 
   "mt:IfAnonymousRecommendAllowed": {
     "prefix": "IfAnonymousRecommendAllowed",
-    "body": ["<mt:IfAnonymousRecommendAllowed${1}>${2}</mt:IfAnonymousRecommendAllowed>"
-    ]
+    "body": ["<mt:IfAnonymousRecommendAllowed${1}>${2}</mt:IfAnonymousRecommendAllowed>"]
   },
 
   "mt:IfAllowCommentHTML": {
@@ -5287,8 +5255,7 @@
 
   "mt:For": {
     "prefix": "For",
-    "body": ["<mt:For var=\"${1:i}\" from=\"${2}\" to=\"${3}\"${4: glue=\"\"}>${5}</mt:For>"
-    ]
+    "body": ["<mt:For var=\"${1:i}\" from=\"${2}\" to=\"${3}\"${4: glue=\"\"}>${5}</mt:For>"]
   },
 
   "mt:Folders": {
@@ -5778,14 +5745,12 @@
 
   "mt:EntryAdditionalCategories": {
     "prefix": "EntryAdditionalCategories",
-    "body": ["<mt:EntryAdditionalCategories${1}>${2}</mt:EntryAdditionalCategories>"
-    ]
+    "body": ["<mt:EntryAdditionalCategories${1}>${2}</mt:EntryAdditionalCategories>"]
   },
 
   "mt:EntriesWithSubCategories": {
     "prefix": "EntriesWithSubCategories",
-    "body": ["<mt:EntriesWithSubCategories${1}>${2}</mt:EntriesWithSubCategories>"
-    ]
+    "body": ["<mt:EntriesWithSubCategories${1}>${2}</mt:EntriesWithSubCategories>"]
   },
 
   "mt:EntriesHeader": {
@@ -6575,8 +6540,7 @@
 
   "mt:AuthorFollowingFavorites": {
     "prefix": "AuthorFollowingFavorites",
-    "body": ["<mt:AuthorFollowingFavorites${1}>${2}</mt:AuthorFollowingFavorites>"
-    ]
+    "body": ["<mt:AuthorFollowingFavorites${1}>${2}</mt:AuthorFollowingFavorites>"]
   },
 
   "mt:AuthorFollowingEntries": {
@@ -7059,8 +7023,7 @@
   // --------------------------------------------------
   "mt:AuthorHasContent": {
     "prefix": "AuthorHasContent",
-    "body": ["<mt:AuthorHasContent content_type=\"${1:}\">${2}</mt:AuthorHasContent>"
-    ]
+    "body": ["<mt:AuthorHasContent content_type=\"${1:}\">${2}</mt:AuthorHasContent>"]
   },
 
   "mt:AssetSiteID": {
@@ -7160,8 +7123,7 @@
 
   "mt:ContentAuthorUserpicAsset": {
     "prefix": "ContentAuthorUserpicAsset",
-    "body": ["<mt:ContentAuthorUserpicAsset${1}>${2}</mt:ContentAuthorUserpicAsset>"
-    ]
+    "body": ["<mt:ContentAuthorUserpicAsset${1}>${2}</mt:ContentAuthorUserpicAsset>"]
   },
 
   "mt:ContentAuthorUserpicURL": {
@@ -7171,8 +7133,7 @@
 
   "mt:ContentCalendar": {
     "prefix": "ContentCalendar",
-    "body": ["<mt:ContentCalendar content_type=\"${1:}\">${2}</mt:ContentCalendar>"
-    ]
+    "body": ["<mt:ContentCalendar content_type=\"${1:}\">${2}</mt:ContentCalendar>"]
   },
 
   "date_field=\"\"": {
@@ -7217,8 +7178,7 @@
 
   "mt:ContentField": {
     "prefix": "ContentField",
-    "body": ["<mt:ContentField content_field=\"${1:}\">${2}</mt:ContentField>"
-    ]
+    "body": ["<mt:ContentField content_field=\"${1:}\">${2}</mt:ContentField>"]
   },
 
   "mt:ContentFields": {
@@ -7552,14 +7512,12 @@
 
   "mt:CreateJSON": {
     "prefix": "CreateJSON",
-    "body": ["<mt:CreateJSON include_blogs=\"${1:N}\" fields=\"${2:title,text,text_more,keywords,tags,categories}\"${3} />"
-    ]
+    "body": ["<mt:CreateJSON include_blogs=\"${1:N}\" fields=\"${2:title,text,text_more,keywords,tags,categories}\"${3} />"]
   },
 
   "mt:Foreach": {
     "prefix": "Foreach",
-    "body": ["<mt:Foreach name=\"${1:items}\" as=\"${2:item}\">${3}</mt:Foreach>"
-    ]
+    "body": ["<mt:Foreach name=\"${1:items}\" as=\"${2:item}\">${3}</mt:Foreach>"]
   },
 
   "mt:NestVar": {
@@ -7602,8 +7560,7 @@
 
   "mt:CustomFieldAsset MT.net のみ": {
     "prefix": "CustomFieldAsset",
-    "body": ["<mt:CustomFieldAsset identifier=\"${1:}\">${2}</mt:CustomFieldAsset>"
-    ]
+    "body": ["<mt:CustomFieldAsset identifier=\"${1:}\">${2}</mt:CustomFieldAsset>"]
   },
 
   "paginate_by=\"N\" MT.net のみ": {
@@ -7616,8 +7573,7 @@
   // --------------------------------------------------
   "mt:PageContents": {
     "prefix": "PageContents",
-    "body": ["<mt:PageContents count=\"${1:N}\"${2: navi_count=\"\"}${3: abs2rel=\"1\"}>${4}</mt:PageContents>"
-    ]
+    "body": ["<mt:PageContents count=\"${1:N}\"${2: navi_count=\"\"}${3: abs2rel=\"1\"}>${4}</mt:PageContents>"]
   },
 
   "mt:PageSeparator": {
@@ -7627,8 +7583,7 @@
 
   "mt:PageLists": {
     "prefix": "PageLists",
-    "body": ["<mt:PageLists delim=\"${1}\" show_always=\"${2:0}\">${3}</mt:PageLists>"
-    ]
+    "body": ["<mt:PageLists delim=\"${1}\" show_always=\"${2:0}\">${3}</mt:PageLists>"]
   },
 
   "mt:IfPageFirst": {

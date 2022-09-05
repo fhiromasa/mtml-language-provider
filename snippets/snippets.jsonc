@@ -6940,53 +6940,53 @@
   },
 
   "mtapp:Widget": {
-    "prefix": "Widget",
-    "body": ["<mtapp:Widget${1}>${2}</mtapp:Widget>"]
+    "prefix": "mtapp:Widget",
+    "body": ["mtapp:Widget${1}>${2}</mtapp:Widget>"]
   },
 
   "mtapp:StatusMsg": {
-    "prefix": "StatusMsg",
-    "body": ["<mtapp:StatusMsg${1}>${2}</mtapp:StatusMsg>"]
+    "prefix": "mtapp:StatusMsg",
+    "body": ["mtapp:StatusMsg${1}>${2}</mtapp:StatusMsg>"]
   },
 
   "mtapp:SettingGroup": {
-    "prefix": "SettingGroup",
-    "body": ["<mtapp:SettingGroup${1}>${2}</mtapp:SettingGroup>"]
+    "prefix": "mtapp:SettingGroup",
+    "body": ["mtapp:SettingGroup${1}>${2}</mtapp:SettingGroup>"]
   },
 
   "mtapp:Setting": {
-    "prefix": "Setting",
-    "body": ["<mtapp:Setting${1}>${2}</mtapp:Setting>"]
+    "prefix": "mtapp:Setting",
+    "body": ["mtapp:Setting${1}>${2}</mtapp:Setting>"]
   },
 
   "mtapp:PageActions": {
-    "prefix": "PageActions",
-    "body": ["<mtapp:PageActions${1} />"]
+    "prefix": "mtapp:PageActions",
+    "body": ["mtapp:PageActions${1} />"]
   },
 
   "mtapp:Listing": {
-    "prefix": "Listing",
-    "body": ["<mtapp:Listing${1}>${2}</mtapp:Listing>"]
+    "prefix": "mtapp:Listing",
+    "body": ["mtapp:Listing${1}>${2}</mtapp:Listing>"]
   },
 
   "mtapp:ListFilters": {
-    "prefix": "ListFilters",
-    "body": ["<mtapp:ListFilters${1} />"]
+    "prefix": "mtapp:ListFilters",
+    "body": ["mtapp:ListFilters${1} />"]
   },
 
   "mtapp:Link": {
-    "prefix": "Link",
-    "body": ["<mtapp:Link${1} />"]
+    "prefix": "mtapp:Link",
+    "body": ["mtapp:Link${1} />"]
   },
 
   "mtapp:Form": {
-    "prefix": "Form",
-    "body": ["<mtapp:Form${1}>${2}</mtapp:Form>"]
+    "prefix": "mtapp:Form",
+    "body": ["mtapp:Form${1}>${2}</mtapp:Form>"]
   },
 
   "mtapp:ActionBar": {
-    "prefix": "ActionBar",
-    "body": ["<mtapp:ActionBar${1} />"]
+    "prefix": "mtapp:ActionBar",
+    "body": ["mtapp:ActionBar${1} />"]
   },
 
   "mt:AdminScript": {

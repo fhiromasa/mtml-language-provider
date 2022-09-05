@@ -165,7 +165,7 @@
       "name": "entity.other.attribute-name.html"
     },
     "regex_replace":{
-      "match": "\\b(regex_replace)=(\".*\"|'.*'),(\"\\w+\"|'\\w+')",
+      "match": "\\b(regex_replace|replace)=(\".*\"|'.*'),(\"\\w+\"|'\\w+')",
       "captures":{ 
         "1":{"name":"entity.other.attribute-name"},
         "2":{"name":"string.regexp"},

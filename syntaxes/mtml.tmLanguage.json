@@ -51,7 +51,7 @@
               ]
             }
           },
-          "end": ">",
+          "end": "/?>",
           "endCaptures": {
             "0": {"name": "punctuation.definition.tag.mt"}
           },

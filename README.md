@@ -1,6 +1,6 @@
 ## Overview
 
-Syntax highlight for Movable Type Markup Language (MTML)
+Syntax highlight and Snippets for Movable Type Markup Language (MTML)
 
 <p><img src="./images/screencapture.png" alt="screen capture image"></p>
 

@@ -45,7 +45,7 @@
               "name": "support.class.mt",
               "patterns": [
                 {
-                  "match": "([iI][fF]|[eE][lL][sS][eE]|[lL][oO][oO][pP])",
+                  "match": "([iI][fF]|[eE][lL][sS][eE]|[lL][oO][oO][pP]|[Ff][Oo][Rr])",
                   "name": "keyword.control.mt"
                 }
               ]

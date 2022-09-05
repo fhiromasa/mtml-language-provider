@@ -80,15 +80,14 @@
     "mt-variable-tag": {
       "patterns": [
         {
-          "begin": "(<)(\\$[Mm][Tt]:?(\\w+:)?\\w+)",
+          "begin": "(<\\$[Mm][Tt]:?)((\\w+:)?\\w+)",
           "beginCaptures": {
             "1": {"name": "punctuation.definition.tag.mt"},
-            "2": {"name": "variable.other.mt"}
+            "2": {"name": "support.class.mt"}
           },
-          "end": "(\\$)?(>)",
+          "end": "(\\$?>)",
           "endCaptures": {
-            "1": {"name": "variable.other.mt"},
-            "2": {"name": "punctuation.definition.tag.mt"}
+            "1": {"name": "punctuation.definition.tag.mt"}
           },
           "name": "meta.tag.mt.variable.html",
           "patterns": [

@@ -1,413 +1,295 @@
 {
-	"$schema": "https://raw.githubusercontent.com/martinring/tmlanguage/master/tmlanguage.json",
-	"name": "Movable Type Markup Language",
-  "firstLineMatch" : "<\\$?[Mm][Tt]",
-  "keyEquivalent" : "^~M",
-  "patterns" : [
-    {
-      "include" : "#mt-ignore-tag"
-    },
-    {
-      "include" : "#trans-tag"
-    },
-    {
-      "include" : "#mt-container-tag"
-    },
-    {
-      "include" : "#mt-variable-tag"
-    },
-    {
-      "include" : "#psedo-html"
-    }
+  "$schema": "https://raw.githubusercontent.com/martinring/tmlanguage/master/tmlanguage.json",
+  "name": "Movable Type Markup Language",
+  "firstLineMatch": "<\\$?[Mm][Tt]",
+  "keyEquivalent": "^~M",
+  "patterns": [
+    {"include": "#mt-ignore-tag"},
+    {"include": "#trans-tag"},
+    {"include": "#mt-container-tag"},
+    {"include": "#mt-variable-tag"},
+    {"include": "#psedo-html"},
+    {"include": "#embedded-code"},
+    {"include": "#entities"}
   ],
-  "repository" : {
-    "embedded-code" : {
-      "patterns" : [
-        {
-          "include" : "#php"
-        },
-        {
-          "include" : "#ruby"
-        }
+  "repository": {
+    "embedded-code": {
+      "patterns": [
+        {"include": "#php"},
+        {"include": "#ruby"}
       ]
     },
-    "entities" : {
-      "patterns" : [
-        {
-          "captures" : {
-            "1" : {
-              "name" : "punctuation.definition.constant.html"
-            },
-            "3" : {
-              "name" : "punctuation.definition.constant.html"
-            }
-          },
-          "match" : "(&)([a-zA-Z0-9]+|#[0-9]+|#x[0-9a-fA-F]+)(;)",
-          "name" : "constant.character.entity.html"
-        },
-        {
-          "match" : "&",
-          "name" : "invalid.illegal.bad-ampersand.html"
-        }
-      ]
-    },
-    "mt-container-tag" : {
-      "patterns" : [
-        {
-          "begin" : "(<\/?)([Mm][Tt]:?(\\w+:)?\\w+)",
-          "beginCaptures" : {
-            "1" : {
-              "name" : "punctuation.definition.tag.mt"
-            },
-            "2" : {
-              "name" : "entity.name.tag.mt"
-            }
-          },
-          "end" : ">",
-          "endCaptures" : {
-            "0" : {
-              "name" : "punctuation.definition.tag.mt"
-            }
-          },
-          "name" : "meta.tag.mt.container.html",
-          "patterns" : [
-            {
-              "include" : "#tag-stuff"
-            }
-          ]
-        }
-      ]
-    },
-    "mt-ignore-tag" : {
-      "patterns" : [
-        {
-          "begin" : "<[Mm][Tt]:?[Ii]gnore>",
-          "beginCaptures" : {
-            "0" : {
-              "name" : "punctuation.definition.comment.begin.mt"
-            }
-          },
-          "end" : "</[Mm][Tt]:?[Ii]gnore>",
-          "endCaptures" : {
-            "0" : {
-              "name" : "punctuation.definition.comment.end.mt"
-            }
-          },
-          "name" : "comment.block.html"
-        }
-      ]
-    },
-    "mt-variable-tag" : {
-      "patterns" : [
-        {
-          "begin" : "(<)(\\$[Mm][Tt]:?(\\w+:)?\\w+)",
-          "beginCaptures" : {
-            "1" : {
-              "name" : "punctuation.definition.tag.mt"
-            },
-            "2" : {
-              "name" : "variable.other.mt"
-            }
-          },
-          "end" : "(\\$)?(>)",
-          "endCaptures" : {
-            "1" : {
-              "name" : "variable.other.mt"
-            },
-            "2" : {
-              "name" : "punctuation.definition.tag.mt"
-            }
-          },
-          "name" : "meta.tag.mt.variable.html",
-          "patterns" : [
-            {
-              "include" : "#tag-stuff"
-            }
-          ]
-        }
-      ]
-    },
-    "php" : {
-      "begin" : "(?=(^\\s*)?<\\?)",
-      "end" : "(?!(^\\s*)?<\\?)",
-      "patterns" : [
-        {
-          "include" : "text.html.php"
-        }
-      ]
-    },
-    "ruby" : {
-      "begin" : "<%+(?!>)=?",
-      "captures" : {
-        "0" : {
-          "name" : "punctuation.section.embedded.ruby"
-        }
-      },
-      "end" : "-?%>",
-      "name" : "source.ruby.embedded.html",
-      "patterns" : [
-        {
-          "captures" : {
-            "1" : {
-              "name" : "punctuation.definition.comment.ruby"
-            }
-          },
-          "match" : "(#).*?(?=-?%>)",
-          "name" : "comment.line.number-sign.ruby"
-        },
-        {
-          "include" : "source.ruby"
-        }
-      ]
-    },
-    "string-double-quoted" : {
-      "begin" : "\"",
-      "beginCaptures" : {
-        "0" : {
-          "name" : "punctuation.definition.string.begin.html"
-        }
-      },
-      "end" : "\"",
-      "endCaptures" : {
-        "0" : {
-          "name" : "punctuation.definition.string.end.html"
-        }
-      },
-      "name" : "string.quoted.double.html",
-      "patterns" : [
-        {
-          "include" : "#trans-tag"
-        },
-        {
-          "include" : "#mt-variable-tag"
-        },
-        {
-          "include" : "#mt-container-tag"
-        },
-        {
-          "include" : "#embedded-code"
-        },
-        {
-          "include" : "#entities"
-        }
-      ]
-    },
-    "string-single-quoted" : {
-      "begin" : "'",
-      "beginCaptures" : {
-        "0" : {
-          "name" : "punctuation.definition.string.begin.html"
-        }
-      },
-      "end" : "'",
-      "endCaptures" : {
-        "0" : {
-          "name" : "punctuation.definition.string.end.html"
-        }
-      },
-      "name" : "string.quoted.single.html",
-      "patterns" : [
-        {
-          "include" : "#trans-tag"
-        },
-        {
-          "include" : "#mt-variable-tag"
-        },
-        {
-          "include" : "#mt-container-tag"
-        },
-        {
-          "include" : "#embedded-code"
-        },
-        {
-          "include" : "#entities"
-        }
-      ]
-    },
-    "tag-generic-attribute" : {
-      "match" : "\\b([a-zA-Z-_:]+)",
-      "name" : "entity.other.attribute-name.html"
-    },
-    "tag-stuff" : {
-      "patterns" : [
-        {
-          "include" : "#trans-tag"
-        },
-        {
-          "include" : "#tag-generic-attribute"
-        },
-        {
-          "include" : "#string-double-quoted"
-        },
-        {
-          "include" : "#string-single-quoted"
-        }
-      ]
-    },
-    "trans-tag" : {
-      "patterns" : [
-        {
-          "begin" : "(<)(__trans)",
-          "beginCaptures" : {
-            "1" : {
-              "name" : "punctuation.definition.tag.mt"
-            },
-            "2" : {
-              "name" : "variable.other.mt"
-            }
-          },
-          "end" : "(>)",
-          "endCaptures" : {
-            "1" : {
-              "name" : "variable.other.mt"
-            },
-            "2" : {
-              "name" : "punctuation.definition.tag.mt"
-            }
-          },
-          "name" : "meta.tag.mt.trans.html",
-          "patterns" : [
-            {
-              "include" : "#tag-stuff"
-            }
-          ]
-        }
-      ]
-    },
-    "psedo-html" : {
+    "entities": {
       "patterns": [
         {
-          "include" : "#html-comment"
+          "captures": {
+            "1": {"name": "punctuation.definition.constant.html"},
+            "3": {"name": "punctuation.definition.constant.html"}
+          },
+          "match": "(&)([a-zA-Z0-9]+|#[0-9]+|#x[0-9a-fA-F]+)(;)",
+          "name": "constant.character.entity.html"
         },
         {
-          "include" : "#html-doctype"
-        },
-        {
-          "include" : "#html-tag"
+          "match": "&",
+          "name": "invalid.illegal.bad-ampersand.html"
         }
       ]
     },
-    "html-comment" : {
+    "mt-container-tag": {
+      "patterns": [
+        {
+          "begin": "(</?[Mm][Tt]:?)((\\w+:)?\\w+)",
+          "beginCaptures": {
+            "1": {"name": "punctuation.definition.tag.mt"},
+            "2": {
+              "name": "support.class.mt",
+              "patterns": [
+                {
+                  "match": "([iI][fF]|[eE][lL][sS][eE]|[lL][oO][oO][pP])",
+                  "name": "keyword.control.mt"
+                }
+              ]
+            }
+          },
+          "end": ">",
+          "endCaptures": {
+            "0": {"name": "punctuation.definition.tag.mt"}
+          },
+          "name": "meta.tag.mt.container.html",
+          "patterns": [
+            {"include": "#tag-stuff"}
+          ]
+        }
+      ]
+    },
+    "mt-ignore-tag": {
+      "patterns": [
+        {
+          "begin": "<[Mm][Tt]:?[Ii]gnore>",
+          "beginCaptures": {
+            "0": {"name": "punctuation.definition.comment.begin.mt"}
+          },
+          "end": "</[Mm][Tt]:?[Ii]gnore>",
+          "endCaptures": {
+            "0": {"name": "punctuation.definition.comment.end.mt"}
+          },
+          "name": "comment.block.html"
+        }
+      ]
+    },
+    "mt-variable-tag": {
+      "patterns": [
+        {
+          "begin": "(<)(\\$[Mm][Tt]:?(\\w+:)?\\w+)",
+          "beginCaptures": {
+            "1": {"name": "punctuation.definition.tag.mt"},
+            "2": {"name": "variable.other.mt"}
+          },
+          "end": "(\\$)?(>)",
+          "endCaptures": {
+            "1": {"name": "variable.other.mt"},
+            "2": {"name": "punctuation.definition.tag.mt"}
+          },
+          "name": "meta.tag.mt.variable.html",
+          "patterns": [
+            {"include": "#tag-stuff"}
+          ]
+        }
+      ]
+    },
+    "php": {
+      "begin": "(<\\?php)",
+      "end": "(\\?>)",
+      "name": "entity.name.tag",
+      "patterns": [
+        {"include": "source.php"}
+      ]
+    },
+    "ruby": {
+      "begin": "<%+(?!>)=?",
+      "captures": {
+        "0": {"name": "punctuation.section.embedded.ruby"}
+      },
+      "end": "-?%>",
+      "name": "source.ruby.embedded.html",
+      "patterns": [
+        {
+          "captures": {
+            "1": {"name": "punctuation.definition.comment.ruby"}
+          },
+          "match": "(#).*?(?=-?%>)",
+          "name": "comment.line.number-sign.ruby"
+        },
+        {
+          "include": "source.ruby"
+        }
+      ]
+    },
+    "string-double-quoted": {
+      "begin": "\"",
+      "beginCaptures": {
+        "0": {"name": "punctuation.definition.string.begin.html"}
+      },
+      "end": "\"",
+      "endCaptures": {
+        "0": {"name": "punctuation.definition.string.end.html"}
+      },
+      "name": "string.quoted.double.html",
+      "patterns": [
+        {"include": "#trans-tag"},
+        {"include": "#mt-variable-tag"},
+        {"include": "#mt-container-tag"},
+        {"include": "#embedded-code"},
+        {"include": "#entities"}
+      ]
+    },
+    "string-single-quoted": {
+      "begin": "'",
+      "beginCaptures": {
+        "0": {"name": "punctuation.definition.string.begin.html"}
+      },
+      "end": "'",
+      "endCaptures": {
+        "0": {"name": "punctuation.definition.string.end.html"}
+      },
+      "name": "string.quoted.single.html",
+      "patterns": [
+        {"include": "#trans-tag"},
+        {"include": "#mt-variable-tag"},
+        {"include": "#mt-container-tag"},
+        {"include": "#embedded-code"},
+        {"include": "#entities"}
+      ]
+    },
+    "tag-generic-attribute": {
+      "match": "\\b([a-zA-Z-_:]+)",
+      "name": "entity.other.attribute-name.html"
+    },
+    "regex_replace":{
+      "match": "\\b(regex_replace)=(\".*\"|'.*'),(\"\\w+\"|'\\w+')",
+      "captures":{ 
+        "1":{"name":"entity.other.attribute-name"},
+        "2":{"name":"string.regexp"},
+        "3":{"patterns": [
+          {"include": "#string-double-quoted"},
+          {"include": "#string-single-quoted"}
+        ]
+        }
+      }
+    },
+    "tag-stuff": {
+      "patterns": [
+        {"include": "#regex_replace"},
+        {"include": "#trans-tag"},
+        {"include": "#tag-generic-attribute"},
+        {"include": "#string-double-quoted"},
+        {"include": "#string-single-quoted"}
+      ]
+    },
+    "trans-tag": {
+      "patterns": [
+        {
+          "begin": "(<)(__trans)",
+          "beginCaptures": {
+            "1": {"name": "punctuation.definition.tag.mt"},
+            "2": {"name": "variable.other.mt"}
+          },
+          "end": "(>)",
+          "endCaptures": {
+            "1": {"name": "variable.other.mt"},
+            "2": {"name": "punctuation.definition.tag.mt"}
+          },
+          "name": "meta.tag.mt.trans.html",
+          "patterns": [
+            {"include": "#tag-stuff"}
+          ]
+        }
+      ]
+    },
+    "psedo-html": {
+      "patterns": [
+        {"include": "#html-comment"},
+        {"include": "#html-doctype"},
+        {"include": "#html-tag"}
+      ]
+    },
+    "html-comment": {
       "begin": "<!--",
       "captures": {
-				"0": {
-					"name": "punctuation.definition.comment.html"
-				}
-			},
+        "0": {"name": "punctuation.definition.comment.html"}
+      },
       "end": "-->",
       "name": "comment.block.html"
     },
-    "html-doctype" : {
-			"begin": "<!(?=(?i:DOCTYPE\\s))",
-			"beginCaptures": {
-				"0": {
-					"name": "punctuation.definition.tag.begin.html"
-				}
-			},
-			"end": ">",
-			"endCaptures": {
-				"0": {
-					"name": "punctuation.definition.tag.end.html"
-				}
-			},
-			"name": "meta.tag.metadata.doctype.html",
-			"patterns": [
-				{
-					"match": "\\G(?i:DOCTYPE)",
-					"name": "entity.name.tag.html"
-				},
-				{
-					"begin": "\"",
-					"end": "\"",
-					"name": "string.quoted.double.html"
-				},
-				{
-					"match": "[^\\s>]+",
-					"name": "entity.other.attribute-name.html"
-				}
-			]
-		},
-    "html-tag" : {
-      "patterns" : [
+    "html-doctype": {
+      "begin": "<!(?=(?i:DOCTYPE\\s))",
+      "beginCaptures": {
+        "0": {"name": "punctuation.definition.tag.begin.html"}
+      },
+      "end": ">",
+      "endCaptures": {
+        "0": {"name": "punctuation.definition.tag.end.html"}
+      },
+      "name": "meta.tag.metadata.doctype.html",
+      "patterns": [
+        {
+          "match": "\\G(?i:DOCTYPE)",
+          "name": "entity.name.tag.html"
+        },
+        {
+          "begin": "\"",
+          "end": "\"",
+          "name": "string.quoted.double.html"
+        },
+        {
+          "match": "[^\\s>]+",
+          "name": "entity.other.attribute-name.html"
+        }
+      ]
+    },
+    "html-tag": {
+      "patterns": [
         {
           "begin": "(<)((?:([-_a-zA-Z0-9]+)(:))?([-_a-zA-Z0-9:]+))(?=(\\s[^>]*)?></\\2>)",
           "beginCaptures": {
-            "1": {
-              "name": "punctuation.definition.tag.xml"
-            },
-            "2": {
-              "name": "entity.name.tag.xml"
-            },
-            "3": {
-              "name": "entity.name.tag.namespace.xml"
-            },
-            "4": {
-              "name": "punctuation.separator.namespace.xml"
-            },
-            "5": {
-              "name": "entity.name.tag.localname.xml"
-            }
+            "1": {"name": "punctuation.definition.tag.xml"},
+            "2": {"name": "entity.name.tag.xml"},
+            "3": {"name": "entity.name.tag.namespace.xml"},
+            "4": {"name": "punctuation.separator.namespace.xml"},
+            "5": {"name": "entity.name.tag.localname.xml"}
           },
           "end": "(>)(</)((?:([-_a-zA-Z0-9]+)(:))?([-_a-zA-Z0-9:]+))(>)",
           "endCaptures": {
-            "1": {
-              "name": "punctuation.definition.tag.xml"
-            },
-            "2": {
-              "name": "punctuation.definition.tag.xml"
-            },
-            "3": {
-              "name": "entity.name.tag.xml"
-            },
-            "4": {
-              "name": "entity.name.tag.namespace.xml"
-            },
-            "5": {
-              "name": "punctuation.separator.namespace.xml"
-            },
-            "6": {
-              "name": "entity.name.tag.localname.xml"
-            },
-            "7": {
-              "name": "punctuation.definition.tag.xml"
-            }
+            "1": {"name": "punctuation.definition.tag.xml"},
+            "2": {"name": "punctuation.definition.tag.xml"},
+            "3": {"name": "entity.name.tag.xml"},
+            "4": {"name": "entity.name.tag.namespace.xml"},
+            "5": {"name": "punctuation.separator.namespace.xml"},
+            "6": {"name": "entity.name.tag.localname.xml"},
+            "7": {"name": "punctuation.definition.tag.xml"}
           },
           "name": "meta.tag.no-content.xml",
           "patterns": [
-            {
-              "include": "#tag-stuff"
-            }
+            {"include": "#tag-stuff"}
           ]
         },
         {
           "begin": "(</?)(?:([-\\w\\.]+)((:)))?([-\\w\\.:]+)",
           "captures": {
-            "1": {
-              "name": "punctuation.definition.tag.xml"
-            },
-            "2": {
-              "name": "entity.name.tag.namespace.xml"
-            },
-            "3": {
-              "name": "entity.name.tag.xml"
-            },
-            "4": {
-              "name": "punctuation.separator.namespace.xml"
-            },
-            "5": {
-              "name": "entity.name.tag.localname.xml"
-            }
+            "1": {"name": "punctuation.definition.tag.xml"},
+            "2": {"name": "entity.name.tag.namespace.xml"},
+            "3": {"name": "entity.name.tag.xml"},
+            "4": {"name": "punctuation.separator.namespace.xml"},
+            "5": {"name": "entity.name.tag.localname.xml"}
           },
           "end": "(/?>)",
           "name": "meta.tag.xml",
           "patterns": [
-            {
-              "include": "#tag-stuff"
-            }
+            {"include": "#tag-stuff"}
           ]
         }
       ]
-		}
+    }
   },
-	"scopeName": "source.mtml"
+  "scopeName": "source.mtml"
 }

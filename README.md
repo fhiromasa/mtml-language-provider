@@ -7,7 +7,6 @@ Syntax highlight for Movable Type Markup Language (MTML)
 ## Features
 
 - Syntax Hightlighting for `.mtml` files.
+- Provide Snippets for `.mtml` files.
 
-## Visual Studio Marketplace
 
-https://marketplace.visualstudio.com/items?itemName=yupyom.mtml

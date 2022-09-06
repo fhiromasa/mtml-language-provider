@@ -5895,7 +5895,7 @@
   },
   "mt:SiteContentCount": {
     "prefix": "SiteContentCount",
-    "body": ["<mt:SiteContentCount content_type=\"${1:}\" />"]
+    "body": ["<mt:SiteContentCount content_type=\"${1:}\">"]
   },
   "mt:SiteDateLanguage": {
     "prefix": "SiteDateLanguage",
@@ -6011,7 +6011,7 @@
   },
   "mt:CreateJSON": {
     "prefix": "CreateJSON",
-    "body": ["<mt:CreateJSON include_blogs=\"${1:N}\" fields=\"${2:title,text,text_more,keywords,tags,categories}\" />"]
+    "body": ["<mt:CreateJSON include_blogs=\"${1:N}\" fields=\"${2:title,text,text_more,keywords,tags,categories}\">"]
   },
   "mt:Foreach": {
     "prefix": "Foreach",
@@ -6019,7 +6019,7 @@
   },
   "mt:NestVar": {
     "prefix": "NestVar",
-    "body": ["<mt:NestVar name=\"${1:}\" />"]
+    "body": ["<mt:NestVar name=\"${1:}\">"]
   },
   // --------------------------------------------------
   //  MovableType.net Added [ start ]
@@ -6046,7 +6046,7 @@
   },
   "mt:CustomFieldValue MT.net のみ": {
     "prefix": "CustomFieldValue",
-    "body": ["<mt:CustomFieldValue identifier=\"${1:}\" />"]
+    "body": ["<mt:CustomFieldValue identifier=\"${1:}\">"]
   },
   "mt:CustomFieldAsset MT.net のみ": {
     "prefix": "CustomFieldAsset",

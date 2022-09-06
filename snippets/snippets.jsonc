@@ -388,7 +388,7 @@
   },
   "mt:If else": {
     "prefix": "If else",
-    "body": ["<mt:If name=\"${1:VarName}\"><mt:Else></mt:If>"]
+    "body": ["<mt:If name=\"${1:name}\"><mt:Else></mt:If>"]
   },
   "regex_replace=\"//\",\"\"": {
     "prefix": "regex_replace=\"//\",\"\"",
@@ -584,7 +584,7 @@
   },
   "replace=\"\"": {
     "prefix": "replace=\"\"",
-    "body": ["replace=\"\""]
+    "body": ["replace=\"\",\"\""]
   },
   "remove_html=\"\"": {
     "prefix": "remove_html=\"\"",
@@ -3428,7 +3428,7 @@
   },
   "mt:Unless": {
     "prefix": "Unless",
-    "body": ["<mt:Unless name=\"${1:VariableName}\"></mt:Unless>"]
+    "body": ["<mt:Unless name=\"${1:name}\"></mt:Unless>"]
   },
   "mt:TypeKeyToken": {
     "prefix": "TypeKeyToken",
@@ -3608,15 +3608,15 @@
   },
   "mt:SetVars": {
     "prefix": "SetVars",
-    "body": ["<mt:SetVars>\n${1:Variable Name}=${2:Value}\n</mt:SetVars>"]
+    "body": ["<mt:SetVars>\n${1: Name}=${2:Value}\n</mt:SetVars>"]
   },
   "mt:SetVarTemplate": {
     "prefix": "SetVarTemplate",
-    "body": ["<mt:SetVarTemplate name=\"${1:Variable Name}\"></mt:SetVarTemplate>"]
+    "body": ["<mt:SetVarTemplate name=\"${1: Name}\"></mt:SetVarTemplate>"]
   },
   "mt:SetVar": {
     "prefix": "SetVar",
-    "body": ["<mt:SetVar name=\"${1:VariableName}\" value=\"${2:Value}\">"]
+    "body": ["<mt:SetVar name=\"${1:Name}\" value=\"${2:Value}\">"]
   },
   "mt:SetHashVar": {
     "prefix": "SetHashVar",
@@ -3944,7 +3944,7 @@
   },
   "mt:Loop": {
     "prefix": "Loop",
-    "body": ["<mt:Loop name=\"${1:VariableName}\"${2: sort_by=\"\"}${3: glue=\"\"}></mt:Loop>"]
+    "body": ["<mt:Loop name=\"${1:name}\" sort_by=\"${2:}\"></mt:Loop>"]
   },
   "mt:Link": {
     "prefix": "Link",
@@ -4172,7 +4172,7 @@
   },
   "mt:If": {
     "prefix": "If",
-    "body": ["<mt:If name=\"${1:VariableName}\"></mt:If>"]
+    "body": ["<mt:If name=\"${1:Name}\"></mt:If>"]
   },
   "mt:HasSubFolders": {
     "prefix": "HasSubFolders",
@@ -5602,17 +5602,13 @@
     "prefix": "ActionStreams",
     "body": ["<mt:ActionStreams></mt:ActionStreams>"]
   },
-  "mt:Include module": {
-    "prefix": "Include module",
-    "body": ["<mt:Include module=\"${1:module}\">"]
-  },
   "mt:Var": {
     "prefix": "Var",
-    "body": ["<mt:Var name=\"${1:name}\" />"]
+    "body": ["<mt:Var name=\"${1:name}\">"]
   },
   "mt:SetVarBlock": {
     "prefix": "SetVarBlock",
-    "body": ["<mt:SetVarBlock name=\"${1:VariableName}\"></mt:SetVarBlock>"]
+    "body": ["<mt:SetVarBlock name=\"${1:name}\"></mt:SetVarBlock>"]
   },
   "mt": {
     "prefix": "mt",
@@ -5623,7 +5619,7 @@
   // --------------------------------------------------
   "mt:AuthorHasContent": {
     "prefix": "AuthorHasContent",
-    "body": ["<mt:AuthorHasContent content_type=\"${1:}\"></mt:AuthorHasContent>"]
+    "body": ["<mt:AuthorHasContent></mt:AuthorHasContent>"]
   },
   "mt:AssetSiteID": {
     "prefix": "AssetSiteID",
@@ -5635,7 +5631,7 @@
   },
   "mt:AuthorContentCount": {
     "prefix": "AuthorContentCount",
-    "body": ["<mt:AuthorContentCount content_type=\"${1:}\" />"]
+    "body": ["<mt:AuthorContentCount>"]
   },
   "include_sites=\"\"": {
     "prefix": "include_sites=\"\"",
@@ -5661,7 +5657,7 @@
     "prefix": "CategorySets",
     "body": ["<mt:CategorySets></mt:CategorySets>"]
   },
-  "content_type=\"\"": {
+  "content_type": {
     "prefix": "content_type=\"\"",
     "body": ["content_type=\"${1:}\""]
   },

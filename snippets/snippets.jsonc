@@ -394,9 +394,9 @@
     "prefix": "regex_replace=\"//\",\"\"",
     "body": ["regex_replace=\"/${1:RegExp}/\",\"${2:Replacement}\""]
   },
-  "mt:GroupBlogsWebsitester": {
-    "prefix": "GroupBlogsWebsitester",
-    "body": ["<mt:GroupBlogsWebsitester></mt:GroupBlogsWebsitester>"]
+  "mt:GroupBlogsWebsitesFooter": {
+    "prefix": "GroupBlogsWebsitesFooter",
+    "body": ["<mt:GroupBlogsWebsitesFooter></mt:GroupBlogsWebsitesFooter>"]
   },
   "mt:GroupBlogsWebsitesHeader": {
     "prefix": "GroupBlogsWebsitesHeader",
@@ -406,9 +406,9 @@
     "prefix": "GroupBlogsWebsites",
     "body": ["<mt:GroupBlogsWebsites${1: group=\"\"}${2: group_id=\"\"}${3: blog_id=\"\"}></mt:GroupBlogsWebsites>"]
   },
-  "mt:GroupWebsitester": {
-    "prefix": "GroupWebsitester",
-    "body": ["<mt:GroupWebsitester></mt:GroupWebsitester>"]
+  "mt:GroupWebsitesFooter": {
+    "prefix": "GroupWebsitesFooter",
+    "body": ["<mt:GroupWebsitesFooter></mt:GroupWebsitesFooter>"]
   },
   "mt:GroupWebsitesHeader": {
     "prefix": "GroupWebsitesHeader",
@@ -418,9 +418,9 @@
     "prefix": "GroupWebsites",
     "body": ["<mt:GroupWebsites${1: group=\"\"}${2: group_id=\"\"}${3: blog_id=\"\"}></mt:GroupWebsites>"]
   },
-  "mt:GroupBlogster": {
-    "prefix": "GroupBlogster",
-    "body": ["<mt:GroupBlogster></mt:GroupBlogster>"]
+  "mt:GroupBlogsFooter": {
+    "prefix": "GroupBlogsFooter",
+    "body": ["<mt:GroupBlogsFooter></mt:GroupBlogsFooter>"]
   },
   "mt:GroupBlogsHeader": {
     "prefix": "GroupBlogsHeader",
@@ -430,9 +430,9 @@
     "prefix": "GroupBlogs",
     "body": ["<mt:GroupBlogs${1: group=\"\"}${2: group_id=\"\"}${3: blog_id=\"\"}></mt:GroupBlogs>"]
   },
-  "mt:GroupCategoriesFolderster": {
-    "prefix": "GroupCategoriesFolderster",
-    "body": ["<mt:GroupCategoriesFolderster></mt:GroupCategoriesFolderster>"]
+  "mt:GroupCategoriesFoldersFooter": {
+    "prefix": "GroupCategoriesFoldersFooter",
+    "body": ["<mt:GroupCategoriesFoldersFooter></mt:GroupCategoriesFoldersFooter>"]
   },
   "mt:GroupCategoriesFoldersHeader": {
     "prefix": "GroupCategoriesFoldersHeader",
@@ -442,9 +442,9 @@
     "prefix": "GroupCategoriesFolders",
     "body": ["<mt:GroupCategoriesFolders${1: group=\"\"}${2: group_id=\"\"}${3: blog_id=\"\"}></mt:GroupCategoriesFolders>"]
   },
-  "mt:GroupFolderster": {
-    "prefix": "GroupFolderster",
-    "body": ["<mt:GroupFolderster></mt:GroupFolderster>"]
+  "mt:GroupFoldersFooter": {
+    "prefix": "GroupFoldersFooter",
+    "body": ["<mt:GroupFoldersFooter></mt:GroupFoldersFooter>"]
   },
   "mt:GroupFoldersHeader": {
     "prefix": "GroupFoldersHeader",
@@ -454,9 +454,9 @@
     "prefix": "GroupFolders",
     "body": ["<mt:GroupFolders${1: group=\"\"}${2: group_id=\"\"}${3: blog_id=\"\"}></mt:GroupFolders>"]
   },
-  "mt:GroupCategoriester": {
-    "prefix": "GroupCategoriester",
-    "body": ["<mt:GroupCategoriester></mt:GroupCategoriester>"]
+  "mt:GroupCategoriesFooter": {
+    "prefix": "GroupCategoriesFooter",
+    "body": ["<mt:GroupCategoriesFooter></mt:GroupCategoriesFooter>"]
   },
   "mt:GroupCategoriesHeader": {
     "prefix": "GroupCategoriesHeader",
@@ -466,9 +466,9 @@
     "prefix": "GroupCategories",
     "body": ["<mt:GroupCategories${1: group=\"\"}${2: group_id=\"\"}${3: blog_id=\"\"}></mt:GroupCategories>"]
   },
-  "mt:GroupEntriesPagester": {
-    "prefix": "GroupEntriesPagester",
-    "body": ["<mt:GroupEntriesPagester></mt:GroupEntriesPagester>"]
+  "mt:GroupEntriesPagesFooter": {
+    "prefix": "GroupEntriesPagesFooter",
+    "body": ["<mt:GroupEntriesPagesFooter></mt:GroupEntriesPagesFooter>"]
   },
   "mt:GroupEntriesPagesHeader": {
     "prefix": "GroupEntriesPagesHeader",
@@ -478,9 +478,9 @@
     "prefix": "GroupEntriesPages",
     "body": ["<mt:GroupEntriesPages${1: group=\"\"}${2: group_id=\"\"}${3: blog_id=\"\"}></mt:GroupEntriesPages>"]
   },
-  "mt:GroupPagester": {
-    "prefix": "GroupPagester",
-    "body": ["<mt:GroupPagester></mt:GroupPagester>"]
+  "mt:GroupPagesFooter": {
+    "prefix": "GroupPagesFooter",
+    "body": ["<mt:GroupPagesFooter></mt:GroupPagesFooter>"]
   },
   "mt:GroupPagesHeader": {
     "prefix": "GroupPagesHeader",
@@ -490,9 +490,9 @@
     "prefix": "GroupPages",
     "body": ["<mt:GroupPages${1: group=\"\"}${2: group_id=\"\"}${3: blog_id=\"\"}></mt:GroupPages>"]
   },
-  "mt:GroupEntriester": {
-    "prefix": "GroupEntriester",
-    "body": ["<mt:GroupEntriester></mt:GroupEntriester>"]
+  "mt:GroupEntriesFooter": {
+    "prefix": "GroupEntriesFooter",
+    "body": ["<mt:GroupEntriesFooter></mt:GroupEntriesFooter>"]
   },
   "mt:GroupEntriesHeader": {
     "prefix": "GroupEntriesHeader",
@@ -742,9 +742,9 @@
     "prefix": "TemplateName",
     "body": ["<mt:TemplateName>"]
   },
-  "mt:Templatester": {
-    "prefix": "Templatester",
-    "body": ["<mt:Templatester></mt:Templatester>"]
+  "mt:TemplatesFooter": {
+    "prefix": "TemplatesFooter",
+    "body": ["<mt:TemplatesFooter></mt:TemplatesFooter>"]
   },
   "mt:Templates": {
     "prefix": "Templates",
@@ -1258,9 +1258,9 @@
     "prefix": "IfActiveImage",
     "body": ["<mt:IfActiveImage></mt:IfActiveImage>"]
   },
-  "mt:Linkster": {
-    "prefix": "Linkster",
-    "body": ["<mt:Linkster></mt:Linkster>"]
+  "mt:LinksFooter": {
+    "prefix": "LinksFooter",
+    "body": ["<mt:LinksFooter></mt:LinksFooter>"]
   },
   "mt:Links": {
     "prefix": "Links",
@@ -1714,9 +1714,9 @@
     "prefix": "EntryParentID",
     "body": ["<mt:EntryParentID>"]
   },
-  "mt:EntryChildrenPagester": {
-    "prefix": "EntryChildrenPagester",
-    "body": ["<mt:EntryChildrenPagester></mt:EntryChildrenPagester>"]
+  "mt:EntryChildrenPagesFooter": {
+    "prefix": "EntryChildrenPagesFooter",
+    "body": ["<mt:EntryChildrenPagesFooter></mt:EntryChildrenPagesFooter>"]
   },
   "mt:IfEntryChildrenter": {
     "prefix": "IfEntryChildrenter",
@@ -2074,9 +2074,9 @@
     "prefix": "CustomObjectsHeader",
     "body": ["<mt:CustomObjectsHeader></mt:CustomObjectsHeader>"]
   },
-  "mt:CustomObjectColumnster": {
-    "prefix": "CustomObjectColumnster",
-    "body": ["<mt:CustomObjectColumnster></mt:CustomObjectColumnster>"]
+  "mt:CustomObjectColumnsFooter": {
+    "prefix": "CustomObjectColumnsFooter",
+    "body": ["<mt:CustomObjectColumnsFooter></mt:CustomObjectColumnsFooter>"]
   },
   "mt:SetContext": {
     "prefix": "SetContext",
@@ -2098,9 +2098,9 @@
     "prefix": "CustomObjectIfTagged",
     "body": ["<mt:CustomObjectIfTagged></mt:CustomObjectIfTagged>"]
   },
-  "mt:CustomObjectster": {
-    "prefix": "CustomObjectster",
-    "body": ["<mt:CustomObjectster></mt:CustomObjectster>"]
+  "mt:CustomObjectsFooter": {
+    "prefix": "CustomObjectsFooter",
+    "body": ["<mt:CustomObjectsFooter></mt:CustomObjectsFooter>"]
   },
   "mt:CategoryClass": {
     "prefix": "CategoryClass",
@@ -2118,17 +2118,17 @@
     "prefix": "ItemGroupEntriesCount",
     "body": ["<mt:ItemGroupEntriesCount>"]
   },
-  "mt:ItemGroupEntriester": {
-    "prefix": "ItemGroupEntriester",
-    "body": ["<mt:ItemGroupEntriester></mt:ItemGroupEntriester>"]
+  "mt:ItemGroupEntriesFooter": {
+    "prefix": "ItemGroupEntriesFooter",
+    "body": ["<mt:ItemGroupEntriesFooter></mt:ItemGroupEntriesFooter>"]
   },
-  "mt:ItemGroupCategoriester": {
-    "prefix": "ItemGroupCategoriester",
-    "body": ["<mt:ItemGroupCategoriester></mt:ItemGroupCategoriester>"]
+  "mt:ItemGroupCategoriesFooter": {
+    "prefix": "ItemGroupCategoriesFooter",
+    "body": ["<mt:ItemGroupCategoriesFooter></mt:ItemGroupCategoriesFooter>"]
   },
-  "mt:ItemGroupBlogster": {
-    "prefix": "ItemGroupBlogster",
-    "body": ["<mt:ItemGroupBlogster></mt:ItemGroupBlogster>"]
+  "mt:ItemGroupBlogsFooter": {
+    "prefix": "ItemGroupBlogsFooter",
+    "body": ["<mt:ItemGroupBlogsFooter></mt:ItemGroupBlogsFooter>"]
   },
   "mt:ItemGroupBlogs": {
     "prefix": "ItemGroupBlogs",
@@ -2190,9 +2190,9 @@
     "prefix": "ItemGroupBlogNext",
     "body": ["<mt:ItemGroupBlogNext></mt:ItemGroupBlogNext>"]
   },
-  "mt:CustomGroupster": {
-    "prefix": "CustomGroupster",
-    "body": ["<mt:CustomGroupster></mt:CustomGroupster>"]
+  "mt:CustomGroupsFooter": {
+    "prefix": "CustomGroupsFooter",
+    "body": ["<mt:CustomGroupsFooter></mt:CustomGroupsFooter>"]
   },
   "mt:ItemGroupCategoryPrevious": {
     "prefix": "ItemGroupCategoryPrevious",
@@ -2670,9 +2670,9 @@
     "prefix": "IfIE",
     "body": ["<mt:IfIE></mt:IfIE>"]
   },
-  "mt:Campaignster": {
-    "prefix": "Campaignster",
-    "body": ["<mt:Campaignster></mt:Campaignster>"]
+  "mt:CampaignsFooter": {
+    "prefix": "CampaignsFooter",
+    "body": ["<mt:CampaignsFooter></mt:CampaignsFooter>"]
   },
   "mt:IfCampaignActive": {
     "prefix": "IfCampaignActive",
@@ -2682,9 +2682,9 @@
     "prefix": "Banners",
     "body": ["<mt:Banners></mt:Banners>"]
   },
-  "mt:Bannerster": {
-    "prefix": "Bannerster",
-    "body": ["<mt:Bannerster></mt:Bannerster>"]
+  "mt:BannersFooter": {
+    "prefix": "BannersFooter",
+    "body": ["<mt:BannersFooter></mt:BannersFooter>"]
   },
   "mt:Campaigns": {
     "prefix": "Campaigns",
@@ -2870,9 +2870,9 @@
     "prefix": "IfBlogTreeEntryPublished",
     "body": ["<mt:IfBlogTreeEntryPublished></mt:IfBlogTreeEntryPublished>"]
   },
-  "mt:BlogTreeAssetster": {
-    "prefix": "BlogTreeAssetster",
-    "body": ["<mt:BlogTreeAssetster></mt:BlogTreeAssetster>"]
+  "mt:BlogTreeAssetsFooter": {
+    "prefix": "BlogTreeAssetsFooter",
+    "body": ["<mt:BlogTreeAssetsFooter></mt:BlogTreeAssetsFooter>"]
   },
   "mt:IfUserCanCreateEntry": {
     "prefix": "IfUserCanCreateEntry",
@@ -2906,9 +2906,9 @@
     "prefix": "RemoveReturn",
     "body": ["<mt:RemoveReturn></mt:RemoveReturn>"]
   },
-  "mt:BlogTreeEntriester": {
-    "prefix": "BlogTreeEntriester",
-    "body": ["<mt:BlogTreeEntriester></mt:BlogTreeEntriester>"]
+  "mt:BlogTreeEntriesFooter": {
+    "prefix": "BlogTreeEntriesFooter",
+    "body": ["<mt:BlogTreeEntriesFooter></mt:BlogTreeEntriesFooter>"]
   },
   "mt:IfCategoryIsTopLevel": {
     "prefix": "IfCategoryIsTopLevel",
@@ -2982,17 +2982,17 @@
     "prefix": "GroupAssets",
     "body": ["<mt:GroupAssets></mt:GroupAssets>"]
   },
-  "mt:GroupAssetster": {
-    "prefix": "GroupAssetster",
-    "body": ["<mt:GroupAssetster></mt:GroupAssetster>"]
+  "mt:GroupAssetsFooter": {
+    "prefix": "GroupAssetsFooter",
+    "body": ["<mt:GroupAssetsFooter></mt:GroupAssetsFooter>"]
   },
   "mt:ItemGroupAssets": {
     "prefix": "ItemGroupAssets",
     "body": ["<mt:ItemGroupAssets></mt:ItemGroupAssets>"]
   },
-  "mt:ItemGroupAssetster": {
-    "prefix": "ItemGroupAssetster",
-    "body": ["<mt:ItemGroupAssetster></mt:ItemGroupAssetster>"]
+  "mt:ItemGroupAssetsFooter": {
+    "prefix": "ItemGroupAssetsFooter",
+    "body": ["<mt:ItemGroupAssetsFooter></mt:ItemGroupAssetsFooter>"]
   },
   "url2download=\"\"": {
     "prefix": "url2download=\"\"",
@@ -3226,9 +3226,9 @@
     "prefix": "IfAltsearchModeIsCategory",
     "body": ["<mt:IfAltsearchModeIsCategory></mt:IfAltsearchModeIsCategory>"]
   },
-  "mt:IfAltsearchMetadataster": {
-    "prefix": "IfAltsearchMetadataster",
-    "body": ["<mt:IfAltsearchMetadataster></mt:IfAltsearchMetadataster>"]
+  "mt:IfAltsearchMetadatasFooter": {
+    "prefix": "IfAltsearchMetadatasFooter",
+    "body": ["<mt:IfAltsearchMetadatasFooter></mt:IfAltsearchMetadatasFooter>"]
   },
   "mt:AltSearchMetadata": {
     "prefix": "AltSearchMetadata",
@@ -3642,9 +3642,9 @@
     "prefix": "SearchResultsHeader",
     "body": ["<mt:SearchResultsHeader></mt:SearchResultsHeader>"]
   },
-  "mt:SearchResultster": {
-    "prefix": "SearchResultster",
-    "body": ["<mt:SearchResultster></mt:SearchResultster>"]
+  "mt:SearchResultsFooter": {
+    "prefix": "SearchResultsFooter",
+    "body": ["<mt:SearchResultsFooter></mt:SearchResultsFooter>"]
   },
   "mt:SearchResults": {
     "prefix": "SearchResults",
@@ -3698,9 +3698,9 @@
     "prefix": "PingsHeader",
     "body": ["<mt:PingsHeader></mt:PingsHeader>"]
   },
-  "mt:Pingster": {
-    "prefix": "Pingster",
-    "body": ["<mt:Pingster></mt:Pingster>"]
+  "mt:PingsFooter": {
+    "prefix": "PingsFooter",
+    "body": ["<mt:PingsFooter></mt:PingsFooter>"]
   },
   "mt:Pings": {
     "prefix": "Pings",
@@ -3790,9 +3790,9 @@
     "prefix": "PagesHeader",
     "body": ["<mt:PagesHeader></mt:PagesHeader>"]
   },
-  "mt:Pagester": {
-    "prefix": "Pagester",
-    "body": ["<mt:Pagester></mt:Pagester>"]
+  "mt:PagesFooter": {
+    "prefix": "PagesFooter",
+    "body": ["<mt:PagesFooter></mt:PagesFooter>"]
   },
   "mt:Pages": {
     "prefix": "Pages",
@@ -4686,9 +4686,9 @@
     "prefix": "CommentsHeader",
     "body": ["<mt:CommentsHeader></mt:CommentsHeader>"]
   },
-  "mt:Commentster": {
-    "prefix": "Commentster",
-    "body": ["<mt:Commentster></mt:Commentster>"]
+  "mt:CommentsFooter": {
+    "prefix": "CommentsFooter",
+    "body": ["<mt:CommentsFooter></mt:CommentsFooter>"]
   },
   "mt:Comments": {
     "prefix": "Comments",
@@ -5346,9 +5346,9 @@
     "prefix": "AssetsHeader",
     "body": ["<mt:AssetsHeader></mt:AssetsHeader>"]
   },
-  "mt:Assetster": {
-    "prefix": "Assetster",
-    "body": ["<mt:Assetster></mt:Assetster>"]
+  "mt:AssetsFooter": {
+    "prefix": "AssetsFooter",
+    "body": ["<mt:AssetsFooter></mt:AssetsFooter>"]
   },
   "mt:Assets": {
     "prefix": "Assets",
@@ -5578,9 +5578,9 @@
     "prefix": "ActionsHeader",
     "body": ["<mt:ActionsHeader></mt:ActionsHeader>"]
   },
-  "mt:Actionster": {
-    "prefix": "Actionster",
-    "body": ["<mt:Actionster></mt:Actionster>"]
+  "mt:ActionsFooter": {
+    "prefix": "ActionsFooter",
+    "body": ["<mt:ActionsFooter></mt:ActionsFooter>"]
   },
   "mt:ActionsFavorite": {
     "prefix": "ActionsFavorite",
@@ -5805,9 +5805,9 @@
     "prefix": "ContentsHeader",
     "body": ["<mt:ContentsHeader></mt:ContentsHeader>"]
   },
-  "mt:Contentster": {
-    "prefix": "Contentster",
-    "body": ["<mt:Contentster></mt:Contentster>"]
+  "mt:ContentsFooter": {
+    "prefix": "ContentsFooter",
+    "body": ["<mt:ContentsFooter></mt:ContentsFooter>"]
   },
   "mt:ContentSiteDescription": {
     "prefix": "ContentSiteDescription",
@@ -5895,7 +5895,7 @@
   },
   "mt:SiteContentCount": {
     "prefix": "SiteContentCount",
-    "body": ["<mt:SiteContentCount content_type=\"${1:}\" />"]
+    "body": ["<mt:SiteContentCount content_type=\"${1:}\">"]
   },
   "mt:SiteDateLanguage": {
     "prefix": "SiteDateLanguage",
@@ -6011,7 +6011,7 @@
   },
   "mt:CreateJSON": {
     "prefix": "CreateJSON",
-    "body": ["<mt:CreateJSON include_blogs=\"${1:N}\" fields=\"${2:title,text,text_more,keywords,tags,categories}\" />"]
+    "body": ["<mt:CreateJSON include_blogs=\"${1:N}\" fields=\"${2:title,text,text_more,keywords,tags,categories}\">"]
   },
   "mt:Foreach": {
     "prefix": "Foreach",
@@ -6019,7 +6019,7 @@
   },
   "mt:NestVar": {
     "prefix": "NestVar",
-    "body": ["<mt:NestVar name=\"${1:}\" />"]
+    "body": ["<mt:NestVar name=\"${1:}\">"]
   },
   // --------------------------------------------------
   //  MovableType.net Added [ start ]
@@ -6046,7 +6046,7 @@
   },
   "mt:CustomFieldValue MT.net のみ": {
     "prefix": "CustomFieldValue",
-    "body": ["<mt:CustomFieldValue identifier=\"${1:}\" />"]
+    "body": ["<mt:CustomFieldValue identifier=\"${1:}\">"]
   },
   "mt:CustomFieldAsset MT.net のみ": {
     "prefix": "CustomFieldAsset",
@@ -6119,9 +6119,9 @@
     "prefix": "PageContentsHeader",
     "body": ["<mt:PageContentsHeader></mt:PageContentsHeader>"]
   },
-  "mt:PageContentster": {
-    "prefix": "PageContentster",
-    "body": ["<mt:PageContentster></mt:PageContentster>"]
+  "mt:PageContentsFooter": {
+    "prefix": "PageContentsFooter",
+    "body": ["<mt:PageContentsFooter></mt:PageContentsFooter>"]
   },
   "mt:PageEmpty": {
     "prefix": "PageEmpty",

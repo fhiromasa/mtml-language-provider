@@ -2,7022 +2,5618 @@
   // ==================================================
   //  MTML Completions for VS Code [start]
   // ==================================================
-
   "current_mapping=\"\"": {
     "prefix": "current_mapping=\"\"",
     "body": ["current_mapping=\"${1:1}\""]
   },
-
   "with_index=\"\"": {
     "prefix": "with_index=\"\"",
     "body": ["with_index=\"${1:1}\""]
   },
-
   "by_folder=\"\"": {
     "prefix": "by_folder=\"\"",
     "body": ["by_folder=\"${1:1}\""]
   },
-
   "by_category=\"\"": {
     "prefix": "by_category=\"\"",
     "body": ["by_category=\"${1:1}\""]
   },
-
   "by_author=\"\"": {
     "prefix": "by_author=\"\"",
     "body": ["by_author=\"${1:1}\""]
   },
-
   "with_domain=\"\"": {
     "prefix": "with_domain=\"\"",
     "body": ["with_domain=\"${1:1}\""]
   },
-
   "mt:WebsiteEntryCount": {
     "prefix": "WebsiteEntryCount",
     "body": ["<mt:WebsiteEntryCount${1} />"]
   },
-
   "mt:StatsSnippet": {
     "prefix": "StatsSnippet",
     "body": ["<mt:StatsSnippet${1} />"]
   },
-
   "mt:CanonicalURL": {
     "prefix": "CanonicalURL",
     "body": ["<mt:CanonicalURL${1} />"]
   },
-
   "mt:CanonicalLink": {
     "prefix": "CanonicalLink",
     "body": ["<mt:CanonicalLink${1} />"]
   },
-
   "mt:BlogDateLanguage": {
     "prefix": "BlogDateLanguage",
     "body": ["<mt:BlogDateLanguage${1} />"]
   },
-
   "mt:WebsiteDateLanguage": {
     "prefix": "WebsiteDateLanguage",
     "body": ["<mt:WebsiteDateLanguage${1} />"]
   },
-
   "sort_method=\"\"": {
     "prefix": "sort_method=\"\"",
     "body": ["sort_method=\"${1}\""]
   },
-
   "top=\"\"": {
     "prefix": "top=\"\"",
     "body": ["top=\"${1:1}\""]
   },
-
   "include_current=\"\"": {
     "prefix": "include_current=\"\"",
     "body": ["include_current=\"${1:1}\""]
   },
-
   "mt:IfLogin": {
     "prefix": "IfLogin",
     "body": ["<mt:IfLogin${1}>${2}</mt:IfLogin>"]
   },
-
   "exclude_blogs=\"\"": {
     "prefix": "exclude_blogs=\"\"",
     "body": ["exclude_blogs=\"${1:ID}\""]
   },
-
   "include_with_website=\"\"": {
     "prefix": "include_with_website=\"\"",
     "body": ["include_with_website=\"${1:1}\""]
   },
-
   "include_blogs=\"\"": {
     "prefix": "include_blogs=\"\"",
     "body": ["include_blogs=\"${1:ID}\""]
   },
-
   "blog_ids=\"\"": {
     "prefix": "blog_ids=\"\"",
     "body": ["blog_ids=\"${1:ID}\""]
   },
-
   "variable=\"\"": {
     "prefix": "variable=\"\"",
     "body": ["variable=\"${1:value}\""]
   },
-
   "var=\"\"": {
     "prefix": "var=\"\"",
     "body": ["var=\"${1:variable}\""]
   },
-
   "value=\"\"": {
     "prefix": "value=\"\"",
     "body": ["value=\"${1:}\""]
   },
-
   "utc=\"\"": {
     "prefix": "utc=\"\"",
     "body": ["utc=\"${1:1}\""]
   },
-
   "unique=\"\"": {
     "prefix": "unique=\"\"",
     "body": ["unique=\"${1:1}\""]
   },
-
   "type=\"\"": {
     "prefix": "type=\"\"",
     "body": ["type=\"${1:}\""]
   },
-
   "trim_spaces=\"\"": {
     "prefix": "trim_spaces=\"\"",
     "body": ["trim_spaces=\"${1:1}\""]
   },
-
   "tags=\"\"": {
     "prefix": "tags=\"\"",
     "body": ["tags=\"${1:tag}\""]
   },
-
   "tag=\"\"": {
     "prefix": "tag=\"\"",
     "body": ["tag=\"${1:tag}\""]
   },
-
   "stream=\"\"": {
     "prefix": "stream=\"\"",
     "body": ["stream=\"${1:stream}\""]
   },
-
   "ssi=\"\"": {
     "prefix": "ssi=\"\"",
     "body": ["ssi=\"${1:1}\""]
   },
-
   "square=\"\"": {
     "prefix": "square=\"\"",
     "body": ["square=\"${1:1}\""]
   },
-
   "sort=\"\"": {
     "prefix": "sort=\"\"",
     "body": ["sort=\"${1:created}\""]
   },
-
   "sort_order=\"\"": {
     "prefix": "sort_order=\"\"",
     "body": ["sort_order=\"${1:ascend}\""]
   },
-
   "sort_by=\"\"": {
     "prefix": "sort_by=\"\"",
     "body": ["sort_by=\"${1}\""]
   },
-
   "singular=\"\"": {
     "prefix": "singular=\"\"",
     "body": ["singular=\"${1:text}\""]
   },
-
   "service=\"\"": {
     "prefix": "service=\"\"",
     "body": ["service=\"${1:service_id}\""]
   },
-
   "script=\"\"": {
     "prefix": "script=\"\"",
     "body": ["script=\"${1:function}\""]
   },
-
   "recently_commented_on=\"\"": {
     "prefix": "recently_commented_on=\"\"",
     "body": ["recently_commented_on=\"${1:N}\""]
   },
-
   "range_incl=\"\"": {
     "prefix": "range_incl=\"\"",
     "body": ["range_incl=\"${1:}\""]
   },
-
   "preserve_spaces=\"\"": {
     "prefix": "preserve_spaces=\"\"",
     "body": ["preserve_spaces=\"${1:1}\""]
   },
-
   "prepend=\"\"": {
     "prefix": "prepend=\"\"",
     "body": ["prepend=\"${1:1}\""]
   },
-
   "plural=\"\"": {
     "prefix": "plural=\"\"",
     "body": ["plural=\"${1:text}\""]
   },
-
   "period=\"\"": {
     "prefix": "period=\"\"",
     "body": ["period=\"${1:Sec}\""]
   },
-
   "parent=\"\"": {
     "prefix": "parent=\"\"",
     "body": ["parent=\"${1:1}\""]
   },
-
   "offset=\"\"": {
     "prefix": "offset=\"\"",
     "body": ["offset=\"${1:N}\""]
   },
-
   "object_type=\"\"": {
     "prefix": "object_type=\"\"",
     "body": ["object_type=\"${1}\""]
   },
-
   "object_id=\"\"": {
     "prefix": "object_id=\"\"",
     "body": ["object_id=\"${1:id}\""]
   },
-
   "object_ds=\"\"": {
     "prefix": "object_ds=\"\"",
     "body": ["object_ds=\"${1}\""]
   },
-
   "none=\"\"": {
     "prefix": "none=\"\"",
     "body": ["none=\"${1:text}\""]
   },
-
   "no_folder=\"\"": {
     "prefix": "no_folder=\"\"",
     "body": ["no_folder=\"${1:1}\""]
   },
-
   "namespace=\"\"": {
     "prefix": "namespace=\"\"",
     "body": ["namespace=\"${1}\""]
   },
-
   "name=\"\"": {
     "prefix": "name=\"\"",
     "body": ["name=\"${1}\""]
   },
-
   "method=\"\"": {
     "prefix": "method=\"\"",
     "body": ["method=\"${1:post}\""]
   },
-
   "limit=\"\"": {
     "prefix": "limit=\"\"",
     "body": ["limit=\"${1:N}\""]
   },
-
   "lastn=\"\"": {
     "prefix": "lastn=\"\"",
     "body": ["lastn=\"${1:N}\""]
   },
-
   "key=\"\"": {
     "prefix": "key=\"\"",
     "body": ["key=\"${1:cache_key}\""]
   },
-
   "include_subfolders=\"\"": {
     "prefix": "include_subfolders=\"\"",
     "body": ["include_subfolders=\"${1:1}\""]
   },
-
   "identifier=\"\"": {
     "prefix": "identifier=\"\"",
     "body": ["identifier=\"${1:index_template_identifier}\""]
   },
-
   "id=\"\"": {
     "prefix": "id=\"\"",
     "body": ["id=\"${1:id}\""]
   },
-
   "html_tag=\"\"": {
     "prefix": "html_tag=\"\"",
     "body": ["html_tag=\"${1:element}\""]
   },
-
   "head_offset=\"\"": {
     "prefix": "head_offset=\"\"",
     "body": ["head_offset=\"${1:N}\""]
   },
-
   "glue=\"\"": {
     "prefix": "glue=\"\"",
     "body": ["glue=\"${1:}\""]
   },
-
   "global=\"\"": {
     "prefix": "global=\"\"",
     "body": ["global=\"${1:1}\""]
   },
-
   "format=\"\"": {
     "prefix": "format=\"\"",
     "body": ["format=\"${1:format}\""]
   },
-
   "format_name=\"\"": {
     "prefix": "format_name=\"\"",
     "body": ["format_name=\"${1:format_name}\""]
   },
-
   "folder=\"\"": {
     "prefix": "folder=\"\"",
     "body": ["folder=\"${1:folder}\""]
   },
-
   "flavor=\"\"": {
     "prefix": "flavor=\"\"",
     "body": ["flavor=\"${1:xhtml2}\""]
   },
-
   "field:customfieldbasename=\"\"": {
     "prefix": "field:customfieldbasename=\"\"",
     "body": ["field:customfieldbasename=\"${1:}\""]
   },
-
   "enctype=\"\"": {
     "prefix": "enctype=\"\"",
     "body": ["enctype=\"${1:enctype}\""]
   },
-
   "element_id=\"\"": {
     "prefix": "element_id=\"\"",
     "body": ["element_id=\"${1:id}\""]
   },
-
   "display_names=\"\"": {
     "prefix": "display_names=\"\"",
     "body": ["display_names=\"${1:display_name}\""]
   },
-
   "display_name=\"\"": {
     "prefix": "display_name=\"\"",
     "body": ["display_name=\"${1:display_name}\""]
   },
-
   "direction=\"\"": {
     "prefix": "direction=\"\"",
     "body": ["direction=\"${1:ascend}\""]
   },
-
   "days=\"\"": {
     "prefix": "days=\"\"",
     "body": ["days=\"${1:N}\""]
   },
-
   "cache=\"\"": {
     "prefix": "cache=\"\"",
     "body": ["cache=\"${1:1}\""]
   },
-
   "cache_prefix=\"\"": {
     "prefix": "cache_prefix=\"\"",
     "body": ["cache_prefix=\"${1:key}\""]
   },
-
   "cache_key=\"\"": {
     "prefix": "cache_key=\"\"",
     "body": ["cache_key=\"${1:cache_key}\""]
   },
-
   "by=\"\"": {
     "prefix": "by=\"\"",
     "body": ["by=\"${1:action}\""]
   },
-
   "by_user=\"\"": {
     "prefix": "by_user=\"\"",
     "body": ["by_user=\"${1:1}\""]
   },
-
   "by_blog=\"\"": {
     "prefix": "by_blog=\"\"",
     "body": ["by_blog=\"${1:1}\""]
   },
-
   "blog_id=\"\"": {
     "prefix": "blog_id=\"\"",
     "body": ["blog_id=\"${1:id}\""]
   },
-
   "authors=\"\"": {
     "prefix": "authors=\"\"",
     "body": ["authors=\"${1:author_user_name}\""]
   },
-
   "author=\"\"": {
     "prefix": "author=\"\"",
     "body": ["author=\"${1:author_user_name}\""]
   },
-
   "author_ids=\"\"": {
     "prefix": "author_ids=\"\"",
     "body": ["author_ids=\"${1:author_id}\""]
   },
-
   "author_id=\"\"": {
     "prefix": "author_id=\"\"",
     "body": ["author_id=\"${1:id}\""]
   },
-
   "append=\"\"": {
     "prefix": "append=\"\"",
     "body": ["append=\"${1:1}\""]
   },
-
   "action=\"\"": {
     "prefix": "action=\"\"",
     "body": ["action=\"${1:url}\""]
   },
-
   "__odd__": {
     "prefix": "__odd__",
     "body": ["__odd__"]
   },
-
   "__last__": {
     "prefix": "__last__",
     "body": ["__last__"]
   },
-
   "__first__": {
     "prefix": "__first__",
     "body": ["__first__"]
   },
-
   "__even__": {
     "prefix": "__even__",
     "body": ["__even__"]
   },
-
   "__counter__": {
     "prefix": "__counter__",
     "body": ["__counter__"]
   },
-
   "escape=\"\"": {
     "prefix": "escape=\"\"",
     "body": ["escape=\"mail\""]
   },
-
   "mt:AccessibleBlock": {
     "prefix": "AccessibleBlock",
     "body": ["<mt:AccessibleBlock${1}>${2}</mt:AccessibleBlock>"]
   },
-
   "mtml": {
     "prefix": "mtml",
     "body": ["MTML tag=\"${1:/}mt:${2:TagName}\"${3: params=\"\"}>"]
   },
-
   "mt:If else": {
     "prefix": "If else",
     "body": ["<mt:If name=\"${1:VarName}\">${2}<mt:Else>${3}</mt:If>"]
   },
-
   "regex_replace=\"//\",\"\"": {
     "prefix": "regex_replace=\"//\",\"\"",
     "body": ["regex_replace=\"/${1:RegExp}/\",\"${2:Replacement}\""]
   },
-
   "mt:GroupBlogsWebsitester": {
     "prefix": "GroupBlogsWebsitester",
     "body": ["<mt:GroupBlogsWebsitester>${1}</mt:GroupBlogsWebsitester>"]
   },
-
   "mt:GroupBlogsWebsitesHeader": {
     "prefix": "GroupBlogsWebsitesHeader",
     "body": ["<mt:GroupBlogsWebsitesHeader>${1}</mt:GroupBlogsWebsitesHeader>"]
   },
-
   "mt:GroupBlogsWebsites": {
     "prefix": "GroupBlogsWebsites",
     "body": ["<mt:GroupBlogsWebsites${1: group=\"\"}${2: group_id=\"\"}${3: blog_id=\"\"}>${4}</mt:GroupBlogsWebsites>"]
   },
-
   "mt:GroupWebsitester": {
     "prefix": "GroupWebsitester",
     "body": ["<mt:GroupWebsitester>${1}</mt:GroupWebsitester>"]
   },
-
   "mt:GroupWebsitesHeader": {
     "prefix": "GroupWebsitesHeader",
     "body": ["<mt:GroupWebsitesHeader>${1}</mt:GroupWebsitesHeader>"]
   },
-
   "mt:GroupWebsites": {
     "prefix": "GroupWebsites",
     "body": ["<mt:GroupWebsites${1: group=\"\"}${2: group_id=\"\"}${3: blog_id=\"\"}>${4}</mt:GroupWebsites>"]
   },
-
   "mt:GroupBlogster": {
     "prefix": "GroupBlogster",
     "body": ["<mt:GroupBlogster>${1}</mt:GroupBlogster>"]
   },
-
   "mt:GroupBlogsHeader": {
     "prefix": "GroupBlogsHeader",
     "body": ["<mt:GroupBlogsHeader>${1}</mt:GroupBlogsHeader>"]
   },
-
   "mt:GroupBlogs": {
     "prefix": "GroupBlogs",
     "body": ["<mt:GroupBlogs${1: group=\"\"}${2: group_id=\"\"}${3: blog_id=\"\"}>${4}</mt:GroupBlogs>"]
   },
-
   "mt:GroupCategoriesFolderster": {
     "prefix": "GroupCategoriesFolderster",
     "body": ["<mt:GroupCategoriesFolderster>${1}</mt:GroupCategoriesFolderster>"]
   },
-
   "mt:GroupCategoriesFoldersHeader": {
     "prefix": "GroupCategoriesFoldersHeader",
     "body": ["<mt:GroupCategoriesFoldersHeader>${1}</mt:GroupCategoriesFoldersHeader>"]
   },
-
   "mt:GroupCategoriesFolders": {
     "prefix": "GroupCategoriesFolders",
     "body": ["<mt:GroupCategoriesFolders${1: group=\"\"}${2: group_id=\"\"}${3: blog_id=\"\"}>${4}</mt:GroupCategoriesFolders>"]
   },
-
   "mt:GroupFolderster": {
     "prefix": "GroupFolderster",
     "body": ["<mt:GroupFolderster>${1}</mt:GroupFolderster>"]
   },
-
   "mt:GroupFoldersHeader": {
     "prefix": "GroupFoldersHeader",
     "body": ["<mt:GroupFoldersHeader>${1}</mt:GroupFoldersHeader>"]
   },
-
   "mt:GroupFolders": {
     "prefix": "GroupFolders",
     "body": ["<mt:GroupFolders${1: group=\"\"}${2: group_id=\"\"}${3: blog_id=\"\"}>${4}</mt:GroupFolders>"]
   },
-
   "mt:GroupCategoriester": {
     "prefix": "GroupCategoriester",
     "body": ["<mt:GroupCategoriester>${1}</mt:GroupCategoriester>"]
   },
-
   "mt:GroupCategoriesHeader": {
     "prefix": "GroupCategoriesHeader",
     "body": ["<mt:GroupCategoriesHeader>${1}</mt:GroupCategoriesHeader>"]
   },
-
   "mt:GroupCategories": {
     "prefix": "GroupCategories",
     "body": ["<mt:GroupCategories${1: group=\"\"}${2: group_id=\"\"}${3: blog_id=\"\"}>${4}</mt:GroupCategories>"]
   },
-
   "mt:GroupEntriesPagester": {
     "prefix": "GroupEntriesPagester",
     "body": ["<mt:GroupEntriesPagester>${1}</mt:GroupEntriesPagester>"]
   },
-
   "mt:GroupEntriesPagesHeader": {
     "prefix": "GroupEntriesPagesHeader",
     "body": ["<mt:GroupEntriesPagesHeader>${1}</mt:GroupEntriesPagesHeader>"]
   },
-
   "mt:GroupEntriesPages": {
     "prefix": "GroupEntriesPages",
     "body": ["<mt:GroupEntriesPages${1: group=\"\"}${2: group_id=\"\"}${3: blog_id=\"\"}>${4}</mt:GroupEntriesPages>"]
   },
-
   "mt:GroupPagester": {
     "prefix": "GroupPagester",
     "body": ["<mt:GroupPagester>${1}</mt:GroupPagester>"]
   },
-
   "mt:GroupPagesHeader": {
     "prefix": "GroupPagesHeader",
     "body": ["<mt:GroupPagesHeader>${1}</mt:GroupPagesHeader>"]
   },
-
   "mt:GroupPages": {
     "prefix": "GroupPages",
     "body": ["<mt:GroupPages${1: group=\"\"}${2: group_id=\"\"}${3: blog_id=\"\"}>${4}</mt:GroupPages>"]
   },
-
   "mt:GroupEntriester": {
     "prefix": "GroupEntriester",
     "body": ["<mt:GroupEntriester>${1}</mt:GroupEntriester>"]
   },
-
   "mt:GroupEntriesHeader": {
     "prefix": "GroupEntriesHeader",
     "body": ["<mt:GroupEntriesHeader>${1}</mt:GroupEntriesHeader>"]
   },
-
   "mt:GroupEntries": {
     "prefix": "GroupEntries",
     "body": ["<mt:GroupEntries${1: group=\"\"}${2: group_id=\"\"}${3: blog_id=\"\"}>${4}</mt:GroupEntries>"]
   },
-
   "zero_pad=\"\"": {
     "prefix": "zero_pad=\"\"",
     "body": ["zero_pad=\"${1:N}\""]
   },
-
   "wrap_text=\"\"": {
     "prefix": "wrap_text=\"\"",
     "body": ["wrap_text=\"${1:N}\""]
   },
-
   "upper_case=\"\"": {
     "prefix": "upper_case=\"\"",
     "body": ["upper_case=\"1\""]
   },
-
   "trim_to=\"\"": {
     "prefix": "trim_to=\"\"",
     "body": ["trim_to=\"${1:N}\""]
   },
-
   "trim=\"\"": {
     "prefix": "trim=\"\"",
     "body": ["trim=\"1\""]
   },
-
   "strip_tags=\"\"": {
     "prefix": "strip_tags=\"\"",
     "body": ["strip_tags=\"1\""]
   },
-
   "strip_linefeeds=\"\"": {
     "prefix": "strip_linefeeds=\"\"",
     "body": ["strip_linefeeds=\"1\""]
   },
-
   "strip=\"\"": {
     "prefix": "strip=\"\"",
     "body": ["strip=\"${1}\""]
   },
-
   "string_format=\"\"": {
     "prefix": "string_format=\"\"",
     "body": ["string_format=\"${1}\""]
   },
-
   "sprintf=\"\"": {
     "prefix": "sprintf=\"\"",
     "body": ["sprintf=\"${1}\""]
   },
-
   "spam_protect=\"\"": {
     "prefix": "spam_protect=\"\"",
     "body": ["spam_protect=\"1\""]
   },
-
   "spacify=\"\"": {
     "prefix": "spacify=\"\"",
     "body": ["spacify=\"${1}\""]
   },
-
   "space_pad=\"\"": {
     "prefix": "space_pad=\"\"",
     "body": ["space_pad=\"${1:N}\""]
   },
-
   "smarty_pants=\"\"": {
     "prefix": "smarty_pants=\"\"",
     "body": ["smarty_pants=\"1\""]
   },
-
   "smart_quotes=\"\"": {
     "prefix": "smart_quotes=\"\"",
     "body": ["smart_quotes=\"1\""]
   },
-
   "smart_ellipses=\"\"": {
     "prefix": "smart_ellipses=\"\"",
     "body": ["smart_ellipses=\"1\""]
   },
-
   "smart_dashes=\"\"": {
     "prefix": "smart_dashes=\"\"",
     "body": ["smart_dashes=\"1\""]
   },
-
   "setvar=\"\"": {
     "prefix": "setvar=\"\"",
     "body": ["setvar=\"${1}\""]
   },
-
   "sanitize=\"\"": {
     "prefix": "sanitize=\"\"",
     "body": ["sanitize=\"${1:1}\""]
   },
-
   "rtrim=\"\"": {
     "prefix": "rtrim=\"\"",
     "body": ["rtrim=\"1\""]
   },
-
   "replace=\"\"": {
     "prefix": "replace=\"\"",
     "body": ["replace=\"${1}\""]
   },
-
   "remove_html=\"\"": {
     "prefix": "remove_html=\"\"",
     "body": ["remove_html=\"1\""]
   },
-
   "numify=\"\"": {
     "prefix": "numify=\"\"",
     "body": ["numify=\"1\""]
   },
-
   "nofollowfy=\"\"": {
     "prefix": "nofollowfy=\"\"",
     "body": ["nofollowfy=\"1\""]
   },
-
   "nl2br=\"\"": {
     "prefix": "nl2br=\"\"",
     "body": ["nl2br=\"${1:xhtml}\""]
   },
-
   "mteval=\"\"": {
     "prefix": "mteval=\"\"",
     "body": ["mteval=\"1\""]
   },
-
   "ltrim=\"\"": {
     "prefix": "ltrim=\"\"",
     "body": ["ltrim=\"1\""]
   },
-
   "lower_case=\"\"": {
     "prefix": "lower_case=\"\"",
     "body": ["lower_case=\"1\""]
   },
-
   "indent=\"\"": {
     "prefix": "indent=\"\"",
     "body": ["indent=\"1\""]
   },
-
   "filters=\"\"": {
     "prefix": "filters=\"\"",
     "body": ["filters=\"${1}\""]
   },
-
   "encode_xml=\"\"": {
     "prefix": "encode_xml=\"\"",
     "body": ["encode_xml=\"1\""]
   },
-
   "encode_url=\"\"": {
     "prefix": "encode_url=\"\"",
     "body": ["encode_url=\"1\""]
   },
-
   "encode_sha1=\"\"": {
     "prefix": "encode_sha1=\"\"",
     "body": ["encode_sha1=\"1\""]
   },
-
   "encode_php=\"\"": {
     "prefix": "encode_php=\"\"",
     "body": ["encode_php=\"1\""]
   },
-
   "encode_js=\"\"": {
     "prefix": "encode_js=\"\"",
     "body": ["encode_js=\"1\""]
   },
-
   "dirify=\"\"": {
     "prefix": "dirify=\"\"",
     "body": ["dirify=\"1\""]
   },
-
   "decode_xml=\"\"": {
     "prefix": "decode_xml=\"\"",
     "body": ["decode_xml=\"1\""]
   },
-
   "decode_html=\"\"": {
     "prefix": "decode_html=\"\"",
     "body": ["decode_html=\"1\""]
   },
-
   "count_words=\"\"": {
     "prefix": "count_words=\"\"",
     "body": ["count_words=\"${1}\""]
   },
-
   "count_paragraphs=\"\"": {
     "prefix": "count_paragraphs=\"\"",
     "body": ["count_paragraphs=\"1\""]
   },
-
   "count_characters=\"\"": {
     "prefix": "count_characters=\"\"",
     "body": ["count_characters=\"1\""]
   },
-
   "cat=\"\"": {
     "prefix": "cat=\"\"",
     "body": ["cat=\"${1}\""]
   },
-
   "capitalize=\"\"": {
     "prefix": "capitalize=\"\"",
     "body": ["capitalize=\"1\""]
   },
-
   "mt:ViewerScript": {
     "prefix": "ViewerScript",
     "body": ["<mt:ViewerScript${1} />"]
   },
-
   "mt:IfEnableEdit": {
     "prefix": "IfEnableEdit",
     "body": ["<mt:IfEnableEdit${1}>${2}</mt:IfEnableEdit>"]
   },
-
   "mt:ViewerUserContext": {
     "prefix": "ViewerUserContext",
     "body": ["<mt:ViewerUserContext${1}>${2}</mt:ViewerUserContext>"]
   },
-
   "mt:CookieDump": {
     "prefix": "CookieDump",
     "body": ["<mt:CookieDump${1} />"]
   },
-
   "mt:VarDump": {
     "prefix": "VarDump",
     "body": ["<mt:VarDump${1} />"]
   },
-
   "mt:EnvDump": {
     "prefix": "EnvDump",
     "body": ["<mt:EnvDump${1} />"]
   },
-
   "mt:QueryDump": {
     "prefix": "QueryDump",
     "body": ["<mt:QueryDump${1} />"]
   },
-
   "trimj_to=\"\"": {
     "prefix": "trimj_to=\"\"",
     "body": ["trimj_to=\"${1}\""]
   },
-
   "mt:EntryTemplateName": {
     "prefix": "EntryTemplateName",
     "body": ["<mt:EntryTemplateName${1} />"]
   },
-
   "mt:TemplateSelector": {
     "prefix": "TemplateSelector",
     "body": ["<mt:TemplateSelector${1}>${2}</mt:TemplateSelector>"]
   },
-
   "mt:IfTemplateSelectorBlock": {
     "prefix": "IfTemplateSelectorBlock",
     "body": ["<mt:IfTemplateSelectorBlock${1}>${2}</mt:IfTemplateSelectorBlock>"]
   },
-
   "mt:IfTemplateSelector": {
     "prefix": "IfTemplateSelector",
     "body": ["<mt:IfTemplateSelector${1}>${2}</mt:IfTemplateSelector>"]
   },
-
   "mt:TemplateOutput": {
     "prefix": "TemplateOutput",
     "body": ["<mt:TemplateOutput${1} />"]
   },
-
   "mt:TemplateGroupFieldScope": {
     "prefix": "TemplateGroupFieldScope",
     "body": ["<mt:TemplateGroupFieldScope${1} />"]
   },
-
   "mt:TemplateText": {
     "prefix": "TemplateText",
     "body": ["<mt:TemplateText${1} />"]
   },
-
   "mt:TemplateName": {
     "prefix": "TemplateName",
     "body": ["<mt:TemplateName${1} />"]
   },
-
   "mt:Templatester": {
     "prefix": "Templatester",
     "body": ["<mt:Templatester>${1}</mt:Templatester>"]
   },
-
   "mt:Templates": {
     "prefix": "Templates",
     "body": ["<mt:Templates${1}>${2}</mt:Templates>"]
   },
-
   "mt:TemplatesHeader": {
     "prefix": "TemplatesHeader",
     "body": ["<mt:TemplatesHeader>${1}</mt:TemplatesHeader>"]
   },
-
   "mt:IfNotSent": {
     "prefix": "IfNotSent",
     "body": ["<mt:IfNotSent${1}>${2}</mt:IfNotSent>"]
   },
-
   "mt:SetTagContext": {
     "prefix": "SetTagContext",
     "body": ["<mt:SetTagContext${1}>${2}</mt:SetTagContext>"]
   },
-
   "mt:SidebarAssetCount": {
     "prefix": "SidebarAssetCount",
     "body": ["<mt:SidebarAssetCount${1} />"]
   },
-
   "mt:IfAuthorCanDropBox": {
     "prefix": "IfAuthorCanDropBox",
     "body": ["<mt:IfAuthorCanDropBox${1}>${2}</mt:IfAuthorCanDropBox>"]
   },
-
   "mt:SearchEntryField": {
     "prefix": "SearchEntryField",
     "body": ["<mt:SearchEntryField${1}>${2}</mt:SearchEntryField>"]
   },
-
   "mt:RequestCache": {
     "prefix": "RequestCache",
     "body": ["<mt:RequestCache${1}>${2}</mt:RequestCache>"]
   },
-
   "mt:RebuildIndexById": {
     "prefix": "RebuildIndexById",
     "body": ["<mt:RebuildIndexById${1} />"]
   },
-
   "mt:RebuildBlog": {
     "prefix": "RebuildBlog",
     "body": ["<mt:RebuildBlog${1} />"]
   },
-
   "mt:RebuildIndexByBlogId": {
     "prefix": "RebuildIndexByBlogId",
     "body": ["<mt:RebuildIndexByBlogId${1} />"]
   },
-
   "highlight=\"\"": {
     "prefix": "highlight=\"\"",
     "body": ["highlight=\"${1}\""]
   },
-
   "hilight=\"\"": {
     "prefix": "hilight=\"\"",
     "body": ["hilight=\"${1}\""]
   },
-
   "is_draft=\"\"": {
     "prefix": "is_draft=\"\"",
     "body": ["is_draft=\"${1}\""]
   },
-
   "mt:EstResultEntryBlogID": {
     "prefix": "EstResultEntryBlogID",
     "body": ["<mt:EstResultEntryBlogID${1} />"]
   },
-
   "mt:EstCmdPath": {
     "prefix": "EstCmdPath",
     "body": ["<mt:EstCmdPath${1} />"]
   },
-
   "mt:EstDbPath": {
     "prefix": "EstDbPath",
     "body": ["<mt:EstDbPath${1} />"]
   },
-
   "mt:EstResultURL": {
     "prefix": "EstResultURL",
     "body": ["<mt:EstResultURL${1} />"]
   },
-
   "mt:EstResultExcerpt": {
     "prefix": "EstResultExcerpt",
     "body": ["<mt:EstResultExcerpt${1} />"]
   },
-
   "mt:EstResultEntryID": {
     "prefix": "EstResultEntryID",
     "body": ["<mt:EstResultEntryID${1} />"]
   },
-
   "mt:EstResultAttribute": {
     "prefix": "EstResultAttribute",
     "body": ["<mt:EstResultAttribute${1} />"]
   },
-
   "mt:EstraierScript": {
     "prefix": "EstraierScript",
     "body": ["<mt:EstraierScript${1} />"]
   },
-
   "mt:EstResultTitle": {
     "prefix": "EstResultTitle",
     "body": ["<mt:EstResultTitle${1} />"]
   },
-
   "mt:EstResultDate": {
     "prefix": "EstResultDate",
     "body": ["<mt:EstResultDate${1} />"]
   },
-
   "mt:EstResultCount": {
     "prefix": "EstResultCount",
     "body": ["<mt:EstResultCount${1} />"]
   },
-
   "mt:EstraierTarget": {
     "prefix": "EstraierTarget",
     "body": ["<mt:EstraierTarget${1}>${2}</mt:EstraierTarget>"]
   },
-
   "mt:EstResultPager": {
     "prefix": "EstResultPager",
     "body": ["<mt:EstResultPager${1}>${2}</mt:EstResultPager>"]
   },
-
   "mt:EstResultPagerHeader": {
     "prefix": "EstResultPagerHeader",
     "body": ["<mt:EstResultPagerHeader>${1}</mt:EstResultPagerHeader>"]
   },
-
   "mt:EstraierResults": {
     "prefix": "EstraierResults",
     "body": ["<mt:EstraierResults${1}>${2}</mt:EstraierResults>"]
   },
-
   "mt:EstResultPagerter": {
     "prefix": "EstResultPagerter",
     "body": ["<mt:EstResultPagerter>${1}</mt:EstResultPagerter>"]
   },
-
   "mt:IfEstResultNext": {
     "prefix": "IfEstResultNext",
     "body": ["<mt:IfEstResultNext${1}>${2}</mt:IfEstResultNext>"]
   },
-
   "mt:IfEstResultMatch": {
     "prefix": "IfEstResultMatch",
     "body": ["<mt:IfEstResultMatch${1}>${2}</mt:IfEstResultMatch>"]
   },
-
   "mt:IfEstResultPrev": {
     "prefix": "IfEstResultPrev",
     "body": ["<mt:IfEstResultPrev${1}>${2}</mt:IfEstResultPrev>"]
   },
-
   "mt:EstResultEntryCtx": {
     "prefix": "EstResultEntryCtx",
     "body": ["<mt:EstResultEntryCtx${1}>${2}</mt:EstResultEntryCtx>"]
   },
-
   "mt:EstraierSuffix": {
     "prefix": "EstraierSuffix",
     "body": ["<mt:EstraierSuffix${1}>${2}</mt:EstraierSuffix>"]
   },
-
   "mt:EstResultHeader": {
     "prefix": "EstResultHeader",
     "body": ["<mt:EstResultHeader>${1}</mt:EstResultHeader>"]
   },
-
   "mt:EstResultter": {
     "prefix": "EstResultter",
     "body": ["<mt:EstResultter>${1}</mt:EstResultter>"]
   },
-
   "mt:EstraierMeta": {
     "prefix": "EstraierMeta",
     "body": ["<mt:EstraierMeta${1}>${2}</mt:EstraierMeta>"]
   },
-
   "mt:EstraierBlock": {
     "prefix": "EstraierBlock",
     "body": ["<mt:EstraierBlock${1}>${2}</mt:EstraierBlock>"]
   },
-
   "mt:EstResultBlogCtx": {
     "prefix": "EstResultBlogCtx",
     "body": ["<mt:EstResultBlogCtx${1}>${2}</mt:EstResultBlogCtx>"]
   },
-
   "mt:LatestRevisionValue": {
     "prefix": "LatestRevisionValue",
     "body": ["<mt:LatestRevisionValue${1} />"]
   },
-
   "mt:RevisionCount": {
     "prefix": "RevisionCount",
     "body": ["<mt:RevisionCount${1} />"]
   },
-
   "set_loop=\"\"": {
     "prefix": "set_loop=\"\"",
     "body": ["set_loop=\"${1}\""]
   },
-
   "translate_templatized=\"\"": {
     "prefix": "translate_templatized=\"\"",
     "body": ["translate_templatized=\"${1}\""]
   },
-
   "table2tag=\"\"": {
     "prefix": "table2tag=\"\"",
     "body": ["table2tag=\"${1}\""]
   },
-
   "strip_emptylines=\"\"": {
     "prefix": "strip_emptylines=\"\"",
     "body": ["strip_emptylines=\"${1}\""]
   },
-
   "tab2table=\"\"": {
     "prefix": "tab2table=\"\"",
     "body": ["tab2table=\"${1}\""]
   },
-
   "mt:TableColumnValue": {
     "prefix": "TableColumnValue",
     "body": ["<mt:TableColumnValue${1} />"]
   },
-
   "mt:TabSplitLine": {
     "prefix": "TabSplitLine",
     "body": ["<mt:TabSplitLine${1} />"]
   },
-
   "mt:BlogIsMembersOnly": {
     "prefix": "BlogIsMembersOnly",
     "body": ["<mt:BlogIsMembersOnly${1} />"]
   },
-
   "mt:ThisURL": {
     "prefix": "ThisURL",
     "body": ["<mt:ThisURL${1} />"]
   },
-
   "mt:PluginSetting": {
     "prefix": "PluginSetting",
     "body": ["<mt:PluginSetting${1} />"]
   },
-
   "mt:PowerCMSEdition": {
     "prefix": "PowerCMSEdition",
     "body": ["<mt:PowerCMSEdition${1} />"]
   },
-
   "mt:CGIMaxUpload": {
     "prefix": "CGIMaxUpload",
     "body": ["<mt:CGIMaxUpload${1} />"]
   },
-
   "mt:PowerCMSVersion": {
     "prefix": "PowerCMSVersion",
     "body": ["<mt:PowerCMSVersion${1} />"]
   },
-
   "mt:EntryStatus": {
     "prefix": "EntryStatus",
     "body": ["<mt:EntryStatus${1} />"]
   },
-
   "mt:CMSParam": {
     "prefix": "CMSParam",
     "body": ["<mt:CMSParam${1} />"]
   },
-
   "mt:PowerCMSFilesDir": {
     "prefix": "PowerCMSFilesDir",
     "body": ["<mt:PowerCMSFilesDir${1} />"]
   },
-
   "mt:IfModule": {
     "prefix": "IfModule",
     "body": ["<mt:IfModule${1}>${2}</mt:IfModule>"]
   },
-
   "mt:IfPerlModule": {
     "prefix": "IfPerlModule",
     "body": ["<mt:IfPerlModule${1}>${2}</mt:IfPerlModule>"]
   },
-
   "mt:TabSplitDatas": {
     "prefix": "TabSplitDatas",
     "body": ["<mt:TabSplitDatas${1}>${2}</mt:TabSplitDatas>"]
   },
-
   "mt:IfUserRole": {
     "prefix": "IfUserRole",
     "body": ["<mt:IfUserRole${1}>${2}</mt:IfUserRole>"]
   },
-
   "mt:IfCMSParam": {
     "prefix": "IfCMSParam",
     "body": ["<mt:IfCMSParam${1}>${2}</mt:IfCMSParam>"]
   },
-
   "mt:IfComponent": {
     "prefix": "IfComponent",
     "body": ["<mt:IfComponent${1}>${2}</mt:IfComponent>"]
   },
-
   "mt:IfPowerCMSFiles": {
     "prefix": "IfPowerCMSFiles",
     "body": ["<mt:IfPowerCMSFiles${1}>${2}</mt:IfPowerCMSFiles>"]
   },
-
   "mt:CMSContext": {
     "prefix": "CMSContext",
     "body": ["<mt:CMSContext${1}>${2}</mt:CMSContext>"]
   },
-
   "mt:TabSplitData": {
     "prefix": "TabSplitData",
     "body": ["<mt:TabSplitData${1}>${2}</mt:TabSplitData>"]
   },
-
   "mt:IfEntryIsinCategory": {
     "prefix": "IfEntryIsinCategory",
     "body": ["<mt:IfEntryIsinCategory${1}>${2}</mt:IfEntryIsinCategory>"]
   },
-
   "mt:IfUserCan": {
     "prefix": "IfUserCan",
     "body": ["<mt:IfUserCan${1}>${2}</mt:IfUserCan>"]
   },
-
   "mt:IfPlugin": {
     "prefix": "IfPlugin",
     "body": ["<mt:IfPlugin${1}>${2}</mt:IfPlugin>"]
   },
-
   "mt:IfCMS": {
     "prefix": "IfCMS",
     "body": ["<mt:IfCMS${1}>${2}</mt:IfCMS>"]
   },
-
   "mt:IfSecure": {
     "prefix": "IfSecure",
     "body": ["<mt:IfSecure${1}>${2}</mt:IfSecure>"]
   },
-
   "mt:PagerCurrent": {
     "prefix": "PagerCurrent",
     "body": ["<mt:PagerCurrent${1} />"]
   },
-
   "mt:PagerLink": {
     "prefix": "PagerLink",
     "body": ["<mt:PagerLink${1} />"]
   },
-
   "mt:PagerPrevLink": {
     "prefix": "PagerPrevLink",
     "body": ["<mt:PagerPrevLink${1} />"]
   },
-
   "mt:PagerTotal": {
     "prefix": "PagerTotal",
     "body": ["<mt:PagerTotal${1} />"]
   },
-
   "mt:PagerCounter": {
     "prefix": "PagerCounter",
     "body": ["<mt:PagerCounter${1} />"]
   },
-
   "mt:PagerNextLink": {
     "prefix": "PagerNextLink",
     "body": ["<mt:PagerNextLink${1} />"]
   },
-
   "mt:IfPagerHeader": {
     "prefix": "IfPagerHeader",
     "body": ["<mt:IfPagerHeader>${1}</mt:IfPagerHeader>"]
   },
-
   "mt:IfPagerCurrent": {
     "prefix": "IfPagerCurrent",
     "body": ["<mt:IfPagerCurrent${1}>${2}</mt:IfPagerCurrent>"]
   },
-
   "mt:PagerBlock": {
     "prefix": "PagerBlock",
     "body": ["<mt:PagerBlock${1}>${2}</mt:PagerBlock>"]
   },
-
   "mt:IfPagerter": {
     "prefix": "IfPagerter",
     "body": ["<mt:IfPagerter>${1}</mt:IfPagerter>"]
   },
-
   "mt:IfPagerPrev": {
     "prefix": "IfPagerPrev",
     "body": ["<mt:IfPagerPrev${1}>${2}</mt:IfPagerPrev>"]
   },
-
   "mt:Pager": {
     "prefix": "Pager",
     "body": ["<mt:Pager${1}>${2}</mt:Pager>"]
   },
-
   "mt:IfPagerNext": {
     "prefix": "IfPagerNext",
     "body": ["<mt:IfPagerNext${1}>${2}</mt:IfPagerNext>"]
   },
-
   "mt:ObjectGroupItemClass": {
     "prefix": "ObjectGroupItemClass",
     "body": ["<mt:ObjectGroupItemClass${1} />"]
   },
-
   "mt:OGBlogs": {
     "prefix": "OGBlogs",
     "body": ["<mt:OGBlogs${1}>${2}</mt:OGBlogs>"]
   },
-
   "mt:OGEntries": {
     "prefix": "OGEntries",
     "body": ["<mt:OGEntries${1}>${2}</mt:OGEntries>"]
   },
-
   "mt:IfObjectGroupItemIsEntry": {
     "prefix": "IfObjectGroupItemIsEntry",
     "body": ["<mt:IfObjectGroupItemIsEntry${1}>${2}</mt:IfObjectGroupItemIsEntry>"]
   },
-
   "mt:OGCategories": {
     "prefix": "OGCategories",
     "body": ["<mt:OGCategories${1}>${2}</mt:OGCategories>"]
   },
-
   "mt:ObjectGroupItems": {
     "prefix": "ObjectGroupItems",
     "body": ["<mt:ObjectGroupItems${1}>${2}</mt:ObjectGroupItems>"]
   },
-
   "mt:IfObjectGroupItemIsCategory": {
     "prefix": "IfObjectGroupItemIsCategory",
     "body": ["<mt:IfObjectGroupItemIsCategory${1}>${2}</mt:IfObjectGroupItemIsCategory>"]
   },
-
   "mt:IfObjectGroupItemIsBlog": {
     "prefix": "IfObjectGroupItemIsBlog",
     "body": ["<mt:IfObjectGroupItemIsBlog${1}>${2}</mt:IfObjectGroupItemIsBlog>"]
   },
-
   "abs_addslash=\"\"": {
     "prefix": "abs_addslash=\"\"",
     "body": ["abs_addslash=\"${1}\""]
   },
-
   "cut_firstslash=\"\"": {
     "prefix": "cut_firstslash=\"\"",
     "body": ["cut_firstslash=\"${1}\""]
   },
-
   "mt:CSSCompressor": {
     "prefix": "CSSCompressor",
     "body": ["<mt:CSSCompressor${1}>${2}</mt:CSSCompressor>"]
   },
-
   "mt:JSCompressor": {
     "prefix": "JSCompressor",
     "body": ["<mt:JSCompressor${1}>${2}</mt:JSCompressor>"]
   },
-
   "add_session_for_mobile=\"\"": {
     "prefix": "add_session_for_mobile=\"\"",
     "body": ["add_session_for_mobile=\"${1}\""]
   },
-
   "external_link_for_mobile=\"\"": {
     "prefix": "external_link_for_mobile=\"\"",
     "body": ["external_link_for_mobile=\"${1}\""]
   },
-
   "mt:AuthorMobileEmail": {
     "prefix": "AuthorMobileEmail",
     "body": ["<mt:AuthorMobileEmail${1} />"]
   },
-
   "mt:AuthorMobileToken": {
     "prefix": "AuthorMobileToken",
     "body": ["<mt:AuthorMobileToken${1} />"]
   },
-
   "mt:MembersScript": {
     "prefix": "MembersScript",
     "body": ["<mt:MembersScript${1} />"]
   },
-
   "mt:MembersLoginCheck": {
     "prefix": "MembersLoginCheck",
     "body": ["<mt:MembersLoginCheck${1} />"]
   },
-
   "mt:CustomFieldQuery": {
     "prefix": "CustomFieldQuery",
     "body": ["<mt:CustomFieldQuery${1} />"]
   },
-
   "mt:IfMemberLogin": {
     "prefix": "IfMemberLogin",
     "body": ["<mt:IfMemberLogin${1}>${2}</mt:IfMemberLogin>"]
   },
-
   "mt:MailMagazineNumber": {
     "prefix": "MailMagazineNumber",
     "body": ["<mt:MailMagazineNumber${1} />"]
   },
-
   "mt:CurrentDate": {
     "prefix": "CurrentDate",
     "body": ["<mt:CurrentDate${1} />"]
   },
-
   "mt:LinkTarget": {
     "prefix": "LinkTarget",
     "body": ["<mt:LinkTarget${1} />"]
   },
-
   "mt:LinkAuthoredOn": {
     "prefix": "LinkAuthoredOn",
     "body": ["<mt:LinkAuthoredOn${1} />"]
   },
-
   "mt:LinkName": {
     "prefix": "LinkName",
     "body": ["<mt:LinkName${1} />"]
   },
-
   "mt:LinkRSSUpdatedOn": {
     "prefix": "LinkRSSUpdatedOn",
     "body": ["<mt:LinkRSSUpdatedOn${1} />"]
   },
-
   "mt:LinkURLUpdatedOn": {
     "prefix": "LinkURLUpdatedOn",
     "body": ["<mt:LinkURLUpdatedOn${1} />"]
   },
-
   "mt:LinkAuthorDisplayName": {
     "prefix": "LinkAuthorDisplayName",
     "body": ["<mt:LinkAuthorDisplayName${1} />"]
   },
-
   "mt:LinkNotes": {
     "prefix": "LinkNotes",
     "body": ["<mt:LinkNotes${1} />"]
   },
-
   "mt:LinkDescription": {
     "prefix": "LinkDescription",
     "body": ["<mt:LinkDescription${1} />"]
   },
-
   "mt:LinkImageAddress": {
     "prefix": "LinkImageAddress",
     "body": ["<mt:LinkImageAddress${1} />"]
   },
-
   "mt:LinkRSSAddress": {
     "prefix": "LinkRSSAddress",
     "body": ["<mt:LinkRSSAddress${1} />"]
   },
-
   "mt:LinkRel": {
     "prefix": "LinkRel",
     "body": ["<mt:LinkRel${1} />"]
   },
-
   "mt:LinkFieldScope": {
     "prefix": "LinkFieldScope",
     "body": ["<mt:LinkFieldScope${1} />"]
   },
-
   "mt:LinkBlogID": {
     "prefix": "LinkBlogID",
     "body": ["<mt:LinkBlogID${1} />"]
   },
-
   "mt:LinkRating": {
     "prefix": "LinkRating",
     "body": ["<mt:LinkRating${1} />"]
   },
-
   "mt:LinkURL": {
     "prefix": "LinkURL",
     "body": ["<mt:LinkURL${1} />"]
   },
-
   "mt:LinkHTML": {
     "prefix": "LinkHTML",
     "body": ["<mt:LinkHTML${1} />"]
   },
-
   "mt:LinkTitle": {
     "prefix": "LinkTitle",
     "body": ["<mt:LinkTitle${1} />"]
   },
-
   "mt:LinkCreatedOn": {
     "prefix": "LinkCreatedOn",
     "body": ["<mt:LinkCreatedOn${1} />"]
   },
-
   "mt:LinkModifiedOn": {
     "prefix": "LinkModifiedOn",
     "body": ["<mt:LinkModifiedOn${1} />"]
   },
-
   "mt:IfActiveLink": {
     "prefix": "IfActiveLink",
     "body": ["<mt:IfActiveLink${1}>${2}</mt:IfActiveLink>"]
   },
-
   "mt:IfActiveImage": {
     "prefix": "IfActiveImage",
     "body": ["<mt:IfActiveImage${1}>${2}</mt:IfActiveImage>"]
   },
-
   "mt:Linkster": {
     "prefix": "Linkster",
     "body": ["<mt:Linkster>${1}</mt:Linkster>"]
   },
-
   "mt:Links": {
     "prefix": "Links",
     "body": ["<mt:Links${1}>${2}</mt:Links>"]
   },
-
   "mt:LinkBlock": {
     "prefix": "LinkBlock",
     "body": ["<mt:LinkBlock${1}>${2}</mt:LinkBlock>"]
   },
-
   "mt:IfActiveRSS": {
     "prefix": "IfActiveRSS",
     "body": ["<mt:IfActiveRSS${1}>${2}</mt:IfActiveRSS>"]
   },
-
   "mt:IfBrokenRSS": {
     "prefix": "IfBrokenRSS",
     "body": ["<mt:IfBrokenRSS${1}>${2}</mt:IfBrokenRSS>"]
   },
-
   "mt:LinkIfTagged": {
     "prefix": "LinkIfTagged",
     "body": ["<mt:LinkIfTagged${1}>${2}</mt:LinkIfTagged>"]
   },
-
   "mt:LinkAuthor": {
     "prefix": "LinkAuthor",
     "body": ["<mt:LinkAuthor${1}>${2}</mt:LinkAuthor>"]
   },
-
   "mt:IfBrokenLink": {
     "prefix": "IfBrokenLink",
     "body": ["<mt:IfBrokenLink${1}>${2}</mt:IfBrokenLink>"]
   },
-
   "mt:LinkTags": {
     "prefix": "LinkTags",
     "body": ["<mt:LinkTags${1}>${2}</mt:LinkTags>"]
   },
-
   "mt:LinksHeader": {
     "prefix": "LinksHeader",
     "body": ["<mt:LinksHeader>${1}</mt:LinksHeader>"]
   },
-
   "mt:IfBrokenImage": {
     "prefix": "IfBrokenImage",
     "body": ["<mt:IfBrokenImage${1}>${2}</mt:IfBrokenImage>"]
   },
-
   "convert2thumbnail=\"\"": {
     "prefix": "convert2thumbnail=\"\"",
     "body": ["convert2thumbnail=\"${1}\""]
   },
-
   "z2h=\"\"": {
     "prefix": "z2h=\"\"",
     "body": ["z2h=\"${1}\""]
   },
-
   "str2keitai=\"\"": {
     "prefix": "str2keitai=\"\"",
     "body": ["str2keitai=\"${1}\""]
   },
-
   "emoticon2mtml=\"\"": {
     "prefix": "emoticon2mtml=\"\"",
     "body": ["emoticon2mtml=\"${1}\""]
   },
-
   "tel2link=\"\"": {
     "prefix": "tel2link=\"\"",
     "body": ["tel2link=\"${1}\""]
   },
-
   "convertthumbnail=\"\"": {
     "prefix": "convertthumbnail=\"\"",
     "body": ["convertthumbnail=\"${1}\""]
   },
-
   "mt:GetUnicodeEmoji": {
     "prefix": "GetUnicodeEmoji",
     "body": ["<mt:GetUnicodeEmoji${1} />"]
   },
-
   "mt:GetCareer": {
     "prefix": "GetCareer",
     "body": ["<mt:GetCareer${1} />"]
   },
-
   "mt:KeitaiPageNumber": {
     "prefix": "KeitaiPageNumber",
     "body": ["<mt:KeitaiPageNumber${1} />"]
   },
-
   "mt:GetEmoji": {
     "prefix": "GetEmoji",
     "body": ["<mt:GetEmoji${1} />"]
   },
-
   "mt:KeitaiPageCount": {
     "prefix": "KeitaiPageCount",
     "body": ["<mt:KeitaiPageCount${1} />"]
   },
-
   "mt:GetEmojiRegacy": {
     "prefix": "GetEmojiRegacy",
     "body": ["<mt:GetEmojiRegacy${1} />"]
   },
-
   "mt:KeitaiPageLink": {
     "prefix": "KeitaiPageLink",
     "body": ["<mt:KeitaiPageLink${1} />"]
   },
-
   "mt:KeitaiPagePrevLink": {
     "prefix": "KeitaiPagePrevLink",
     "body": ["<mt:KeitaiPagePrevLink${1} />"]
   },
-
   "mt:XMLDocument": {
     "prefix": "XMLDocument",
     "body": ["<mt:XMLDocument${1} />"]
   },
-
   "mt:GetEmojiLegacy": {
     "prefix": "GetEmojiLegacy",
     "body": ["<mt:GetEmojiLegacy${1} />"]
   },
-
   "mt:KeitaiPageNextLink": {
     "prefix": "KeitaiPageNextLink",
     "body": ["<mt:KeitaiPageNextLink${1} />"]
   },
-
   "mt:KeitaiEmoticonSize": {
     "prefix": "KeitaiEmoticonSize",
     "body": ["<mt:KeitaiEmoticonSize${1} />"]
   },
-
   "mt:GetEmojiUnicode": {
     "prefix": "GetEmojiUnicode",
     "body": ["<mt:GetEmojiUnicode${1} />"]
   },
-
   "mt:GetEmoticon": {
     "prefix": "GetEmoticon",
     "body": ["<mt:GetEmoticon${1} />"]
   },
-
   "mt:IfKeitaiPagePrev": {
     "prefix": "IfKeitaiPagePrev",
     "body": ["<mt:IfKeitaiPagePrev${1}>${2}</mt:IfKeitaiPagePrev>"]
   },
-
   "mt:KeitaiContentBody": {
     "prefix": "KeitaiContentBody",
     "body": ["<mt:KeitaiContentBody${1}>${2}</mt:KeitaiContentBody>"]
   },
-
   "mt:KeitaiContentPageList": {
     "prefix": "KeitaiContentPageList",
     "body": ["<mt:KeitaiContentPageList${1}>${2}</mt:KeitaiContentPageList>"]
   },
-
   "mt:KeitaiContentPageListter": {
     "prefix": "KeitaiContentPageListter",
     "body": ["<mt:KeitaiContentPageListter>${1}</mt:KeitaiContentPageListter>"]
   },
-
   "mt:KeitaiContentPageListHeader": {
     "prefix": "KeitaiContentPageListHeader",
     "body": ["<mt:KeitaiContentPageListHeader>${1}</mt:KeitaiContentPageListHeader>"]
   },
-
   "mt:IfKeitai": {
     "prefix": "IfKeitai",
     "body": ["<mt:IfKeitai${1}>${2}</mt:IfKeitai>"]
   },
-
   "mt:IfAndroid": {
     "prefix": "IfAndroid",
     "body": ["<mt:IfAndroid${1}>${2}</mt:IfAndroid>"]
   },
-
   "mt:IfPC": {
     "prefix": "IfPC",
     "body": ["<mt:IfPC${1}>${2}</mt:IfPC>"]
   },
-
   "mt:Emoticon2emoji": {
     "prefix": "Emoticon2emoji",
     "body": ["<mt:Emoticon2emoji${1}>${2}</mt:Emoticon2emoji>"]
   },
-
   "mt:StripLineFeeds": {
     "prefix": "StripLineFeeds",
     "body": ["<mt:StripLineFeeds${1}>${2}</mt:StripLineFeeds>"]
   },
-
   "mt:IfTablet": {
     "prefix": "IfTablet",
     "body": ["<mt:IfTablet${1}>${2}</mt:IfTablet>"]
   },
-
   "mt:KeitaiContent": {
     "prefix": "KeitaiContent",
     "body": ["<mt:KeitaiContent${1}>${2}</mt:KeitaiContent>"]
   },
-
   "mt:IfKeitaiPageCurrent": {
     "prefix": "IfKeitaiPageCurrent",
     "body": ["<mt:IfKeitaiPageCurrent${1}>${2}</mt:IfKeitaiPageCurrent>"]
   },
-
   "mt:IfiPhone": {
     "prefix": "IfiPhone",
     "body": ["<mt:IfiPhone${1}>${2}</mt:IfiPhone>"]
   },
-
   "mt:IfKeitaiPageNext": {
     "prefix": "IfKeitaiPageNext",
     "body": ["<mt:IfKeitaiPageNext${1}>${2}</mt:IfKeitaiPageNext>"]
   },
-
   "mt:IfSmartphone": {
     "prefix": "IfSmartphone",
     "body": ["<mt:IfSmartphone${1}>${2}</mt:IfSmartphone>"]
   },
-
   "mt:IfiPad": {
     "prefix": "IfiPad",
     "body": ["<mt:IfiPad${1}>${2}</mt:IfiPad>"]
   },
-
   "mt:ConvertSJIS": {
     "prefix": "ConvertSJIS",
     "body": ["<mt:ConvertSJIS${1}>${2}</mt:ConvertSJIS>"]
   },
-
   "mt:IfTheURLFound": {
     "prefix": "IfTheURLFound",
     "body": ["<mt:IfTheURLFound${1}>${2}</mt:IfTheURLFound>"]
   },
-
   "mt:IfURLFound": {
     "prefix": "IfURLFound",
     "body": ["<mt:IfURLFound${1}>${2}</mt:IfURLFound>"]
   },
-
   "mt:GAHotEntriesCount": {
     "prefix": "GAHotEntriesCount",
     "body": ["<mt:GAHotEntriesCount${1} />"]
   },
-
   "mt:GATrackingCode": {
     "prefix": "GATrackingCode",
     "body": ["<mt:GATrackingCode${1} />"]
   },
-
   "mt:GALastUpdateTs": {
     "prefix": "GALastUpdateTs",
     "body": ["<mt:GALastUpdateTs${1} />"]
   },
-
   "mt:IfCMSIsBlog": {
     "prefix": "IfCMSIsBlog",
     "body": ["<mt:IfCMSIsBlog${1}>${2}</mt:IfCMSIsBlog>"]
   },
-
   "mt:GAHotEntries": {
     "prefix": "GAHotEntries",
     "body": ["<mt:GAHotEntries${1}>${2}</mt:GAHotEntries>"]
   },
-
   "mt:GetCookie": {
     "prefix": "GetCookie",
     "body": ["<mt:GetCookie${1} />"]
   },
-
   "mt:GetEnv": {
     "prefix": "GetEnv",
     "body": ["<mt:GetEnv${1} />"]
   },
-
   "mt:SetFolderContext": {
     "prefix": "SetFolderContext",
     "body": ["<mt:SetFolderContext${1}>${2}</mt:SetFolderContext>"]
   },
-
   "mt:FormScript": {
     "prefix": "FormScript",
     "body": ["<mt:FormScript${1} />"]
   },
-
   "mt:PostFieldsAsStr": {
     "prefix": "PostFieldsAsStr",
     "body": ["<mt:PostFieldsAsStr${1} />"]
   },
-
   "mt:EntryPostCount": {
     "prefix": "EntryPostCount",
     "body": ["<mt:EntryPostCount${1} />"]
   },
-
   "mt:PagePostCount": {
     "prefix": "PagePostCount",
     "body": ["<mt:PagePostCount${1} />"]
   },
-
   "mt:EntryPosts": {
     "prefix": "EntryPosts",
     "body": ["<mt:EntryPosts${1}>${2}</mt:EntryPosts>"]
   },
-
   "mt:ExtFieldFileDate": {
     "prefix": "ExtFieldFileDate",
     "body": ["<mt:ExtFieldFileDate${1} />"]
   },
-
   "mt:ExtFieldFileSize": {
     "prefix": "ExtFieldFileSize",
     "body": ["<mt:ExtFieldFileSize${1} />"]
   },
-
   "mt:ExtFieldImageWidth": {
     "prefix": "ExtFieldImageWidth",
     "body": ["<mt:ExtFieldImageWidth${1} />"]
   },
-
   "mt:ExtFieldValue": {
     "prefix": "ExtFieldValue",
     "body": ["<mt:ExtFieldValue${1} />"]
   },
-
   "mt:ExtFieldNum": {
     "prefix": "ExtFieldNum",
     "body": ["<mt:ExtFieldNum${1} />"]
   },
-
   "mt:ExtFieldDescription": {
     "prefix": "ExtFieldDescription",
     "body": ["<mt:ExtFieldDescription${1} />"]
   },
-
   "mt:ExtFieldThumbnailHeight": {
     "prefix": "ExtFieldThumbnailHeight",
     "body": ["<mt:ExtFieldThumbnailHeight${1} />"]
   },
-
   "mt:ExtFieldImageHeight": {
     "prefix": "ExtFieldImageHeight",
     "body": ["<mt:ExtFieldImageHeight${1} />"]
   },
-
   "mt:ExtFieldMultiValue": {
     "prefix": "ExtFieldMultiValue",
     "body": ["<mt:ExtFieldMultiValue${1} />"]
   },
-
   "mt:ExtFieldFileSuffix": {
     "prefix": "ExtFieldFileSuffix",
     "body": ["<mt:ExtFieldFileSuffix${1} />"]
   },
-
   "mt:ExtFieldAlt": {
     "prefix": "ExtFieldAlt",
     "body": ["<mt:ExtFieldAlt${1} />"]
   },
-
   "mt:ExtFieldThumbnailWidth": {
     "prefix": "ExtFieldThumbnailWidth",
     "body": ["<mt:ExtFieldThumbnailWidth${1} />"]
   },
-
   "mt:ExtFieldFileThumbnail": {
     "prefix": "ExtFieldFileThumbnail",
     "body": ["<mt:ExtFieldFileThumbnail${1} />"]
   },
-
   "mt:ExtFieldExportData": {
     "prefix": "ExtFieldExportData",
     "body": ["<mt:ExtFieldExportData${1} />"]
   },
-
   "mt:ExtFieldName": {
     "prefix": "ExtFieldName",
     "body": ["<mt:ExtFieldName${1} />"]
   },
-
   "mt:ExtFieldCBLabel": {
     "prefix": "ExtFieldCBLabel",
     "body": ["<mt:ExtFieldCBLabel${1} />"]
   },
-
   "mt:ExtFieldID": {
     "prefix": "ExtFieldID",
     "body": ["<mt:ExtFieldID${1} />"]
   },
-
   "mt:ExtFieldFileName": {
     "prefix": "ExtFieldFileName",
     "body": ["<mt:ExtFieldFileName${1} />"]
   },
-
   "mt:ExtFieldFilePath": {
     "prefix": "ExtFieldFilePath",
     "body": ["<mt:ExtFieldFilePath${1} />"]
   },
-
   "mt:ExtFieldLabel": {
     "prefix": "ExtFieldLabel",
     "body": ["<mt:ExtFieldLabel${1} />"]
   },
-
   "mt:ExtFieldText": {
     "prefix": "ExtFieldText",
     "body": ["<mt:ExtFieldText${1} />"]
   },
-
   "mt:ExtFieldCount": {
     "prefix": "ExtFieldCount",
     "body": ["<mt:ExtFieldCount${1} />"]
   },
-
   "mt:ExtFieldCounter": {
     "prefix": "ExtFieldCounter",
     "body": ["<mt:ExtFieldCounter${1} />"]
   },
-
   "mt:EntryExtDatas": {
     "prefix": "EntryExtDatas",
     "body": ["<mt:EntryExtDatas${1} />"]
   },
-
   "mt:ExtFieldThumbnail": {
     "prefix": "ExtFieldThumbnail",
     "body": ["<mt:ExtFieldThumbnail${1} />"]
   },
-
   "mt:IfExtFieldType": {
     "prefix": "IfExtFieldType",
     "body": ["<mt:IfExtFieldType${1}>${2}</mt:IfExtFieldType>"]
   },
-
   "mt:IfExtField": {
     "prefix": "IfExtField",
     "body": ["<mt:IfExtField${1}>${2}</mt:IfExtField>"]
   },
-
   "mt:IfExtFieldTypeImage": {
     "prefix": "IfExtFieldTypeImage",
     "body": ["<mt:IfExtFieldTypeImage${1}>${2}</mt:IfExtFieldTypeImage>"]
   },
-
   "mt:IfExtFieldFileExists": {
     "prefix": "IfExtFieldFileExists",
     "body": ["<mt:IfExtFieldFileExists${1}>${2}</mt:IfExtFieldFileExists>"]
   },
-
   "mt:ExtFields": {
     "prefix": "ExtFields",
     "body": ["<mt:ExtFields${1}>${2}</mt:ExtFields>"]
   },
-
   "mt:IfExtFieldThumbnailExists": {
     "prefix": "IfExtFieldThumbnailExists",
     "body": ["<mt:IfExtFieldThumbnailExists${1}>${2}</mt:IfExtFieldThumbnailExists>"]
   },
-
   "mt:IfExtFieldCompare": {
     "prefix": "IfExtFieldCompare",
     "body": ["<mt:IfExtFieldCompare${1}>${2}</mt:IfExtFieldCompare>"]
   },
-
   "mt:IfEntryIsDynamic": {
     "prefix": "IfEntryIsDynamic",
     "body": ["<mt:IfEntryIsDynamic${1}>${2}</mt:IfEntryIsDynamic>"]
   },
-
   "mt:ExtFieldAsset": {
     "prefix": "ExtFieldAsset",
     "body": ["<mt:ExtFieldAsset${1}>${2}</mt:ExtFieldAsset>"]
   },
-
   "mt:IfExtFieldNonEmpty": {
     "prefix": "IfExtFieldNonEmpty",
     "body": ["<mt:IfExtFieldNonEmpty${1}>${2}</mt:IfExtFieldNonEmpty>"]
   },
-
   "mt:ExtFieldsMultiValues": {
     "prefix": "ExtFieldsMultiValues",
     "body": ["<mt:ExtFieldsMultiValues${1}>${2}</mt:ExtFieldsMultiValues>"]
   },
-
   "mt:IfExtFieldSelected": {
     "prefix": "IfExtFieldSelected",
     "body": ["<mt:IfExtFieldSelected${1}>${2}</mt:IfExtFieldSelected>"]
   },
-
   "mt:EntryCreatorID": {
     "prefix": "EntryCreatorID",
     "body": ["<mt:EntryCreatorID${1} />"]
   },
-
   "mt:EntryCreatorDisplayName": {
     "prefix": "EntryCreatorDisplayName",
     "body": ["<mt:EntryCreatorDisplayName${1} />"]
   },
-
   "mt:IfEntryCanEditable": {
     "prefix": "IfEntryCanEditable",
     "body": ["<mt:IfEntryCanEditable${1}>${2}</mt:IfEntryCanEditable>"]
   },
-
   "mt:IfAuthorPostLimitInBlog": {
     "prefix": "IfAuthorPostLimitInBlog",
     "body": ["<mt:IfAuthorPostLimitInBlog${1}>${2}</mt:IfAuthorPostLimitInBlog>"]
   },
-
   "mt:IfCanCreateInCategory": {
     "prefix": "IfCanCreateInCategory",
     "body": ["<mt:IfCanCreateInCategory${1}>${2}</mt:IfCanCreateInCategory>"]
   },
-
   "mt:EntryCreatorContext": {
     "prefix": "EntryCreatorContext",
     "body": ["<mt:EntryCreatorContext${1}>${2}</mt:EntryCreatorContext>"]
   },
-
   "mt:EntryPublishedOn": {
     "prefix": "EntryPublishedOn",
     "body": ["<mt:EntryPublishedOn${1} />"]
   },
-
   "mt:EntryUnpublishedOn": {
     "prefix": "EntryUnpublishedOn",
     "body": ["<mt:EntryUnpublishedOn${1} />"]
   },
-
   "mt:IfEntryUnpublished": {
     "prefix": "IfEntryUnpublished",
     "body": ["<mt:IfEntryUnpublished${1}>${2}</mt:IfEntryUnpublished>"]
   },
-
   "mt:IfEntryPublished": {
     "prefix": "IfEntryPublished",
     "body": ["<mt:IfEntryPublished${1}>${2}</mt:IfEntryPublished>"]
   },
-
   "mt:Permalink": {
     "prefix": "Permalink",
     "body": ["<mt:Permalink${1} />"]
   },
-
   "mt:EntryChildrenCounter": {
     "prefix": "EntryChildrenCounter",
     "body": ["<mt:EntryChildrenCounter${1} />"]
   },
-
   "mt:EntryParentID": {
     "prefix": "EntryParentID",
     "body": ["<mt:EntryParentID${1} />"]
   },
-
   "mt:EntryChildrenPagester": {
     "prefix": "EntryChildrenPagester",
     "body": ["<mt:EntryChildrenPagester>${1}</mt:EntryChildrenPagester>"]
   },
-
   "mt:IfEntryChildrenter": {
     "prefix": "IfEntryChildrenter",
     "body": ["<mt:IfEntryChildrenter>${1}</mt:IfEntryChildrenter>"]
   },
-
   "mt:EntryChildrenPages": {
     "prefix": "EntryChildrenPages",
     "body": ["<mt:EntryChildrenPages${1}>${2}</mt:EntryChildrenPages>"]
   },
-
   "mt:PageParentEntry": {
     "prefix": "PageParentEntry",
     "body": ["<mt:PageParentEntry${1}>${2}</mt:PageParentEntry>"]
   },
-
   "mt:EntryChildrenPrev": {
     "prefix": "EntryChildrenPrev",
     "body": ["<mt:EntryChildrenPrev${1}>${2}</mt:EntryChildrenPrev>"]
   },
-
   "mt:EntryChildrenPagesHeader": {
     "prefix": "EntryChildrenPagesHeader",
     "body": ["<mt:EntryChildrenPagesHeader>${1}</mt:EntryChildrenPagesHeader>"]
   },
-
   "mt:IfEntryChildrenHeader": {
     "prefix": "IfEntryChildrenHeader",
     "body": ["<mt:IfEntryChildrenHeader>${1}</mt:IfEntryChildrenHeader>"]
   },
-
   "mt:EntryChildrenNext": {
     "prefix": "EntryChildrenNext",
     "body": ["<mt:EntryChildrenNext${1}>${2}</mt:EntryChildrenNext>"]
   },
-
   "pickup_extension=\"\"": {
     "prefix": "pickup_extension=\"\"",
     "body": ["pickup_extension=\"${1}\""]
   },
-
   "make_seo_basename=\"\"": {
     "prefix": "make_seo_basename=\"\"",
     "body": ["make_seo_basename=\"${1}\""]
   },
-
   "build_mtml=\"\"": {
     "prefix": "build_mtml=\"\"",
     "body": ["build_mtml=\"${1}\""]
   },
-
   "trimwhitespace=\"\"": {
     "prefix": "trimwhitespace=\"\"",
     "body": ["trimwhitespace=\"${1}\""]
   },
-
   "intval=\"\"": {
     "prefix": "intval=\"\"",
     "body": ["intval=\"${1}\""]
   },
-
   "highlightingsearchword=\"\"": {
     "prefix": "highlightingsearchword=\"\"",
     "body": ["highlightingsearchword=\"${1}\""]
   },
-
   "mt:BlogDynamicMTMLConditional": {
     "prefix": "BlogDynamicMTMLConditional",
     "body": ["<mt:BlogDynamicMTMLConditional${1} />"]
   },
-
   "mt:CurrentArchiveURL": {
     "prefix": "CurrentArchiveURL",
     "body": ["<mt:CurrentArchiveURL${1} />"]
   },
-
   "mt:BlogDynamicConditional": {
     "prefix": "BlogDynamicConditional",
     "body": ["<mt:BlogDynamicConditional${1} />"]
   },
-
   "mt:AuthorLanguage": {
     "prefix": "AuthorLanguage",
     "body": ["<mt:AuthorLanguage${1} />"]
   },
-
   "mt:ReferralKeyword": {
     "prefix": "ReferralKeyword",
     "body": ["<mt:ReferralKeyword${1} />"]
   },
-
   "mt:Rand": {
     "prefix": "Rand",
     "body": ["<mt:Rand${1} />"]
   },
-
   "mt:BlogFilesDirective": {
     "prefix": "BlogFilesDirective",
     "body": ["<mt:BlogFilesDirective${1} />"]
   },
-
   "mt:BlogFilesMatch": {
     "prefix": "BlogFilesMatch",
     "body": ["<mt:BlogFilesMatch${1} />"]
   },
-
   "mt:Trans": {
     "prefix": "Trans",
     "body": ["<mt:Trans${1} />"]
   },
-
   "mt:FileGetContents": {
     "prefix": "FileGetContents",
     "body": ["<mt:FileGetContents${1} />"]
   },
-
   "mt:BlogDynamicSearchConditional": {
     "prefix": "BlogDynamicSearchConditional",
     "body": ["<mt:BlogDynamicSearchConditional${1} />"]
   },
-
   "mt:DynamicSiteBootstrapper": {
     "prefix": "DynamicSiteBootstrapper",
     "body": ["<mt:DynamicSiteBootstrapper${1} />"]
   },
-
   "mt:UserAgent": {
     "prefix": "UserAgent",
     "body": ["<mt:UserAgent${1} />"]
   },
-
   "mt:BlogDynamicMTMLCache": {
     "prefix": "BlogDynamicMTMLCache",
     "body": ["<mt:BlogDynamicMTMLCache${1} />"]
   },
-
   "mt:BlogDynamicCache": {
     "prefix": "BlogDynamicCache",
     "body": ["<mt:BlogDynamicCache${1} />"]
   },
-
   "mt:BlogDynamicExcludeExtension": {
     "prefix": "BlogDynamicExcludeExtension",
     "body": ["<mt:BlogDynamicExcludeExtension${1} />"]
   },
-
   "mt:BlogDynamicExtension": {
     "prefix": "BlogDynamicExtension",
     "body": ["<mt:BlogDynamicExtension${1} />"]
   },
-
   "mt:CurrentArchiveFile": {
     "prefix": "CurrentArchiveFile",
     "body": ["<mt:CurrentArchiveFile${1} />"]
   },
-
   "mt:BlogFilesMatchDirective": {
     "prefix": "BlogFilesMatchDirective",
     "body": ["<mt:BlogFilesMatchDirective${1} />"]
   },
-
   "mt:PluginVersion": {
     "prefix": "PluginVersion",
     "body": ["<mt:PluginVersion${1} />"]
   },
-
   "mt:Query": {
     "prefix": "Query",
     "body": ["<mt:Query${1} />"]
   },
-
   "mt:BlogDynamicSearchCacheExpiration": {
     "prefix": "BlogDynamicSearchCacheExpiration",
     "body": ["<mt:BlogDynamicSearchCacheExpiration${1} />"]
   },
-
   "mt:Error": {
     "prefix": "Error",
     "body": ["<mt:Error${1} />"]
   },
-
   "mt:BlogDynamicSearchCache": {
     "prefix": "BlogDynamicSearchCache",
     "body": ["<mt:BlogDynamicSearchCache${1} />"]
   },
-
   "mt:BlogDynamicDirectoryIndex": {
     "prefix": "BlogDynamicDirectoryIndex",
     "body": ["<mt:BlogDynamicDirectoryIndex${1} />"]
   },
-
   "mt:PluginPath": {
     "prefix": "PluginPath",
     "body": ["<mt:PluginPath${1} />"]
   },
-
   "mt:CommentStrip": {
     "prefix": "CommentStrip",
     "body": ["<mt:CommentStrip${1}>${2}</mt:CommentStrip>"]
   },
-
   "mt:LoginAuthorCtx": {
     "prefix": "LoginAuthorCtx",
     "body": ["<mt:LoginAuthorCtx${1}>${2}</mt:LoginAuthorCtx>"]
   },
-
   "mt:IfUserHasPermission": {
     "prefix": "IfUserHasPermission",
     "body": ["<mt:IfUserHasPermission${1}>${2}</mt:IfUserHasPermission>"]
   },
-
   "mt:CommentOut": {
     "prefix": "CommentOut",
     "body": ["<mt:CommentOut${1}>${2}</mt:CommentOut>"]
   },
-
   "mt:ReferralKeywords": {
     "prefix": "ReferralKeywords",
     "body": ["<mt:ReferralKeywords${1}>${2}</mt:ReferralKeywords>"]
   },
-
   "mt:StripTags": {
     "prefix": "StripTags",
     "body": ["<mt:StripTags${1}>${2}</mt:StripTags>"]
   },
-
   "mt:QueryLoop": {
     "prefix": "QueryLoop",
     "body": ["<mt:QueryLoop${1}>${2}</mt:QueryLoop>"]
   },
-
   "mt:NonDynamicMTML": {
     "prefix": "NonDynamicMTML",
     "body": ["<mt:NonDynamicMTML${1}>${2}</mt:NonDynamicMTML>"]
   },
-
   "mt:IfBlogDynamicConditional": {
     "prefix": "IfBlogDynamicConditional",
     "body": ["<mt:IfBlogDynamicConditional${1}>${2}</mt:IfBlogDynamicConditional>"]
   },
-
   "mt:EntryCategoryBlock": {
     "prefix": "EntryCategoryBlock",
     "body": ["<mt:EntryCategoryBlock${1}>${2}</mt:EntryCategoryBlock>"]
   },
-
   "mt:DynamicMTML": {
     "prefix": "DynamicMTML",
     "body": ["<mt:DynamicMTML>${1}</mt:DynamicMTML>"]
   },
-
   "mt:SetErrorHandler": {
     "prefix": "SetErrorHandler",
     "body": ["<mt:SetErrorHandler${1}>${2}</mt:SetErrorHandler>"]
   },
-
   "mt:ClientAuthorBlock": {
     "prefix": "ClientAuthorBlock",
     "body": ["<mt:ClientAuthorBlock${1}>${2}</mt:ClientAuthorBlock>"]
   },
-
   "mt:BuildRecurs": {
     "prefix": "BuildRecurs",
     "body": ["<mt:BuildRecurs${1}>${2}</mt:BuildRecurs>"]
   },
-
   "mt:QueryVars": {
     "prefix": "QueryVars",
     "body": ["<mt:QueryVars${1}>${2}</mt:QueryVars>"]
   },
-
   "mt:IfBlogDynamicCache": {
     "prefix": "IfBlogDynamicCache",
     "body": ["<mt:IfBlogDynamicCache${1}>${2}</mt:IfBlogDynamicCache>"]
   },
-
   "mt:SplitVars": {
     "prefix": "SplitVars",
     "body": ["<mt:SplitVars${1}>${2}</mt:SplitVars>"]
   },
-
   "mt:SearchEntries": {
     "prefix": "SearchEntries",
     "body": ["<mt:SearchEntries${1}>${2}</mt:SearchEntries>"]
   },
-
   "mt:RawMTML": {
     "prefix": "RawMTML",
     "body": ["<mt:RawMTML${1}>${2}</mt:RawMTML>"]
   },
-
   "mt:IfUserAgent": {
     "prefix": "IfUserAgent",
     "body": ["<mt:IfUserAgent${1}>${2}</mt:IfUserAgent>"]
   },
-
   "mt:SetQueryVars": {
     "prefix": "SetQueryVars",
     "body": ["<mt:SetQueryVars${1}>${2}</mt:SetQueryVars>"]
   },
-
   "mt:IfBlogDynamicMTML": {
     "prefix": "IfBlogDynamicMTML",
     "body": ["<mt:IfBlogDynamicMTML${1}>${2}</mt:IfBlogDynamicMTML>"]
   },
-
   "mt:CustomObjectBasename": {
     "prefix": "CustomObjectBasename",
     "body": ["<mt:CustomObjectBasename${1} />"]
   },
-
   "mt:CustomObjectID": {
     "prefix": "CustomObjectID",
     "body": ["<mt:CustomObjectID${1} />"]
   },
-
   "mt:CustomObjectLabel": {
     "prefix": "CustomObjectLabel",
     "body": ["<mt:CustomObjectLabel${1} />"]
   },
-
   "mt:CustomObjectColumnValue": {
     "prefix": "CustomObjectColumnValue",
     "body": ["<mt:CustomObjectColumnValue${1} />"]
   },
-
   "mt:CustomObjectAuthoredOn": {
     "prefix": "CustomObjectAuthoredOn",
     "body": ["<mt:CustomObjectAuthoredOn${1} />"]
   },
-
   "mt:CustomObjectAuthorDisplayName": {
     "prefix": "CustomObjectAuthorDisplayName",
     "body": ["<mt:CustomObjectAuthorDisplayName${1} />"]
   },
-
   "mt:CustomObjectBody": {
     "prefix": "CustomObjectBody",
     "body": ["<mt:CustomObjectBody${1} />"]
   },
-
   "mt:CustomObjectColumnName": {
     "prefix": "CustomObjectColumnName",
     "body": ["<mt:CustomObjectColumnName${1} />"]
   },
-
   "mt:CustomFieldColumnValue": {
     "prefix": "CustomFieldColumnValue",
     "body": ["<mt:CustomFieldColumnValue${1} />"]
   },
-
   "mt:CustomObjectsCount": {
     "prefix": "CustomObjectsCount",
     "body": ["<mt:CustomObjectsCount${1} />"]
   },
-
   "mt:CustomObjectColumn": {
     "prefix": "CustomObjectColumn",
     "body": ["<mt:CustomObjectColumn${1} />"]
   },
-
   "mt:CustomObjectFieldScope": {
     "prefix": "CustomObjectFieldScope",
     "body": ["<mt:CustomObjectFieldScope${1} />"]
   },
-
   "mt:CustomObjectPermalink": {
     "prefix": "CustomObjectPermalink",
     "body": ["<mt:CustomObjectPermalink${1} />"]
   },
-
   "mt:CustomObjectName": {
     "prefix": "CustomObjectName",
     "body": ["<mt:CustomObjectName${1} />"]
   },
-
   "mt:CustomObjectModifiedOn": {
     "prefix": "CustomObjectModifiedOn",
     "body": ["<mt:CustomObjectModifiedOn${1} />"]
   },
-
   "mt:CustomObjectFolderLink": {
     "prefix": "CustomObjectFolderLink",
     "body": ["<mt:CustomObjectFolderLink${1} />"]
   },
-
   "mt:CustomObjectKeywords": {
     "prefix": "CustomObjectKeywords",
     "body": ["<mt:CustomObjectKeywords${1} />"]
   },
-
   "mt:CustomObjectPeriodOn": {
     "prefix": "CustomObjectPeriodOn",
     "body": ["<mt:CustomObjectPeriodOn${1} />"]
   },
-
   "mt:ComponentPath": {
     "prefix": "ComponentPath",
     "body": ["<mt:ComponentPath${1} />"]
   },
-
   "mt:CustomObjectBlogID": {
     "prefix": "CustomObjectBlogID",
     "body": ["<mt:CustomObjectBlogID${1} />"]
   },
-
   "mt:CustomObjectCreatedOn": {
     "prefix": "CustomObjectCreatedOn",
     "body": ["<mt:CustomObjectCreatedOn${1} />"]
   },
-
   "mt:CustomObjectAuthor": {
     "prefix": "CustomObjectAuthor",
     "body": ["<mt:CustomObjectAuthor${1}>${2}</mt:CustomObjectAuthor>"]
   },
-
   "mt:CustomObjectTags": {
     "prefix": "CustomObjectTags",
     "body": ["<mt:CustomObjectTags${1}>${2}</mt:CustomObjectTags>"]
   },
-
   "mt:IfNonSystemScope": {
     "prefix": "IfNonSystemScope",
     "body": ["<mt:IfNonSystemScope${1}>${2}</mt:IfNonSystemScope>"]
   },
-
   "mt:IfHyperion": {
     "prefix": "IfHyperion",
     "body": ["<mt:IfHyperion${1}>${2}</mt:IfHyperion>"]
   },
-
   "mt:CustomObjects": {
     "prefix": "CustomObjects",
     "body": ["<mt:CustomObjects${1}>${2}</mt:CustomObjects>"]
   },
-
   "mt:CustomObjectColumnsHeader": {
     "prefix": "CustomObjectColumnsHeader",
     "body": ["<mt:CustomObjectColumnsHeader>${1}</mt:CustomObjectColumnsHeader>"]
   },
-
   "mt:CustomObjectsHeader": {
     "prefix": "CustomObjectsHeader",
     "body": ["<mt:CustomObjectsHeader>${1}</mt:CustomObjectsHeader>"]
   },
-
   "mt:CustomObjectColumnster": {
     "prefix": "CustomObjectColumnster",
     "body": ["<mt:CustomObjectColumnster>${1}</mt:CustomObjectColumnster>"]
   },
-
   "mt:SetContext": {
     "prefix": "SetContext",
     "body": ["<mt:SetContext${1}>${2}</mt:SetContext>"]
   },
-
   "mt:CustomObjectFolder": {
     "prefix": "CustomObjectFolder",
     "body": ["<mt:CustomObjectFolder${1}>${2}</mt:CustomObjectFolder>"]
   },
-
   "mt:CustomObject": {
     "prefix": "CustomObject",
     "body": ["<mt:CustomObject${1}>${2}</mt:CustomObject>"]
   },
-
   "mt:CustomObjectColumns": {
     "prefix": "CustomObjectColumns",
     "body": ["<mt:CustomObjectColumns${1}>${2}</mt:CustomObjectColumns>"]
   },
-
   "mt:CustomObjectIfTagged": {
     "prefix": "CustomObjectIfTagged",
     "body": ["<mt:CustomObjectIfTagged${1}>${2}</mt:CustomObjectIfTagged>"]
   },
-
   "mt:CustomObjectster": {
     "prefix": "CustomObjectster",
     "body": ["<mt:CustomObjectster>${1}</mt:CustomObjectster>"]
   },
-
   "mt:CategoryClass": {
     "prefix": "CategoryClass",
     "body": ["<mt:CategoryClass${1} />"]
   },
-
   "mt:ItemGroupBlogsCount": {
     "prefix": "ItemGroupBlogsCount",
     "body": ["<mt:ItemGroupBlogsCount${1} />"]
   },
-
   "mt:ItemGroupCategoriesCount": {
     "prefix": "ItemGroupCategoriesCount",
     "body": ["<mt:ItemGroupCategoriesCount${1} />"]
   },
-
   "mt:ItemGroupEntriesCount": {
     "prefix": "ItemGroupEntriesCount",
     "body": ["<mt:ItemGroupEntriesCount${1} />"]
   },
-
   "mt:ItemGroupEntriester": {
     "prefix": "ItemGroupEntriester",
     "body": ["<mt:ItemGroupEntriester>${1}</mt:ItemGroupEntriester>"]
   },
-
   "mt:ItemGroupCategoriester": {
     "prefix": "ItemGroupCategoriester",
     "body": ["<mt:ItemGroupCategoriester>${1}</mt:ItemGroupCategoriester>"]
   },
-
   "mt:ItemGroupBlogster": {
     "prefix": "ItemGroupBlogster",
     "body": ["<mt:ItemGroupBlogster>${1}</mt:ItemGroupBlogster>"]
   },
-
   "mt:ItemGroupBlogs": {
     "prefix": "ItemGroupBlogs",
     "body": ["<mt:ItemGroupBlogs${1}>${2}</mt:ItemGroupBlogs>"]
   },
-
   "mt:ItemGroupBlogsHeader": {
     "prefix": "ItemGroupBlogsHeader",
     "body": ["<mt:ItemGroupBlogsHeader>${1}</mt:ItemGroupBlogsHeader>"]
   },
-
   "mt:ItemGroupCategoriesHeader": {
     "prefix": "ItemGroupCategoriesHeader",
     "body": ["<mt:ItemGroupCategoriesHeader>${1}</mt:ItemGroupCategoriesHeader>"]
   },
-
   "mt:ItemGroupEntriesHeader": {
     "prefix": "ItemGroupEntriesHeader",
     "body": ["<mt:ItemGroupEntriesHeader>${1}</mt:ItemGroupEntriesHeader>"]
   },
-
   "mt:ItemGroupEntries": {
     "prefix": "ItemGroupEntries",
     "body": ["<mt:ItemGroupEntries${1}>${2}</mt:ItemGroupEntries>"]
   },
-
   "mt:ItemGroupCategories": {
     "prefix": "ItemGroupCategories",
     "body": ["<mt:ItemGroupCategories${1}>${2}</mt:ItemGroupCategories>"]
   },
-
   "mt:CustomGroupFieldScope": {
     "prefix": "CustomGroupFieldScope",
     "body": ["<mt:CustomGroupFieldScope${1} />"]
   },
-
   "mt:GetObjectChildLabel": {
     "prefix": "GetObjectChildLabel",
     "body": ["<mt:GetObjectChildLabel${1} />"]
   },
-
   "mt:CustomGroupName": {
     "prefix": "CustomGroupName",
     "body": ["<mt:CustomGroupName${1} />"]
   },
-
   "mt:GetObjectClassLabel": {
     "prefix": "GetObjectClassLabel",
     "body": ["<mt:GetObjectClassLabel${1} />"]
   },
-
   "mt:CustomGroupOrder": {
     "prefix": "CustomGroupOrder",
     "body": ["<mt:CustomGroupOrder${1} />"]
   },
-
   "mt:ItemGroupBlogPrevious": {
     "prefix": "ItemGroupBlogPrevious",
     "body": ["<mt:ItemGroupBlogPrevious${1}>${2}</mt:ItemGroupBlogPrevious>"]
   },
-
   "mt:ItemGroupEntryNext": {
     "prefix": "ItemGroupEntryNext",
     "body": ["<mt:ItemGroupEntryNext${1}>${2}</mt:ItemGroupEntryNext>"]
   },
-
   "mt:ItemGroupEntryPrevious": {
     "prefix": "ItemGroupEntryPrevious",
     "body": ["<mt:ItemGroupEntryPrevious${1}>${2}</mt:ItemGroupEntryPrevious>"]
   },
-
   "mt:ItemGroupBlogNext": {
     "prefix": "ItemGroupBlogNext",
     "body": ["<mt:ItemGroupBlogNext${1}>${2}</mt:ItemGroupBlogNext>"]
   },
-
   "mt:CustomGroupster": {
     "prefix": "CustomGroupster",
     "body": ["<mt:CustomGroupster>${1}</mt:CustomGroupster>"]
   },
-
   "mt:ItemGroupCategoryPrevious": {
     "prefix": "ItemGroupCategoryPrevious",
     "body": ["<mt:ItemGroupCategoryPrevious${1}>${2}</mt:ItemGroupCategoryPrevious>"]
   },
-
   "mt:CustomGroups": {
     "prefix": "CustomGroups",
     "body": ["<mt:CustomGroups${1}>${2}</mt:CustomGroups>"]
   },
-
   "mt:ItemGroupCategoryNext": {
     "prefix": "ItemGroupCategoryNext",
     "body": ["<mt:ItemGroupCategoryNext${1}>${2}</mt:ItemGroupCategoryNext>"]
   },
-
   "mt:IfCMSWebSite": {
     "prefix": "IfCMSWebSite",
     "body": ["<mt:IfCMSWebSite${1}>${2}</mt:IfCMSWebSite>"]
   },
-
   "mt:CustomGroupsHeader": {
     "prefix": "CustomGroupsHeader",
     "body": ["<mt:CustomGroupsHeader>${1}</mt:CustomGroupsHeader>"]
   },
-
   "mt:CustomConfigID": {
     "prefix": "CustomConfigID",
     "body": ["<mt:CustomConfigID${1} />"]
   },
-
   "mt:CustomConfigCreatedOn": {
     "prefix": "CustomConfigCreatedOn",
     "body": ["<mt:CustomConfigCreatedOn${1} />"]
   },
-
   "mt:CustomConfigAuthorDisplayName": {
     "prefix": "CustomConfigAuthorDisplayName",
     "body": ["<mt:CustomConfigAuthorDisplayName${1} />"]
   },
-
   "mt:CustomConfigKey": {
     "prefix": "CustomConfigKey",
     "body": ["<mt:CustomConfigKey${1} />"]
   },
-
   "mt:CustomConfigValue": {
     "prefix": "CustomConfigValue",
     "body": ["<mt:CustomConfigValue${1} />"]
   },
-
   "mt:CustomConfigPriority": {
     "prefix": "CustomConfigPriority",
     "body": ["<mt:CustomConfigPriority${1} />"]
   },
-
   "mt:CustomConfigName": {
     "prefix": "CustomConfigName",
     "body": ["<mt:CustomConfigName${1} />"]
   },
-
   "mt:CustomConfigModifiedOn": {
     "prefix": "CustomConfigModifiedOn",
     "body": ["<mt:CustomConfigModifiedOn${1} />"]
   },
-
   "mt:CustomConfig": {
     "prefix": "CustomConfig",
     "body": ["<mt:CustomConfig${1}>${2}</mt:CustomConfig>"]
   },
-
   "mt:CustomConfigLoop": {
     "prefix": "CustomConfigLoop",
     "body": ["<mt:CustomConfigLoop${1}>${2}</mt:CustomConfigLoop>"]
   },
-
   "mt:CountGroupCount": {
     "prefix": "CountGroupCount",
     "body": ["<mt:CountGroupCount${1} />"]
   },
-
   "mt:CountGroupValue": {
     "prefix": "CountGroupValue",
     "body": ["<mt:CountGroupValue${1} />"]
   },
-
   "mt:CountGroupBy": {
     "prefix": "CountGroupBy",
     "body": ["<mt:CountGroupBy${1}>${2}</mt:CountGroupBy>"]
   },
-
   "format_ts=\"\"": {
     "prefix": "format_ts=\"\"",
     "body": ["format_ts=\"${1}\""]
   },
-
   "mt:FormElementDescription": {
     "prefix": "FormElementDescription",
     "body": ["<mt:FormElementDescription${1} />"]
   },
-
   "mt:FormElementBasename": {
     "prefix": "FormElementBasename",
     "body": ["<mt:FormElementBasename${1} />"]
   },
-
   "mt:FormElementOption": {
     "prefix": "FormElementOption",
     "body": ["<mt:FormElementOption${1} />"]
   },
-
   "mt:ContactFormStaticLink": {
     "prefix": "ContactFormStaticLink",
     "body": ["<mt:ContactFormStaticLink${1} />"]
   },
-
   "mt:FeedbackClosedMessage": {
     "prefix": "FeedbackClosedMessage",
     "body": ["<mt:FeedbackClosedMessage${1} />"]
   },
-
   "mt:FormCMSFormStatusMsg": {
     "prefix": "FormCMSFormStatusMsg",
     "body": ["<mt:FormCMSFormStatusMsg${1} />"]
   },
-
   "mt:ContactFormAuthorDisplayName": {
     "prefix": "ContactFormAuthorDisplayName",
     "body": ["<mt:ContactFormAuthorDisplayName${1} />"]
   },
-
   "mt:FeedbackInformationMessage": {
     "prefix": "FeedbackInformationMessage",
     "body": ["<mt:FeedbackInformationMessage${1} />"]
   },
-
   "mt:FeedbackConfirmMessage": {
     "prefix": "FeedbackConfirmMessage",
     "body": ["<mt:FeedbackConfirmMessage${1} />"]
   },
-
   "mt:ContactFormColumn": {
     "prefix": "ContactFormColumn",
     "body": ["<mt:ContactFormColumn${1} />"]
   },
-
   "mt:FormElementColumn": {
     "prefix": "FormElementColumn",
     "body": ["<mt:FormElementColumn${1} />"]
   },
-
   "mt:FormElementDefault": {
     "prefix": "FormElementDefault",
     "body": ["<mt:FormElementDefault${1} />"]
   },
-
   "mt:FormElementType": {
     "prefix": "FormElementType",
     "body": ["<mt:FormElementType${1} />"]
   },
-
   "mt:ContactFormID": {
     "prefix": "ContactFormID",
     "body": ["<mt:ContactFormID${1} />"]
   },
-
   "mt:FeedbackPreOpenMessage": {
     "prefix": "FeedbackPreOpenMessage",
     "body": ["<mt:FeedbackPreOpenMessage${1} />"]
   },
-
   "mt:FeedbackCount": {
     "prefix": "FeedbackCount",
     "body": ["<mt:FeedbackCount${1} />"]
   },
-
   "mt:ContactFormFieldScope": {
     "prefix": "ContactFormFieldScope",
     "body": ["<mt:ContactFormFieldScope${1} />"]
   },
-
   "mt:FormElementName": {
     "prefix": "FormElementName",
     "body": ["<mt:FormElementName${1} />"]
   },
-
   "mt:FeedbackThanksMessage": {
     "prefix": "FeedbackThanksMessage",
     "body": ["<mt:FeedbackThanksMessage${1} />"]
   },
-
   "mt:FeedbackErrorMessage": {
     "prefix": "FeedbackErrorMessage",
     "body": ["<mt:FeedbackErrorMessage${1} />"]
   },
-
   "mt:ContactFormScript": {
     "prefix": "ContactFormScript",
     "body": ["<mt:ContactFormScript${1} />"]
   },
-
   "mt:ContactFormName": {
     "prefix": "ContactFormName",
     "body": ["<mt:ContactFormName${1} />"]
   },
-
   "mt:FormElementSize": {
     "prefix": "FormElementSize",
     "body": ["<mt:FormElementSize${1} />"]
   },
-
   "mt:FormCMSHTML": {
     "prefix": "FormCMSHTML",
     "body": ["<mt:FormCMSHTML${1} />"]
   },
-
   "mt:FormElementHTML": {
     "prefix": "FormElementHTML",
     "body": ["<mt:FormElementHTML${1} />"]
   },
-
   "mt:IfContactFormIsClosed": {
     "prefix": "IfContactFormIsClosed",
     "body": ["<mt:IfContactFormIsClosed${1}>${2}</mt:IfContactFormIsClosed>"]
   },
-
   "mt:IfFeedbackAlreadyPosted": {
     "prefix": "IfFeedbackAlreadyPosted",
     "body": ["<mt:IfFeedbackAlreadyPosted${1}>${2}</mt:IfFeedbackAlreadyPosted>"]
   },
-
   "mt:ContactForms": {
     "prefix": "ContactForms",
     "body": ["<mt:ContactForms${1}>${2}</mt:ContactForms>"]
   },
-
   "mt:IfFormElementValidate": {
     "prefix": "IfFormElementValidate",
     "body": ["<mt:IfFormElementValidate${1}>${2}</mt:IfFormElementValidate>"]
   },
-
   "mt:IfFormElementColumn": {
     "prefix": "IfFormElementColumn",
     "body": ["<mt:IfFormElementColumn${1}>${2}</mt:IfFormElementColumn>"]
   },
-
   "mt:IfContactFormIsPreOpen": {
     "prefix": "IfContactFormIsPreOpen",
     "body": ["<mt:IfContactFormIsPreOpen${1}>${2}</mt:IfContactFormIsPreOpen>"]
   },
-
   "mt:IfContactFormIsOpen": {
     "prefix": "IfContactFormIsOpen",
     "body": ["<mt:IfContactFormIsOpen${1}>${2}</mt:IfContactFormIsOpen>"]
   },
-
   "mt:FormElementOptions": {
     "prefix": "FormElementOptions",
     "body": ["<mt:FormElementOptions${1}>${2}</mt:FormElementOptions>"]
   },
-
   "mt:IfFormElementRequired": {
     "prefix": "IfFormElementRequired",
     "body": ["<mt:IfFormElementRequired${1}>${2}</mt:IfFormElementRequired>"]
   },
-
   "mt:CampaignRedirect": {
     "prefix": "CampaignRedirect",
     "body": ["<mt:CampaignRedirect${1} />"]
   },
-
   "mt:BannerCounter": {
     "prefix": "BannerCounter",
     "body": ["<mt:BannerCounter${1} />"]
   },
-
   "mt:BannerUniqClicks": {
     "prefix": "BannerUniqClicks",
     "body": ["<mt:BannerUniqClicks${1} />"]
   },
-
   "mt:BannerDisplays": {
     "prefix": "BannerDisplays",
     "body": ["<mt:BannerDisplays${1} />"]
   },
-
   "mt:CampaignConversionCounter": {
     "prefix": "CampaignConversionCounter",
     "body": ["<mt:CampaignConversionCounter${1} />"]
   },
-
   "mt:BannerPublishingOn": {
     "prefix": "BannerPublishingOn",
     "body": ["<mt:BannerPublishingOn${1} />"]
   },
-
   "mt:BannerText": {
     "prefix": "BannerText",
     "body": ["<mt:BannerText${1} />"]
   },
-
   "mt:BannerURL": {
     "prefix": "BannerURL",
     "body": ["<mt:BannerURL${1} />"]
   },
-
   "mt:CampaignCounter": {
     "prefix": "CampaignCounter",
     "body": ["<mt:CampaignCounter${1} />"]
   },
-
   "mt:CampaignBannerWidth": {
     "prefix": "CampaignBannerWidth",
     "body": ["<mt:CampaignBannerWidth${1} />"]
   },
-
   "mt:CampaignAuthorDisplayName": {
     "prefix": "CampaignAuthorDisplayName",
     "body": ["<mt:CampaignAuthorDisplayName${1} />"]
   },
-
   "mt:BannerBannerHeight": {
     "prefix": "BannerBannerHeight",
     "body": ["<mt:BannerBannerHeight${1} />"]
   },
-
   "mt:BannerMaxUniqDisplays": {
     "prefix": "BannerMaxUniqDisplays",
     "body": ["<mt:BannerMaxUniqDisplays${1} />"]
   },
-
   "mt:CampaignTitle": {
     "prefix": "CampaignTitle",
     "body": ["<mt:CampaignTitle${1} />"]
   },
-
   "mt:CampaignMaxDisplays": {
     "prefix": "CampaignMaxDisplays",
     "body": ["<mt:CampaignMaxDisplays${1} />"]
   },
-
   "mt:CampaignConversion": {
     "prefix": "CampaignConversion",
     "body": ["<mt:CampaignConversion${1} />"]
   },
-
   "mt:CampaignCreatedOn": {
     "prefix": "CampaignCreatedOn",
     "body": ["<mt:CampaignCreatedOn${1} />"]
   },
-
   "mt:BannerMemo": {
     "prefix": "BannerMemo",
     "body": ["<mt:BannerMemo${1} />"]
   },
-
   "mt:CampaignBannerURL": {
     "prefix": "CampaignBannerURL",
     "body": ["<mt:CampaignBannerURL${1} />"]
   },
-
   "mt:BannerConversionView": {
     "prefix": "BannerConversionView",
     "body": ["<mt:BannerConversionView${1} />"]
   },
-
   "mt:CampaignConversionView": {
     "prefix": "CampaignConversionView",
     "body": ["<mt:CampaignConversionView${1} />"]
   },
-
   "mt:CampaignUniqDisplays": {
     "prefix": "CampaignUniqDisplays",
     "body": ["<mt:CampaignUniqDisplays${1} />"]
   },
-
   "mt:CampaignDisplays": {
     "prefix": "CampaignDisplays",
     "body": ["<mt:CampaignDisplays${1} />"]
   },
-
   "mt:CampaignMaxClicks": {
     "prefix": "CampaignMaxClicks",
     "body": ["<mt:CampaignMaxClicks${1} />"]
   },
-
   "mt:BannerPeriodOn": {
     "prefix": "BannerPeriodOn",
     "body": ["<mt:BannerPeriodOn${1} />"]
   },
-
   "mt:BannerRedirect": {
     "prefix": "BannerRedirect",
     "body": ["<mt:BannerRedirect${1} />"]
   },
-
   "mt:BannerMaxClicks": {
     "prefix": "BannerMaxClicks",
     "body": ["<mt:BannerMaxClicks${1} />"]
   },
-
   "mt:CampaignBannerHeight": {
     "prefix": "CampaignBannerHeight",
     "body": ["<mt:CampaignBannerHeight${1} />"]
   },
-
   "mt:BannerTitle": {
     "prefix": "BannerTitle",
     "body": ["<mt:BannerTitle${1} />"]
   },
-
   "mt:CampaignUniqClicks": {
     "prefix": "CampaignUniqClicks",
     "body": ["<mt:CampaignUniqClicks${1} />"]
   },
-
   "mt:CampaignText": {
     "prefix": "CampaignText",
     "body": ["<mt:CampaignText${1} />"]
   },
-
   "mt:CampaignID": {
     "prefix": "CampaignID",
     "body": ["<mt:CampaignID${1} />"]
   },
-
   "mt:CampaignClicks": {
     "prefix": "CampaignClicks",
     "body": ["<mt:CampaignClicks${1} />"]
   },
-
   "mt:BannerScript": {
     "prefix": "BannerScript",
     "body": ["<mt:BannerScript${1} />"]
   },
-
   "mt:CampaignFieldScope": {
     "prefix": "CampaignFieldScope",
     "body": ["<mt:CampaignFieldScope${1} />"]
   },
-
   "mt:CampaignScript": {
     "prefix": "CampaignScript",
     "body": ["<mt:CampaignScript${1} />"]
   },
-
   "mt:BannerClicks": {
     "prefix": "BannerClicks",
     "body": ["<mt:BannerClicks${1} />"]
   },
-
   "mt:BannerConversion": {
     "prefix": "BannerConversion",
     "body": ["<mt:BannerConversion${1} />"]
   },
-
   "mt:BannerConversionCounter": {
     "prefix": "BannerConversionCounter",
     "body": ["<mt:BannerConversionCounter${1} />"]
   },
-
   "mt:BannerCreatedOn": {
     "prefix": "BannerCreatedOn",
     "body": ["<mt:BannerCreatedOn${1} />"]
   },
-
   "mt:CampaignPeriodOn": {
     "prefix": "CampaignPeriodOn",
     "body": ["<mt:CampaignPeriodOn${1} />"]
   },
-
   "mt:CampaignMaxUniqDisplays": {
     "prefix": "CampaignMaxUniqDisplays",
     "body": ["<mt:CampaignMaxUniqDisplays${1} />"]
   },
-
   "mt:BannerBannerWidth": {
     "prefix": "BannerBannerWidth",
     "body": ["<mt:BannerBannerWidth${1} />"]
   },
-
   "mt:BannerFieldScope": {
     "prefix": "BannerFieldScope",
     "body": ["<mt:BannerFieldScope${1} />"]
   },
-
   "mt:BannerBasename": {
     "prefix": "BannerBasename",
     "body": ["<mt:BannerBasename${1} />"]
   },
-
   "mt:BannerMaxUniqClicks": {
     "prefix": "BannerMaxUniqClicks",
     "body": ["<mt:BannerMaxUniqClicks${1} />"]
   },
-
   "mt:BannerMaxDisplays": {
     "prefix": "BannerMaxDisplays",
     "body": ["<mt:BannerMaxDisplays${1} />"]
   },
-
   "mt:BannerBannerURL": {
     "prefix": "BannerBannerURL",
     "body": ["<mt:BannerBannerURL${1} />"]
   },
-
   "mt:BannerID": {
     "prefix": "BannerID",
     "body": ["<mt:BannerID${1} />"]
   },
-
   "mt:CampaignPublishingOn": {
     "prefix": "CampaignPublishingOn",
     "body": ["<mt:CampaignPublishingOn${1} />"]
   },
-
   "mt:CampaignMemo": {
     "prefix": "CampaignMemo",
     "body": ["<mt:CampaignMemo${1} />"]
   },
-
   "mt:CampaignMaxUniqClicks": {
     "prefix": "CampaignMaxUniqClicks",
     "body": ["<mt:CampaignMaxUniqClicks${1} />"]
   },
-
   "mt:CampaignBasename": {
     "prefix": "CampaignBasename",
     "body": ["<mt:CampaignBasename${1} />"]
   },
-
   "mt:CampaignMovieURL": {
     "prefix": "CampaignMovieURL",
     "body": ["<mt:CampaignMovieURL${1} />"]
   },
-
   "mt:BannerAuthorDisplayName": {
     "prefix": "BannerAuthorDisplayName",
     "body": ["<mt:BannerAuthorDisplayName${1} />"]
   },
-
   "mt:BannerUniqDisplays": {
     "prefix": "BannerUniqDisplays",
     "body": ["<mt:BannerUniqDisplays${1} />"]
   },
-
   "mt:CampaignURL": {
     "prefix": "CampaignURL",
     "body": ["<mt:CampaignURL${1} />"]
   },
-
   "mt:BannerMovieURL": {
     "prefix": "BannerMovieURL",
     "body": ["<mt:BannerMovieURL${1} />"]
   },
-
   "mt:IfCampaignHasImage": {
     "prefix": "IfCampaignHasImage",
     "body": ["<mt:IfCampaignHasImage${1}>${2}</mt:IfCampaignHasImage>"]
   },
-
   "mt:CampaignTags": {
     "prefix": "CampaignTags",
     "body": ["<mt:CampaignTags${1}>${2}</mt:CampaignTags>"]
   },
-
   "mt:CampaignIfTagged": {
     "prefix": "CampaignIfTagged",
     "body": ["<mt:CampaignIfTagged${1}>${2}</mt:CampaignIfTagged>"]
   },
-
   "mt:IfBannerActive": {
     "prefix": "IfBannerActive",
     "body": ["<mt:IfBannerActive${1}>${2}</mt:IfBannerActive>"]
   },
-
   "mt:IfBannerHasMovie": {
     "prefix": "IfBannerHasMovie",
     "body": ["<mt:IfBannerHasMovie${1}>${2}</mt:IfBannerHasMovie>"]
   },
-
   "mt:Banner": {
     "prefix": "Banner",
     "body": ["<mt:Banner${1}>${2}</mt:Banner>"]
   },
-
   "mt:BannerTags": {
     "prefix": "BannerTags",
     "body": ["<mt:BannerTags${1}>${2}</mt:BannerTags>"]
   },
-
   "mt:IfIE": {
     "prefix": "IfIE",
     "body": ["<mt:IfIE${1}>${2}</mt:IfIE>"]
   },
-
   "mt:Campaignster": {
     "prefix": "Campaignster",
     "body": ["<mt:Campaignster>${1}</mt:Campaignster>"]
   },
-
   "mt:IfCampaignActive": {
     "prefix": "IfCampaignActive",
     "body": ["<mt:IfCampaignActive${1}>${2}</mt:IfCampaignActive>"]
   },
-
   "mt:Banners": {
     "prefix": "Banners",
     "body": ["<mt:Banners${1}>${2}</mt:Banners>"]
   },
-
   "mt:Bannerster": {
     "prefix": "Bannerster",
     "body": ["<mt:Bannerster>${1}</mt:Bannerster>"]
   },
-
   "mt:Campaigns": {
     "prefix": "Campaigns",
     "body": ["<mt:Campaigns${1}>${2}</mt:Campaigns>"]
   },
-
   "mt:CampaignsHeader": {
     "prefix": "CampaignsHeader",
     "body": ["<mt:CampaignsHeader>${1}</mt:CampaignsHeader>"]
   },
-
   "mt:BannerAsset": {
     "prefix": "BannerAsset",
     "body": ["<mt:BannerAsset${1}>${2}</mt:BannerAsset>"]
   },
-
   "mt:BannerIfTagged": {
     "prefix": "BannerIfTagged",
     "body": ["<mt:BannerIfTagged${1}>${2}</mt:BannerIfTagged>"]
   },
-
   "mt:BannersHeader": {
     "prefix": "BannersHeader",
     "body": ["<mt:BannersHeader>${1}</mt:BannersHeader>"]
   },
-
   "mt:IfCampaignHasMovie": {
     "prefix": "IfCampaignHasMovie",
     "body": ["<mt:IfCampaignHasMovie${1}>${2}</mt:IfCampaignHasMovie>"]
   },
-
   "mt:Campaign": {
     "prefix": "Campaign",
     "body": ["<mt:Campaign${1}>${2}</mt:Campaign>"]
   },
-
   "mt:CampaignAuthor": {
     "prefix": "CampaignAuthor",
     "body": ["<mt:CampaignAuthor${1}>${2}</mt:CampaignAuthor>"]
   },
-
   "mt:IfBannerHasImage": {
     "prefix": "IfBannerHasImage",
     "body": ["<mt:IfBannerHasImage${1}>${2}</mt:IfBannerHasImage>"]
   },
-
   "mt:CampaignRandom": {
     "prefix": "CampaignRandom",
     "body": ["<mt:CampaignRandom${1}>${2}</mt:CampaignRandom>"]
   },
-
   "mt:BannerAuthor": {
     "prefix": "BannerAuthor",
     "body": ["<mt:BannerAuthor${1}>${2}</mt:BannerAuthor>"]
   },
-
   "mt:BannerRandom": {
     "prefix": "BannerRandom",
     "body": ["<mt:BannerRandom${1}>${2}</mt:BannerRandom>"]
   },
-
   "mt:CampaignAsset": {
     "prefix": "CampaignAsset",
     "body": ["<mt:CampaignAsset${1}>${2}</mt:CampaignAsset>"]
   },
-
   "asset2url=\"\"": {
     "prefix": "asset2url=\"\"",
     "body": ["asset2url=\"${1}\""]
   },
-
   "exportformat=\"\"": {
     "prefix": "exportformat=\"\"",
     "body": ["exportformat=\"${1}\""]
   },
-
   "mt:CustomFieldType": {
     "prefix": "CustomFieldType",
     "body": ["<mt:CustomFieldType${1} />"]
   },
-
   "mt:ExportEntries": {
     "prefix": "ExportEntries",
     "body": ["<mt:ExportEntries${1}>${2}</mt:ExportEntries>"]
   },
-
   "mt:CMSCacheBlock": {
     "prefix": "CMSCacheBlock",
     "body": ["<mt:CMSCacheBlock${1}>${2}</mt:CMSCacheBlock>"]
   },
-
   "mt:RequestCacheBlock": {
     "prefix": "RequestCacheBlock",
     "body": ["<mt:RequestCacheBlock${1}>${2}</mt:RequestCacheBlock>"]
   },
-
   "mt:ContactFormFileAsset": {
     "prefix": "ContactFormFileAsset",
     "body": ["<mt:ContactFormFileAsset${1}>${2}</mt:ContactFormFileAsset>"]
   },
-
   "mt:BreadcrumbsLabel": {
     "prefix": "BreadcrumbsLabel",
     "body": ["<mt:BreadcrumbsLabel${1} />"]
   },
-
   "mt:BreadcrumbsTitle": {
     "prefix": "BreadcrumbsTitle",
     "body": ["<mt:BreadcrumbsTitle${1} />"]
   },
-
   "mt:BreadcrumbsLink": {
     "prefix": "BreadcrumbsLink",
     "body": ["<mt:BreadcrumbsLink${1} />"]
   },
-
   "mt:BreadcrumbsURL": {
     "prefix": "BreadcrumbsURL",
     "body": ["<mt:BreadcrumbsURL${1} />"]
   },
-
   "mt:Breadcrumbs": {
     "prefix": "Breadcrumbs",
     "body": ["<mt:Breadcrumbs${1}>${2}</mt:Breadcrumbs>"]
   },
-
   "mt:UserBookmarks": {
     "prefix": "UserBookmarks",
     "body": ["<mt:UserBookmarks${1}>${2}</mt:UserBookmarks>"]
   },
-
   "mt:BlogTreeBlogNameTrim": {
     "prefix": "BlogTreeBlogNameTrim",
     "body": ["<mt:BlogTreeBlogNameTrim${1} />"]
   },
-
   "mt:BlogTreePingCount": {
     "prefix": "BlogTreePingCount",
     "body": ["<mt:BlogTreePingCount${1} />"]
   },
-
   "mt:AdminFullURL": {
     "prefix": "AdminFullURL",
     "body": ["<mt:AdminFullURL${1} />"]
   },
-
   "mt:BlogTreeEntiesLastn": {
     "prefix": "BlogTreeEntiesLastn",
     "body": ["<mt:BlogTreeEntiesLastn${1} />"]
   },
-
   "mt:BlogTreeFormDataCount": {
     "prefix": "BlogTreeFormDataCount",
     "body": ["<mt:BlogTreeFormDataCount${1} />"]
   },
-
   "mt:BlogTreeDashboardCSS": {
     "prefix": "BlogTreeDashboardCSS",
     "body": ["<mt:BlogTreeDashboardCSS${1} />"]
   },
-
   "mt:ISCreatePosts": {
     "prefix": "ISCreatePosts",
     "body": ["<mt:ISCreatePosts${1} />"]
   },
-
   "mt:StaticFullURL": {
     "prefix": "StaticFullURL",
     "body": ["<mt:StaticFullURL${1} />"]
   },
-
   "mt:BlogTreeFolderCount": {
     "prefix": "BlogTreeFolderCount",
     "body": ["<mt:BlogTreeFolderCount${1} />"]
   },
-
   "mt:BlogTreeCatMaxDisplay": {
     "prefix": "BlogTreeCatMaxDisplay",
     "body": ["<mt:BlogTreeCatMaxDisplay${1} />"]
   },
-
   "mt:BlogTreeEntryTitleTrim": {
     "prefix": "BlogTreeEntryTitleTrim",
     "body": ["<mt:BlogTreeEntryTitleTrim${1} />"]
   },
-
   "mt:BlogTreeTagCount": {
     "prefix": "BlogTreeTagCount",
     "body": ["<mt:BlogTreeTagCount${1} />"]
   },
-
   "mt:BlogTreeCommentCount": {
     "prefix": "BlogTreeCommentCount",
     "body": ["<mt:BlogTreeCommentCount${1} />"]
   },
-
   "mt:BlogTreeEntriesCount": {
     "prefix": "BlogTreeEntriesCount",
     "body": ["<mt:BlogTreeEntriesCount${1} />"]
   },
-
   "mt:BlogTreeCatMaxDepth": {
     "prefix": "BlogTreeCatMaxDepth",
     "body": ["<mt:BlogTreeCatMaxDepth${1} />"]
   },
-
   "mt:BlogTreeEntries": {
     "prefix": "BlogTreeEntries",
     "body": ["<mt:BlogTreeEntries${1}>${2}</mt:BlogTreeEntries>"]
   },
-
   "mt:IfUserCanCreatePage": {
     "prefix": "IfUserCanCreatePage",
     "body": ["<mt:IfUserCanCreatePage${1}>${2}</mt:IfUserCanCreatePage>"]
   },
-
   "mt:BlogTreeAssets": {
     "prefix": "BlogTreeAssets",
     "body": ["<mt:BlogTreeAssets${1}>${2}</mt:BlogTreeAssets>"]
   },
-
   "mt:IfBlogTree": {
     "prefix": "IfBlogTree",
     "body": ["<mt:IfBlogTree${1}>${2}</mt:IfBlogTree>"]
   },
-
   "mt:IfBlogTreeEntryPublished": {
     "prefix": "IfBlogTreeEntryPublished",
     "body": ["<mt:IfBlogTreeEntryPublished${1}>${2}</mt:IfBlogTreeEntryPublished>"]
   },
-
   "mt:BlogTreeAssetster": {
     "prefix": "BlogTreeAssetster",
     "body": ["<mt:BlogTreeAssetster>${1}</mt:BlogTreeAssetster>"]
   },
-
   "mt:IfUserCanCreateEntry": {
     "prefix": "IfUserCanCreateEntry",
     "body": ["<mt:IfUserCanCreateEntry${1}>${2}</mt:IfUserCanCreateEntry>"]
   },
-
   "mt:CMSBlogContext": {
     "prefix": "CMSBlogContext",
     "body": ["<mt:CMSBlogContext${1}>${2}</mt:CMSBlogContext>"]
   },
-
   "mt:IfUserIsSuperuser": {
     "prefix": "IfUserIsSuperuser",
     "body": ["<mt:IfUserIsSuperuser${1}>${2}</mt:IfUserIsSuperuser>"]
   },
-
   "mt:IfChildBlog": {
     "prefix": "IfChildBlog",
     "body": ["<mt:IfChildBlog${1}>${2}</mt:IfChildBlog>"]
   },
-
   "mt:BlogTreeEntriesHeader": {
     "prefix": "BlogTreeEntriesHeader",
     "body": ["<mt:BlogTreeEntriesHeader>${1}</mt:BlogTreeEntriesHeader>"]
   },
-
   "mt:BlogTreeAssetsHeader": {
     "prefix": "BlogTreeAssetsHeader",
     "body": ["<mt:BlogTreeAssetsHeader>${1}</mt:BlogTreeAssetsHeader>"]
   },
-
   "mt:IfUserHasPerm": {
     "prefix": "IfUserHasPerm",
     "body": ["<mt:IfUserHasPerm${1}>${2}</mt:IfUserHasPerm>"]
   },
-
   "mt:RemoveReturn": {
     "prefix": "RemoveReturn",
     "body": ["<mt:RemoveReturn${1}>${2}</mt:RemoveReturn>"]
   },
-
   "mt:BlogTreeEntriester": {
     "prefix": "BlogTreeEntriester",
     "body": ["<mt:BlogTreeEntriester>${1}</mt:BlogTreeEntriester>"]
   },
-
   "mt:IfCategoryIsTopLevel": {
     "prefix": "IfCategoryIsTopLevel",
     "body": ["<mt:IfCategoryIsTopLevel${1}>${2}</mt:IfCategoryIsTopLevel>"]
   },
-
   "asset_id=\"\"": {
     "prefix": "asset_id=\"\"",
     "body": ["asset_id=\"${1}\""]
   },
-
   "path2url=\"\"": {
     "prefix": "path2url=\"\"",
     "body": ["path2url=\"${1}\""]
   },
-
   "get_basename=\"\"": {
     "prefix": "get_basename=\"\"",
     "body": ["get_basename=\"${1}\""]
   },
-
   "HTMLImageElement=\"\"": {
     "prefix": "HTMLImageElement=\"\"",
     "body": ["HTMLImageElement=\"${1}\""]
   },
-
   "mt:EntryAttachFile": {
     "prefix": "EntryAttachFile",
     "body": ["<mt:EntryAttachFile${1} />"]
   },
-
   "mt:AttachFileCounter": {
     "prefix": "AttachFileCounter",
     "body": ["<mt:AttachFileCounter${1} />"]
   },
-
   "mt:EntryAttachFilesValues": {
     "prefix": "EntryAttachFilesValues",
     "body": ["<mt:EntryAttachFilesValues${1} />"]
   },
-
   "mt:IfBlogAttachFile": {
     "prefix": "IfBlogAttachFile",
     "body": ["<mt:IfBlogAttachFile${1}>${2}</mt:IfBlogAttachFile>"]
   },
-
   "mt:EntryAttachFiles": {
     "prefix": "EntryAttachFiles",
     "body": ["<mt:EntryAttachFiles${1}>${2}</mt:EntryAttachFiles>"]
   },
-
   "mt:IfCategoryAttachFile": {
     "prefix": "IfCategoryAttachFile",
     "body": ["<mt:IfCategoryAttachFile${1}>${2}</mt:IfCategoryAttachFile>"]
   },
-
   "mt:CategoryAttachFiles": {
     "prefix": "CategoryAttachFiles",
     "body": ["<mt:CategoryAttachFiles${1}>${2}</mt:CategoryAttachFiles>"]
   },
-
   "mt:BlogAttachFiles": {
     "prefix": "BlogAttachFiles",
     "body": ["<mt:BlogAttachFiles${1}>${2}</mt:BlogAttachFiles>"]
   },
-
   "mt:IfEntryAttachFile": {
     "prefix": "IfEntryAttachFile",
     "body": ["<mt:IfEntryAttachFile${1}>${2}</mt:IfEntryAttachFile>"]
   },
-
   "mt:AssetGroupFieldScope": {
     "prefix": "AssetGroupFieldScope",
     "body": ["<mt:AssetGroupFieldScope${1} />"]
   },
-
   "mt:GroupAssetsHeader": {
     "prefix": "GroupAssetsHeader",
     "body": ["<mt:GroupAssetsHeader>${1}</mt:GroupAssetsHeader>"]
   },
-
   "mt:ItemGroupAssetsHeader": {
     "prefix": "ItemGroupAssetsHeader",
     "body": ["<mt:ItemGroupAssetsHeader>${1}</mt:ItemGroupAssetsHeader>"]
   },
-
   "mt:GroupAssets": {
     "prefix": "GroupAssets",
     "body": ["<mt:GroupAssets${1}>${2}</mt:GroupAssets>"]
   },
-
   "mt:GroupAssetster": {
     "prefix": "GroupAssetster",
     "body": ["<mt:GroupAssetster>${1}</mt:GroupAssetster>"]
   },
-
   "mt:ItemGroupAssets": {
     "prefix": "ItemGroupAssets",
     "body": ["<mt:ItemGroupAssets${1}>${2}</mt:ItemGroupAssets>"]
   },
-
   "mt:ItemGroupAssetster": {
     "prefix": "ItemGroupAssetster",
     "body": ["<mt:ItemGroupAssetster>${1}</mt:ItemGroupAssetster>"]
   },
-
   "url2download=\"\"": {
     "prefix": "url2download=\"\"",
     "body": ["url2download=\"${1}\""]
   },
-
   "mt:DownloadScript": {
     "prefix": "DownloadScript",
     "body": ["<mt:DownloadScript${1} />"]
   },
-
   "absolute=\"\"": {
     "prefix": "absolute=\"\"",
     "body": ["absolute=\"${1}\""]
   },
-
   "mt:AltSearchParam": {
     "prefix": "AltSearchParam",
     "body": ["<mt:AltSearchParam${1} />"]
   },
-
   "mt:AltSearchNext": {
     "prefix": "AltSearchNext",
     "body": ["<mt:AltSearchNext${1} />"]
   },
-
   "mt:AltSearchPageCounter": {
     "prefix": "AltSearchPageCounter",
     "body": ["<mt:AltSearchPageCounter${1} />"]
   },
-
   "mt:AltSearchCategoryID": {
     "prefix": "AltSearchCategoryID",
     "body": ["<mt:AltSearchCategoryID${1} />"]
   },
-
   "mt:AltSearchMatch": {
     "prefix": "AltSearchMatch",
     "body": ["<mt:AltSearchMatch${1} />"]
   },
-
   "mt:AltSearchCategoryLabel": {
     "prefix": "AltSearchCategoryLabel",
     "body": ["<mt:AltSearchCategoryLabel${1} />"]
   },
-
   "mt:AltSearchFrom": {
     "prefix": "AltSearchFrom",
     "body": ["<mt:AltSearchFrom${1} />"]
   },
-
   "mt:AltSearchOffset": {
     "prefix": "AltSearchOffset",
     "body": ["<mt:AltSearchOffset${1} />"]
   },
-
   "mt:AltSearchLast": {
     "prefix": "AltSearchLast",
     "body": ["<mt:AltSearchLast${1} />"]
   },
-
   "mt:AltSearchPages": {
     "prefix": "AltSearchPages",
     "body": ["<mt:AltSearchPages${1} />"]
   },
-
   "mt:AltSearchResultOffset": {
     "prefix": "AltSearchResultOffset",
     "body": ["<mt:AltSearchResultOffset${1} />"]
   },
-
   "mt:AltSearchSort_order": {
     "prefix": "AltSearchSort_order",
     "body": ["<mt:AltSearchSort_order${1} />"]
   },
-
   "mt:AltSearchQuery": {
     "prefix": "AltSearchQuery",
     "body": ["<mt:AltSearchQuery${1} />"]
   },
-
   "mt:Year": {
     "prefix": "Year",
     "body": ["<mt:Year${1} />"]
   },
-
   "mt:AltSearchCurrent": {
     "prefix": "AltSearchCurrent",
     "body": ["<mt:AltSearchCurrent${1} />"]
   },
-
   "mt:AltSearchCategories_and_or": {
     "prefix": "AltSearchCategories_and_or",
     "body": ["<mt:AltSearchCategories_and_or${1} />"]
   },
-
   "mt:AltSearchFeedPath": {
     "prefix": "AltSearchFeedPath",
     "body": ["<mt:AltSearchFeedPath${1} />"]
   },
-
   "mt:AltSearchResultNumber": {
     "prefix": "AltSearchResultNumber",
     "body": ["<mt:AltSearchResultNumber${1} />"]
   },
-
   "mt:AltSearchTo": {
     "prefix": "AltSearchTo",
     "body": ["<mt:AltSearchTo${1} />"]
   },
-
   "mt:AltSearchAnd_or": {
     "prefix": "AltSearchAnd_or",
     "body": ["<mt:AltSearchAnd_or${1} />"]
   },
-
   "mt:AltSearchSort_by": {
     "prefix": "AltSearchSort_by",
     "body": ["<mt:AltSearchSort_by${1} />"]
   },
-
   "mt:AltSearchLimit": {
     "prefix": "AltSearchLimit",
     "body": ["<mt:AltSearchLimit${1} />"]
   },
-
   "mt:AltSearchResultPermalink": {
     "prefix": "AltSearchResultPermalink",
     "body": ["<mt:AltSearchResultPermalink${1} />"]
   },
-
   "mt:AltSearchpath": {
     "prefix": "AltSearchpath",
     "body": ["<mt:AltSearchpath${1} />"]
   },
-
   "mt:AltSearchDate": {
     "prefix": "AltSearchDate",
     "body": ["<mt:AltSearchDate${1} />"]
   },
-
   "mt:AltSearchURL": {
     "prefix": "AltSearchURL",
     "body": ["<mt:AltSearchURL${1} />"]
   },
-
   "mt:AltSearchCategoryIDs": {
     "prefix": "AltSearchCategoryIDs",
     "body": ["<mt:AltSearchCategoryIDs${1} />"]
   },
-
   "mt:AltSearchPrev": {
     "prefix": "AltSearchPrev",
     "body": ["<mt:AltSearchPrev${1} />"]
   },
-
   "mt:AltSearchBlogID": {
     "prefix": "AltSearchBlogID",
     "body": ["<mt:AltSearchBlogID${1} />"]
   },
-
   "mt:AltSearchDateParams": {
     "prefix": "AltSearchDateParams",
     "body": ["<mt:AltSearchDateParams${1} />"]
   },
-
   "mt:AltSearchBench": {
     "prefix": "AltSearchBench",
     "body": ["<mt:AltSearchBench${1} />"]
   },
-
   "mt:IfCurrentYear": {
     "prefix": "IfCurrentYear",
     "body": ["<mt:IfCurrentYear${1}>${2}</mt:IfCurrentYear>"]
   },
-
   "mt:IfAltsearchParam": {
     "prefix": "IfAltsearchParam",
     "body": ["<mt:IfAltsearchParam${1}>${2}</mt:IfAltsearchParam>"]
   },
-
   "mt:IfAltsearchModeIsTag": {
     "prefix": "IfAltsearchModeIsTag",
     "body": ["<mt:IfAltsearchModeIsTag${1}>${2}</mt:IfAltsearchModeIsTag>"]
   },
-
   "mt:IfAltsearchCurrentCategories": {
     "prefix": "IfAltsearchCurrentCategories",
     "body": ["<mt:IfAltsearchCurrentCategories${1}>${2}</mt:IfAltsearchCurrentCategories>"]
   },
-
   "mt:IfAltsearchResultCurrent": {
     "prefix": "IfAltsearchResultCurrent",
     "body": ["<mt:IfAltsearchResultCurrent${1}>${2}</mt:IfAltsearchResultCurrent>"]
   },
-
   "mt:IfAltsearchSort_order": {
     "prefix": "IfAltsearchSort_order",
     "body": ["<mt:IfAltsearchSort_order${1}>${2}</mt:IfAltsearchSort_order>"]
   },
-
   "mt:IfAltsearchFrom": {
     "prefix": "IfAltsearchFrom",
     "body": ["<mt:IfAltsearchFrom${1}>${2}</mt:IfAltsearchFrom>"]
   },
-
   "mt:IfAltsearchCurrentCategory": {
     "prefix": "IfAltsearchCurrentCategory",
     "body": ["<mt:IfAltsearchCurrentCategory${1}>${2}</mt:IfAltsearchCurrentCategory>"]
   },
-
   "mt:IfAltsearchDate": {
     "prefix": "IfAltsearchDate",
     "body": ["<mt:IfAltsearchDate${1}>${2}</mt:IfAltsearchDate>"]
   },
-
   "mt:IfAltsearchMetadatasHeader": {
     "prefix": "IfAltsearchMetadatasHeader",
     "body": ["<mt:IfAltsearchMetadatasHeader>${1}</mt:IfAltsearchMetadatasHeader>"]
   },
-
   "mt:IfAltsearchMatchQuery": {
     "prefix": "IfAltsearchMatchQuery",
     "body": ["<mt:IfAltsearchMatchQuery${1}>${2}</mt:IfAltsearchMatchQuery>"]
   },
-
   "mt:IfAltsearchModeIsCategories": {
     "prefix": "IfAltsearchModeIsCategories",
     "body": ["<mt:IfAltsearchModeIsCategories${1}>${2}</mt:IfAltsearchModeIsCategories>"]
   },
-
   "mt:IfAltsearchQuery": {
     "prefix": "IfAltsearchQuery",
     "body": ["<mt:IfAltsearchQuery${1}>${2}</mt:IfAltsearchQuery>"]
   },
-
   "mt:Years": {
     "prefix": "Years",
     "body": ["<mt:Years${1}>${2}</mt:Years>"]
   },
-
   "mt:IfAltsearchResultPrev": {
     "prefix": "IfAltsearchResultPrev",
     "body": ["<mt:IfAltsearchResultPrev${1}>${2}</mt:IfAltsearchResultPrev>"]
   },
-
   "mt:IfAltsearchNoneMatch": {
     "prefix": "IfAltsearchNoneMatch",
     "body": ["<mt:IfAltsearchNoneMatch${1}>${2}</mt:IfAltsearchNoneMatch>"]
   },
-
   "mt:IfAltsearchModeIsSubCategory": {
     "prefix": "IfAltsearchModeIsSubCategory",
     "body": ["<mt:IfAltsearchModeIsSubCategory${1}>${2}</mt:IfAltsearchModeIsSubCategory>"]
   },
-
   "mt:IfAltsearchCategories_and_or": {
     "prefix": "IfAltsearchCategories_and_or",
     "body": ["<mt:IfAltsearchCategories_and_or${1}>${2}</mt:IfAltsearchCategories_and_or>"]
   },
-
   "mt:IfAltsearchSort_by": {
     "prefix": "IfAltsearchSort_by",
     "body": ["<mt:IfAltsearchSort_by${1}>${2}</mt:IfAltsearchSort_by>"]
   },
-
   "mt:AltSearchMetadatas": {
     "prefix": "AltSearchMetadatas",
     "body": ["<mt:AltSearchMetadatas${1}>${2}</mt:AltSearchMetadatas>"]
   },
-
   "mt:IfAltsearchTo": {
     "prefix": "IfAltsearchTo",
     "body": ["<mt:IfAltsearchTo${1}>${2}</mt:IfAltsearchTo>"]
   },
-
   "mt:IfAltSearchParamDate": {
     "prefix": "IfAltSearchParamDate",
     "body": ["<mt:IfAltSearchParamDate${1}>${2}</mt:IfAltSearchParamDate>"]
   },
-
   "mt:IfAltsearchResultNext": {
     "prefix": "IfAltsearchResultNext",
     "body": ["<mt:IfAltsearchResultNext${1}>${2}</mt:IfAltsearchResultNext>"]
   },
-
   "mt:IfAltsearchModeIsCategory": {
     "prefix": "IfAltsearchModeIsCategory",
     "body": ["<mt:IfAltsearchModeIsCategory${1}>${2}</mt:IfAltsearchModeIsCategory>"]
   },
-
   "mt:IfAltsearchMetadataster": {
     "prefix": "IfAltsearchMetadataster",
     "body": ["<mt:IfAltsearchMetadataster>${1}</mt:IfAltsearchMetadataster>"]
   },
-
   "mt:AltSearchMetadata": {
     "prefix": "AltSearchMetadata",
     "body": ["<mt:AltSearchMetadata${1}>${2}</mt:AltSearchMetadata>"]
   },
-
   "mt:AltSearchResults": {
     "prefix": "AltSearchResults",
     "body": ["<mt:AltSearchResults${1}>${2}</mt:AltSearchResults>"]
   },
-
   "mt:IfAltsearchAnd_or": {
     "prefix": "IfAltsearchAnd_or",
     "body": ["<mt:IfAltsearchAnd_or${1}>${2}</mt:IfAltsearchAnd_or>"]
   },
-
   "mt:EntryFieldScope": {
     "prefix": "EntryFieldScope",
     "body": ["<mt:EntryFieldScope${1} />"]
   },
-
   "mt:PageFieldScope": {
     "prefix": "PageFieldScope",
     "body": ["<mt:PageFieldScope${1} />"]
   },
-
   "mt:CfEntrySetContext": {
     "prefix": "CfEntrySetContext",
     "body": ["<mt:CfEntrySetContext${1}>${2}</mt:CfEntrySetContext>"]
   },
-
   "accessibility=\"\"": {
     "prefix": "accessibility=\"\"",
     "body": ["accessibility=\"${1}\""]
   },
-
   "mt:ImgAltCheckErrorCode": {
     "prefix": "ImgAltCheckErrorCode",
     "body": ["<mt:ImgAltCheckErrorCode${1} />"]
   },
-
   "mt:ImgAltCheckErrorCount": {
     "prefix": "ImgAltCheckErrorCount",
     "body": ["<mt:ImgAltCheckErrorCount${1} />"]
   },
-
   "mt:ImgAltCheckImgAlt": {
     "prefix": "ImgAltCheckImgAlt",
     "body": ["<mt:ImgAltCheckImgAlt${1} />"]
   },
-
   "mt:ImgAltCheckFilename": {
     "prefix": "ImgAltCheckFilename",
     "body": ["<mt:ImgAltCheckFilename${1} />"]
   },
-
   "mt:ImgAltCheckImgSrc": {
     "prefix": "ImgAltCheckImgSrc",
     "body": ["<mt:ImgAltCheckImgSrc${1} />"]
   },
-
   "mt:ImgAltCheckAlertCount": {
     "prefix": "ImgAltCheckAlertCount",
     "body": ["<mt:ImgAltCheckAlertCount${1} />"]
   },
-
   "mt:ImgAltCheckErrorMessage": {
     "prefix": "ImgAltCheckErrorMessage",
     "body": ["<mt:ImgAltCheckErrorMessage${1} />"]
   },
-
   "mt:ImgAltCheckter": {
     "prefix": "ImgAltCheckter",
     "body": ["<mt:ImgAltCheckter>${1}</mt:ImgAltCheckter>"]
   },
-
   "mt:ImgAltCheckHeader": {
     "prefix": "ImgAltCheckHeader",
     "body": ["<mt:ImgAltCheckHeader>${1}</mt:ImgAltCheckHeader>"]
   },
-
   "mt:ImgAltCheck": {
     "prefix": "ImgAltCheck",
     "body": ["<mt:ImgAltCheck${1}>${2}</mt:ImgAltCheck>"]
   },
-
   "mt:XMLRPCScript": {
     "prefix": "XMLRPCScript",
     "body": ["<mt:XMLRPCScript${1} />"]
   },
-
   "mt:WidgetSet": {
     "prefix": "WidgetSet",
     "body": ["<mt:WidgetSet${1} />"]
   },
-
   "mt:WidgetManager": {
     "prefix": "WidgetManager",
     "body": ["<mt:WidgetManager${1} />"]
   },
-
   "mt:Websites": {
     "prefix": "Websites",
     "body": ["<mt:Websites${1}>${2}</mt:Websites>"]
   },
-
   "mt:WebsiteURL": {
     "prefix": "WebsiteURL",
     "body": ["<mt:WebsiteURL${1} />"]
   },
-
   "mt:WebsiteTimezone": {
     "prefix": "WebsiteTimezone",
     "body": ["<mt:WebsiteTimezone${1} />"]
   },
-
   "mt:WebsiteThemeID": {
     "prefix": "WebsiteThemeID",
     "body": ["<mt:WebsiteThemeID${1} />"]
   },
-
   "mt:WebsiteRelativeURL": {
     "prefix": "WebsiteRelativeURL",
     "body": ["<mt:WebsiteRelativeURL${1} />"]
   },
-
   "mt:WebsitePingCount": {
     "prefix": "WebsitePingCount",
     "body": ["<mt:WebsitePingCount${1} />"]
   },
-
   "mt:WebsitePath": {
     "prefix": "WebsitePath",
     "body": ["<mt:WebsitePath${1} />"]
   },
-
   "mt:WebsitePageCount": {
     "prefix": "WebsitePageCount",
     "body": ["<mt:WebsitePageCount${1} />"]
   },
-
   "mt:WebsiteName": {
     "prefix": "WebsiteName",
     "body": ["<mt:WebsiteName${1} />"]
   },
-
   "mt:WebsiteLanguage": {
     "prefix": "WebsiteLanguage",
     "body": ["<mt:WebsiteLanguage${1} />"]
   },
-
   "mt:WebsiteIfCommentsOpen": {
     "prefix": "WebsiteIfCommentsOpen",
     "body": ["<mt:WebsiteIfCommentsOpen${1}>${2}</mt:WebsiteIfCommentsOpen>"]
   },
-
   "mt:WebsiteIfCCLicense": {
     "prefix": "WebsiteIfCCLicense",
     "body": ["<mt:WebsiteIfCCLicense${1}>${2}</mt:WebsiteIfCCLicense>"]
   },
-
   "mt:WebsiteID": {
     "prefix": "WebsiteID",
     "body": ["<mt:WebsiteID${1} />"]
   },
-
   "mt:WebsiteHost": {
     "prefix": "WebsiteHost",
     "body": ["<mt:WebsiteHost${1} />"]
   },
-
   "mt:WebsiteHasBlog": {
     "prefix": "WebsiteHasBlog",
     "body": ["<mt:WebsiteHasBlog${1}>${2}</mt:WebsiteHasBlog>"]
   },
-
   "mt:WebsiteFileExtension": {
     "prefix": "WebsiteFileExtension",
     "body": ["<mt:WebsiteFileExtension${1} />"]
   },
-
   "mt:WebsiteDescription": {
     "prefix": "WebsiteDescription",
     "body": ["<mt:WebsiteDescription${1} />"]
   },
-
   "mt:WebsiteCustomFields": {
     "prefix": "WebsiteCustomFields",
     "body": ["<mt:WebsiteCustomFields${1}>${2}</mt:WebsiteCustomFields>"]
   },
-
   "mt:WebsiteCustomFieldValue": {
     "prefix": "WebsiteCustomFieldValue",
     "body": ["<mt:WebsiteCustomFieldValue${1} />"]
   },
-
   "mt:WebsiteCustomFieldName": {
     "prefix": "WebsiteCustomFieldName",
     "body": ["<mt:WebsiteCustomFieldName${1} />"]
   },
-
   "mt:WebsiteCustomFieldDescription": {
     "prefix": "WebsiteCustomFieldDescription",
     "body": ["<mt:WebsiteCustomFieldDescription${1} />"]
   },
-
   "mt:WebsiteCommentCount": {
     "prefix": "WebsiteCommentCount",
     "body": ["<mt:WebsiteCommentCount${1} />"]
   },
-
   "mt:WebsiteCCLicenseURL": {
     "prefix": "WebsiteCCLicenseURL",
     "body": ["<mt:WebsiteCCLicenseURL${1} />"]
   },
-
   "mt:WebsiteCCLicenseImage": {
     "prefix": "WebsiteCCLicenseImage",
     "body": ["<mt:WebsiteCCLicenseImage${1} />"]
   },
-
   "mt:VideoCustomFields": {
     "prefix": "VideoCustomFields",
     "body": ["<mt:VideoCustomFields${1}>${2}</mt:VideoCustomFields>"]
   },
-
   "mt:VideoCustomFieldValue": {
     "prefix": "VideoCustomFieldValue",
     "body": ["<mt:VideoCustomFieldValue${1} />"]
   },
-
   "mt:VideoCustomFieldName": {
     "prefix": "VideoCustomFieldName",
     "body": ["<mt:VideoCustomFieldName${1} />"]
   },
-
   "mt:VideoCustomFieldDescription": {
     "prefix": "VideoCustomFieldDescription",
     "body": ["<mt:VideoCustomFieldDescription${1} />"]
   },
-
   "mt:Version": {
     "prefix": "Version",
     "body": ["<mt:Version${1} />"]
   },
-
   "mt:Unless": {
     "prefix": "Unless",
     "body": ["<mt:Unless name=\"${1:VariableName}\">${2}</mt:Unless>"]
   },
-
   "mt:TypeKeyToken": {
     "prefix": "TypeKeyToken",
     "body": ["<mt:TypeKeyToken${1} />"]
   },
-
   "mt:TrackbackScript": {
     "prefix": "TrackbackScript",
     "body": ["<mt:TrackbackScript${1} />"]
   },
-
   "mt:TotalPages": {
     "prefix": "TotalPages",
     "body": ["<mt:TotalPages${1} />"]
   },
-
   "mt:TopLevelParent": {
     "prefix": "TopLevelParent",
     "body": ["<mt:TopLevelParent${1}>${2}</mt:TopLevelParent>"]
   },
-
   "mt:TopLevelFolders": {
     "prefix": "TopLevelFolders",
     "body": ["<mt:TopLevelFolders${1}>${2}</mt:TopLevelFolders>"]
   },
-
   "mt:TopLevelFolder": {
     "prefix": "TopLevelFolder",
     "body": ["<mt:TopLevelFolder${1}>${2}</mt:TopLevelFolder>"]
   },
-
   "mt:TopLevelCategories": {
     "prefix": "TopLevelCategories",
     "body": ["<mt:TopLevelCategories${1}>${2}</mt:TopLevelCategories>"]
   },
-
   "mt:TextileOptions": {
     "prefix": "TextileOptions",
     "body": ["<mt:TextileOptions${1} />"]
   },
-
   "mt:TextileHeadOffset": {
     "prefix": "TextileHeadOffset",
     "body": ["<mt:TextileHeadOffset${1} />"]
   },
-
   "mt:Textile": {
     "prefix": "Textile",
     "body": ["<mt:Textile${1}>${2}</mt:Textile>"]
   },
-
   "mt:TemplateNote": {
     "prefix": "TemplateNote",
     "body": ["<mt:TemplateNote note=\"${1:Comment}\">"]
   },
-
   "mt:TemplateCustomFields": {
     "prefix": "TemplateCustomFields",
     "body": ["<mt:TemplateCustomFields${1}>${2}</mt:TemplateCustomFields>"]
   },
-
   "mt:TemplateCustomFieldValue": {
     "prefix": "TemplateCustomFieldValue",
     "body": ["<mt:TemplateCustomFieldValue${1} />"]
   },
-
   "mt:TemplateCustomFieldName": {
     "prefix": "TemplateCustomFieldName",
     "body": ["<mt:TemplateCustomFieldName${1} />"]
   },
-
   "mt:TemplateCustomFieldDescription": {
     "prefix": "TemplateCustomFieldDescription",
     "body": ["<mt:TemplateCustomFieldDescription${1} />"]
   },
-
   "mt:TemplateCreatedOn": {
     "prefix": "TemplateCreatedOn",
     "body": ["<mt:TemplateCreatedOn${1} />"]
   },
-
   "mt:Tags": {
     "prefix": "Tags",
     "body": ["<mt:Tags${1}>${2}</mt:Tags>"]
   },
-
   "mt:TagSearchLink": {
     "prefix": "TagSearchLink",
     "body": ["<mt:TagSearchLink${1} />"]
   },
-
   "mt:TagRank": {
     "prefix": "TagRank",
     "body": ["<mt:TagRank${1} />"]
   },
-
   "mt:TagName": {
     "prefix": "TagName",
     "body": ["<mt:TagName${1} />"]
   },
-
   "mt:TagLabel": {
     "prefix": "TagLabel",
     "body": ["<mt:TagLabel${1} />"]
   },
-
   "mt:TagID": {
     "prefix": "TagID",
     "body": ["<mt:TagID${1} />"]
   },
-
   "mt:TagCount": {
     "prefix": "TagCount",
     "body": ["<mt:TagCount${1} />"]
   },
-
   "mt:SupportDirectoryURL": {
     "prefix": "SupportDirectoryURL",
     "body": ["<mt:SupportDirectoryURL${1} />"]
   },
-
   "mt:SubFolders": {
     "prefix": "SubFolders",
     "body": ["<mt:SubFolders${1}>${2}</mt:SubFolders>"]
   },
-
   "mt:SubFolderRecurse": {
     "prefix": "SubFolderRecurse",
     "body": ["<mt:SubFolderRecurse${1} />"]
   },
-
   "mt:SubCatsRecurse": {
     "prefix": "SubCatsRecurse",
     "body": ["<mt:SubCatsRecurse${1} />"]
   },
-
   "mt:SubCategoryPath": {
     "prefix": "SubCategoryPath",
     "body": ["<mt:SubCategoryPath${1} />"]
   },
-
   "mt:SubCategories": {
     "prefix": "SubCategories",
     "body": ["<mt:SubCategories${1}>${2}</mt:SubCategories>"]
   },
-
   "mt:SubCatIsLast": {
     "prefix": "SubCatIsLast",
     "body": ["<mt:SubCatIsLast${1}>${2}</mt:SubCatIsLast>"]
   },
-
   "mt:SubCatIsFirst": {
     "prefix": "SubCatIsFirst",
     "body": ["<mt:SubCatIsFirst${1}>${2}</mt:SubCatIsFirst>"]
   },
-
   "mt:StreamActionVar": {
     "prefix": "StreamActionVar",
     "body": ["<mt:StreamActionVar${1} />"]
   },
-
   "mt:StreamActionTitle": {
     "prefix": "StreamActionTitle",
     "body": ["<mt:StreamActionTitle${1} />"]
   },
-
   "mt:StreamActionThumbnailURL": {
     "prefix": "StreamActionThumbnailURL",
     "body": ["<mt:StreamActionThumbnailURL${1} />"]
   },
-
   "mt:StreamActionTags": {
     "prefix": "StreamActionTags",
     "body": ["<mt:StreamActionTags${1}>${2}</mt:StreamActionTags>"]
   },
-
   "mt:StreamActionRollup": {
     "prefix": "StreamActionRollup",
     "body": ["<mt:StreamActionRollup${1}>${2}</mt:StreamActionRollup>"]
   },
-
   "mt:StreamActionModifiedDate": {
     "prefix": "StreamActionModifiedDate",
     "body": ["<mt:StreamActionModifiedDate${1} />"]
   },
-
   "mt:StreamActionID": {
     "prefix": "StreamActionID",
     "body": ["<mt:StreamActionID${1} />"]
   },
-
   "mt:StreamActionDate": {
     "prefix": "StreamActionDate",
     "body": ["<mt:StreamActionDate${1} />"]
   },
-
   "mt:StreamAction": {
     "prefix": "StreamAction",
     "body": ["<mt:StreamAction${1} />"]
   },
-
   "mt:StaticWebPath": {
     "prefix": "StaticWebPath",
     "body": ["<mt:StaticWebPath${1} />"]
   },
-
   "mt:StaticFilePath": {
     "prefix": "StaticFilePath",
     "body": ["<mt:StaticFilePath${1} />"]
   },
-
   "mt:SmartyPantsVersion": {
     "prefix": "SmartyPantsVersion",
     "body": ["<mt:SmartyPantsVersion${1} />"]
   },
-
   "mt:SignOnURL": {
     "prefix": "SignOnURL",
     "body": ["<mt:SignOnURL${1} />"]
   },
-
   "mt:SetVars": {
     "prefix": "SetVars",
     "body": ["<mt:SetVars>\n${1:Variable Name}=${2:Value}\n</mt:SetVars>"]
   },
-
   "mt:SetVarTemplate": {
     "prefix": "SetVarTemplate",
     "body": ["<mt:SetVarTemplate name=\"${1:Variable Name}\">${2}</mt:SetVarTemplate>"]
   },
-
   "mt:SetVar": {
     "prefix": "SetVar",
     "body": ["<mt:SetVar name=\"${1:VariableName}\" value=\"${2:Value}\">"]
   },
-
   "mt:SetHashVar": {
     "prefix": "SetHashVar",
     "body": ["<mt:SetHashVar${1}>${2}</mt:SetHashVar>"]
   },
-
   "mt:Section": {
     "prefix": "Section",
     "body": ["<mt:Section${1}>${2}</mt:Section>"]
   },
-
   "mt:SearchTemplateID": {
     "prefix": "SearchTemplateID",
     "body": ["<mt:SearchTemplateID${1} />"]
   },
-
   "mt:SearchString": {
     "prefix": "SearchString",
     "body": ["<mt:SearchString${1} />"]
   },
-
   "mt:SearchScript": {
     "prefix": "SearchScript",
     "body": ["<mt:SearchScript${1} />"]
   },
-
   "mt:SearchResultsHeader": {
     "prefix": "SearchResultsHeader",
     "body": ["<mt:SearchResultsHeader${1}>${2}</mt:SearchResultsHeader>"]
   },
-
   "mt:SearchResultster": {
     "prefix": "SearchResultster",
     "body": ["<mt:SearchResultster${1}>${2}</mt:SearchResultster>"]
   },
-
   "mt:SearchResults": {
     "prefix": "SearchResults",
     "body": ["<mt:SearchResults${1}>${2}</mt:SearchResults>"]
   },
-
   "mt:SearchResultCount": {
     "prefix": "SearchResultCount",
     "body": ["<mt:SearchResultCount${1} />"]
   },
-
   "mt:SearchMaxResults": {
     "prefix": "SearchMaxResults",
     "body": ["<mt:SearchMaxResults${1} />"]
   },
-
   "mt:SearchIncludeBlogs": {
     "prefix": "SearchIncludeBlogs",
     "body": ["<mt:SearchIncludeBlogs${1} />"]
   },
-
   "mt:RemoteSignOutLink": {
     "prefix": "RemoteSignOutLink",
     "body": ["<mt:RemoteSignOutLink${1} />"]
   },
-
   "mt:RemoteSignInLink": {
     "prefix": "RemoteSignInLink",
     "body": ["<mt:RemoteSignInLink${1} />"]
   },
-
   "mt:PublishCharset": {
     "prefix": "PublishCharset",
     "body": ["<mt:PublishCharset${1} />"]
   },
-
   "mt:ProfileServices": {
     "prefix": "ProfileServices",
     "body": ["<mt:ProfileServices${1}>${2}</mt:ProfileServices>"]
   },
-
   "mt:ProductName": {
     "prefix": "ProductName",
     "body": ["<mt:ProductName${1} />"]
   },
-
   "mt:PreviousLink": {
     "prefix": "PreviousLink",
     "body": ["<mt:PreviousLink${1} />"]
   },
-
   "mt:PingsSentURL": {
     "prefix": "PingsSentURL",
     "body": ["<mt:PingsSentURL${1} />"]
   },
-
   "mt:PingsSent": {
     "prefix": "PingsSent",
     "body": ["<mt:PingsSent${1}>${2}</mt:PingsSent>"]
   },
-
   "mt:PingsHeader": {
     "prefix": "PingsHeader",
     "body": ["<mt:PingsHeader${1}>${2}</mt:PingsHeader>"]
   },
-
   "mt:Pingster": {
     "prefix": "Pingster",
     "body": ["<mt:Pingster${1}>${2}</mt:Pingster>"]
   },
-
   "mt:Pings": {
     "prefix": "Pings",
     "body": ["<mt:Pings${1}>${2}</mt:Pings>"]
   },
-
   "mt:PingURL": {
     "prefix": "PingURL",
     "body": ["<mt:PingURL${1} />"]
   },
-
   "mt:PingTitle": {
     "prefix": "PingTitle",
     "body": ["<mt:PingTitle${1} />"]
   },
-
   "mt:PingScoreLow": {
     "prefix": "PingScoreLow",
     "body": ["<mt:PingScoreLow${1} />"]
   },
-
   "mt:PingScoreHigh": {
     "prefix": "PingScoreHigh",
     "body": ["<mt:PingScoreHigh${1} />"]
   },
-
   "mt:PingScoreCount": {
     "prefix": "PingScoreCount",
     "body": ["<mt:PingScoreCount${1} />"]
   },
-
   "mt:PingScoreAvg": {
     "prefix": "PingScoreAvg",
     "body": ["<mt:PingScoreAvg${1} />"]
   },
-
   "mt:PingScore": {
     "prefix": "PingScore",
     "body": ["<mt:PingScore${1} />"]
   },
-
   "mt:PingRank": {
     "prefix": "PingRank",
     "body": ["<mt:PingRank${1} />"]
   },
-
   "mt:PingIP": {
     "prefix": "PingIP",
     "body": ["<mt:PingIP${1} />"]
   },
-
   "mt:PingID": {
     "prefix": "PingID",
     "body": ["<mt:PingID${1} />"]
   },
-
   "mt:PingExcerpt": {
     "prefix": "PingExcerpt",
     "body": ["<mt:PingExcerpt${1} />"]
   },
-
   "mt:PingEntry": {
     "prefix": "PingEntry",
     "body": ["<mt:PingEntry${1}>${2}</mt:PingEntry>"]
   },
-
   "mt:PingDate": {
     "prefix": "PingDate",
     "body": ["<mt:PingDate${1} />"]
   },
-
   "mt:PingBlogName": {
     "prefix": "PingBlogName",
     "body": ["<mt:PingBlogName${1} />"]
   },
-
   "mt:PasswordValidationRule": {
     "prefix": "PasswordValidationRule",
     "body": ["<mt:PasswordValidationRule${1}>${2}</mt:PasswordValidationRule>"]
   },
-
   "mt:PasswordValidation": {
     "prefix": "PasswordValidation",
     "body": ["<mt:PasswordValidation${1}>${2}</mt:PasswordValidation>"]
   },
-
   "mt:ParentFolders": {
     "prefix": "ParentFolders",
     "body": ["<mt:ParentFolders${1}>${2}</mt:ParentFolders>"]
   },
-
   "mt:ParentFolder": {
     "prefix": "ParentFolder",
     "body": ["<mt:ParentFolder${1}>${2}</mt:ParentFolder>"]
   },
-
   "mt:ParentCategory": {
     "prefix": "ParentCategory",
     "body": ["<mt:ParentCategory${1}>${2}</mt:ParentCategory>"]
   },
-
   "mt:ParentCategories": {
     "prefix": "ParentCategories",
     "body": ["<mt:ParentCategories${1}>${2}</mt:ParentCategories>"]
   },
-
   "mt:PagesHeader": {
     "prefix": "PagesHeader",
     "body": ["<mt:PagesHeader${1}>${2}</mt:PagesHeader>"]
   },
-
   "mt:Pagester": {
     "prefix": "Pagester",
     "body": ["<mt:Pagester${1}>${2}</mt:Pagester>"]
   },
-
   "mt:Pages": {
     "prefix": "Pages",
     "body": ["<mt:Pages${1}>${2}</mt:Pages>"]
   },
-
   "mt:PageTitle": {
     "prefix": "PageTitle",
     "body": ["<mt:PageTitle${1: escape=\"html\"}>"]
   },
-
   "mt:PageTags": {
     "prefix": "PageTags",
     "body": ["<mt:PageTags${1}>${2}</mt:PageTags>"]
   },
-
   "mt:PagePrevious": {
     "prefix": "PagePrevious",
     "body": ["<mt:PagePrevious${1}>${2}</mt:PagePrevious>"]
   },
-
   "mt:PagePermalink": {
     "prefix": "PagePermalink",
     "body": ["<mt:PagePermalink${1} />"]
   },
-
   "mt:PageNext": {
     "prefix": "PageNext",
     "body": ["<mt:PageNext${1}>${2}</mt:PageNext>"]
   },
-
   "mt:PageMore": {
     "prefix": "PageMore",
     "body": ["<mt:PageMore${1} />"]
   },
-
   "mt:PageModifiedDate": {
     "prefix": "PageModifiedDate",
     "body": ["<mt:PageModifiedDate${1} />"]
   },
-
   "mt:PageKeywords": {
     "prefix": "PageKeywords",
     "body": ["<mt:PageKeywords${1} />"]
   },
-
   "mt:PageIfTagged": {
     "prefix": "PageIfTagged",
     "body": ["<mt:PageIfTagged${1}>${2}</mt:PageIfTagged>"]
   },
-
   "mt:PageID": {
     "prefix": "PageID",
     "body": ["<mt:PageID${1} />"]
   },
-
   "mt:PageFolder": {
     "prefix": "PageFolder",
     "body": ["<mt:PageFolder${1}>${2}</mt:PageFolder>"]
   },
-
   "mt:PageExcerpt": {
     "prefix": "PageExcerpt",
     "body": ["<mt:PageExcerpt${1} />"]
   },
-
   "mt:PageDate": {
     "prefix": "PageDate",
     "body": ["<mt:PageDate${1} />"]
   },
-
   "mt:PageCustomFields": {
     "prefix": "PageCustomFields",
     "body": ["<mt:PageCustomFields${1}>${2}</mt:PageCustomFields>"]
   },
-
   "mt:PageCustomFieldValue": {
     "prefix": "PageCustomFieldValue",
     "body": ["<mt:PageCustomFieldValue${1} />"]
   },
-
   "mt:PageCustomFieldName": {
     "prefix": "PageCustomFieldName",
     "body": ["<mt:PageCustomFieldName${1} />"]
   },
-
   "mt:PageCustomFieldDescription": {
     "prefix": "PageCustomFieldDescription",
     "body": ["<mt:PageCustomFieldDescription${1} />"]
   },
-
   "mt:PageBody": {
     "prefix": "PageBody",
     "body": ["<mt:PageBody${1} />"]
   },
-
   "mt:PageBasename": {
     "prefix": "PageBasename",
     "body": ["<mt:PageBasename${1} />"]
   },
-
   "mt:PageAuthorURL": {
     "prefix": "PageAuthorURL",
     "body": ["<mt:PageAuthorURL${1} />"]
   },
-
   "mt:PageAuthorLink": {
     "prefix": "PageAuthorLink",
     "body": ["<mt:PageAuthorLink${1} />"]
   },
-
   "mt:PageAuthorEmail": {
     "prefix": "PageAuthorEmail",
     "body": ["<mt:PageAuthorEmail${1} />"]
   },
-
   "mt:PageAuthorDisplayName": {
     "prefix": "PageAuthorDisplayName",
     "body": ["<mt:PageAuthorDisplayName${1} />"]
   },
-
   "mt:PageAssets": {
     "prefix": "PageAssets",
     "body": ["<mt:PageAssets${1}>${2}</mt:PageAssets>"]
   },
-
   "mt:OtherProfiles": {
     "prefix": "OtherProfiles",
     "body": ["<mt:OtherProfiles${1}>${2}</mt:OtherProfiles>"]
   },
-
   "mt:OtherProfileVar": {
     "prefix": "OtherProfileVar",
     "body": ["<mt:OtherProfileVar${1} />"]
   },
-
   "mt:OtherBlog": {
     "prefix": "OtherBlog",
     "body": ["<mt:OtherBlog${1}>${2}</mt:OtherBlog>"]
   },
-
   "mt:NotifyScript": {
     "prefix": "NotifyScript",
     "body": ["<mt:NotifyScript${1} />"]
   },
-
   "mt:NoSearchResults": {
     "prefix": "NoSearchResults",
     "body": ["<mt:NoSearchResults${1}>${2}</mt:NoSearchResults>"]
   },
-
   "mt:NoSearch": {
     "prefix": "NoSearch",
     "body": ["<mt:NoSearch${1}>${2}</mt:NoSearch>"]
   },
-
   "mt:NextLink": {
     "prefix": "NextLink",
     "body": ["<mt:NextLink${1} />"]
   },
-
   "mt:MultiBlogLocalBlog": {
     "prefix": "MultiBlogLocalBlog",
     "body": ["<mt:MultiBlogLocalBlog${1}>${2}</mt:MultiBlogLocalBlog>"]
   },
-
   "mt:MultiBlogIfLocalBlog": {
     "prefix": "MultiBlogIfLocalBlog",
     "body": ["<mt:MultiBlogIfLocalBlog${1}>${2}</mt:MultiBlogIfLocalBlog>"]
   },
-
   "mt:MultiBlog": {
     "prefix": "MultiBlog",
     "body": ["<mt:MultiBlog${1}>${2}</mt:MultiBlog>"]
   },
-
   "mt:MaxResults": {
     "prefix": "MaxResults",
     "body": ["<mt:MaxResults${1} />"]
   },
-
   "mt:MarkdownOptions": {
     "prefix": "MarkdownOptions",
     "body": ["<mt:MarkdownOptions${1}>${2}</mt:MarkdownOptions>"]
   },
-
   "mt:Loop": {
     "prefix": "Loop",
     "body": ["<mt:Loop name=\"${1:VariableName}\"${2: sort_by=\"\"}${3: glue=\"\"}>${4}</mt:Loop>"]
   },
-
   "mt:Link": {
     "prefix": "Link",
     "body": ["<mt:Link${1} />"]
   },
-
   "mt:IndexName": {
     "prefix": "IndexName",
     "body": ["<mt:IndexName${1} />"]
   },
-
   "mt:IndexList": {
     "prefix": "IndexList",
     "body": ["<mt:IndexList${1}>${2}</mt:IndexList>"]
   },
-
   "mt:IndexLink": {
     "prefix": "IndexLink",
     "body": ["<mt:IndexLink${1} />"]
   },
-
   "mt:IndexBasename": {
     "prefix": "IndexBasename",
     "body": ["<mt:IndexBasename${1} />"]
   },
-
   "mt:IncludeBlock": {
     "prefix": "IncludeBlock",
     "body": ["<mt:IncludeBlock${1}>${2}</mt:IncludeBlock>"]
   },
-
   "mt:Include": {
     "prefix": "Include",
     "body": ["<mt:Include module=\"${1:Module Name}\">"]
   },
-
   "mt:ImageWidth": {
     "prefix": "ImageWidth",
     "body": ["<mt:ImageWidth${1} />"]
   },
-
   "mt:ImageURL": {
     "prefix": "ImageURL",
     "body": ["<mt:ImageURL${1} />"]
   },
-
   "mt:ImageHeight": {
     "prefix": "ImageHeight",
     "body": ["<mt:ImageHeight${1} />"]
   },
-
   "mt:ImageCustomFields": {
     "prefix": "ImageCustomFields",
     "body": ["<mt:ImageCustomFields${1}>${2}</mt:ImageCustomFields>"]
   },
-
   "mt:ImageCustomFieldValue": {
     "prefix": "ImageCustomFieldValue",
     "body": ["<mt:ImageCustomFieldValue${1} />"]
   },
-
   "mt:ImageCustomFieldName": {
     "prefix": "ImageCustomFieldName",
     "body": ["<mt:ImageCustomFieldName${1} />"]
   },
-
   "mt:ImageCustomFieldDescription": {
     "prefix": "ImageCustomFieldDescription",
     "body": ["<mt:ImageCustomFieldDescription${1} />"]
   },
-
   "mt:Ignore": {
     "prefix": "Ignore",
     "body": ["<mt:Ignore>${1}</mt:Ignore>"]
   },
-
   "mt:IfWebsite": {
     "prefix": "IfWebsite",
     "body": ["<mt:IfWebsite${1}>${2}</mt:IfWebsite>"]
   },
-
   "mt:IfTypeKeyToken": {
     "prefix": "IfTypeKeyToken",
     "body": ["<mt:IfTypeKeyToken${1}>${2}</mt:IfTypeKeyToken>"]
   },
-
   "mt:IfTagSearch": {
     "prefix": "IfTagSearch",
     "body": ["<mt:IfTagSearch${1}>${2}</mt:IfTagSearch>"]
   },
-
   "mt:IfStraightSearch": {
     "prefix": "IfStraightSearch",
     "body": ["<mt:IfStraightSearch${1}>${2}</mt:IfStraightSearch>"]
   },
-
   "mt:IfStatic": {
     "prefix": "IfStatic",
     "body": ["<mt:IfStatic${1}>${2}</mt:IfStatic>"]
   },
-
   "mt:IfRequireCommentEmails": {
     "prefix": "IfRequireCommentEmails",
     "body": ["<mt:IfRequireCommentEmails${1}>${2}</mt:IfRequireCommentEmails>"]
   },
-
   "mt:IfRegistrationRequired": {
     "prefix": "IfRegistrationRequired",
     "body": ["<mt:IfRegistrationRequired${1}>${2}</mt:IfRegistrationRequired>"]
   },
-
   "mt:IfRegistrationNotRequired": {
     "prefix": "IfRegistrationNotRequired",
     "body": ["<mt:IfRegistrationNotRequired${1}>${2}</mt:IfRegistrationNotRequired>"]
   },
-
   "mt:IfRegistrationAllowed": {
     "prefix": "IfRegistrationAllowed",
     "body": ["<mt:IfRegistrationAllowed${1}>${2}</mt:IfRegistrationAllowed>"]
   },
-
   "mt:IfPreviousResults": {
     "prefix": "IfPreviousResults",
     "body": ["<mt:IfPreviousResults${1}>${2}</mt:IfPreviousResults>"]
   },
-
   "mt:IfPingsModerated": {
     "prefix": "IfPingsModerated",
     "body": ["<mt:IfPingsModerated${1}>${2}</mt:IfPingsModerated>"]
   },
-
   "mt:IfPingsAllowed": {
     "prefix": "IfPingsAllowed",
     "body": ["<mt:IfPingsAllowed${1}>${2}</mt:IfPingsAllowed>"]
   },
-
   "mt:IfPingsActive": {
     "prefix": "IfPingsActive",
     "body": ["<mt:IfPingsActive${1}>${2}</mt:IfPingsActive>"]
   },
-
   "mt:IfPingsAccepted": {
     "prefix": "IfPingsAccepted",
     "body": ["<mt:IfPingsAccepted${1}>${2}</mt:IfPingsAccepted>"]
   },
-
   "mt:IfNonZero": {
     "prefix": "IfNonZero",
     "body": ["<mt:IfNonZero${1}>${2}</mt:IfNonZero>"]
   },
-
   "mt:IfNonEmpty": {
     "prefix": "IfNonEmpty",
     "body": ["<mt:IfNonEmpty${1}>${2}</mt:IfNonEmpty>"]
   },
-
   "mt:IfNeedEmail": {
     "prefix": "IfNeedEmail",
     "body": ["<mt:IfNeedEmail${1}>${2}</mt:IfNeedEmail>"]
   },
-
   "mt:IfMoreResults": {
     "prefix": "IfMoreResults",
     "body": ["<mt:IfMoreResults${1}>${2}</mt:IfMoreResults>"]
   },
-
   "mt:IfMaxResultsCutoff": {
     "prefix": "IfMaxResultsCutoff",
     "body": ["<mt:IfMaxResultsCutoff${1}>${2}</mt:IfMaxResultsCutoff>"]
   },
-
   "mt:IfLoggedIn": {
     "prefix": "IfLoggedIn",
     "body": ["<mt:IfLoggedIn${1}>${2}</mt:IfLoggedIn>"]
   },
-
   "mt:IfIsDescendant": {
     "prefix": "IfIsDescendant",
     "body": ["<mt:IfIsDescendant${1}>${2}</mt:IfIsDescendant>"]
   },
-
   "mt:IfIsAncestor": {
     "prefix": "IfIsAncestor",
     "body": ["<mt:IfIsAncestor${1}>${2}</mt:IfIsAncestor>"]
   },
-
   "mt:IfImageSupport": {
     "prefix": "IfImageSupport",
     "body": ["<mt:IfImageSupport${1}>${2}</mt:IfImageSupport>"]
   },
-
   "mt:IfFolder": {
     "prefix": "IfFolder",
     "body": ["<mt:IfFolder${1}>${2}</mt:IfFolder>"]
   },
-
   "mt:IfDynamic": {
     "prefix": "IfDynamic",
     "body": ["<mt:IfDynamic${1}>${2}</mt:IfDynamic>"]
   },
-
   "mt:IfCurrentPage": {
     "prefix": "IfCurrentPage",
     "body": ["<mt:IfCurrentPage${1}>${2}</mt:IfCurrentPage>"]
   },
-
   "mt:IfCommentsModerated": {
     "prefix": "IfCommentsModerated",
     "body": ["<mt:IfCommentsModerated${1}>${2}</mt:IfCommentsModerated>"]
   },
-
   "mt:IfCommentsAllowed": {
     "prefix": "IfCommentsAllowed",
     "body": ["<mt:IfCommentsAllowed${1}>${2}</mt:IfCommentsAllowed>"]
   },
-
   "mt:IfCommentsActive": {
     "prefix": "IfCommentsActive",
     "body": ["<mt:IfCommentsActive${1}>${2}</mt:IfCommentsActive>"]
   },
-
   "mt:IfCommentsAccepted": {
     "prefix": "IfCommentsAccepted",
     "body": ["<mt:IfCommentsAccepted${1}>${2}</mt:IfCommentsAccepted>"]
   },
-
   "mt:IfCommenterTrusted": {
     "prefix": "IfCommenterTrusted",
     "body": ["<mt:IfCommenterTrusted${1}>${2}</mt:IfCommenterTrusted>"]
   },
-
   "mt:IfCommenterIsEntryAuthor": {
     "prefix": "IfCommenterIsEntryAuthor",
     "body": ["<mt:IfCommenterIsEntryAuthor${1}>${2}</mt:IfCommenterIsEntryAuthor>"]
   },
-
   "mt:IfCommenterIsAuthor": {
     "prefix": "IfCommenterIsAuthor",
     "body": ["<mt:IfCommenterIsAuthor${1}>${2}</mt:IfCommenterIsAuthor>"]
   },
-
   "mt:IfCommentReplies": {
     "prefix": "IfCommentReplies",
     "body": ["<mt:IfCommentReplies${1}>${2}</mt:IfCommentReplies>"]
   },
-
   "mt:IfCommentParent": {
     "prefix": "IfCommentParent",
     "body": ["<mt:IfCommentParent${1}>${2}</mt:IfCommentParent>"]
   },
-
   "mt:IfCategory": {
     "prefix": "IfCategory",
     "body": ["<mt:IfCategory${1}>${2}</mt:IfCategory>"]
   },
-
   "mt:IfBlog": {
     "prefix": "IfBlog",
     "body": ["<mt:IfBlog${1}>${2}</mt:IfBlog>"]
   },
-
   "mt:IfArchiveTypeEnabled": {
     "prefix": "IfArchiveTypeEnabled",
     "body": ["<mt:IfArchiveTypeEnabled${1}>${2}</mt:IfArchiveTypeEnabled>"]
   },
-
   "mt:IfArchiveType": {
     "prefix": "IfArchiveType",
     "body": ["<mt:IfArchiveType${1}>${2}</mt:IfArchiveType>"]
   },
-
   "mt:IfAnonymousRecommendAllowed": {
     "prefix": "IfAnonymousRecommendAllowed",
     "body": ["<mt:IfAnonymousRecommendAllowed${1}>${2}</mt:IfAnonymousRecommendAllowed>"]
   },
-
   "mt:IfAllowCommentHTML": {
     "prefix": "IfAllowCommentHTML",
     "body": ["<mt:IfAllowCommentHTML${1}>${2}</mt:IfAllowCommentHTML>"]
   },
-
   "mt:If": {
     "prefix": "If",
     "body": ["<mt:If name=\"${1:VariableName}\">${2}</mt:If>"]
   },
-
   "mt:HasSubFolders": {
     "prefix": "HasSubFolders",
     "body": ["<mt:HasSubFolders${1}>${2}</mt:HasSubFolders>"]
   },
-
   "mt:HasSubCategories": {
     "prefix": "HasSubCategories",
     "body": ["<mt:HasSubCategories${1}>${2}</mt:HasSubCategories>"]
   },
-
   "mt:HasParentFolder": {
     "prefix": "HasParentFolder",
     "body": ["<mt:HasParentFolder${1}>${2}</mt:HasParentFolder>"]
   },
-
   "mt:HasParentCategory": {
     "prefix": "HasParentCategory",
     "body": ["<mt:HasParentCategory${1}>${2}</mt:HasParentCategory>"]
   },
-
   "mt:HasNoSubCategories": {
     "prefix": "HasNoSubCategories",
     "body": ["<mt:HasNoSubCategories${1}>${2}</mt:HasNoSubCategories>"]
   },
-
   "mt:HasNoParentCategory": {
     "prefix": "HasNoParentCategory",
     "body": ["<mt:HasNoParentCategory${1}>${2}</mt:HasNoParentCategory>"]
   },
-
   "mt:HTTPContentType": {
     "prefix": "HTTPContentType",
     "body": ["<mt:HTTPContentType${1} />"]
   },
-
   "mt:GetVar": {
     "prefix": "GetVar",
     "body": ["<mt:GetVar${1} />"]
   },
-
   "mt:For": {
     "prefix": "For",
     "body": ["<mt:For var=\"${1:i}\" from=\"${2}\" to=\"${3}\"${4: glue=\"\"}>${5}</mt:For>"]
   },
-
   "mt:Folders": {
     "prefix": "Folders",
     "body": ["<mt:Folders${1}>${2}</mt:Folders>"]
   },
-
   "mt:FolderPrevious": {
     "prefix": "FolderPrevious",
     "body": ["<mt:FolderPrevious${1}>${2}</mt:FolderPrevious>"]
   },
-
   "mt:FolderPath": {
     "prefix": "FolderPath",
     "body": ["<mt:FolderPath${1} />"]
   },
-
   "mt:FolderNext": {
     "prefix": "FolderNext",
     "body": ["<mt:FolderNext${1}>${2}</mt:FolderNext>"]
   },
-
   "mt:FolderLabel": {
     "prefix": "FolderLabel",
     "body": ["<mt:FolderLabel${1} />"]
   },
-
   "mt:FolderID": {
     "prefix": "FolderID",
     "body": ["<mt:FolderID${1} />"]
   },
-
   "mt:FolderHeader": {
     "prefix": "FolderHeader",
     "body": ["<mt:FolderHeader${1}>${2}</mt:FolderHeader>"]
   },
-
   "mt:Folderter": {
     "prefix": "Folderter",
     "body": ["<mt:Folderter${1}>${2}</mt:Folderter>"]
   },
-
   "mt:FolderDescription": {
     "prefix": "FolderDescription",
     "body": ["<mt:FolderDescription${1} />"]
   },
-
   "mt:FolderCustomFields": {
     "prefix": "FolderCustomFields",
     "body": ["<mt:FolderCustomFields${1}>${2}</mt:FolderCustomFields>"]
   },
-
   "mt:FolderCustomFieldValue": {
     "prefix": "FolderCustomFieldValue",
     "body": ["<mt:FolderCustomFieldValue${1} />"]
   },
-
   "mt:FolderCustomFieldName": {
     "prefix": "FolderCustomFieldName",
     "body": ["<mt:FolderCustomFieldName${1} />"]
   },
-
   "mt:FolderCustomFieldDescription": {
     "prefix": "FolderCustomFieldDescription",
     "body": ["<mt:FolderCustomFieldDescription${1} />"]
   },
-
   "mt:FolderCount": {
     "prefix": "FolderCount",
     "body": ["<mt:FolderCount${1} />"]
   },
-
   "mt:FolderBasename": {
     "prefix": "FolderBasename",
     "body": ["<mt:FolderBasename${1} />"]
   },
-
   "mt:FileTemplate": {
     "prefix": "FileTemplate",
     "body": ["<mt:FileTemplate${1} />"]
   },
-
   "mt:FileCustomFields": {
     "prefix": "FileCustomFields",
     "body": ["<mt:FileCustomFields${1}>${2}</mt:FileCustomFields>"]
   },
-
   "mt:FileCustomFieldValue": {
     "prefix": "FileCustomFieldValue",
     "body": ["<mt:FileCustomFieldValue${1} />"]
   },
-
   "mt:FileCustomFieldName": {
     "prefix": "FileCustomFieldName",
     "body": ["<mt:FileCustomFieldName${1} />"]
   },
-
   "mt:FileCustomFieldDescription": {
     "prefix": "FileCustomFieldDescription",
     "body": ["<mt:FileCustomFieldDescription${1} />"]
   },
-
   "mt:FeedbackScore": {
     "prefix": "FeedbackScore",
     "body": ["<mt:FeedbackScore${1} />"]
   },
-
   "mt:FeedTitle": {
     "prefix": "FeedTitle",
     "body": ["<mt:FeedTitle${1} />"]
   },
-
   "mt:FeedLink": {
     "prefix": "FeedLink",
     "body": ["<mt:FeedLink${1} />"]
   },
-
   "mt:FeedInclude": {
     "prefix": "FeedInclude",
     "body": ["<mt:FeedInclude${1} />"]
   },
-
   "mt:FeedEntryTitle": {
     "prefix": "FeedEntryTitle",
     "body": ["<mt:FeedEntryTitle${1} />"]
   },
-
   "mt:FeedEntryLink": {
     "prefix": "FeedEntryLink",
     "body": ["<mt:FeedEntryLink${1} />"]
   },
-
   "mt:FeedEntries": {
     "prefix": "FeedEntries",
     "body": ["<mt:FeedEntries${1}>${2}</mt:FeedEntries>"]
   },
-
   "mt:Feed": {
     "prefix": "Feed",
     "body": ["<mt:Feed${1}>${2}</mt:Feed>"]
   },
-
   "mt:ErrorMessage": {
     "prefix": "ErrorMessage",
     "body": ["<mt:ErrorMessage${1} />"]
   },
-
   "mt:EntryTrackbackLink": {
     "prefix": "EntryTrackbackLink",
     "body": ["<mt:EntryTrackbackLink${1} />"]
   },
-
   "mt:EntryTrackbackID": {
     "prefix": "EntryTrackbackID",
     "body": ["<mt:EntryTrackbackID${1} />"]
   },
-
   "mt:EntryTrackbackData": {
     "prefix": "EntryTrackbackData",
     "body": ["<mt:EntryTrackbackData${1} />"]
   },
-
   "mt:EntryTrackbackCount": {
     "prefix": "EntryTrackbackCount",
     "body": ["<mt:EntryTrackbackCount${1} />"]
   },
-
   "mt:EntryTitle": {
     "prefix": "EntryTitle",
     "body": ["<mt:EntryTitle${1: escape=\"html\"} />"]
   },
-
   "mt:EntryTags": {
     "prefix": "EntryTags",
     "body": ["<mt:EntryTags${1}>${2}</mt:EntryTags>"]
   },
-
   "mt:EntryScoreLow": {
     "prefix": "EntryScoreLow",
     "body": ["<mt:EntryScoreLow${1} />"]
   },
-
   "mt:EntryScoreHigh": {
     "prefix": "EntryScoreHigh",
     "body": ["<mt:EntryScoreHigh${1} />"]
   },
-
   "mt:EntryScoreCount": {
     "prefix": "EntryScoreCount",
     "body": ["<mt:EntryScoreCount${1} />"]
   },
-
   "mt:EntryScoreAvg": {
     "prefix": "EntryScoreAvg",
     "body": ["<mt:EntryScoreAvg${1} />"]
   },
-
   "mt:EntryScore": {
     "prefix": "EntryScore",
     "body": ["<mt:EntryScore${1} />"]
   },
-
   "mt:EntryRecommendedTotal": {
     "prefix": "EntryRecommendedTotal",
     "body": ["<mt:EntryRecommendedTotal${1} />"]
   },
-
   "mt:EntryRecommendVoteLink": {
     "prefix": "EntryRecommendVoteLink",
     "body": ["<mt:EntryRecommendVoteLink${1} />"]
   },
-
   "mt:EntryRawPostType": {
     "prefix": "EntryRawPostType",
     "body": ["<mt:EntryRawPostType${1} />"]
   },
-
   "mt:EntryRank": {
     "prefix": "EntryRank",
     "body": ["<mt:EntryRank${1} />"]
   },
-
   "mt:EntryPrimaryCategory": {
     "prefix": "EntryPrimaryCategory",
     "body": ["<mt:EntryPrimaryCategory${1}>${2}</mt:EntryPrimaryCategory>"]
   },
-
   "mt:EntryPrevious": {
     "prefix": "EntryPrevious",
     "body": ["<mt:EntryPrevious${1}>${2}</mt:EntryPrevious>"]
   },
-
   "mt:EntryPostType": {
     "prefix": "EntryPostType",
     "body": ["<mt:EntryPostType${1} />"]
   },
-
   "mt:EntryPhoto": {
     "prefix": "EntryPhoto",
     "body": ["<mt:EntryPhoto${1} />"]
   },
-
   "mt:EntryPermalink": {
     "prefix": "EntryPermalink",
     "body": ["<mt:EntryPermalink${1} />"]
   },
-
   "mt:EntryNext": {
     "prefix": "EntryNext",
     "body": ["<mt:EntryNext${1}>${2}</mt:EntryNext>"]
   },
-
   "mt:EntryMore": {
     "prefix": "EntryMore",
     "body": ["<mt:EntryMore${1} />"]
   },
-
   "mt:EntryModifiedDate": {
     "prefix": "EntryModifiedDate",
     "body": ["<mt:EntryModifiedDate${1} />"]
   },
-
   "mt:EntryLinkURL": {
     "prefix": "EntryLinkURL",
     "body": ["<mt:EntryLinkURL${1} />"]
   },
-
   "mt:EntryLink": {
     "prefix": "EntryLink",
     "body": ["<mt:EntryLink${1} />"]
   },
-
   "mt:EntryKeywords": {
     "prefix": "EntryKeywords",
     "body": ["<mt:EntryKeywords${1} />"]
   },
-
   "mt:EntryIfTagged": {
     "prefix": "EntryIfTagged",
     "body": ["<mt:EntryIfTagged${1}>${2}</mt:EntryIfTagged>"]
   },
-
   "mt:EntryIfExtended": {
     "prefix": "EntryIfExtended",
     "body": ["<mt:EntryIfExtended${1}>${2}</mt:EntryIfExtended>"]
   },
-
   "mt:EntryIfCommentsOpen": {
     "prefix": "EntryIfCommentsOpen",
     "body": ["<mt:EntryIfCommentsOpen${1}>${2}</mt:EntryIfCommentsOpen>"]
   },
-
   "mt:EntryIfCategory": {
     "prefix": "EntryIfCategory",
     "body": ["<mt:EntryIfCategory${1}>${2}</mt:EntryIfCategory>"]
   },
-
   "mt:EntryIfAllowPings": {
     "prefix": "EntryIfAllowPings",
     "body": ["<mt:EntryIfAllowPings${1}>${2}</mt:EntryIfAllowPings>"]
   },
-
   "mt:EntryIfAllowComments": {
     "prefix": "EntryIfAllowComments",
     "body": ["<mt:EntryIfAllowComments${1}>${2}</mt:EntryIfAllowComments>"]
   },
-
   "mt:EntryID": {
     "prefix": "EntryID",
     "body": ["<mt:EntryID${1} />"]
   },
-
   "mt:EntryFlag": {
     "prefix": "EntryFlag",
     "body": ["<mt:EntryFlag${1} />"]
   },
-
   "mt:EntryExcerpt": {
     "prefix": "EntryExcerpt",
     "body": ["<mt:EntryExcerpt${1} />"]
   },
-
   "mt:EntryEmbedCode": {
     "prefix": "EntryEmbedCode",
     "body": ["<mt:EntryEmbedCode${1} />"]
   },
-
   "mt:EntryEditLink": {
     "prefix": "EntryEditLink",
     "body": ["<mt:EntryEditLink${1} />"]
   },
-
   "mt:EntryDate": {
     "prefix": "EntryDate",
     "body": ["<mt:EntryDate${1} />"]
   },
-
   "mt:EntryCustomFields": {
     "prefix": "EntryCustomFields",
     "body": ["<mt:EntryCustomFields${1}>${2}</mt:EntryCustomFields>"]
   },
-
   "mt:EntryCustomFieldValue": {
     "prefix": "EntryCustomFieldValue",
     "body": ["<mt:EntryCustomFieldValue${1} />"]
   },
-
   "mt:EntryCustomFieldName": {
     "prefix": "EntryCustomFieldName",
     "body": ["<mt:EntryCustomFieldName${1} />"]
   },
-
   "mt:EntryCustomFieldDescription": {
     "prefix": "EntryCustomFieldDescription",
     "body": ["<mt:EntryCustomFieldDescription${1} />"]
   },
-
   "mt:EntryCreatedDate": {
     "prefix": "EntryCreatedDate",
     "body": ["<mt:EntryCreatedDate${1} />"]
   },
-
   "mt:EntryCommentCount": {
     "prefix": "EntryCommentCount",
     "body": ["<mt:EntryCommentCount${1} />"]
   },
-
   "mt:EntryClassLabel": {
     "prefix": "EntryClassLabel",
     "body": ["<mt:EntryClassLabel${1} />"]
   },
-
   "mt:EntryClass": {
     "prefix": "EntryClass",
     "body": ["<mt:EntryClass${1} />"]
   },
-
   "mt:EntryCategory": {
     "prefix": "EntryCategory",
     "body": ["<mt:EntryCategory${1} />"]
   },
-
   "mt:EntryCategories": {
     "prefix": "EntryCategories",
     "body": ["<mt:EntryCategories${1}>${2}</mt:EntryCategories>"]
   },
-
   "mt:EntryBody": {
     "prefix": "EntryBody",
     "body": ["<mt:EntryBody${1} />"]
   },
-
   "mt:EntryBlogURL": {
     "prefix": "EntryBlogURL",
     "body": ["<mt:EntryBlogURL${1} />"]
   },
-
   "mt:EntryBlogName": {
     "prefix": "EntryBlogName",
     "body": ["<mt:EntryBlogName${1} />"]
   },
-
   "mt:EntryBlogID": {
     "prefix": "EntryBlogID",
     "body": ["<mt:EntryBlogID${1} />"]
   },
-
   "mt:EntryBlogDescription": {
     "prefix": "EntryBlogDescription",
     "body": ["<mt:EntryBlogDescription${1} />"]
   },
-
   "mt:EntryBasename": {
     "prefix": "EntryBasename",
     "body": ["<mt:EntryBasename${1} />"]
   },
-
   "mt:EntryAuthorUserpicURL": {
     "prefix": "EntryAuthorUserpicURL",
     "body": ["<mt:EntryAuthorUserpicURL${1} />"]
   },
-
   "mt:EntryAuthorUserpicAsset": {
     "prefix": "EntryAuthorUserpicAsset",
     "body": ["<mt:EntryAuthorUserpicAsset${1}>${2}</mt:EntryAuthorUserpicAsset>"]
   },
-
   "mt:EntryAuthorUserpic": {
     "prefix": "EntryAuthorUserpic",
     "body": ["<mt:EntryAuthorUserpic${1} />"]
   },
-
   "mt:EntryAuthorUsername": {
     "prefix": "EntryAuthorUsername",
     "body": ["<mt:EntryAuthorUsername${1} />"]
   },
-
   "mt:EntryAuthorURL": {
     "prefix": "EntryAuthorURL",
     "body": ["<mt:EntryAuthorURL${1} />"]
   },
-
   "mt:EntryAuthorNickname": {
     "prefix": "EntryAuthorNickname",
     "body": ["<mt:EntryAuthorNickname${1} />"]
   },
-
   "mt:EntryAuthorLink": {
     "prefix": "EntryAuthorLink",
     "body": ["<mt:EntryAuthorLink${1} />"]
   },
-
   "mt:EntryAuthorID": {
     "prefix": "EntryAuthorID",
     "body": ["<mt:EntryAuthorID${1} />"]
   },
-
   "mt:EntryAuthorEmail": {
     "prefix": "EntryAuthorEmail",
     "body": ["<mt:EntryAuthorEmail${1} />"]
   },
-
   "mt:EntryAuthorDisplayName": {
     "prefix": "EntryAuthorDisplayName",
     "body": ["<mt:EntryAuthorDisplayName${1} />"]
   },
-
   "mt:EntryAuthor": {
     "prefix": "EntryAuthor",
     "body": ["<mt:EntryAuthor${1} />"]
   },
-
   "mt:EntryAudio": {
     "prefix": "EntryAudio",
     "body": ["<mt:EntryAudio${1} />"]
   },
-
   "mt:EntryAtomID": {
     "prefix": "EntryAtomID",
     "body": ["<mt:EntryAtomID${1} />"]
   },
-
   "mt:EntryAssets": {
     "prefix": "EntryAssets",
     "body": ["<mt:EntryAssets${1}>${2}</mt:EntryAssets>"]
   },
-
   "mt:EntryAdditionalCategories": {
     "prefix": "EntryAdditionalCategories",
     "body": ["<mt:EntryAdditionalCategories${1}>${2}</mt:EntryAdditionalCategories>"]
   },
-
   "mt:EntriesWithSubCategories": {
     "prefix": "EntriesWithSubCategories",
     "body": ["<mt:EntriesWithSubCategories${1}>${2}</mt:EntriesWithSubCategories>"]
   },
-
   "mt:EntriesHeader": {
     "prefix": "EntriesHeader",
     "body": ["<mt:EntriesHeader${1}>${2}</mt:EntriesHeader>"]
   },
-
   "mt:Entriester": {
     "prefix": "Entriester",
     "body": ["<mt:Entriester${1}>${2}</mt:Entriester>"]
   },
-
   "mt:EntriesCount": {
     "prefix": "EntriesCount",
     "body": ["<mt:EntriesCount${1} />"]
   },
-
   "mt:Entries": {
     "prefix": "Entries",
     "body": ["<mt:Entries lastn=\"${1:N}\">${2}</mt:Entries>"]
   },
-
   "mt:ElseIf": {
     "prefix": "ElseIf",
     "body": ["<mt:ElseIf${1}>${2}</mt:ElseIf>"]
   },
-
   "mt:Else": {
     "prefix": "Else",
     "body": ["<mt:Else${1}>${2}</mt:Else>"]
   },
-
   "mt:DefaultLanguage": {
     "prefix": "DefaultLanguage",
     "body": ["<mt:DefaultLanguage${1} />"]
   },
-
   "mt:DateHeader": {
     "prefix": "DateHeader",
     "body": ["<mt:DateHeader${1}>${2}</mt:DateHeader>"]
   },
-
   "mt:Dateter": {
     "prefix": "Dateter",
     "body": ["<mt:Dateter${1}>${2}</mt:Dateter>"]
   },
-
   "mt:Date": {
     "prefix": "Date",
     "body": ["<mt:Date${1} />"]
   },
-
   "mt:CustomFieldValue": {
     "prefix": "CustomFieldValue",
     "body": ["<mt:CustomFieldValue${1} />"]
   },
-
   "mt:CustomFieldName": {
     "prefix": "CustomFieldName",
     "body": ["<mt:CustomFieldName${1} />"]
   },
-
   "mt:CustomFieldIsRequired": {
     "prefix": "CustomFieldIsRequired",
     "body": ["<mt:CustomFieldIsRequired${1}>${2}</mt:CustomFieldIsRequired>"]
   },
-
   "mt:CustomFieldHTML": {
     "prefix": "CustomFieldHTML",
     "body": ["<mt:CustomFieldHTML${1} />"]
   },
-
   "mt:CustomFieldDescription": {
     "prefix": "CustomFieldDescription",
     "body": ["<mt:CustomFieldDescription${1} />"]
   },
-
   "mt:CustomFieldBasename": {
     "prefix": "CustomFieldBasename",
     "body": ["<mt:CustomFieldBasename${1} />"]
   },
-
   "mt:CurrentPage": {
     "prefix": "CurrentPage",
     "body": ["<mt:CurrentPage${1} />"]
   },
-
   "mt:ConfigFile": {
     "prefix": "ConfigFile",
     "body": ["<mt:ConfigFile${1} />"]
   },
-
   "mt:CommunityScript": {
     "prefix": "CommunityScript",
     "body": ["<mt:CommunityScript${1} />"]
   },
-
   "mt:CommentsHeader": {
     "prefix": "CommentsHeader",
     "body": ["<mt:CommentsHeader${1}>${2}</mt:CommentsHeader>"]
   },
-
   "mt:Commentster": {
     "prefix": "Commentster",
     "body": ["<mt:Commentster${1}>${2}</mt:Commentster>"]
   },
-
   "mt:Comments": {
     "prefix": "Comments",
     "body": ["<mt:Comments${1}>${2}</mt:Comments>"]
   },
-
   "mt:CommenterUserpicURL": {
     "prefix": "CommenterUserpicURL",
     "body": ["<mt:CommenterUserpicURL${1} />"]
   },
-
   "mt:CommenterUserpicAsset": {
     "prefix": "CommenterUserpicAsset",
     "body": ["<mt:CommenterUserpicAsset${1}>${2}</mt:CommenterUserpicAsset>"]
   },
-
   "mt:CommenterUserpic": {
     "prefix": "CommenterUserpic",
     "body": ["<mt:CommenterUserpic${1} />"]
   },
-
   "mt:CommenterUsername": {
     "prefix": "CommenterUsername",
     "body": ["<mt:CommenterUsername${1} />"]
   },
-
   "mt:CommenterURL": {
     "prefix": "CommenterURL",
     "body": ["<mt:CommenterURL${1} />"]
   },
-
   "mt:CommenterNameThunk": {
     "prefix": "CommenterNameThunk",
     "body": ["<mt:CommenterNameThunk${1} />"]
   },
-
   "mt:CommenterName": {
     "prefix": "CommenterName",
     "body": ["<mt:CommenterName${1} />"]
   },
-
   "mt:CommenterIfTrusted": {
     "prefix": "CommenterIfTrusted",
     "body": ["<mt:CommenterIfTrusted${1}>${2}</mt:CommenterIfTrusted>"]
   },
-
   "mt:CommenterID": {
     "prefix": "CommenterID",
     "body": ["<mt:CommenterID${1} />"]
   },
-
   "mt:CommenterEmail": {
     "prefix": "CommenterEmail",
     "body": ["<mt:CommenterEmail${1} />"]
   },
-
   "mt:CommenterAuthType": {
     "prefix": "CommenterAuthType",
     "body": ["<mt:CommenterAuthType${1} />"]
   },
-
   "mt:CommenterAuthIconURL": {
     "prefix": "CommenterAuthIconURL",
     "body": ["<mt:CommenterAuthIconURL${1} />"]
   },
-
   "mt:CommentURL": {
     "prefix": "CommentURL",
     "body": ["<mt:CommentURL${1} />"]
   },
-
   "mt:CommentScript": {
     "prefix": "CommentScript",
     "body": ["<mt:CommentScript${1} />"]
   },
-
   "mt:CommentScoreLow": {
     "prefix": "CommentScoreLow",
     "body": ["<mt:CommentScoreLow${1} />"]
   },
-
   "mt:CommentScoreHigh": {
     "prefix": "CommentScoreHigh",
     "body": ["<mt:CommentScoreHigh${1} />"]
   },
-
   "mt:CommentScoreCount": {
     "prefix": "CommentScoreCount",
     "body": ["<mt:CommentScoreCount${1} />"]
   },
-
   "mt:CommentScoreAvg": {
     "prefix": "CommentScoreAvg",
     "body": ["<mt:CommentScoreAvg${1} />"]
   },
-
   "mt:CommentScore": {
     "prefix": "CommentScore",
     "body": ["<mt:CommentScore${1} />"]
   },
-
   "mt:CommentRepliesRecurse": {
     "prefix": "CommentRepliesRecurse",
     "body": ["<mt:CommentRepliesRecurse${1} />"]
   },
-
   "mt:CommentReplies": {
     "prefix": "CommentReplies",
     "body": ["<mt:CommentReplies${1}>${2}</mt:CommentReplies>"]
   },
-
   "mt:CommentRank": {
     "prefix": "CommentRank",
     "body": ["<mt:CommentRank${1} />"]
   },
-
   "mt:CommentPreviewURL": {
     "prefix": "CommentPreviewURL",
     "body": ["<mt:CommentPreviewURL${1} />"]
   },
-
   "mt:CommentPreviewIsStatic": {
     "prefix": "CommentPreviewIsStatic",
     "body": ["<mt:CommentPreviewIsStatic${1} />"]
   },
-
   "mt:CommentPreviewIP": {
     "prefix": "CommentPreviewIP",
     "body": ["<mt:CommentPreviewIP${1} />"]
   },
-
   "mt:CommentPreviewEmail": {
     "prefix": "CommentPreviewEmail",
     "body": ["<mt:CommentPreviewEmail${1} />"]
   },
-
   "mt:CommentPreviewDate": {
     "prefix": "CommentPreviewDate",
     "body": ["<mt:CommentPreviewDate${1} />"]
   },
-
   "mt:CommentPreviewBody": {
     "prefix": "CommentPreviewBody",
     "body": ["<mt:CommentPreviewBody${1} />"]
   },
-
   "mt:CommentPreviewAuthorLink": {
     "prefix": "CommentPreviewAuthorLink",
     "body": ["<mt:CommentPreviewAuthorLink${1} />"]
   },
-
   "mt:CommentPreviewAuthor": {
     "prefix": "CommentPreviewAuthor",
     "body": ["<mt:CommentPreviewAuthor${1} />"]
   },
-
   "mt:CommentParentID": {
     "prefix": "CommentParentID",
     "body": ["<mt:CommentParentID${1} />"]
   },
-
   "mt:CommentParent": {
     "prefix": "CommentParent",
     "body": ["<mt:CommentParent${1}>${2}</mt:CommentParent>"]
   },
-
   "mt:CommentOrderNumber": {
     "prefix": "CommentOrderNumber",
     "body": ["<mt:CommentOrderNumber${1} />"]
   },
-
   "mt:CommentName": {
     "prefix": "CommentName",
     "body": ["<mt:CommentName${1} />"]
   },
-
   "mt:CommentLink": {
     "prefix": "CommentLink",
     "body": ["<mt:CommentLink${1} />"]
   },
-
   "mt:CommentIfModerated": {
     "prefix": "CommentIfModerated",
     "body": ["<mt:CommentIfModerated${1}>${2}</mt:CommentIfModerated>"]
   },
-
   "mt:CommentIP": {
     "prefix": "CommentIP",
     "body": ["<mt:CommentIP${1} />"]
   },
-
   "mt:CommentID": {
     "prefix": "CommentID",
     "body": ["<mt:CommentID${1} />"]
   },
-
   "mt:CommentEntryID": {
     "prefix": "CommentEntryID",
     "body": ["<mt:CommentEntryID${1} />"]
   },
-
   "mt:CommentEntry": {
     "prefix": "CommentEntry",
     "body": ["<mt:CommentEntry${1}>${2}</mt:CommentEntry>"]
   },
-
   "mt:CommentEmail": {
     "prefix": "CommentEmail",
     "body": ["<mt:CommentEmail${1} />"]
   },
-
   "mt:CommentDate": {
     "prefix": "CommentDate",
     "body": ["<mt:CommentDate${1} />"]
   },
-
   "mt:CommentCustomFields": {
     "prefix": "CommentCustomFields",
     "body": ["<mt:CommentCustomFields${1}>${2}</mt:CommentCustomFields>"]
   },
-
   "mt:CommentCustomFieldValue": {
     "prefix": "CommentCustomFieldValue",
     "body": ["<mt:CommentCustomFieldValue${1} />"]
   },
-
   "mt:CommentCustomFieldName": {
     "prefix": "CommentCustomFieldName",
     "body": ["<mt:CommentCustomFieldName${1} />"]
   },
-
   "mt:CommentCustomFieldDescription": {
     "prefix": "CommentCustomFieldDescription",
     "body": ["<mt:CommentCustomFieldDescription${1} />"]
   },
-
   "mt:CommentBody": {
     "prefix": "CommentBody",
     "body": ["<mt:CommentBody${1} />"]
   },
-
   "mt:CommentBlogID": {
     "prefix": "CommentBlogID",
     "body": ["<mt:CommentBlogID${1} />"]
   },
-
   "mt:CommentAuthorLink": {
     "prefix": "CommentAuthorLink",
     "body": ["<mt:CommentAuthorLink${1} />"]
   },
-
   "mt:CommentAuthorIdentity": {
     "prefix": "CommentAuthorIdentity",
     "body": ["<mt:CommentAuthorIdentity${1} />"]
   },
-
   "mt:CommentAuthor": {
     "prefix": "CommentAuthor",
     "body": ["<mt:CommentAuthor${1} />"]
   },
-
   "mt:CategoryTrackbackLink": {
     "prefix": "CategoryTrackbackLink",
     "body": ["<mt:CategoryTrackbackLink${1} />"]
   },
-
   "mt:CategoryTrackbackCount": {
     "prefix": "CategoryTrackbackCount",
     "body": ["<mt:CategoryTrackbackCount${1} />"]
   },
-
   "mt:CategoryPrevious": {
     "prefix": "CategoryPrevious",
     "body": ["<mt:CategoryPrevious${1}>${2}</mt:CategoryPrevious>"]
   },
-
   "mt:CategoryNext": {
     "prefix": "CategoryNext",
     "body": ["<mt:CategoryNext${1}>${2}</mt:CategoryNext>"]
   },
-
   "mt:CategoryLabel": {
     "prefix": "CategoryLabel",
     "body": ["<mt:CategoryLabel${1} />"]
   },
-
   "mt:CategoryIfAllowPings": {
     "prefix": "CategoryIfAllowPings",
     "body": ["<mt:CategoryIfAllowPings${1}>${2}</mt:CategoryIfAllowPings>"]
   },
-
   "mt:CategoryID": {
     "prefix": "CategoryID",
     "body": ["<mt:CategoryID${1} />"]
   },
-
   "mt:CategoryDescription": {
     "prefix": "CategoryDescription",
     "body": ["<mt:CategoryDescription${1} />"]
   },
-
   "mt:CategoryCustomFields": {
     "prefix": "CategoryCustomFields",
     "body": ["<mt:CategoryCustomFields${1}>${2}</mt:CategoryCustomFields>"]
   },
-
   "mt:CategoryCustomFieldValue": {
     "prefix": "CategoryCustomFieldValue",
     "body": ["<mt:CategoryCustomFieldValue${1} />"]
   },
-
   "mt:CategoryCustomFieldName": {
     "prefix": "CategoryCustomFieldName",
     "body": ["<mt:CategoryCustomFieldName${1} />"]
   },
-
   "mt:CategoryCustomFieldDescription": {
     "prefix": "CategoryCustomFieldDescription",
     "body": ["<mt:CategoryCustomFieldDescription${1} />"]
   },
-
   "mt:CategoryCount": {
     "prefix": "CategoryCount",
     "body": ["<mt:CategoryCount${1} />"]
   },
-
   "mt:CategoryCommentCount": {
     "prefix": "CategoryCommentCount",
     "body": ["<mt:CategoryCommentCount${1} />"]
   },
-
   "mt:CategoryBasename": {
     "prefix": "CategoryBasename",
     "body": ["<mt:CategoryBasename${1} />"]
   },
-
   "mt:CategoryArchiveLink": {
     "prefix": "CategoryArchiveLink",
     "body": ["<mt:CategoryArchiveLink${1} />"]
   },
-
   "mt:Categories": {
     "prefix": "Categories",
     "body": ["<mt:Categories${1}>${2}</mt:Categories>"]
   },
-
   "mt:CaptchaFields": {
     "prefix": "CaptchaFields",
     "body": ["<mt:CaptchaFields${1} />"]
   },
-
   "mt:CalendarWeekHeader": {
     "prefix": "CalendarWeekHeader",
     "body": ["<mt:CalendarWeekHeader${1}>${2}</mt:CalendarWeekHeader>"]
   },
-
   "mt:CalendarWeekter": {
     "prefix": "CalendarWeekter",
     "body": ["<mt:CalendarWeekter${1}>${2}</mt:CalendarWeekter>"]
   },
-
   "mt:CalendarIfToday": {
     "prefix": "CalendarIfToday",
     "body": ["<mt:CalendarIfToday${1}>${2}</mt:CalendarIfToday>"]
   },
-
   "mt:CalendarIfNoEntries": {
     "prefix": "CalendarIfNoEntries",
     "body": ["<mt:CalendarIfNoEntries${1}>${2}</mt:CalendarIfNoEntries>"]
   },
-
   "mt:CalendarIfEntries": {
     "prefix": "CalendarIfEntries",
     "body": ["<mt:CalendarIfEntries${1}>${2}</mt:CalendarIfEntries>"]
   },
-
   "mt:CalendarIfBlank": {
     "prefix": "CalendarIfBlank",
     "body": ["<mt:CalendarIfBlank${1}>${2}</mt:CalendarIfBlank>"]
   },
-
   "mt:CalendarDay": {
     "prefix": "CalendarDay",
     "body": ["<mt:CalendarDay${1} />"]
   },
-
   "mt:CalendarDate": {
     "prefix": "CalendarDate",
     "body": ["<mt:CalendarDate${1} />"]
   },
-
   "mt:CalendarCellNumber": {
     "prefix": "CalendarCellNumber",
     "body": ["<mt:CalendarCellNumber${1} />"]
   },
-
   "mt:Calendar": {
     "prefix": "Calendar",
     "body": ["<mt:Calendar${1}>${2}</mt:Calendar>"]
   },
-
   "mt:CGIServerPath": {
     "prefix": "CGIServerPath",
     "body": ["<mt:CGIServerPath${1} />"]
   },
-
   "mt:CGIRelativeURL": {
     "prefix": "CGIRelativeURL",
     "body": ["<mt:CGIRelativeURL${1} />"]
   },
-
   "mt:CGIPath": {
     "prefix": "CGIPath",
     "body": ["<mt:CGIPath${1} />"]
   },
-
   "mt:CGIHost": {
     "prefix": "CGIHost",
     "body": ["<mt:CGIHost${1} />"]
   },
-
   "mt:CCLicenseRDF": {
     "prefix": "CCLicenseRDF",
     "body": ["<mt:CCLicenseRDF${1} />"]
   },
-
   "mt:BuildTemplateID": {
     "prefix": "BuildTemplateID",
     "body": ["<mt:BuildTemplateID${1} />"]
   },
-
   "mt:Blogs": {
     "prefix": "Blogs",
     "body": ["<mt:Blogs${1}>${2}</mt:Blogs>"]
   },
-
   "mt:BlogURL": {
     "prefix": "BlogURL",
     "body": ["<mt:BlogURL${1} />"]
   },
-
   "mt:BlogTimezone": {
     "prefix": "BlogTimezone",
     "body": ["<mt:BlogTimezone${1} />"]
   },
-
   "mt:BlogThemeID": {
     "prefix": "BlogThemeID",
     "body": ["<mt:BlogThemeID${1} />"]
   },
-
   "mt:BlogTemplateSetID": {
     "prefix": "BlogTemplateSetID",
     "body": ["<mt:BlogTemplateSetID${1} />"]
   },
-
   "mt:BlogSitePath": {
     "prefix": "BlogSitePath",
     "body": ["<mt:BlogSitePath${1} />"]
   },
-
   "mt:BlogResultHeader": {
     "prefix": "BlogResultHeader",
     "body": ["<mt:BlogResultHeader${1}>${2}</mt:BlogResultHeader>"]
   },
-
   "mt:BlogResultter": {
     "prefix": "BlogResultter",
     "body": ["<mt:BlogResultter${1}>${2}</mt:BlogResultter>"]
   },
-
   "mt:BlogRelativeURL": {
     "prefix": "BlogRelativeURL",
     "body": ["<mt:BlogRelativeURL${1} />"]
   },
-
   "mt:BlogPingCount": {
     "prefix": "BlogPingCount",
     "body": ["<mt:BlogPingCount${1} />"]
   },
-
   "mt:BlogParentWebsite": {
     "prefix": "BlogParentWebsite",
     "body": ["<mt:BlogParentWebsite${1}>${2}</mt:BlogParentWebsite>"]
   },
-
   "mt:BlogPageCount": {
     "prefix": "BlogPageCount",
     "body": ["<mt:BlogPageCount${1} />"]
   },
-
   "mt:BlogName": {
     "prefix": "BlogName",
     "body": ["<mt:BlogName${1} />"]
   },
-
   "mt:BlogLanguage": {
     "prefix": "BlogLanguage",
     "body": ["<mt:BlogLanguage${1} />"]
   },
-
   "mt:BlogIfCommentsOpen": {
     "prefix": "BlogIfCommentsOpen",
     "body": ["<mt:BlogIfCommentsOpen${1}>${2}</mt:BlogIfCommentsOpen>"]
   },
-
   "mt:BlogIfCCLicense": {
     "prefix": "BlogIfCCLicense",
     "body": ["<mt:BlogIfCCLicense${1}>${2}</mt:BlogIfCCLicense>"]
   },
-
   "mt:BlogID": {
     "prefix": "BlogID",
     "body": ["<mt:BlogID${1} />"]
   },
-
   "mt:BlogHost": {
     "prefix": "BlogHost",
     "body": ["<mt:BlogHost${1} />"]
   },
-
   "mt:BlogFileExtension": {
     "prefix": "BlogFileExtension",
     "body": ["<mt:BlogFileExtension${1} />"]
   },
-
   "mt:BlogEntryCount": {
     "prefix": "BlogEntryCount",
     "body": ["<mt:BlogEntryCount${1} />"]
   },
-
   "mt:BlogDescription": {
     "prefix": "BlogDescription",
     "body": ["<mt:BlogDescription${1} />"]
   },
-
   "mt:BlogCustomFields": {
     "prefix": "BlogCustomFields",
     "body": ["<mt:BlogCustomFields${1}>${2}</mt:BlogCustomFields>"]
   },
-
   "mt:BlogCustomFieldValue": {
     "prefix": "BlogCustomFieldValue",
     "body": ["<mt:BlogCustomFieldValue${1} />"]
   },
-
   "mt:BlogCustomFieldName": {
     "prefix": "BlogCustomFieldName",
     "body": ["<mt:BlogCustomFieldName${1} />"]
   },
-
   "mt:BlogCustomFieldDescription": {
     "prefix": "BlogCustomFieldDescription",
     "body": ["<mt:BlogCustomFieldDescription${1} />"]
   },
-
   "mt:BlogCommentCount": {
     "prefix": "BlogCommentCount",
     "body": ["<mt:BlogCommentCount${1} />"]
   },
-
   "mt:BlogCategoryCount": {
     "prefix": "BlogCategoryCount",
     "body": ["<mt:BlogCategoryCount${1} />"]
   },
-
   "mt:BlogCCLicenseURL": {
     "prefix": "BlogCCLicenseURL",
     "body": ["<mt:BlogCCLicenseURL${1} />"]
   },
-
   "mt:BlogCCLicenseImage": {
     "prefix": "BlogCCLicenseImage",
     "body": ["<mt:BlogCCLicenseImage${1} />"]
   },
-
   "mt:BlogArchiveURL": {
     "prefix": "BlogArchiveURL",
     "body": ["<mt:BlogArchiveURL${1} />"]
   },
-
   "mt:Authors": {
     "prefix": "Authors",
     "body": ["<mt:Authors${1}>${2}</mt:Authors>"]
   },
-
   "mt:AuthorUserpicURL": {
     "prefix": "AuthorUserpicURL",
     "body": ["<mt:AuthorUserpicURL${1} />"]
   },
-
   "mt:AuthorUserpicAsset": {
     "prefix": "AuthorUserpicAsset",
     "body": ["<mt:AuthorUserpicAsset${1}>${2}</mt:AuthorUserpicAsset>"]
   },
-
   "mt:AuthorUserpic": {
     "prefix": "AuthorUserpic",
     "body": ["<mt:AuthorUserpic${1} />"]
   },
-
   "mt:AuthorUnFollowLink": {
     "prefix": "AuthorUnFollowLink",
     "body": ["<mt:AuthorUnFollowLink${1} />"]
   },
-
   "mt:AuthorURL": {
     "prefix": "AuthorURL",
     "body": ["<mt:AuthorURL${1} />"]
   },
-
   "mt:AuthorScoreLow": {
     "prefix": "AuthorScoreLow",
     "body": ["<mt:AuthorScoreLow${1} />"]
   },
-
   "mt:AuthorScoreHigh": {
     "prefix": "AuthorScoreHigh",
     "body": ["<mt:AuthorScoreHigh${1} />"]
   },
-
   "mt:AuthorScoreCount": {
     "prefix": "AuthorScoreCount",
     "body": ["<mt:AuthorScoreCount${1} />"]
   },
-
   "mt:AuthorScoreAvg": {
     "prefix": "AuthorScoreAvg",
     "body": ["<mt:AuthorScoreAvg${1} />"]
   },
-
   "mt:AuthorScore": {
     "prefix": "AuthorScore",
     "body": ["<mt:AuthorScore${1} />"]
   },
-
   "mt:AuthorRank": {
     "prefix": "AuthorRank",
     "body": ["<mt:AuthorRank${1} />"]
   },
-
   "mt:AuthorPrevious": {
     "prefix": "AuthorPrevious",
     "body": ["<mt:AuthorPrevious${1}>${2}</mt:AuthorPrevious>"]
   },
-
   "mt:AuthorNext": {
     "prefix": "AuthorNext",
     "body": ["<mt:AuthorNext${1}>${2}</mt:AuthorNext>"]
   },
-
   "mt:AuthorName": {
     "prefix": "AuthorName",
     "body": ["<mt:AuthorName${1} />"]
   },
-
   "mt:AuthorIfFollowing": {
     "prefix": "AuthorIfFollowing",
     "body": ["<mt:AuthorIfFollowing${1}>${2}</mt:AuthorIfFollowing>"]
   },
-
   "mt:AuthorIfFollowed": {
     "prefix": "AuthorIfFollowed",
     "body": ["<mt:AuthorIfFollowed${1}>${2}</mt:AuthorIfFollowed>"]
   },
-
   "mt:AuthorID": {
     "prefix": "AuthorID",
     "body": ["<mt:AuthorID${1} />"]
   },
-
   "mt:AuthorHasPage": {
     "prefix": "AuthorHasPage",
     "body": ["<mt:AuthorHasPage${1}>${2}</mt:AuthorHasPage>"]
   },
-
   "mt:AuthorHasEntry": {
     "prefix": "AuthorHasEntry",
     "body": ["<mt:AuthorHasEntry${1}>${2}</mt:AuthorHasEntry>"]
   },
-
   "mt:AuthorFollowingFavorites": {
     "prefix": "AuthorFollowingFavorites",
     "body": ["<mt:AuthorFollowingFavorites${1}>${2}</mt:AuthorFollowingFavorites>"]
   },
-
   "mt:AuthorFollowingEntries": {
     "prefix": "AuthorFollowingEntries",
     "body": ["<mt:AuthorFollowingEntries${1}>${2}</mt:AuthorFollowingEntries>"]
   },
-
   "mt:AuthorFollowingCount": {
     "prefix": "AuthorFollowingCount",
     "body": ["<mt:AuthorFollowingCount${1} />"]
   },
-
   "mt:AuthorFollowingComments": {
     "prefix": "AuthorFollowingComments",
     "body": ["<mt:AuthorFollowingComments${1}>${2}</mt:AuthorFollowingComments>"]
   },
-
   "mt:AuthorFollowing": {
     "prefix": "AuthorFollowing",
     "body": ["<mt:AuthorFollowing${1}>${2}</mt:AuthorFollowing>"]
   },
-
   "mt:AuthorFollowersCount": {
     "prefix": "AuthorFollowersCount",
     "body": ["<mt:AuthorFollowersCount${1} />"]
   },
-
   "mt:AuthorFollowers": {
     "prefix": "AuthorFollowers",
     "body": ["<mt:AuthorFollowers${1}>${2}</mt:AuthorFollowers>"]
   },
-
   "mt:AuthorFollowLink": {
     "prefix": "AuthorFollowLink",
     "body": ["<mt:AuthorFollowLink${1} />"]
   },
-
   "mt:AuthorEntryCount": {
     "prefix": "AuthorEntryCount",
     "body": ["<mt:AuthorEntryCount${1} />"]
   },
-
   "mt:AuthorEntriesCount": {
     "prefix": "AuthorEntriesCount",
     "body": ["<mt:AuthorEntriesCount${1} />"]
   },
-
   "mt:AuthorEmail": {
     "prefix": "AuthorEmail",
     "body": ["<mt:AuthorEmail${1} />"]
   },
-
   "mt:AuthorDisplayName": {
     "prefix": "AuthorDisplayName",
     "body": ["<mt:AuthorDisplayName${1} />"]
   },
-
   "mt:AuthorCustomFields": {
     "prefix": "AuthorCustomFields",
     "body": ["<mt:AuthorCustomFields${1}>${2}</mt:AuthorCustomFields>"]
   },
-
   "mt:AuthorCustomFieldValue": {
     "prefix": "AuthorCustomFieldValue",
     "body": ["<mt:AuthorCustomFieldValue${1} />"]
   },
-
   "mt:AuthorCustomFieldName": {
     "prefix": "AuthorCustomFieldName",
     "body": ["<mt:AuthorCustomFieldName${1} />"]
   },
-
   "mt:AuthorCustomFieldDescription": {
     "prefix": "AuthorCustomFieldDescription",
     "body": ["<mt:AuthorCustomFieldDescription${1} />"]
   },
-
   "mt:AuthorComments": {
     "prefix": "AuthorComments",
     "body": ["<mt:AuthorComments${1}>${2}</mt:AuthorComments>"]
   },
-
   "mt:AuthorCommentResponses": {
     "prefix": "AuthorCommentResponses",
     "body": ["<mt:AuthorCommentResponses${1}>${2}</mt:AuthorCommentResponses>"]
   },
-
   "mt:AuthorCommentCount": {
     "prefix": "AuthorCommentCount",
     "body": ["<mt:AuthorCommentCount${1} />"]
   },
-
   "mt:AuthorBasename": {
     "prefix": "AuthorBasename",
     "body": ["<mt:AuthorBasename${1} />"]
   },
-
   "mt:AuthorAuthType": {
     "prefix": "AuthorAuthType",
     "body": ["<mt:AuthorAuthType${1} />"]
   },
-
   "mt:AuthorAuthIconURL": {
     "prefix": "AuthorAuthIconURL",
     "body": ["<mt:AuthorAuthIconURL${1} />"]
   },
-
   "mt:AudioCustomFields": {
     "prefix": "AudioCustomFields",
     "body": ["<mt:AudioCustomFields${1}>${2}</mt:AudioCustomFields>"]
   },
-
   "mt:AudioCustomFieldValue": {
     "prefix": "AudioCustomFieldValue",
     "body": ["<mt:AudioCustomFieldValue${1} />"]
   },
-
   "mt:AudioCustomFieldName": {
     "prefix": "AudioCustomFieldName",
     "body": ["<mt:AudioCustomFieldName${1} />"]
   },
-
   "mt:AudioCustomFieldDescription": {
     "prefix": "AudioCustomFieldDescription",
     "body": ["<mt:AudioCustomFieldDescription${1} />"]
   },
-
   "mt:AtomScript": {
     "prefix": "AtomScript",
     "body": ["<mt:AtomScript${1} />"]
   },
-
   "mt:AssetsHeader": {
     "prefix": "AssetsHeader",
     "body": ["<mt:AssetsHeader${1}>${2}</mt:AssetsHeader>"]
   },
-
   "mt:Assetster": {
     "prefix": "Assetster",
     "body": ["<mt:Assetster${1}>${2}</mt:Assetster>"]
   },
-
   "mt:Assets": {
     "prefix": "Assets",
     "body": ["<mt:Assets${1}>${2}</mt:Assets>"]
   },
-
   "mt:AssetURL": {
     "prefix": "AssetURL",
     "body": ["<mt:AssetURL${1} />"]
   },
-
   "mt:AssetType": {
     "prefix": "AssetType",
     "body": ["<mt:AssetType${1} />"]
   },
-
   "mt:AssetThumbnailURL": {
     "prefix": "AssetThumbnailURL",
     "body": ["<mt:AssetThumbnailURL${1} />"]
   },
-
   "mt:AssetThumbnailLink": {
     "prefix": "AssetThumbnailLink",
     "body": ["<mt:AssetThumbnailLink${1} />"]
   },
-
   "mt:AssetTags": {
     "prefix": "AssetTags",
     "body": ["<mt:AssetTags${1}>${2}</mt:AssetTags>"]
   },
-
   "mt:AssetScoreLow": {
     "prefix": "AssetScoreLow",
     "body": ["<mt:AssetScoreLow${1} />"]
   },
-
   "mt:AssetScoreHigh": {
     "prefix": "AssetScoreHigh",
     "body": ["<mt:AssetScoreHigh${1} />"]
   },
-
   "mt:AssetScoreCount": {
     "prefix": "AssetScoreCount",
     "body": ["<mt:AssetScoreCount${1} />"]
   },
-
   "mt:AssetScoreAvg": {
     "prefix": "AssetScoreAvg",
     "body": ["<mt:AssetScoreAvg${1} />"]
   },
-
   "mt:AssetScore": {
     "prefix": "AssetScore",
     "body": ["<mt:AssetScore${1} />"]
   },
-
   "mt:AssetRank": {
     "prefix": "AssetRank",
     "body": ["<mt:AssetRank${1} />"]
   },
-
   "mt:AssetProperty": {
     "prefix": "AssetProperty",
     "body": ["<mt:AssetProperty${1} />"]
   },
-
   "mt:AssetMimeType": {
     "prefix": "AssetMimeType",
     "body": ["<mt:AssetMimeType${1} />"]
   },
-
   "mt:AssetLink": {
     "prefix": "AssetLink",
     "body": ["<mt:AssetLink${1} />"]
   },
-
   "mt:AssetLabel": {
     "prefix": "AssetLabel",
     "body": ["<mt:AssetLabel${1} />"]
   },
-
   "mt:AssetIsLastInRow": {
     "prefix": "AssetIsLastInRow",
     "body": ["<mt:AssetIsLastInRow${1}>${2}</mt:AssetIsLastInRow>"]
   },
-
   "mt:AssetIsFirstInRow": {
     "prefix": "AssetIsFirstInRow",
     "body": ["<mt:AssetIsFirstInRow${1}>${2}</mt:AssetIsFirstInRow>"]
   },
-
   "mt:AssetIfTagged": {
     "prefix": "AssetIfTagged",
     "body": ["<mt:AssetIfTagged${1}>${2}</mt:AssetIfTagged>"]
   },
-
   "mt:AssetID": {
     "prefix": "AssetID",
     "body": ["<mt:AssetID${1} />"]
   },
-
   "mt:AssetFilePath": {
     "prefix": "AssetFilePath",
     "body": ["<mt:AssetFilePath${1} />"]
   },
-
   "mt:AssetFileName": {
     "prefix": "AssetFileName",
     "body": ["<mt:AssetFileName${1} />"]
   },
-
   "mt:AssetFileExt": {
     "prefix": "AssetFileExt",
     "body": ["<mt:AssetFileExt${1} />"]
   },
-
   "mt:AssetDescription": {
     "prefix": "AssetDescription",
     "body": ["<mt:AssetDescription${1} />"]
   },
-
   "mt:AssetDateAdded": {
     "prefix": "AssetDateAdded",
     "body": ["<mt:AssetDateAdded${1} />"]
   },
-
   "mt:AssetCount": {
     "prefix": "AssetCount",
     "body": ["<mt:AssetCount${1} />"]
   },
-
   "mt:AssetAddedBy": {
     "prefix": "AssetAddedBy",
     "body": ["<mt:AssetAddedBy${1} />"]
   },
-
   "mt:Asset": {
     "prefix": "Asset",
     "body": ["<mt:Asset${1}>${2}</mt:Asset>"]
   },
-
   "mt:Archives": {
     "prefix": "Archives",
     "body": ["<mt:Archives${1}>${2}</mt:Archives>"]
   },
-
   "mt:ArchiveTypeLabel": {
     "prefix": "ArchiveTypeLabel",
     "body": ["<mt:ArchiveTypeLabel${1} />"]
   },
-
   "mt:ArchiveType": {
     "prefix": "ArchiveType",
     "body": ["<mt:ArchiveType${1} />"]
   },
-
   "mt:ArchiveTitle": {
     "prefix": "ArchiveTitle",
     "body": ["<mt:ArchiveTitle${1} />"]
   },
-
   "mt:ArchivePrevious": {
     "prefix": "ArchivePrevious",
     "body": ["<mt:ArchivePrevious${1}>${2}</mt:ArchivePrevious>"]
   },
-
   "mt:ArchiveNext": {
     "prefix": "ArchiveNext",
     "body": ["<mt:ArchiveNext${1}>${2}</mt:ArchiveNext>"]
   },
-
   "mt:ArchiveListHeader": {
     "prefix": "ArchiveListHeader",
     "body": ["<mt:ArchiveListHeader${1}>${2}</mt:ArchiveListHeader>"]
   },
-
   "mt:ArchiveListter": {
     "prefix": "ArchiveListter",
     "body": ["<mt:ArchiveListter${1}>${2}</mt:ArchiveListter>"]
   },
-
   "mt:ArchiveList": {
     "prefix": "ArchiveList",
     "body": ["<mt:ArchiveList${1}>${2}</mt:ArchiveList>"]
   },
-
   "mt:ArchiveLink": {
     "prefix": "ArchiveLink",
     "body": ["<mt:ArchiveLink${1} />"]
   },
-
   "mt:ArchiveLabel": {
     "prefix": "ArchiveLabel",
     "body": ["<mt:ArchiveLabel${1} />"]
   },
-
   "mt:ArchiveFile": {
     "prefix": "ArchiveFile",
     "body": ["<mt:ArchiveFile${1} />"]
   },
-
   "mt:ArchiveDateEnd": {
     "prefix": "ArchiveDateEnd",
     "body": ["<mt:ArchiveDateEnd${1} />"]
   },
-
   "mt:ArchiveDate": {
     "prefix": "ArchiveDate",
     "body": ["<mt:ArchiveDate${1} />"]
   },
-
   "mt:ArchiveCount": {
     "prefix": "ArchiveCount",
     "body": ["<mt:ArchiveCount${1} />"]
   },
-
   "mt:ArchiveCategory": {
     "prefix": "ArchiveCategory",
     "body": ["<mt:ArchiveCategory${1} />"]
   },
-
   "mtapp:Widget": {
     "prefix": "Widget",
     "body": ["<mtapp:Widget${1}>${2}</mtapp:Widget>"]
   },
-
   "mtapp:StatusMsg": {
     "prefix": "StatusMsg",
     "body": ["<mtapp:StatusMsg${1}>${2}</mtapp:StatusMsg>"]
   },
-
   "mtapp:SettingGroup": {
     "prefix": "SettingGroup",
     "body": ["<mtapp:SettingGroup${1}>${2}</mtapp:SettingGroup>"]
   },
-
   "mtapp:Setting": {
     "prefix": "Setting",
     "body": ["<mtapp:Setting${1}>${2}</mtapp:Setting>"]
   },
-
   "mtapp:PageActions": {
     "prefix": "PageActions",
     "body": ["<mtapp:PageActions${1} />"]
   },
-
   "mtapp:Listing": {
     "prefix": "Listing",
     "body": ["<mtapp:Listing${1}>${2}</mtapp:Listing>"]
   },
-
   "mtapp:ListFilters": {
     "prefix": "ListFilters",
     "body": ["<mtapp:ListFilters${1} />"]
   },
-
   "mtapp:Link": {
     "prefix": "Link",
     "body": ["<mtapp:Link${1} />"]
   },
-
   "mtapp:Form": {
     "prefix": "Form",
     "body": ["<mtapp:Form${1}>${2}</mtapp:Form>"]
   },
-
   "mtapp:ActionBar": {
     "prefix": "ActionBar",
     "body": ["<mtapp:ActionBar${1} />"]
   },
-
   "mt:AdminScript": {
     "prefix": "AdminScript",
     "body": ["<mt:AdminScript${1} />"]
   },
-
   "mt:AdminCGIPath": {
     "prefix": "AdminCGIPath",
     "body": ["<mt:AdminCGIPath${1} />"]
   },
-
   "mt:ActionsHeader": {
     "prefix": "ActionsHeader",
     "body": ["<mt:ActionsHeader${1}>${2}</mt:ActionsHeader>"]
   },
-
   "mt:Actionster": {
     "prefix": "Actionster",
     "body": ["<mt:Actionster${1}>${2}</mt:Actionster>"]
   },
-
   "mt:ActionsFavorite": {
     "prefix": "ActionsFavorite",
     "body": ["<mt:ActionsFavorite${1}>${2}</mt:ActionsFavorite>"]
   },
-
   "mt:ActionsEntry": {
     "prefix": "ActionsEntry",
     "body": ["<mt:ActionsEntry${1}>${2}</mt:ActionsEntry>"]
   },
-
   "mt:ActionsComment": {
     "prefix": "ActionsComment",
     "body": ["<mt:ActionsComment${1}>${2}</mt:ActionsComment>"]
   },
-
   "mt:Actions": {
     "prefix": "Actions",
     "body": ["<mt:Actions${1}>${2}</mt:Actions>"]
   },
-
   "mt:ActionStreams": {
     "prefix": "ActionStreams",
     "body": ["<mt:ActionStreams${1}>${2}</mt:ActionStreams>"]
   },
-
   "mt:Include module": {
     "prefix": "Include module",
     "body": ["<mt:Include module=\"${1:module}\">"]
   },
-
   "mt:Var": {
     "prefix": "Var",
     "body": ["<mt:Var name=\"${1:name}\" />"]
   },
-
   "mt:SetVarBlock": {
     "prefix": "SetVarBlock",
     "body": ["<mt:SetVarBlock name=\"${1:VariableName}\">${2}</mt:SetVarBlock>"]
   },
-
   "mt": {
     "prefix": "mt",
     "body": ["<mt:${1:TagName}>"]
   },
-
   // --------------------------------------------------
   //  MT6.2 & MT7 R.4207 Added [ start ]
   // --------------------------------------------------
@@ -7025,463 +5621,371 @@
     "prefix": "AuthorHasContent",
     "body": ["<mt:AuthorHasContent content_type=\"${1:}\">${2}</mt:AuthorHasContent>"]
   },
-
   "mt:AssetSiteID": {
     "prefix": "AssetSiteID",
     "body": ["<mt:AssetSiteID${1} />"]
   },
-
   "mt:AssetBlogID": {
     "prefix": "AssetBlogID",
     "body": ["<mt:AssetBlogID${1} />"]
   },
-
   "mt:AuthorContentCount": {
     "prefix": "AuthorContentCount",
     "body": ["<mt:AuthorContentCount content_type=\"${1:}\"${2} />"]
   },
-
   "include_sites=\"\"": {
     "prefix": "include_sites=\"\"",
     "body": ["include_sites=\"${1:ID}\""]
   },
-
   "exclude_sites=\"\"": {
     "prefix": "exclude_sites=\"\"",
     "body": ["exclude_sites=\"${1:ID}\""]
   },
-
   "mt:CalendarIfContents": {
     "prefix": "CalendarIfContents",
     "body": ["<mt:CalendarIfContents>${1}</mt:CalendarIfContents>"]
   },
-
   "mt:CalendarIfNoContents": {
     "prefix": "CalendarIfNoContents",
     "body": ["<mt:CalendarIfNoContents>${1}</mt:CalendarIfNoContents>"]
   },
-
   "mt:CategorySetName": {
     "prefix": "CategorySetName",
     "body": ["<mt:CategorySetName${1} />"]
   },
-
   "mt:CategorySets": {
     "prefix": "CategorySets",
     "body": ["<mt:CategorySets>${1}</mt:CategorySets>"]
   },
-
   "content_type=\"\"": {
     "prefix": "content_type=\"\"",
     "body": ["content_type=\"${1:}\""]
   },
-
   "mt:ChildSites": {
     "prefix": "ChildSites",
     "body": ["<mt:ChildSites${1}>${2}</mt:ChildSites>"]
   },
-
   "mt:CommentSiteID": {
     "prefix": "CommentSiteID",
     "body": ["<mt:CommentSiteID${1} />"]
   },
-
   "mt:ContentAuthorDisplayName": {
     "prefix": "ContentAuthorDisplayName",
     "body": ["<mt:ContentAuthorDisplayName${1} />"]
   },
-
   "mt:ContentAuthorEmail": {
     "prefix": "ContentAuthorEmail",
     "body": ["<mt:ContentAuthorEmail${1} />"]
   },
-
   "mt:ContentAuthorID": {
     "prefix": "ContentAuthorID",
     "body": ["<mt:ContentAuthorID${1} />"]
   },
-
   "mt:ContentAuthorLink": {
     "prefix": "ContentAuthorLink",
     "body": ["<mt:ContentAuthorLink${1} />"]
   },
-
   "mt:ContentAuthorURL": {
     "prefix": "ContentAuthorURL",
     "body": ["<mt:ContentAuthorURL${1} />"]
   },
-
   "mt:ContentAuthorUsername": {
     "prefix": "ContentAuthorUsername",
     "body": ["<mt:ContentAuthorUsername${1} />"]
   },
-
   "mt:ContentAuthorUserpic": {
     "prefix": "ContentAuthorUserpic",
     "body": ["<mt:ContentAuthorUserpic${1} />"]
   },
-
   "mt:ContentAuthorUserpicAsset": {
     "prefix": "ContentAuthorUserpicAsset",
     "body": ["<mt:ContentAuthorUserpicAsset${1}>${2}</mt:ContentAuthorUserpicAsset>"]
   },
-
   "mt:ContentAuthorUserpicURL": {
     "prefix": "ContentAuthorUserpicURL",
     "body": ["<mt:ContentAuthorUserpicURL${1} />"]
   },
-
   "mt:ContentCalendar": {
     "prefix": "ContentCalendar",
     "body": ["<mt:ContentCalendar content_type=\"${1:}\">${2}</mt:ContentCalendar>"]
   },
-
   "date_field=\"\"": {
     "prefix": "date_field=\"\"",
     "body": ["date_field=\"${1:}\""]
   },
-
   "month=\"\"": {
     "prefix": "month=\"\"",
     "body": ["month=\"${1:this}\""]
   },
-
   "category_set=\"\"": {
     "prefix": "category_set=\"\"",
     "body": ["category_set=\"${1:}\""]
   },
-
   "category=\"\"": {
     "prefix": "category=\"\"",
     "body": ["category=\"${1:}\""]
   },
-
   "weeks_start_with=\"\"": {
     "prefix": "weeks_start_with=\"\"",
     "body": ["weeks_start_with=\"${1:N}\""]
   },
-
   "mt:ContentCreatedDate": {
     "prefix": "ContentCreatedDate",
     "body": ["<mt:ContentCreatedDate${1} />"]
   },
-
   "language=\"\"": {
     "prefix": "language=\"\"",
     "body": ["language=\"${1:}\""]
   },
-
   "mt:ContentDate": {
     "prefix": "ContentDate",
     "body": ["<mt:ContentDate${1} />"]
   },
-
   "mt:ContentField": {
     "prefix": "ContentField",
     "body": ["<mt:ContentField content_field=\"${1:}\">${2}</mt:ContentField>"]
   },
-
   "mt:ContentFields": {
     "prefix": "ContentFields",
     "body": ["<mt:ContentFields>${1}</mt:ContentFields>"]
   },
-
   "mt:ContentFieldValue": {
     "prefix": "ContentFieldValue",
     "body": ["<mt:ContentFieldValue${1} />"]
   },
-
   "mt:ContentID": {
     "prefix": "ContentID",
     "body": ["<mt:ContentID${1} />"]
   },
-
   "mt:ContentIdentifier": {
     "prefix": "ContentIdentifier",
     "body": ["<mt:ContentIdentifier${1} />"]
   },
-
   "separator=\"\"": {
     "prefix": "separator=\"\"",
     "body": ["separator=\"${1:}\""]
   },
-
   "mt:ContentLabel": {
     "prefix": "ContentLabel",
     "body": ["<mt:ContentLabel${1} />"]
   },
-
   "mt:ContentModifiedDate": {
     "prefix": "ContentModifiedDate",
     "body": ["<mt:ContentModifiedDate${1} />"]
   },
-
   "mt:ContentNext": {
     "prefix": "ContentNext",
     "body": ["<mt:ContentNext${1}>${2}</mt:ContentNext>"]
   },
-
   "category_field=\"\"": {
     "prefix": "category_field=\"\"",
     "body": ["category_field=\"${1:}\""]
   },
-
   "mt:ContentPermalink": {
     "prefix": "ContentPermalink",
     "body": ["<mt:ContentPermalink${1} />"]
   },
-
   "mt:ContentPrevious": {
     "prefix": "ContentPrevious",
     "body": ["<mt:ContentPrevious${1}>${2}</mt:ContentPrevious>"]
   },
-
   "mt:Contents": {
     "prefix": "Contents",
     "body": ["<mt:Contents${1}>${2}</mt:Contents>"]
   },
-
   "sort_by=\"field:customfieldbasename\"": {
     "prefix": "sort_by=\"field:customfieldbasename\"",
     "body": ["sort_by=\"field:${1:customfieldbasename}\""]
   },
-
   "mt:ContentsCount": {
     "prefix": "ContentsCount",
     "body": ["<mt:ContentsCount${1} />"]
   },
-
   "mt:ContentsHeader": {
     "prefix": "ContentsHeader",
     "body": ["<mt:ContentsHeader>${1}</mt:ContentsHeader>"]
   },
-
   "mt:Contentster": {
     "prefix": "Contentster",
     "body": ["<mt:Contentster>${1}</mt:Contentster>"]
   },
-
   "mt:ContentSiteDescription": {
     "prefix": "ContentSiteDescription",
     "body": ["<mt:ContentSiteDescription${1} />"]
   },
-
   "mt:ContentSiteID": {
     "prefix": "ContentSiteID",
     "body": ["<mt:ContentSiteID${1} />"]
   },
-
   "mt:ContentSiteName": {
     "prefix": "ContentSiteName",
     "body": ["<mt:ContentSiteName${1} />"]
   },
-
   "mt:ContentSiteURL": {
     "prefix": "ContentSiteURL",
     "body": ["<mt:ContentSiteURL${1} />"]
   },
-
   "mt:ContentStatus": {
     "prefix": "ContentStatus",
     "body": ["<mt:ContentStatus${1} />"]
   },
-
   "mt:ContentTypeDescription": {
     "prefix": "ContentTypeDescription",
     "body": ["<mt:ContentTypeDescription${1} />"]
   },
-
   "mt:ContentTypeID": {
     "prefix": "ContentTypeID",
     "body": ["<mt:ContentTypeID${1} />"]
   },
-
   "pad=\"\"": {
     "prefix": "pad=\"\"",
     "body": ["pad=\"${1:1}\""]
   },
-
   "mt:ContentTypeName": {
     "prefix": "ContentTypeName",
     "body": ["<mt:ContentTypeName${1} />"]
   },
-
   "mt:ContentTypeUniqueId": {
     "prefix": "ContentTypeUniqueId",
     "body": ["<mt:ContentTypeUniqueId${1} />"]
   },
-
   "mt:ContentUniqueId": {
     "prefix": "ContentUniqueId",
     "body": ["<mt:ContentUniqueId${1} />"]
   },
-
   "mt:ContentUnpublishedDate": {
     "prefix": "ContentUnpublishedDate",
     "body": ["<mt:ContentUnpublishedDate${1} />"]
   },
-
   "mt:EntrySiteDescription": {
     "prefix": "EntrySiteDescription",
     "body": ["<mt:EntrySiteDescription${1} />"]
   },
-
   "mt:EntrySiteID": {
     "prefix": "EntrySiteID",
     "body": ["<mt:EntrySiteID${1} />"]
   },
-
   "mt:EntrySiteName": {
     "prefix": "EntrySiteName",
     "body": ["<mt:EntrySiteName${1} />"]
   },
-
   "mt:EntrySiteURL": {
     "prefix": "EntrySiteURL",
     "body": ["<mt:EntrySiteURL${1} />"]
   },
-
   "mt:SiteArchiveURL": {
     "prefix": "SiteArchiveURL",
     "body": ["<mt:SiteArchiveURL${1} />"]
   },
-
   "mt:SiteCategoryCount": {
     "prefix": "SiteCategoryCount",
     "body": ["<mt:SiteCategoryCount${1} />"]
   },
-
   "mt:SiteCCLicenseImage": {
     "prefix": "SiteCCLicenseImage",
     "body": ["<mt:SiteCCLicenseImage${1} />"]
   },
-
   "mt:SiteCCLicenseURL": {
     "prefix": "SiteCCLicenseURL",
     "body": ["<mt:SiteCCLicenseURL${1} />"]
   },
-
   "mt:SiteCommentCount": {
     "prefix": "SiteCommentCount",
     "body": ["<mt:SiteCommentCount${1} />"]
   },
-
   "mt:SiteContentCount": {
     "prefix": "SiteContentCount",
     "body": ["<mt:SiteContentCount content_type=\"${1:}\"${2} />"]
   },
-
   "mt:SiteDateLanguage": {
     "prefix": "SiteDateLanguage",
     "body": ["<mt:SiteDateLanguage${1} />"]
   },
-
   "mt:SiteDescription": {
     "prefix": "SiteDescription",
     "body": ["<mt:SiteDescription${1} />"]
   },
-
   "mt:SiteEntryCount": {
     "prefix": "SiteEntryCount",
     "body": ["<mt:SiteEntryCount${1} />"]
   },
-
   "mt:SiteHasChildSite": {
     "prefix": "SiteHasChildSite",
     "body": ["<mt:SiteHasChildSite${1}>${2}</mt:SiteHasChildSite>"]
   },
-
   "mt:SiteHost": {
     "prefix": "SiteHost",
     "body": ["<mt:SiteHost${1} />"]
   },
-
   "mt:SiteID": {
     "prefix": "SiteID",
     "body": ["<mt:SiteID${1} />"]
   },
-
   "mt:SiteIfCommentsOpen": {
     "prefix": "SiteIfCommentsOpen",
     "body": ["<mt:SiteIfCommentsOpen${1}>${2}</mt:SiteIfCommentsOpen>"]
   },
-
   "mt:SiteLanguage": {
     "prefix": "SiteLanguage",
     "body": ["<mt:SiteLanguage${1} />"]
   },
-
   "mt:SiteName": {
     "prefix": "SiteName",
     "body": ["<mt:SiteName${1} />"]
   },
-
   "mt:SitePageCount": {
     "prefix": "SitePageCount",
     "body": ["<mt:SitePageCount${1} />"]
   },
-
   "mt:SiteParentSite": {
     "prefix": "SiteParentSite",
     "body": ["<mt:SiteParentSite${1}>${2}</mt:SiteParentSite>"]
   },
-
   "mt:SitePath": {
     "prefix": "SitePath",
     "body": ["<mt:SitePath${1} />"]
   },
-
   "mt:SitePingCount": {
     "prefix": "SitePingCount",
     "body": ["<mt:SitePingCount${1} />"]
   },
-
   "mt:SiteRelativeURL": {
     "prefix": "SiteRelativeURL",
     "body": ["<mt:SiteRelativeURL${1} />"]
   },
-
   "mt:Sites": {
     "prefix": "Sites",
     "body": ["<mt:Sites${1}>${2}</mt:Sites>"]
   },
-
   "mode=\"\"": {
     "prefix": "mode=\"\"",
     "body": ["mode=\"${1:loop}\""]
   },
-
   "mt:SitesIfLocalSite": {
     "prefix": "SitesIfLocalSite",
     "body": ["<mt:SitesIfLocalSite${1}>${2}</mt:SitesIfLocalSite>"]
   },
-
   "mt:SitesLocalSite": {
     "prefix": "SitesLocalSite",
     "body": ["<mt:SitesLocalSite${1}>${2}</mt:SitesLocalSite>"]
   },
-
   "mt:SiteThemeID": {
     "prefix": "SiteThemeID",
     "body": ["<mt:SiteThemeID${1} />"]
   },
-
   "mt:SiteTimezone": {
     "prefix": "SiteTimezone",
     "body": ["<mt:SiteTimezone${1} />"]
   },
-
   "mt:SiteURL": {
     "prefix": "SiteURL",
     "body": ["<mt:SiteURL${1} />"]
   },
-
   "archive_type=\"Individual\" 記事": {
     "prefix": "archive_type=\"\"",
     "body": ["archive_type=\"${1:Individual}\""],
     "description": "archive_type=\"Individual\" 記事"
   },
-
   // --------------------------------------------------
   //  MTAppjQuery Added [ start ]
   // --------------------------------------------------
@@ -7489,42 +5993,34 @@
     "prefix": "remove_host=\"\"",
     "body": ["remove_host=\"1\""]
   },
-
   "split=\"\"": {
     "prefix": "split=\"\"",
     "body": ["split=\"${1:}\""]
   },
-
   "split_format=\"\"": {
     "prefix": "split_format=\"\"",
     "body": ["split_format=\"${1:format}\""]
   },
-
   "nengou=\"\"": {
     "prefix": "nengou=\"\"",
     "body": ["nengou=\"${1:yyyymmdd}\""]
   },
-
   "compress=\"\"": {
     "prefix": "compress=\"\"",
     "body": ["compress=\"${1:1}\""]
   },
-
   "mt:CreateJSON": {
     "prefix": "CreateJSON",
     "body": ["<mt:CreateJSON include_blogs=\"${1:N}\" fields=\"${2:title,text,text_more,keywords,tags,categories}\"${3} />"]
   },
-
   "mt:Foreach": {
     "prefix": "Foreach",
     "body": ["<mt:Foreach name=\"${1:items}\" as=\"${2:item}\">${3}</mt:Foreach>"]
   },
-
   "mt:NestVar": {
     "prefix": "NestVar",
     "body": ["<mt:NestVar name=\"${1:}\"${2} />"]
   },
-
   // --------------------------------------------------
   //  MovableType.net Added [ start ]
   // --------------------------------------------------
@@ -7532,42 +6028,34 @@
     "prefix": "PaginationHasNext",
     "body": ["<mt:PaginationHasNext${1}>${2}</mt:PaginationHasNext>"]
   },
-
   "mt:PaginationHasPrevious MT.net のみ": {
     "prefix": "PaginationHasPrevious",
     "body": ["<mt:PaginationHasPrevious${1}>${2}</mt:PaginationHasPrevious>"]
   },
-
   "mt:PaginationNextURL MT.net のみ": {
     "prefix": "PaginationNextURL",
     "body": ["<mt:PaginationNextURL${1} />"]
   },
-
   "mt:PaginationPreviousURL MT.net のみ": {
     "prefix": "PaginationPreviousURL",
     "body": ["<mt:PaginationPreviousURL${1} />"]
   },
-
   "mt:CategoryDepth MT.net のみ": {
     "prefix": "CategoryDepth",
     "body": ["<mt:CategoryDepth${1} />"]
   },
-
   "mt:CustomFieldValue MT.net のみ": {
     "prefix": "CustomFieldValue",
     "body": ["<mt:CustomFieldValue identifier=\"${1:}\"${2} />"]
   },
-
   "mt:CustomFieldAsset MT.net のみ": {
     "prefix": "CustomFieldAsset",
     "body": ["<mt:CustomFieldAsset identifier=\"${1:}\">${2}</mt:CustomFieldAsset>"]
   },
-
   "paginate_by=\"N\" MT.net のみ": {
     "prefix": "paginate_by=\"\"",
     "body": ["paginate_by=\"${1:N}\""]
   },
-
   // --------------------------------------------------
   //  PageBute 3.5.8 Added [ start ]
   // --------------------------------------------------
@@ -7575,157 +6063,126 @@
     "prefix": "PageContents",
     "body": ["<mt:PageContents count=\"${1:N}\"${2: navi_count=\"\"}${3: abs2rel=\"1\"}>${4}</mt:PageContents>"]
   },
-
   "mt:PageSeparator": {
     "prefix": "PageSeparator",
     "body": ["<mt:PageSeparator${1} />"]
   },
-
   "mt:PageLists": {
     "prefix": "PageLists",
     "body": ["<mt:PageLists delim=\"${1}\" show_always=\"${2:0}\">${3}</mt:PageLists>"]
   },
-
   "mt:IfPageFirst": {
     "prefix": "IfPageFirst",
     "body": ["<mt:IfPageFirst${1}>${2}</mt:IfPageFirst>"]
   },
-
   "mt:IfPageBefore": {
     "prefix": "IfPageBefore",
     "body": ["<mt:IfPageBefore${1}>${2}</mt:IfPageBefore>"]
   },
-
   "mt:IfPageAfter": {
     "prefix": "IfPageAfter",
     "body": ["<mt:IfPageAfter${1}>${2}</mt:IfPageAfter>"]
   },
-
   "mt:IfPageLast": {
     "prefix": "IfPageLast",
     "body": ["<mt:IfPageLast${1}>${2}</mt:IfPageLast>"]
   },
-
   "delim=\"*\"": {
     "prefix": "delim=\"*\"",
     "body": ["delim=\"${1:*}\""]
   },
-
   "mt:PageFirst": {
     "prefix": "PageFirst",
     "body": ["<mt:PageFirst${1} />"]
   },
-
   "mt:PageBefore": {
     "prefix": "PageBefore",
     "body": ["<mt:PageBefore${1} />"]
   },
-
   "mt:PageAfter": {
     "prefix": "PageAfter",
     "body": ["<mt:PageAfter${1} />"]
   },
-
   "mt:PageLast": {
     "prefix": "PageLast",
     "body": ["<mt:PageLast${1} />"]
   },
-
   "mt:PageCount": {
     "prefix": "PageCount",
     "body": ["<mt:PageCount${1} />"]
   },
-
   "mt:PageMaxCount": {
     "prefix": "PageMaxCount",
     "body": ["<mt:PageMaxCount${1} />"]
   },
-
   "mt:PageContentsHeader": {
     "prefix": "PageContentsHeader",
     "body": ["<mt:PageContentsHeader${1}>${2}</mt:PageContentsHeader>"]
   },
-
   "mt:PageContentster": {
     "prefix": "PageContentster",
     "body": ["<mt:PageContentster${1}>${2}</mt:PageContentster>"]
   },
-
   "mt:PageEmpty": {
     "prefix": "PageEmpty",
     "body": ["<mt:PageEmpty${1}>${2}</mt:PageEmpty>"]
   },
-
   "mt:IfPageNoEmpty": {
     "prefix": "IfPageNoEmpty",
     "body": ["<mt:IfPageNoEmpty${1}>${2}</mt:IfPageNoEmpty>"]
   },
-
   "mt:Pagination": {
     "prefix": "Pagination",
     "body": ["<mt:Pagination${1}>${2}</mt:Pagination>"]
   },
-
   "mt:PaginationHeader": {
     "prefix": "PaginationHeader",
     "body": ["<mt:PaginationHeader${1}>${2}</mt:PaginationHeader>"]
   },
-
   "mt:Paginationter": {
     "prefix": "Paginationter",
     "body": ["<mt:Paginationter${1}>${2}</mt:Paginationter>"]
   },
-
   "mt:IfPaginationCurrent": {
     "prefix": "IfPaginationCurrent",
     "body": ["<mt:IfPaginationCurrent${1}>${2}</mt:IfPaginationCurrent>"]
   },
-
   "mt:IfPaginationFirst": {
     "prefix": "IfPaginationFirst",
     "body": ["<mt:IfPaginationFirst${1}>${2}</mt:IfPaginationFirst>"]
   },
-
   "mt:IfPaginationLast": {
     "prefix": "IfPaginationLast",
     "body": ["<mt:IfPaginationLast${1}>${2}</mt:IfPaginationLast>"]
   },
-
   "mt:IfPaginationNext": {
     "prefix": "IfPaginationNext",
     "body": ["<mt:IfPaginationNext${1}>${2}</mt:IfPaginationNext>"]
   },
-
   "mt:IfPaginationPrev": {
     "prefix": "IfPaginationPrev",
     "body": ["<mt:IfPaginationPrev${1}>${2}</mt:IfPaginationPrev>"]
   },
-
   "mt:PaginationLink": {
     "prefix": "PaginationLink",
     "body": ["<mt:PaginationLink${1} />"]
   },
-
   "element=\"\"": {
     "prefix": "element=\"\"",
     "body": ["element=\"${1:number}\""]
   },
-
   "mt:PaginationFirst": {
     "prefix": "PaginationFirst",
     "body": ["<mt:PaginationFirst${1} />"]
   },
-
   "mt:PaginationLast": {
     "prefix": "PaginationLast",
     "body": ["<mt:PaginationLast${1} />"]
   },
-
   "mt:PaginationNext": {
     "prefix": "PaginationNext",
     "body": ["<mt:PaginationNext${1} />"]
   },
-
   "mt:PaginationPrev": {
     "prefix": "PaginationPrev",
     "body": ["<mt:PaginationPrev${1} />"]

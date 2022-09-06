@@ -45,7 +45,7 @@
               "name": "support.type",
               "patterns": [
                 {
-                  "match": "\\b([iI][fF]\\w*|[eE][lL][sS][eE]|[lL][oO][oO][pP]|[Ff][Oo][Rr])\\b",
+                  "match": "\\b([iI][fF]\\w*|[eE][lL][sS][eE]|[lL][oO][oO][pP]|[Ff][Oo][Rr]([eE][aA][cC][hH])?)\\b",
                   "name": "keyword.control.mt"
                 }
               ]

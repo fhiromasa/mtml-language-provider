@@ -622,6 +622,10 @@
     "prefix": "filters=\"\"",
     "body": ["filters=\"${1}\""]
   },
+  "encode_html=\"\"": {
+    "prefix": "encode_html=\"\"",
+    "body": ["encode_html=\"1\""]
+  },
   "encode_xml=\"\"": {
     "prefix": "encode_xml=\"\"",
     "body": ["encode_xml=\"1\""]

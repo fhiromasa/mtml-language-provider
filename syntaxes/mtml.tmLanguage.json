@@ -5,12 +5,12 @@
   "keyEquivalent": "^~M",
   "patterns": [
     {"include": "#mt-ignore-tag"},
-    {"include": "#trans-tag"},
+    {"include": "#mt-trans-tag"},
     {"include": "#mt-container-tag"},
-    {"include": "#mt-variable-tag"},
+    {"include": "#mt-function-tag"},
     {"include": "#psedo-html"},
     {"include": "#embedded-code"},
-    {"include": "#entities"}
+    {"include": "#character-entity-references"}
   ],
   "repository": {
     "embedded-code": {
@@ -19,7 +19,7 @@
         {"include": "#ruby"}
       ]
     },
-    "entities": {
+    "character-entity-references": {
       "patterns": [
         {
           "captures": {
@@ -42,7 +42,7 @@
           "beginCaptures": {
             "1": {"name": "punctuation.definition.tag.mt"},
             "2": {
-              "name": "support.type",
+              "name": "entity.other.inherited-class.mt",
               "patterns": [
                 {
                   "match": "\\b([iI][fF]\\w*|[eE][lL][sS][eE]|[lL][oO][oO][pP]|[Ff][Oo][Rr]([eE][aA][cC][hH])?)\\b",
@@ -55,9 +55,9 @@
           "endCaptures": {
             "0": {"name": "punctuation.definition.tag.mt"}
           },
-          "name": "meta.tag.mt.container.html",
+          "name": "entity.name.tag.container.mt",
           "patterns": [
-            {"include": "#tag-stuff"}
+            {"include": "#mt-tag-stuff"}
           ]
         }
       ]
@@ -67,61 +67,33 @@
         {
           "begin": "<[Mm][Tt]:?[Ii]gnore>",
           "beginCaptures": {
-            "0": {"name": "punctuation.definition.comment.begin.mt"}
+            "0": {"name": "punctuation.definition.comment.mt"}
           },
           "end": "</[Mm][Tt]:?[Ii]gnore>",
           "endCaptures": {
-            "0": {"name": "punctuation.definition.comment.end.mt"}
+            "0": {"name": "punctuation.definition.comment.mt"}
           },
           "name": "comment.block.mt"
         }
       ]
     },
-    "mt-variable-tag": {
+    "mt-function-tag": {
       "patterns": [
         {
           "begin": "(<)(\\$[Mm][Tt]:?(\\w+:)?\\w+)",
           "beginCaptures": {
             "1": {"name": "punctuation.definition.tag.mt"},
-            "2": {"name": "support.type.mt"}
+            "2": {"name": "entity.other.inherited-class.mt"}
           },
           "end": "(\\$?)(>)",
           "endCaptures": {
-            "1": {"name": "support.type.mt"},
+            "1": {"name": "entity.other.inherited-class.mt"},
             "2": {"name": "punctuation.definition.tag.mt"}
           },
-          "name": "meta.tag.mt.variable.html",
+          "name": "entity.name.tag.function.mt",
           "patterns": [
-            {"include": "#tag-stuff"}
+            {"include": "#mt-tag-stuff"}
           ]
-        }
-      ]
-    },
-    "php": {
-      "begin": "(<\\?php)",
-      "end": "(\\?>)",
-      "name": "entity.name.tag",
-      "patterns": [
-        {"include": "source.php"}
-      ]
-    },
-    "ruby": {
-      "begin": "<%+(?!>)=?",
-      "captures": {
-        "0": {"name": "punctuation.section.embedded.ruby"}
-      },
-      "end": "-?%>",
-      "name": "source.ruby.embedded.html",
-      "patterns": [
-        {
-          "captures": {
-            "1": {"name": "punctuation.definition.comment.ruby"}
-          },
-          "match": "(#).*?(?=-?%>)",
-          "name": "comment.line.number-sign.ruby"
-        },
-        {
-          "include": "source.ruby"
         }
       ]
     },
@@ -136,11 +108,11 @@
       },
       "name": "string.quoted.double.html",
       "patterns": [
-        {"include": "#trans-tag"},
-        {"include": "#mt-variable-tag"},
+        {"include": "#mt-trans-tag"},
+        {"include": "#mt-function-tag"},
         {"include": "#mt-container-tag"},
         {"include": "#embedded-code"},
-        {"include": "#entities"}
+        {"include": "#character-entity-references"}
       ]
     },
     "string-single-quoted": {
@@ -154,60 +126,62 @@
       },
       "name": "string.quoted.single.html",
       "patterns": [
-        {"include": "#trans-tag"},
-        {"include": "#mt-variable-tag"},
+        {"include": "#mt-trans-tag"},
+        {"include": "#mt-function-tag"},
         {"include": "#mt-container-tag"},
         {"include": "#embedded-code"},
-        {"include": "#entities"}
+        {"include": "#character-entity-references"}
       ]
     },
-    "tag-generic-attribute": {
+    "symbol":{
+      "match": "(=|,)",
+      "name":"keyword.operator"
+    },
+    "mt-modifiers": {
       "match": "\\b([a-zA-Z-_:]+)",
       "name": "constant.numeric"
     },
-    "html-tag-generic-attribute": {
-      "match": "\\b([a-zA-Z-_:]+)",
-      "name": "entity.other.attribute-name.html"
-    },
-    "regex_replace":{
-      "match": "\\b(regex_replace|replace)=(\".*\"|'.*'),(\"\\w+\"|'\\w+')",
+    "replace-modifiers":{
+      "match": "\\b(regex_replace|replace)(=)(\".*\"|'.*')(,)(\".*\"|'.*')",
       "captures":{ 
-        "1":{"name":"entity.other.attribute-name"},
-        "2":{"name":"string.regexp"},
-        "3":{"patterns": [
+        "1":{"name":"constant.numeric"},
+        "2":{"patterns": [{"include": "#symbol"}]},
+        "3":{"name":"string.regexp"},
+        "4":{"patterns": [{"include": "#symbol"}]},
+        "5":{"patterns": [
           {"include": "#string-double-quoted"},
           {"include": "#string-single-quoted"}
-        ]
-        }
+        ]}
       }
     },
-    "tag-stuff": {
+    "mt-tag-stuff": {
       "patterns": [
-        {"include": "#regex_replace"},
-        {"include": "#trans-tag"},
-        {"include": "#tag-generic-attribute"},
+        {"include": "#mt-trans-tag"},
+        {"include": "#replace-modifiers"},
+        {"include": "#mt-modifiers"},
         {"include": "#string-double-quoted"},
         {"include": "#string-single-quoted"},
-        {
-          "match": "=",
-          "name":"keyword.operator"
-        }
+        {"include": "#symbol"}
       ]
+    },
+    "html-attributes": {
+      "match": "\\b([a-zA-Z-_]+)",
+      "name": "entity.other.attribute-name.html"
     },
     "html-tag-stuff": {
       "patterns": [
-        {"include": "#html-tag-generic-attribute"},
+        {"include": "#html-attributes"},
         {"include": "#string-double-quoted"},
         {"include": "#string-single-quoted"}
       ]
     },
-    "trans-tag": {
+    "mt-trans-tag": {
       "patterns": [
         {
           "begin": "(<)(__trans)",
           "beginCaptures": {
             "1": {"name": "punctuation.definition.tag.mt"},
-            "2": {"name": "support.type.mt"}
+            "2": {"name": "entity.other.inherited-class.mt"}
           },
           "end": "(>)",
           "endCaptures": {
@@ -215,7 +189,7 @@
           },
           "name": "meta.tag.mt.trans.html",
           "patterns": [
-            {"include": "#tag-stuff"}
+            {"include": "#mt-tag-stuff"}
           ]
         }
       ]
@@ -301,6 +275,34 @@
           "patterns": [
             {"include": "#html-tag-stuff"}
           ]
+        }
+      ]
+    },
+    "php": {
+      "begin": "(<\\?php)",
+      "end": "(\\?>)",
+      "name": "entity.name.tag",
+      "patterns": [
+        {"include": "source.php"}
+      ]
+    },
+    "ruby": {
+      "begin": "<%+(?!>)=?",
+      "captures": {
+        "0": {"name": "punctuation.section.embedded.ruby"}
+      },
+      "end": "-?%>",
+      "name": "source.ruby.embedded.html",
+      "patterns": [
+        {
+          "captures": {
+            "1": {"name": "punctuation.definition.comment.ruby"}
+          },
+          "match": "(#).*?(?=-?%>)",
+          "name": "comment.line.number-sign.ruby"
+        },
+        {
+          "include": "source.ruby"
         }
       ]
     }

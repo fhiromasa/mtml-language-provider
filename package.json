@@ -49,5 +49,8 @@
         "path": "./snippets/snippets.jsonc"
       }
     ]
+  },
+  "scripts": {
+    "release":"npx vsce package"
   }
 }

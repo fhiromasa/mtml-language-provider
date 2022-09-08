@@ -4,7 +4,7 @@
   "description": "Provides MTML (Movable Type Markup Language) syntax highlight and snippets for Visual Studio Code",
   "version": "0.2.0",
   "engines": {
-    "vscode": "^1.70.2"
+    "vscode": "^1.67"
   },
   "publisher": "hiromasa.fujimori",
   "icon": "images/icon.png",

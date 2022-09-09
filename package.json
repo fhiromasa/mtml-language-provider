@@ -2,9 +2,9 @@
   "name": "mtml",
   "displayName": "Movable Type Markup Language",
   "description": "Provides MTML (Movable Type Markup Language) syntax highlight and snippets for Visual Studio Code",
-  "version": "0.2.0",
+  "version": "0.2.1",
   "engines": {
-    "vscode": "^1.67"
+    "vscode": "^1.67.0"
   },
   "publisher": "hiromasa.fujimori",
   "icon": "images/icon.png",

@@ -45,7 +45,7 @@
               "name": "entity.other.inherited-class.mt",
               "patterns": [
                 {
-                  "match": "\\b([iI][fF]\\w*|[eE][lL][sS][eE]|[lL][oO][oO][pP]|[Ff][Oo][Rr]([eE][aA][cC][hH])?)\\b",
+                  "match": "\\b([iI][fF]\\w*|[eE][lL][sS][eE]([iI][fF])?|[lL][oO][oO][pP]|[Ff][Oo][Rr]([eE][aA][cC][hH])?)\\b",
                   "name": "keyword.control.mt"
                 }
               ]
@@ -142,16 +142,12 @@
       "name": "constant.numeric"
     },
     "replace-modifiers":{
-      "match": "\\b(regex_replace|replace)(=)(\".*\"|'.*')(,)(\".*\"|'.*')",
+      "match": "\\b(regex_replace|replace)(=)(\".*\"|'.*')(,)",
       "captures":{ 
         "1":{"name":"constant.numeric"},
         "2":{"patterns": [{"include": "#symbol"}]},
         "3":{"name":"string.regexp"},
-        "4":{"patterns": [{"include": "#symbol"}]},
-        "5":{"patterns": [
-          {"include": "#string-double-quoted"},
-          {"include": "#string-single-quoted"}
-        ]}
+        "4":{"patterns": [{"include": "#symbol"}]}
       }
     },
     "mt-tag-stuff": {

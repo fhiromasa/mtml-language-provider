@@ -5,9 +5,9 @@
   "keyEquivalent": "^~M",
   "patterns": [
     {"include": "#mt-ignore-tag"},
+    {"include": "#embedded-code"},
     {"include": "#mt-tags"},
     {"include": "#pseudo-html"},
-    {"include": "#embedded-code"},
     {"include": "#character-entity-references"}
   ],
   "repository": {
@@ -28,7 +28,8 @@
     "embedded-code": {
       "patterns": [
         {"include": "#php"},
-        {"include": "#ruby"}
+        {"include": "#ruby"},
+        {"include": "#javascript"}
       ]
     },
     "character-entity-references": {
@@ -103,7 +104,13 @@
       "endCaptures": {
         "0": {"name": "punctuation.definition.comment.mt"}
       },
-      "name": "comment.block.mt"
+      "name": "comment.block.mt",
+      "patterns": [{"include": "#mt-ignore-document"}]
+    },
+    "mt-ignore-document":{
+      "begin": "/\\*\\*(?!/)",
+      "end": "\\*/",
+      "name": "comment.block.documentation"
     },
     "string-double-quoted": {
       "begin": "\"",
@@ -275,6 +282,13 @@
         }
       ]
     },
+    "javascript":{
+      "begin": "<script>",
+      "end": "</script>",
+      "name": "entity.name.tag",
+      "patterns": [
+        {"include": "source.js"}
+      ]},
     "php": {
       "begin": "(<\\?php)",
       "end": "(\\?>)",

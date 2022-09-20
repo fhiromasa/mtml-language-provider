@@ -287,9 +287,18 @@
       ]
     },
     "javascript":{
-      "begin": "<script>",
-      "end": "</script>",
-      "name": "entity.name.tag",
+      "begin": "(<)(script)(>)",
+      "beginCaptures": {
+        "1":{"name":"punctuation.definition.tag"},
+        "2":{"name":"entity.name.tag"},
+        "3":{"name":"punctuation.definition.tag"}
+      },
+      "end": "(</)(script)(>)",
+      "endCaptures": {
+        "1":{"name":"punctuation.definition.tag"},
+        "2":{"name":"entity.name.tag"},
+        "3":{"name":"punctuation.definition.tag"}
+      },
       "patterns": [
         {"include": "source.js"}
       ]},

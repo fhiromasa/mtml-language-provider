@@ -3620,7 +3620,7 @@
   },
   "mt:SetHashVar": {
     "prefix": "SetHashVar",
-    "body": ["<mt:SetHashVar></mt:SetHashVar>"]
+    "body": ["<mt:SetHashVar name=\"${1:Name}\"></mt:SetHashVar>"]
   },
   "mt:Section": {
     "prefix": "Section",

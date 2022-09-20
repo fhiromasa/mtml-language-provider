@@ -110,7 +110,11 @@
     "mt-ignore-document":{
       "begin": "/\\*\\*(?!/)",
       "end": "\\*/",
-      "name": "comment.block.documentation"
+      "name": "comment.block.documentation",
+      "patterns": [
+        {"include": "source.js#docblock"},
+        {"include": "#mt-tags"}
+      ]
     },
     "string-double-quoted": {
       "begin": "\"",

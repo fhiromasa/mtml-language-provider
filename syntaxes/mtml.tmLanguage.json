@@ -5,14 +5,19 @@
   "keyEquivalent": "^~M",
   "patterns": [
     {"include": "#mt-ignore-tag"},
-    {"include": "#mt-trans-tag"},
-    {"include": "#mt-block-tag"},
-    {"include": "#mt-function-tag"},
-    {"include": "#psedo-html"},
+    {"include": "#mt-tags"},
+    {"include": "#pseudo-html"},
     {"include": "#embedded-code"},
     {"include": "#character-entity-references"}
   ],
   "repository": {
+    "mt-tags":{
+      "patterns": [
+        {"include": "#mt-trans-tag"},
+        {"include": "#mt-block-tag"},
+        {"include": "#mt-function-tag"}
+      ]
+    },
     "embedded-code": {
       "patterns": [
         {"include": "#php"},
@@ -108,9 +113,7 @@
       },
       "name": "string.quoted.double.html",
       "patterns": [
-        {"include": "#mt-trans-tag"},
-        {"include": "#mt-function-tag"},
-        {"include": "#mt-block-tag"},
+        {"include": "#mt-tags"},
         {"include": "#embedded-code"},
         {"include": "#character-entity-references"}
       ]
@@ -126,9 +129,7 @@
       },
       "name": "string.quoted.single.html",
       "patterns": [
-        {"include": "#mt-trans-tag"},
-        {"include": "#mt-function-tag"},
-        {"include": "#mt-block-tag"},
+        {"include": "#mt-tags"},
         {"include": "#embedded-code"},
         {"include": "#character-entity-references"}
       ]
@@ -169,8 +170,7 @@
         {"include": "#html-attributes"},
         {"include": "#string-double-quoted"},
         {"include": "#string-single-quoted"},
-        {"include": "#mt-block-tag"},
-        {"include": "#mt-function-tag"}
+        {"include": "#mt-tags"}
       ]
     },
     "mt-trans-tag": {
@@ -192,7 +192,7 @@
         }
       ]
     },
-    "psedo-html": {
+    "pseudo-html": {
       "patterns": [
         {"include": "#html-comment"},
         {"include": "#html-doctype"},
@@ -205,7 +205,10 @@
         "0": {"name": "punctuation.definition.comment.html"}
       },
       "end": "-->",
-      "name": "comment.block.html"
+      "name": "comment.block.html",
+      "patterns": [
+        {"include": "#mt-tags"}
+      ]
     },
     "html-doctype": {
       "begin": "<!(?=(?i:DOCTYPE\\s))",

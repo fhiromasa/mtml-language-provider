@@ -5,18 +5,31 @@
   "keyEquivalent": "^~M",
   "patterns": [
     {"include": "#mt-ignore-tag"},
-    {"include": "#mt-trans-tag"},
-    {"include": "#mt-container-tag"},
-    {"include": "#mt-function-tag"},
-    {"include": "#psedo-html"},
     {"include": "#embedded-code"},
+    {"include": "#mt-tags"},
+    {"include": "#pseudo-html"},
     {"include": "#character-entity-references"}
   ],
   "repository": {
+    "mt-tags":{
+      "patterns": [
+        {"include": "#mt-trans-tag"},
+        {"include": "#mt-block-tag"},
+        {"include": "#mt-function-tag"}
+      ]
+    },
+    "pseudo-html": {
+      "patterns": [
+        {"include": "#html-comment"},
+        {"include": "#html-doctype"},
+        {"include": "#html-tag"}
+      ]
+    },
     "embedded-code": {
       "patterns": [
         {"include": "#php"},
-        {"include": "#ruby"}
+        {"include": "#ruby"},
+        {"include": "#javascript"}
       ]
     },
     "character-entity-references": {
@@ -35,7 +48,7 @@
         }
       ]
     },
-    "mt-container-tag": {
+    "mt-block-tag": {
       "patterns": [
         {
           "begin": "(</?[Mm][Tt]:?)((\\w+:)?\\w+)",
@@ -62,21 +75,6 @@
         }
       ]
     },
-    "mt-ignore-tag": {
-      "patterns": [
-        {
-          "begin": "<[Mm][Tt]:?[Ii]gnore>",
-          "beginCaptures": {
-            "0": {"name": "punctuation.definition.comment.mt"}
-          },
-          "end": "</[Mm][Tt]:?[Ii]gnore>",
-          "endCaptures": {
-            "0": {"name": "punctuation.definition.comment.mt"}
-          },
-          "name": "comment.block.mt"
-        }
-      ]
-    },
     "mt-function-tag": {
       "patterns": [
         {
@@ -97,6 +95,27 @@
         }
       ]
     },
+    "mt-ignore-tag": {
+      "begin": "<[Mm][Tt]:?[Ii]gnore>",
+      "beginCaptures": {
+        "0": {"name": "punctuation.definition.comment.mt"}
+      },
+      "end": "</[Mm][Tt]:?[Ii]gnore>",
+      "endCaptures": {
+        "0": {"name": "punctuation.definition.comment.mt"}
+      },
+      "name": "comment.block.mt",
+      "patterns": [{"include": "#mt-ignore-document"}]
+    },
+    "mt-ignore-document":{
+      "begin": "/\\*\\*(?!/)",
+      "end": "\\*/",
+      "name": "comment.block.documentation",
+      "patterns": [
+        {"include": "source.js#docblock"},
+        {"include": "#mt-tags"}
+      ]
+    },
     "string-double-quoted": {
       "begin": "\"",
       "beginCaptures": {
@@ -108,9 +127,7 @@
       },
       "name": "string.quoted.double.html",
       "patterns": [
-        {"include": "#mt-trans-tag"},
-        {"include": "#mt-function-tag"},
-        {"include": "#mt-container-tag"},
+        {"include": "#mt-tags"},
         {"include": "#embedded-code"},
         {"include": "#character-entity-references"}
       ]
@@ -126,9 +143,7 @@
       },
       "name": "string.quoted.single.html",
       "patterns": [
-        {"include": "#mt-trans-tag"},
-        {"include": "#mt-function-tag"},
-        {"include": "#mt-container-tag"},
+        {"include": "#mt-tags"},
         {"include": "#embedded-code"},
         {"include": "#character-entity-references"}
       ]
@@ -168,7 +183,8 @@
       "patterns": [
         {"include": "#html-attributes"},
         {"include": "#string-double-quoted"},
-        {"include": "#string-single-quoted"}
+        {"include": "#string-single-quoted"},
+        {"include": "#mt-tags"}
       ]
     },
     "mt-trans-tag": {
@@ -190,20 +206,16 @@
         }
       ]
     },
-    "psedo-html": {
-      "patterns": [
-        {"include": "#html-comment"},
-        {"include": "#html-doctype"},
-        {"include": "#html-tag"}
-      ]
-    },
     "html-comment": {
       "begin": "<!--",
       "captures": {
         "0": {"name": "punctuation.definition.comment.html"}
       },
       "end": "-->",
-      "name": "comment.block.html"
+      "name": "comment.block.html",
+      "patterns": [
+        {"include": "#mt-tags"}
+      ]
     },
     "html-doctype": {
       "begin": "<!(?=(?i:DOCTYPE\\s))",
@@ -274,6 +286,22 @@
         }
       ]
     },
+    "javascript":{
+      "begin": "(<)(script)(>)",
+      "beginCaptures": {
+        "1":{"name":"punctuation.definition.tag"},
+        "2":{"name":"entity.name.tag"},
+        "3":{"name":"punctuation.definition.tag"}
+      },
+      "end": "(</)(script)(>)",
+      "endCaptures": {
+        "1":{"name":"punctuation.definition.tag"},
+        "2":{"name":"entity.name.tag"},
+        "3":{"name":"punctuation.definition.tag"}
+      },
+      "patterns": [
+        {"include": "source.js"}
+      ]},
     "php": {
       "begin": "(<\\?php)",
       "end": "(\\?>)",

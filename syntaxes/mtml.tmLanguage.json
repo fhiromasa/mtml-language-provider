@@ -6,7 +6,7 @@
   "patterns": [
     {"include": "#mt-ignore-tag"},
     {"include": "#mt-trans-tag"},
-    {"include": "#mt-container-tag"},
+    {"include": "#mt-block-tag"},
     {"include": "#mt-function-tag"},
     {"include": "#psedo-html"},
     {"include": "#embedded-code"},
@@ -35,7 +35,7 @@
         }
       ]
     },
-    "mt-container-tag": {
+    "mt-block-tag": {
       "patterns": [
         {
           "begin": "(</?[Mm][Tt]:?)((\\w+:)?\\w+)",
@@ -110,7 +110,7 @@
       "patterns": [
         {"include": "#mt-trans-tag"},
         {"include": "#mt-function-tag"},
-        {"include": "#mt-container-tag"},
+        {"include": "#mt-block-tag"},
         {"include": "#embedded-code"},
         {"include": "#character-entity-references"}
       ]
@@ -128,7 +128,7 @@
       "patterns": [
         {"include": "#mt-trans-tag"},
         {"include": "#mt-function-tag"},
-        {"include": "#mt-container-tag"},
+        {"include": "#mt-block-tag"},
         {"include": "#embedded-code"},
         {"include": "#character-entity-references"}
       ]
@@ -168,7 +168,9 @@
       "patterns": [
         {"include": "#html-attributes"},
         {"include": "#string-double-quoted"},
-        {"include": "#string-single-quoted"}
+        {"include": "#string-single-quoted"},
+        {"include": "#mt-block-tag"},
+        {"include": "#mt-function-tag"}
       ]
     },
     "mt-trans-tag": {

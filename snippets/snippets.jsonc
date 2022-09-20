@@ -4204,7 +4204,7 @@
   },
   "mt:GetVar": {
     "prefix": "GetVar",
-    "body": ["<mt:GetVar>"]
+    "body": ["<mt:GetVar name=\"${1:name}\">"]
   },
   "mt:For": {
     "prefix": "For",
@@ -6055,137 +6055,6 @@
   "paginate_by=\"N\" MT.net のみ": {
     "prefix": "paginate_by=\"\"",
     "body": ["paginate_by=\"${1:N}\""]
-  },
-  // --------------------------------------------------
-  //  PageBute 3.5.8 Added [ start ]
-  // --------------------------------------------------
-  "mt:PageContents": {
-    "prefix": "PageContents",
-    "body": ["<mt:PageContents count=\"${1:N}\"${2: navi_count=\"\"}${3: abs2rel=\"1\"}></mt:PageContents>"]
-  },
-  "mt:PageSeparator": {
-    "prefix": "PageSeparator",
-    "body": ["<mt:PageSeparator>"]
-  },
-  "mt:PageLists": {
-    "prefix": "PageLists",
-    "body": ["<mt:PageLists delim=\"\" show_always=\"${2:0}\"></mt:PageLists>"]
-  },
-  "mt:IfPageFirst": {
-    "prefix": "IfPageFirst",
-    "body": ["<mt:IfPageFirst></mt:IfPageFirst>"]
-  },
-  "mt:IfPageBefore": {
-    "prefix": "IfPageBefore",
-    "body": ["<mt:IfPageBefore></mt:IfPageBefore>"]
-  },
-  "mt:IfPageAfter": {
-    "prefix": "IfPageAfter",
-    "body": ["<mt:IfPageAfter></mt:IfPageAfter>"]
-  },
-  "mt:IfPageLast": {
-    "prefix": "IfPageLast",
-    "body": ["<mt:IfPageLast></mt:IfPageLast>"]
-  },
-  "delim=\"*\"": {
-    "prefix": "delim=\"*\"",
-    "body": ["delim=\"${1:*}\""]
-  },
-  "mt:PageFirst": {
-    "prefix": "PageFirst",
-    "body": ["<mt:PageFirst>"]
-  },
-  "mt:PageBefore": {
-    "prefix": "PageBefore",
-    "body": ["<mt:PageBefore>"]
-  },
-  "mt:PageAfter": {
-    "prefix": "PageAfter",
-    "body": ["<mt:PageAfter>"]
-  },
-  "mt:PageLast": {
-    "prefix": "PageLast",
-    "body": ["<mt:PageLast>"]
-  },
-  "mt:PageCount": {
-    "prefix": "PageCount",
-    "body": ["<mt:PageCount>"]
-  },
-  "mt:PageMaxCount": {
-    "prefix": "PageMaxCount",
-    "body": ["<mt:PageMaxCount>"]
-  },
-  "mt:PageContentsHeader": {
-    "prefix": "PageContentsHeader",
-    "body": ["<mt:PageContentsHeader></mt:PageContentsHeader>"]
-  },
-  "mt:PageContentsFooter": {
-    "prefix": "PageContentsFooter",
-    "body": ["<mt:PageContentsFooter></mt:PageContentsFooter>"]
-  },
-  "mt:PageEmpty": {
-    "prefix": "PageEmpty",
-    "body": ["<mt:PageEmpty></mt:PageEmpty>"]
-  },
-  "mt:IfPageNoEmpty": {
-    "prefix": "IfPageNoEmpty",
-    "body": ["<mt:IfPageNoEmpty></mt:IfPageNoEmpty>"]
-  },
-  "mt:Pagination": {
-    "prefix": "Pagination",
-    "body": ["<mt:Pagination></mt:Pagination>"]
-  },
-  "mt:PaginationHeader": {
-    "prefix": "PaginationHeader",
-    "body": ["<mt:PaginationHeader></mt:PaginationHeader>"]
-  },
-  "mt:Paginationter": {
-    "prefix": "Paginationter",
-    "body": ["<mt:Paginationter></mt:Paginationter>"]
-  },
-  "mt:IfPaginationCurrent": {
-    "prefix": "IfPaginationCurrent",
-    "body": ["<mt:IfPaginationCurrent></mt:IfPaginationCurrent>"]
-  },
-  "mt:IfPaginationFirst": {
-    "prefix": "IfPaginationFirst",
-    "body": ["<mt:IfPaginationFirst></mt:IfPaginationFirst>"]
-  },
-  "mt:IfPaginationLast": {
-    "prefix": "IfPaginationLast",
-    "body": ["<mt:IfPaginationLast></mt:IfPaginationLast>"]
-  },
-  "mt:IfPaginationNext": {
-    "prefix": "IfPaginationNext",
-    "body": ["<mt:IfPaginationNext></mt:IfPaginationNext>"]
-  },
-  "mt:IfPaginationPrev": {
-    "prefix": "IfPaginationPrev",
-    "body": ["<mt:IfPaginationPrev></mt:IfPaginationPrev>"]
-  },
-  "mt:PaginationLink": {
-    "prefix": "PaginationLink",
-    "body": ["<mt:PaginationLink>"]
-  },
-  "element=\"\"": {
-    "prefix": "element=\"\"",
-    "body": ["element=\"${1:number}\""]
-  },
-  "mt:PaginationFirst": {
-    "prefix": "PaginationFirst",
-    "body": ["<mt:PaginationFirst>"]
-  },
-  "mt:PaginationLast": {
-    "prefix": "PaginationLast",
-    "body": ["<mt:PaginationLast>"]
-  },
-  "mt:PaginationNext": {
-    "prefix": "PaginationNext",
-    "body": ["<mt:PaginationNext>"]
-  },
-  "mt:PaginationPrev": {
-    "prefix": "PaginationPrev",
-    "body": ["<mt:PaginationPrev>"]
   }
   // ==================================================
   //  MTML Completions for VS Code [ end ]

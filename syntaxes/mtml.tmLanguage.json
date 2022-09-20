@@ -18,6 +18,13 @@
         {"include": "#mt-function-tag"}
       ]
     },
+    "pseudo-html": {
+      "patterns": [
+        {"include": "#html-comment"},
+        {"include": "#html-doctype"},
+        {"include": "#html-tag"}
+      ]
+    },
     "embedded-code": {
       "patterns": [
         {"include": "#php"},
@@ -67,21 +74,6 @@
         }
       ]
     },
-    "mt-ignore-tag": {
-      "patterns": [
-        {
-          "begin": "<[Mm][Tt]:?[Ii]gnore>",
-          "beginCaptures": {
-            "0": {"name": "punctuation.definition.comment.mt"}
-          },
-          "end": "</[Mm][Tt]:?[Ii]gnore>",
-          "endCaptures": {
-            "0": {"name": "punctuation.definition.comment.mt"}
-          },
-          "name": "comment.block.mt"
-        }
-      ]
-    },
     "mt-function-tag": {
       "patterns": [
         {
@@ -101,6 +93,17 @@
           ]
         }
       ]
+    },
+    "mt-ignore-tag": {
+      "begin": "<[Mm][Tt]:?[Ii]gnore>",
+      "beginCaptures": {
+        "0": {"name": "punctuation.definition.comment.mt"}
+      },
+      "end": "</[Mm][Tt]:?[Ii]gnore>",
+      "endCaptures": {
+        "0": {"name": "punctuation.definition.comment.mt"}
+      },
+      "name": "comment.block.mt"
     },
     "string-double-quoted": {
       "begin": "\"",
@@ -190,13 +193,6 @@
             {"include": "#mt-tag-stuff"}
           ]
         }
-      ]
-    },
-    "pseudo-html": {
-      "patterns": [
-        {"include": "#html-comment"},
-        {"include": "#html-doctype"},
-        {"include": "#html-tag"}
       ]
     },
     "html-comment": {

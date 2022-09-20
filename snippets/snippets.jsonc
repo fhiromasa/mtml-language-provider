@@ -256,7 +256,7 @@
   },
   "global=\"\"": {
     "prefix": "global=\"\"",
-    "body": ["global=\"${1:1}\""]
+    "body": ["global=\"1\""]
   },
   "format=\"\"": {
     "prefix": "format=\"\"",
@@ -276,7 +276,7 @@
   },
   "field:customfieldbasename=\"\"": {
     "prefix": "field:customfieldbasename=\"\"",
-    "body": ["field:customfieldbasename=\"${1:}\""]
+    "body": ["field:${1:customfieldbasename}=\"${2:value}\""]
   },
   "enctype=\"\"": {
     "prefix": "enctype=\"\"",
@@ -354,26 +354,6 @@
     "prefix": "action=\"\"",
     "body": ["action=\"${1:url}\""]
   },
-  "__odd__": {
-    "prefix": "__odd__",
-    "body": ["__odd__"]
-  },
-  "__last__": {
-    "prefix": "__last__",
-    "body": ["__last__"]
-  },
-  "__first__": {
-    "prefix": "__first__",
-    "body": ["__first__"]
-  },
-  "__even__": {
-    "prefix": "__even__",
-    "body": ["__even__"]
-  },
-  "__counter__": {
-    "prefix": "__counter__",
-    "body": ["__counter__"]
-  },
   "escape=\"\"": {
     "prefix": "escape=\"\"",
     "body": ["escape=\"mail\""]
@@ -381,10 +361,6 @@
   "mt:AccessibleBlock": {
     "prefix": "AccessibleBlock",
     "body": ["<mt:AccessibleBlock></mt:AccessibleBlock>"]
-  },
-  "mtml": {
-    "prefix": "mtml",
-    "body": ["MTML tag=\"${1:/}mt:${2:TagName}\"${3: params=\"\"}>"]
   },
   "mt:If else": {
     "prefix": "If else",

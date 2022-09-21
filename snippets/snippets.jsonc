@@ -212,7 +212,7 @@
   },
   "name=\"\"": {
     "prefix": "name=\"\"",
-    "body": ["name=\"\""]
+    "body": ["name=\"${1:name}\""]
   },
   "method=\"\"": {
     "prefix": "method=\"\"",
@@ -548,7 +548,7 @@
   },
   "setvar=\"\"": {
     "prefix": "setvar=\"\"",
-    "body": ["setvar=\"\""]
+    "body": ["setvar=\"${1:name}\""]
   },
   "sanitize=\"\"": {
     "prefix": "sanitize=\"\"",
@@ -560,7 +560,7 @@
   },
   "replace=\"\"": {
     "prefix": "replace=\"\"",
-    "body": ["replace=\"\",\"\""]
+    "body": ["replace=\"${1:string}\",\"${2:Replacement}\""]
   },
   "remove_html=\"\"": {
     "prefix": "remove_html=\"\"",
@@ -576,7 +576,7 @@
   },
   "nl2br=\"\"": {
     "prefix": "nl2br=\"\"",
-    "body": ["nl2br=\"${1:xhtml}\""]
+    "body": ["nl2br=\"${1:1|xhtml}\""]
   },
   "mteval=\"\"": {
     "prefix": "mteval=\"\"",

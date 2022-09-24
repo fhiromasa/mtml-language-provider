@@ -1,2 +1,4 @@
 /release/
 *.vsix
+/node_modules/
+/out/

@@ -153,7 +153,7 @@
       "name":"keyword.operator"
     },
     "mt-modifiers": {
-      "match": "\\b([a-zA-Z-_:]+)",
+      "match": "\\b([a-zA-Z2-_:]+)",
       "name": "constant.numeric"
     },
     "replace-modifiers":{

@@ -4600,11 +4600,11 @@
   },
   "mt:ElseIf": {
     "prefix": "ElseIf",
-    "body": ["<mt:ElseIf></mt:ElseIf>"]
+    "body": ["<mt:ElseIf>"]
   },
   "mt:Else": {
     "prefix": "Else",
-    "body": ["<mt:Else></mt:Else>"]
+    "body": ["<mt:Else>"]
   },
   "mt:DefaultLanguage": {
     "prefix": "DefaultLanguage",

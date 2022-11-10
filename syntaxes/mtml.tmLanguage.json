@@ -29,7 +29,8 @@
       "patterns": [
         {"include": "#php"},
         {"include": "#ruby"},
-        {"include": "#javascript"}
+        {"include": "#javascript"},
+        {"include": "#css"}
       ]
     },
     "character-entity-references": {
@@ -302,6 +303,22 @@
       "patterns": [
         {"include": "source.js"}
       ]},
+      "css":{
+        "begin": "(<)(style)(>)",
+        "beginCaptures": {
+          "1":{"name":"punctuation.definition.tag"},
+          "2":{"name":"entity.name.tag"},
+          "3":{"name":"punctuation.definition.tag"}
+        },
+        "end": "(</)(style)(>)",
+        "endCaptures": {
+          "1":{"name":"punctuation.definition.tag"},
+          "2":{"name":"entity.name.tag"},
+          "3":{"name":"punctuation.definition.tag"}
+        },
+        "patterns": [
+          {"include": "source.css"}
+        ]},
     "php": {
       "begin": "(<\\?php)",
       "end": "(\\?>)",

@@ -154,12 +154,12 @@
       "name":"keyword.operator"
     },
     "mt-modifiers": {
-      "match": "\\b([a-zA-Z2_:]+)",
+      "match": "\\b([a-zA-Z2\\-_:]+)",
       "name": "constant.numeric"
     },
     "replace-modifiers":{
       "match": "\\b(regex_replace|replace)(=)(\".*\"|'.*')(,)",
-      "captures":{ 
+      "captures":{
         "1":{"name":"constant.numeric"},
         "2":{"patterns": [{"include": "#symbol"}]},
         "3":{"name":"string.regexp"},

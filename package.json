@@ -12,7 +12,7 @@
   "homepage": "",
   "repository": {
     "type": "git",
-    "url": "https://github.com/fhiromasa/vscode-ext-movabletype"
+    "url": "https://github.com/fhiromasa/mtml"
   },
   "categories": [
     "Programming Languages",

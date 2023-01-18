@@ -59,7 +59,7 @@
               "name": "entity.other.inherited-class.mt",
               "patterns": [
                 {
-                  "match": "\\b(?i)(if\\w*|else(if)?|loop|foe(each)?|include|unless)\\b",
+                  "match": "\\b(?i)(if\\w*|else(if)?|loop|for(each)?|include|unless)\\b",
                   "name": "keyword.control.mt"
                 }
               ]

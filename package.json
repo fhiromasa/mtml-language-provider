@@ -25,13 +25,13 @@
   "contributes": {
     "languages": [
       {
-        "id": "mtml",
+        "id": "devmtml",
         "aliases": [
           "MTML",
           "mtml"
         ],
         "extensions": [
-          ".mtml"
+          ".devmtml"
         ],
         "configuration": "./language-configuration.json",
         "icon": {
@@ -42,9 +42,16 @@
     ],
     "grammars": [
       {
-        "language": "mtml",
-        "scopeName": "source.mtml",
-        "path": "./syntaxes/mtml.tmLanguage.json"
+        "language": "devmtml",
+        "scopeName": "source.devmtml",
+        "path": "./syntaxes/mtml.tmGrammar.json"
+      },
+      {
+        "injectTo": [
+          "source.devmtml"
+        ],
+        "scopeName": "source.devmtml.embedded",
+        "path": "./syntaxes/mtml.embedded.tmLanguage.json"
       }
     ],
     "snippets": [

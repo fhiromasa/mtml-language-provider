@@ -12,7 +12,7 @@
   "homepage": "",
   "repository": {
     "type": "git",
-    "url": "https://github.com/fhiromasa/mtml"
+    "url": "https://github.com/fhiromasa/mtml-language-provider"
   },
   "categories": [
     "Programming Languages",
@@ -53,8 +53,5 @@
         "path": "./snippets/snippets.jsonc"
       }
     ]
-  },
-  "scripts": {
-    "release":"npx vsce package"
   }
 }

@@ -93,11 +93,11 @@
       ]
     },
     "mt-ignore-tag": {
-      "begin": "<[Mm][Tt]:?[Ii]gnore>",
+      "begin": "<(?i)mt:?ignore>",
       "beginCaptures": {
         "0": { "name": "punctuation.definition.comment.mt" }
       },
-      "end": "</[Mm][Tt]:?[Ii]gnore>",
+      "end": "</(?i)mt:?ignore>",
       "endCaptures": {
         "0": { "name": "punctuation.definition.comment.mt" }
       },

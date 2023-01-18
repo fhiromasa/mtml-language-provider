@@ -1,5 +1,5 @@
 {
-  "name": "mtml",
+  "name": "mtml-language-provider",
   "displayName": "MTML",
   "description": "Provides MTML (Movable Type Markup Language) syntax highlight and snippets for Visual Studio Code",
   "version": "0.2.6",

@@ -23,9 +23,6 @@ Highlight in `Dark+(default dark)` vscode theme
 | mt control tag | keyword.control              |
 | modifier       | constant.numeric             |
 | ignore         | comment.block                |
-| html tag       | entity.name.tag              |
-| attribute      | entity.other.attribute-name  |
-| html comment   | comment.block                |
 | quoted string  | string.quoted                |
 
 ### Snippets

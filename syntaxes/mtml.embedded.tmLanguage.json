@@ -13,7 +13,7 @@
   ],
   "repository": {
     "ignore-tag": {
-      "begin": "<(?i)mt:?ignore",
+      "begin": "(?i)<mt:?ignore",
       "end": "(?i)</mt:?ignore>",
       "name": "comment.block.mtml"
     },
@@ -28,7 +28,7 @@
       "begin": "(<)(__trans)",
       "beginCaptures": {
         "1": { "name": "punctuation.definition.tag.mtml" },
-        "2": { "name": "entity.other.inherited-class.mtml" }
+        "2": { "name": "entity.other.inherited-class.trans-tag.mtml" }
       },
       "end": "(>)",
       "endCaptures": {
@@ -38,11 +38,11 @@
       "patterns": [{ "include": "#tag-stuff" }]
     },
     "tag-slash": {
-      "begin": "(?i)(</?mt:?)(?!ignore)((\\w+:)?\\w+)",
+      "begin": "(?i)(</?mt:?)(?!ignore)(\\w+)",
       "beginCaptures": {
         "1": { "name": "punctuation.definition.tag.mtml" },
         "2": {
-          "name": "entity.other.inherited-class.mtml",
+          "name": "entity.other.inherited-class.tag-slash.mtml",
           "patterns": [{ "include": "#control-keywords" }]
         }
       },
@@ -54,11 +54,11 @@
       "patterns": [{ "include": "#tag-stuff" }]
     },
     "tag-dollar": {
-      "begin": "(?i)(<)(\\$mt:?(\\w+:)?\\w+)",
+      "begin": "(?i)(<)(\\$mt:?\\w+)",
       "beginCaptures": {
         "1": { "name": "punctuation.definition.tag.mtml" },
         "2": {
-          "name": "entity.other.inherited-class.mtml",
+          "name": "entity.other.inherited-class.tag-dollar.mtml",
           "patterns": [{ "include": "#control-keywords" }]
         }
       },

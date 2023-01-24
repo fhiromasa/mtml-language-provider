@@ -44,7 +44,14 @@
       {
         "language": "mtml",
         "scopeName": "source.mtml",
-        "path": "./syntaxes/mtml.tmLanguage.json"
+        "path": "./syntaxes/mtml.tmGrammar.json"
+      },
+      {
+        "injectTo": [
+          "source.mtml"
+        ],
+        "scopeName": "source.mtml.embedded",
+        "path": "./syntaxes/mtml.embedded.tmLanguage.json"
       }
     ],
     "snippets": [

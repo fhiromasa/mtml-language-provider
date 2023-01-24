@@ -1,0 +1,107 @@
+{
+  "$schema": "https://raw.githubusercontent.com/martinring/tmlanguage/master/tmlanguage.json",
+  "firstLineMatch": "(?i)<\\$mt",
+  "scopeName": "source.mtml.embedded",
+  "injectionSelector": "L:source.mtml",
+  "patterns": [
+    {
+      "include": "#ignore-tag"
+    },
+    {
+      "include": "#tags"
+    }
+  ],
+  "repository": {
+    "ignore-tag": {
+      "begin": "(?i)<mt:?ignore",
+      "end": "(?i)</mt:?ignore>",
+      "name": "comment.block.mtml"
+    },
+    "tags": {
+      "patterns": [
+        { "include": "#trans-tag" },
+        { "include": "#tag-slash" },
+        { "include": "#tag-dollar" }
+      ]
+    },
+    "trans-tag": {
+      "begin": "(<)(__trans)",
+      "beginCaptures": {
+        "1": { "name": "punctuation.definition.tag.mtml" },
+        "2": { "name": "entity.other.inherited-class.trans-tag.mtml" }
+      },
+      "end": "(>)",
+      "endCaptures": {
+        "1": { "name": "punctuation.definition.tag.mtml" }
+      },
+      "name": "meta.tag.mt.trans.html",
+      "patterns": [{ "include": "#tag-stuff" }]
+    },
+    "tag-slash": {
+      "begin": "(?i)(</?mt:?)(?!ignore)(\\w+)",
+      "beginCaptures": {
+        "1": { "name": "punctuation.definition.tag.mtml" },
+        "2": {
+          "name": "entity.other.inherited-class.tag-slash.mtml",
+          "patterns": [{ "include": "#control-keywords" }]
+        }
+      },
+      "end": "/?>",
+      "endCaptures": {
+        "0": { "name": "punctuation.definition.tag.mtml" }
+      },
+      "name": "entity.name.tag.mtml",
+      "patterns": [{ "include": "#tag-stuff" }]
+    },
+    "tag-dollar": {
+      "begin": "(?i)(<)(\\$mt:?\\w+)",
+      "beginCaptures": {
+        "1": { "name": "punctuation.definition.tag.mtml" },
+        "2": {
+          "name": "entity.other.inherited-class.tag-dollar.mtml",
+          "patterns": [{ "include": "#control-keywords" }]
+        }
+      },
+      "end": "(\\$)(>)",
+      "endCaptures": {
+        "1": { "name": "entity.other.inherited-class.mtml" },
+        "2": { "name": "punctuation.definition.tag.mtml" }
+      },
+      "name": "entity.name.tag.dollar.mtml",
+      "patterns": [{ "include": "#tag-stuff" }]
+    },
+    "control-keywords": {
+      "match": "\\b(?i)(if\\w*|else(if)?|loop|for(each)?|include|unless)\\b",
+      "name": "keyword.control.mtml"
+    },
+    "tag-stuff": {
+      "patterns": [
+        { "include": "#trans-tag" },
+        { "include": "#modifier" },
+        { "include": "#string-double-quoted" },
+        { "include": "#string-single-quoted" },
+        { "include": "#symbol" }
+      ]
+    },
+    "string-double-quoted": {
+      "begin": "\"",
+      "end": "\"",
+      "name": "string.quoted.double.mtml",
+      "patterns": [{ "include": "#tags" }]
+    },
+    "string-single-quoted": {
+      "begin": "'",
+      "end": "'",
+      "name": "string.quoted.single.mtml",
+      "patterns": [{ "include": "#tags" }]
+    },
+    "symbol": {
+      "match": "(=|,)",
+      "name": "keyword.operator"
+    },
+    "modifier": {
+      "match": "\\b([a-zA-Z0-9\\-_:]+)",
+      "name": "constant.numeric"
+    }
+  }
+}

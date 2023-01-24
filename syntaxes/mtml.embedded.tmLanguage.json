@@ -1,8 +1,8 @@
 {
   "$schema": "https://raw.githubusercontent.com/martinring/tmlanguage/master/tmlanguage.json",
   "firstLineMatch": "(?i)<\\$mt",
-  "scopeName": "source.devmtml.embedded",
-  "injectionSelector": "L:source.devmtml",
+  "scopeName": "source.mtml.embedded",
+  "injectionSelector": "L:source.mtml",
   "patterns": [
     {
       "include": "#ignore-tag"

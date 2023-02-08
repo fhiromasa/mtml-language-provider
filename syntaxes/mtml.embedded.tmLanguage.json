@@ -38,10 +38,9 @@
       "patterns": [{ "include": "#tag-stuff" }]
     },
     "tag-slash": {
-      "begin": "(?i)(</?mt:?)(app:?)?(?!ignore)(\\w+)",
+      "begin": "(?i)(</?mt(app)?:?)(?!ignore)(\\w+)",
       "beginCaptures": {
         "1": { "name": "punctuation.definition.tag.mtml" },
-        "2": { "name": "punctuation.definition.tag.mtml" },
         "3": {
           "name": "entity.other.inherited-class.tag-slash.mtml",
           "patterns": [{ "include": "#control-keywords" }]
@@ -55,7 +54,7 @@
       "patterns": [{ "include": "#tag-stuff" }]
     },
     "tag-dollar": {
-      "begin": "(?i)(<)(\\$mt:?(app:?)?\\w+)",
+      "begin": "(?i)(<)(\\$mt(app)?:?\\w+)",
       "beginCaptures": {
         "1": { "name": "punctuation.definition.tag.mtml" },
         "2": {

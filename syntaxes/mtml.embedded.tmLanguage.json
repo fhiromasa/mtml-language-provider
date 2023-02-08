@@ -38,10 +38,11 @@
       "patterns": [{ "include": "#tag-stuff" }]
     },
     "tag-slash": {
-      "begin": "(?i)(</?mt:?)(?!ignore)(\\w+)",
+      "begin": "(?i)(</?mt:?)(app:?)?(?!ignore)(\\w+)",
       "beginCaptures": {
         "1": { "name": "punctuation.definition.tag.mtml" },
-        "2": {
+        "2": { "name": "punctuation.definition.tag.mtml" },
+        "3": {
           "name": "entity.other.inherited-class.tag-slash.mtml",
           "patterns": [{ "include": "#control-keywords" }]
         }
@@ -50,11 +51,11 @@
       "endCaptures": {
         "0": { "name": "punctuation.definition.tag.mtml" }
       },
-      "name": "entity.name.tag.mtml",
+      "name": "entity.name.tag.slash.mtml",
       "patterns": [{ "include": "#tag-stuff" }]
     },
     "tag-dollar": {
-      "begin": "(?i)(<)(\\$mt:?\\w+)",
+      "begin": "(?i)(<)(\\$mt:?(app:?)?\\w+)",
       "beginCaptures": {
         "1": { "name": "punctuation.definition.tag.mtml" },
         "2": {

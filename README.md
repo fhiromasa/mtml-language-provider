@@ -2,6 +2,8 @@
 
 Syntax highlight and Snippets for Movable Type Markup Language (MTML)
 
+[Click here for hover feature and so on...](https://marketplace.visualstudio.com/items?itemName=fhiromasa.mtml-language-feature)
+
 ## Features
 
 Works with .mtml extension

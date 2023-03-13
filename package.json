@@ -2,7 +2,7 @@
 	"name": "mtml-language-provider",
 	"displayName": "MTML",
 	"description": "Provides MTML (Movable Type Markup Language) syntax highlight and snippets for Visual Studio Code",
-	"version": "0.3.3",
+	"version": "1.0.0",
 	"engines": {
 		"vscode": "^1.67.0"
 	},

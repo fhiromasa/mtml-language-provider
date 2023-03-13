@@ -1,64 +1,128 @@
 {
-  "name": "mtml-language-provider",
-  "displayName": "MTML",
-  "description": "Provides MTML (Movable Type Markup Language) syntax highlight and snippets for Visual Studio Code",
-  "version": "0.3.3",
-  "engines": {
-    "vscode": "^1.67.0"
-  },
-  "publisher": "fhiromasa",
-  "icon": "images/icon.png",
-  "license": "MIT",
-  "homepage": "",
-  "repository": {
-    "type": "git",
-    "url": "https://github.com/fhiromasa/mtml-language-provider"
-  },
-  "categories": [
-    "Programming Languages",
-    "Snippets"
-  ],
-  "keywords": [
-    "movable type",
-    "mtml"
-  ],
-  "contributes": {
-    "languages": [
-      {
-        "id": "mtml",
-        "aliases": [
-          "MTML",
-          "mtml"
-        ],
-        "extensions": [
-          ".mtml"
-        ],
-        "configuration": "./language-configuration.json",
-        "icon": {
-          "light": "./images/light.png",
-          "dark": "./images/dark.png"
-        }
-      }
-    ],
-    "grammars": [
-      {
-        "language": "mtml",
-        "scopeName": "source.mtml",
-        "path": "./syntaxes/mtml.tmGrammar.json"
-      },
-      {
-        "injectTo": [
-          "source.mtml"
-        ],
-        "scopeName": "source.mtml.embedded",
-        "path": "./syntaxes/mtml.embedded.tmLanguage.json"
-      }
-    ],
-    "snippets": [
-      {
-        "language": "mtml",
-        "path": "./snippets/snippets.jsonc"
-      }
-    ]
-  }
+	"name": "mtml-language-provider",
+	"displayName": "MTML",
+	"description": "Provides MTML (Movable Type Markup Language) syntax highlight and snippets for Visual Studio Code",
+	"version": "0.3.3",
+	"engines": {
+		"vscode": "^1.67.0"
+	},
+	"publisher": "fhiromasa",
+	"icon": "images/icon.png",
+	"license": "MIT",
+	"homepage": "",
+	"repository": {
+		"type": "git",
+		"url": "https://github.com/fhiromasa/mtml-language-provider"
+	},
+	"categories": [
+		"Programming Languages",
+		"Snippets"
+	],
+	"keywords": [
+		"movable type",
+		"mtml"
+	],
+	"activationEvents": [
+		"onLanguage:mtml"
+	],
+	"main": "./out/extension.js",
+	"contributes": {
+		"languages": [
+			{
+				"id": "mtml",
+				"aliases": [
+					"MTML",
+					"mtml"
+				],
+				"extensions": [
+					".mtml"
+				],
+				"configuration": "./language-configuration.json",
+				"icon": {
+					"light": "./images/light.png",
+					"dark": "./images/dark.png"
+				}
+			}
+		],
+		"grammars": [
+			{
+				"language": "mtml",
+				"scopeName": "source.mtml",
+				"path": "./syntaxes/mtml.tmGrammar.json"
+			},
+			{
+				"injectTo": [
+					"source.mtml"
+				],
+				"scopeName": "source.mtml.embedded",
+				"path": "./syntaxes/mtml.embedded.tmLanguage.json"
+			}
+		],
+		"snippets": [
+			{
+				"language": "mtml",
+				"path": "./snippets/snippets.jsonc"
+			}
+		],
+		"configuration": {
+			"title": "",
+			"type": "",
+			"order": 20,
+			"properties": {
+				"mtml.hover.enable": {
+					"type": "boolean",
+					"default": true,
+					"description": "Do you want a hover feature? default true.\nRequires reload after change"
+				},
+				"mtml.completion.enable": {
+					"type": "boolean",
+					"default": true,
+					"description": "Do you want a completion feature? default true.\nRequires reload after change"
+				},
+				"mtml.cms.name": {
+					"type": "string",
+					"enum": [
+						"Movable Type",
+						"Movable Type.net",
+						"PowerCMS",
+						"PowerCMS X"
+					],
+					"default": "Movable Type",
+					"description": "What is your CMS' name?"
+				},
+				"mtml.functiontag.rule": {
+					"type": "string",
+					"enum": [
+						"none",
+						"slash",
+						"dollar"
+					],
+					"default": "slash",
+					"description": "The rule of function tag. none:`<mt:functiontag>`,slash:`<mt:functiontag />`,dollar:`<$mt:functiontag$>`"
+				}
+			}
+		}
+	},
+	"scripts": {
+		"vscode:prepublish": "npm run compile",
+		"compile": "tsc -p ./",
+		"watch": "tsc -watch -p ./",
+		"pretest": "npm run compile && npm run lint",
+		"lint": "eslint src --ext ts",
+		"test": "node ./out/test/runTest.js",
+		"package": "npm run compile && npx vsce package"
+	},
+	"devDependencies": {
+		"@types/vscode": "^1.67.0",
+		"@types/glob": "^7.2.0",
+		"@types/mocha": "^9.1.1",
+		"@types/node": "16.x",
+		"@typescript-eslint/eslint-plugin": "^5.27.0",
+		"@typescript-eslint/parser": "^5.27.0",
+		"eslint": "^8.16.0",
+		"glob": "^8.0.3",
+		"mocha": "^10.0.0",
+		"typescript": "^4.7.2",
+		"@vscode/test-electron": "^2.1.3"
+	}
 }

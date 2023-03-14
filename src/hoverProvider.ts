@@ -1,4 +1,5 @@
-import { TModifier, TItem, getCmsItems, TCms } from "./utils";
+import { GlobalModifier, Tag } from "./Item";
+import { getCmsItems, TCms } from "./utils";
 import {
 	HoverProvider,
 	Hover,
@@ -29,7 +30,7 @@ export default class MTMLHoverProvider implements HoverProvider {
 		const CMS_NAME = workspace
 			.getConfiguration("mtml")
 			.get<TCms>("cms.name", "Movable Type");
-		const CMS_ITEMS = getCmsItems(CMS_NAME);
+		const [TAGS, GLOBAL_MODIFIERS] = getCmsItems(CMS_NAME);
 
 		// mtタグの中で何かしらの要素にホバーしている状況
 		const hoverText = document.getText(hoverRange);
@@ -41,24 +42,23 @@ export default class MTMLHoverProvider implements HoverProvider {
 
 		const tagItemId = tagStructure[0].replace(/[<:$]/g, "");
 		// console.log("1.4. tag item id is :" + tagItemId);
-		let tagItem = CMS_ITEMS[tagItemId.toLowerCase()];
-		if (!tagItem) {
-			tagItem = {
-				name: tagItemId,
-				description: "This tag is not included in the reference.",
-				type: "",
-				url: "",
-				modifiers: {},
-			};
-		}
+		let tagItem =
+			TAGS[tagItemId.toLowerCase()] ||
+			new Tag(
+				tagItemId,
+				"This tag is not included in the reference.",
+				"undefined",
+				"",
+				{}
+			);
 		// console.log("1.5. tagItem is :", tagItem.name);
 
-		let modifierItem: TItem | TModifier | undefined;
+		let modifierItem: GlobalModifier | undefined;
 		if (hoverText.match(/=$/)) {
 			const modifierItemId = hoverText.replace(/(:\w+)?=$/, "").toLowerCase();
 			// console.log("1.6. modifier item id is :" + modifierItemId);
-			modifierItem =
-				CMS_ITEMS[modifierItemId] || tagItem.modifiers[modifierItemId];
+			modifierItem;
+			GLOBAL_MODIFIERS[modifierItemId];
 			// console.log("1.7. modifierItem is :", modifierItem.name);
 		}
 
@@ -66,8 +66,8 @@ export default class MTMLHoverProvider implements HoverProvider {
 	}
 
 	private makeMarkdownString(
-		tagItem: TItem,
-		modifierItem: TItem | TModifier | undefined,
+		tagItem: Tag,
+		modifierItem: GlobalModifier | undefined,
 		cmsName: TCms
 	): MarkdownString {
 		const markdownString = new MarkdownString();
@@ -83,7 +83,8 @@ export default class MTMLHoverProvider implements HoverProvider {
 		}
 
 		markdownString.appendCodeblock(codeBlock);
-		if (modifierItem?.type === "global") {
+		// グローバルモディファイアの表示
+		if (modifierItem?.type) {
 			markdownString.appendMarkdown(
 				[
 					`\n\nglobal modifier : ${modifierItem.name}`,

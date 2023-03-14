@@ -1,12 +1,20 @@
-import movabletypeItems from "./data/movabletype.json";
-import movabletype_netItems from "./data/movabletype_net.json";
-import powercmsItems from "./data/powercms.json";
-import powercms_xItems from "./data/powercms_x.json";
+import movabletypeTag from "./data/movabletype/tag.json";
+import movabletypeModifier from "./data/movabletype/modifier.json";
+import movabletype_netTag from "./data/movabletype_net/tag.json";
+import movabletype_netModifier from "./data/movabletype_net/modifier.json";
+import powercmsTag from "./data/powercms/tag.json";
+import powercmsModifier from "./data/powercms/modifier.json";
+import powercms_xTag from "./data/powercms_x/tag.json";
+import powercms_xModifier from "./data/powercms_x/modifier.json";
+import { TItems, Tag } from "./Item";
 
-const MOVABLETYPE_ITEMS: TItems = movabletypeItems;
-const MOVABLETYPE_NET_ITEMS: TItems = movabletype_netItems;
-const POWERCMS_ITEMS: TItems = powercmsItems;
-const POWERCMS_X_ITEMS: TItems = powercms_xItems;
+const MOVABLETYPE_ITEMS: TItems = [movabletypeTag, movabletypeModifier];
+const MOVABLETYPE_NET_ITEMS: TItems = [
+	movabletype_netTag,
+	movabletype_netModifier,
+];
+const POWERCMS_ITEMS: TItems = [powercmsTag, powercmsModifier];
+const POWERCMS_X_ITEMS: TItems = [powercms_xTag, powercms_xModifier];
 
 export const getCmsItems = (cmsName: TCms): TItems => {
 	switch (cmsName) {
@@ -27,33 +35,6 @@ export type TCms =
 	| "PowerCMS"
 	| "PowerCMS X";
 
-type TItems = {
-	[string: string]: TItem;
-};
-export type TItem = {
-	name: string;
-	url: string;
-	type: string;
-	description: string;
-	modifiers: TModifiers;
-};
-type TModifiers = {
-	[string: string]: TModifier;
-};
-export type TModifier = {
-	name: string;
-	type: string;
-	value: string;
-	description: string;
-	url: string;
-};
-
-export const makeDummyItem = (name?: string): TItem => {
-	return {
-		name: name || "",
-		url: "",
-		type: "",
-		description: "This tag is not included in the reference.",
-		modifiers: {},
-	};
+export const makeDummyTag = (name?: string): Tag => {
+	return new Tag(name || "", "undefined", "", "", {});
 };

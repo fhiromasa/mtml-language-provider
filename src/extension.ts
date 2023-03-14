@@ -15,7 +15,7 @@ const SEL: DocumentSelector = { scheme: "file", language: "mtml" };
 // your extension is activated the very first time the command is executed
 export function activate(context: ExtensionContext): void {
 	// hover機能の提供開始
-	if (workspace.getConfiguration("mtml").get<boolean>("hover.enable")) {
+	if (workspace.getConfiguration("mtml").get<Boolean>("hover.enable")) {
 		// console.log("settings of mtml.hover.enable is true");
 		context.subscriptions.push(
 			languages.registerHoverProvider(SEL, new MTMLHoverProvider())

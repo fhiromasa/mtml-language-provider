@@ -27,6 +27,5 @@ export type TCms =
 	| "PowerCMS"
 	| "PowerCMS X";
 
-export const makeDummyTag = (name?: string): Tag => {
-	return new Tag(name || "", "undefined", "", "", {});
-};
+// 正規表現だと改行を取れないらしい
+export const tagRegex = /<\$?mt(app)?:?[^>]+/i;

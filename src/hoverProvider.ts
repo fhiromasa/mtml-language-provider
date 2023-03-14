@@ -1,5 +1,5 @@
 import { GlobalModifier, Tag } from "./Item";
-import { getCmsItems, TCms } from "./utils";
+import { getCmsItems, TCms, tagRegex } from "./utils";
 import {
 	HoverProvider,
 	Hover,
@@ -17,7 +17,6 @@ export default class MTMLHoverProvider implements HoverProvider {
 		token: CancellationToken
 	): Hover | undefined {
 		// 取得したい文字列の正規表現
-		const tagRegex = /<\$?mt:?[0-9a-zA-Z:_\s=\",]+/i;
 		const hoverRegex = /[0-9a-zA-Z:_]+=?/i;
 
 		const hoverRange = document.getWordRangeAtPosition(position, hoverRegex);
@@ -36,8 +35,8 @@ export default class MTMLHoverProvider implements HoverProvider {
 		const hoverText = document.getText(hoverRange);
 		const tagText = document.getText(tagRange);
 		const tagStructure = tagText.split(/\s+/);
-		// console.log("1.1. hover text is :" + hoverText);
-		// console.log("1.2. tag text is   :" + tagText);
+		console.log("1.1. hover text is :" + hoverText);
+		console.log("1.2. tag text is   :" + tagText);
 		// console.log("1.3. tag structure is :" + tagStructure.join(", "));
 
 		const tagItemId = tagStructure[0].replace(/[<:$]/g, "");
@@ -46,8 +45,8 @@ export default class MTMLHoverProvider implements HoverProvider {
 			TAGS[tagItemId.toLowerCase()] ||
 			new Tag(
 				tagItemId,
-				"This tag is not included in the reference.",
 				"undefined",
+				"This tag is not included in the reference.",
 				"",
 				{}
 			);
@@ -64,49 +63,56 @@ export default class MTMLHoverProvider implements HoverProvider {
 		return new Hover(this.makeMarkdownString(tagItem, modifierItem, CMS_NAME));
 	}
 
-	private makeMarkdownString(
-		tagItem: Tag,
-		modifierItem: GlobalModifier | undefined,
+	readonly makeMarkdownString = (
+		tag: Tag,
+		globalModifier: GlobalModifier | undefined,
 		cmsName: TCms
-	): MarkdownString {
+	): MarkdownString => {
 		const markdownString = new MarkdownString();
-		const tagName = tagItem.name.replace(/^mt/i, "").replace(/:/, "");
-		const tagModifiers = Object.values(tagItem.modifiers);
+		const prefix = tag.name.search(/mtapp/i) < 0 ? "mt:" : "mtapp:";
+		const tagName = tag.name.replace(/^mt(app)?:?/i, "");
+		const completeTagName = prefix + tagName;
+		const tagModifiers = Object.values(tag.modifiers);
 
-		let codeBlock = "<mt:" + tagName + ">";
-		if (modifierItem) {
-			codeBlock = codeBlock.replace(/>$/, ` ${modifierItem.name}="">`);
-		}
-		if (tagItem.type === "block") {
-			codeBlock += " ~ </mt:" + tagName + ">";
-		}
+		const blockClosingTag = tag.type === "block" ? `</${completeTagName}>` : "";
+		const modifierString = globalModifier ? ` ${globalModifier.name}=""` : "";
+		const codeBlock = `<${completeTagName}${modifierString}>${blockClosingTag}`;
 
 		markdownString.appendCodeblock(codeBlock);
 		// グローバルモディファイアの表示
-		if (modifierItem?.type) {
+		if (globalModifier) {
 			markdownString.appendMarkdown(
-				[
-					`\n\nglobal modifier : ${modifierItem.name}`,
-					`\n\n${modifierItem.description}`,
-					`\n\n[${modifierItem.name} Reference](${modifierItem.url})`,
-					`\n\ntemplate tag : ${tagItem.name}`,
-				].join("")
+				`${globalModifier.description}` +
+					`\n\n[${cmsName} ${globalModifier.name} Reference](${globalModifier.url})`
 			);
+			markdownString.appendCodeblock(codeBlock.replace(modifierString, ""));
 		}
-		markdownString.appendMarkdown(`\n\n${tagItem.description}`);
+
+		markdownString.appendMarkdown(`\n${tag.description}`);
 
 		if (tagModifiers.length > 0) {
 			markdownString.appendMarkdown(`\n\nmodifiers`);
-			tagModifiers.map((modifier) => {
-				markdownString.appendMarkdown(
-					`\n- ${modifier.name}=${modifier.value}\n\t- ${modifier.description}`
-				);
-			});
+			markdownString.appendMarkdown(
+				tagModifiers
+					.map((modifier) => {
+						return (
+							`\n- ${modifier.name}=${modifier.value}` +
+							`\n\t- ${
+								modifier.description === ""
+									? "no description"
+									: modifier.description
+							}`
+						);
+					})
+					.join("")
+			);
 		}
 
-		markdownString.appendMarkdown(`\n\n[${cmsName} Reference](${tagItem.url})`);
+		markdownString.appendMarkdown(
+			`\n\n[${cmsName} ${tag.name} Reference](${tag.url})`
+		);
 		// console.log("makeMarkdownString :" + markdownString.value);
 
 		return markdownString;
-	}
+	};
 }

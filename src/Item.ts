@@ -1,25 +1,25 @@
 interface IItem {
 	name: string;
-	type: TItemType;
+	type: TItemType | string;
 	description: string;
 }
 
 type TItemType = TTagType | TGlobalModifierType | TTagModifierType;
 
 type TTagType = TBlockTagType | TFunctionTagType | "undefined";
-type TBlockTagType = "block" | string;
-type TFunctionTagType = "function" | string;
+type TBlockTagType = "block";
+type TFunctionTagType = "function";
 
-type TGlobalModifierType = "global" | string;
-type TTagModifierType = "local" | string;
+type TGlobalModifierType = "global";
+type TTagModifierType = "local";
 
 type TTagModifiers = {
-	[name: string]: TagModifier;
+	[name: string]: LocalModifier;
 };
 
 export class Tag implements IItem {
 	name: string;
-	type: TTagType;
+	type: TTagType | string;
 	description: string;
 	url: string;
 	modifiers: TTagModifiers;
@@ -61,7 +61,7 @@ export class BlockTag extends Tag {
 }
 export class GlobalModifier implements IItem {
 	name: string;
-	type: TGlobalModifierType;
+	type: TGlobalModifierType | string;
 	description: string;
 	url: string;
 	constructor(name: string, description: string, url: string) {
@@ -71,10 +71,10 @@ export class GlobalModifier implements IItem {
 		this.url = url;
 	}
 }
-export class TagModifier implements IItem {
+export class LocalModifier implements IItem {
 	name: string;
 	description: string;
-	type: TTagModifierType;
+	type: TTagModifierType | string;
 	value: string;
 	constructor(name: string, description: string, value: string) {
 		this.name = name;
@@ -92,4 +92,4 @@ export type TTags = {
 export type TGlobalModifiers = {
 	[name: string]: GlobalModifier;
 };
-export type TModifier = GlobalModifier | TagModifier;
+export type TModifier = GlobalModifier | LocalModifier;

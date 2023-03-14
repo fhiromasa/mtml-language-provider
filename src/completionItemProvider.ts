@@ -1,5 +1,5 @@
-import { getCmsItems, TCms } from "./utils";
-import { Tag, TagModifier } from "./Item";
+import { getCmsItems, TCms, tagRegex } from "./utils";
+import { Tag, LocalModifier } from "./Item";
 import {
 	CompletionItemProvider,
 	TextDocument,
@@ -29,7 +29,6 @@ export default class MTMLCompletionItemProvider
 		const GLOBAL_MODIFIER_ARR = Object.values(GLOBAL_MODIFIERS);
 
 		const pointerRegex = /[0-9a-zA-Z<:_]+=?/i;
-		const tagRegex = /<\$?mt:?[0-9a-zA-Z:_\s=\",]+/i;
 
 		const pointerRange = document.getWordRangeAtPosition(
 			position,
@@ -76,7 +75,7 @@ export default class MTMLCompletionItemProvider
 		// console.log("2.2. tag structure is :" + tagStructure.join(", "));
 
 		const tagItem =
-			TAGS[tagItemId.toLowerCase()] || new Tag("", "", "", "", {});
+			TAGS[tagItemId.toLowerCase()] || new Tag("", "undefined", "", "", {});
 		const localModifierCompletionItemArr: CompletionItem[] = Object.values(
 			tagItem.modifiers
 		).map((item) => {
@@ -99,7 +98,7 @@ export default class MTMLCompletionItemProvider
 		const completeTagName = prefix + tagName;
 
 		// 必須モディファイアがあったら追加する
-		const requiredModifierArr: TagModifier[] = [];
+		const requiredModifierArr: LocalModifier[] = [];
 		Object.values(tag.modifiers).forEach((modifier) => {
 			if (modifier.description.search("必須です") > -1) {
 				requiredModifierArr.push(modifier);

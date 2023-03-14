@@ -1,4 +1,5 @@
-import { getCmsItems, makeDummyItem, TCms, TItem, TModifier } from "./utils";
+import { getCmsItems, TCms, tagRegex } from "./utils";
+import { Tag, LocalModifier } from "./Item";
 import {
 	CompletionItemProvider,
 	TextDocument,
@@ -8,6 +9,7 @@ import {
 	CompletionContext,
 	CompletionItem,
 	CompletionItemKind,
+	CompletionItemTag,
 } from "vscode";
 
 export default class MTMLCompletionItemProvider
@@ -23,11 +25,11 @@ export default class MTMLCompletionItemProvider
 		const CMS_NAME = workspace
 			.getConfiguration("mtml")
 			.get<TCms>("cms.name", "Movable Type");
-		const CMS_ITEMS = getCmsItems(CMS_NAME);
-		const ITEM_ARR = Object.values(CMS_ITEMS);
+		const [TAGS, GLOBAL_MODIFIERS] = getCmsItems(CMS_NAME);
+		const TAGS_ARR = Object.values(TAGS);
+		const GLOBAL_MODIFIER_ARR = Object.values(GLOBAL_MODIFIERS);
 
 		const pointerRegex = /[0-9a-zA-Z<:_]+=?/i;
-		const tagRegex = /<\$?mt:?[0-9a-zA-Z:_\s=\",]+/i;
 
 		const pointerRange = document.getWordRangeAtPosition(
 			position,
@@ -44,37 +46,30 @@ export default class MTMLCompletionItemProvider
 		const pointerText = document.getText(pointerRange);
 		// console.log("1.1. pointerText: " + pointerText);
 
-		const tagCompletionItemArr: CompletionItem[] = [];
-		const globalModifierCompletionItemArr: CompletionItem[] = [];
-		// console.log("1.2. ITEM_ARR.length" + ITEM_ARR.length);
-		ITEM_ARR.forEach((item) => {
-			// CMS_ITEMSからCompletionItemを作るところ
-			if (item.type === "global") {
-				// グローバルモディファイアのCompletionItem
-				globalModifierCompletionItemArr.push(
-					new CompletionItem(`${item.name}=""`, CompletionItemKind.Field)
-				);
-				return;
-			}
-
-			// タグのCompletionItem
-			let label = this.makeTagCompletionItem(item);
-
-			// "<"がすでにあるときは消す
-			if (pointerText.search(/^</) > -1) {
-				label = label.replace(/^</, "").replace(/>$/, "");
-			}
-
-			tagCompletionItemArr.push(
-				new CompletionItem(label, CompletionItemKind.Class)
-			);
-			return;
-		});
-
 		if (!tagRange) {
 			// タグの外側、タグの補完をする
-			return tagCompletionItemArr;
+			return TAGS_ARR.map((tag) => {
+				let label = this.makeTagCompletionItemLabel(tag);
+
+				// "<"がすでにあるときは消す
+				if (pointerText.search(/^</) > -1) {
+					label = label.replace(/^</, "").replace(/>$/, "");
+				}
+
+				return new CompletionItem(
+					{ label: label, detail: tag.type },
+					CompletionItemKind.Class
+				);
+			});
 		}
+
+		const globalModifierCompletionItemArr: CompletionItem[] =
+			GLOBAL_MODIFIER_ARR.map((modifier) => {
+				return new CompletionItem(
+					{ label: `${modifier.name}=""`, detail: modifier.type },
+					CompletionItemKind.Field
+				);
+			});
 
 		// タグの内側、グローバルモディファイアとタグのモディファイアを補完する
 		const tagText = document.getText(tagRange);
@@ -83,11 +78,18 @@ export default class MTMLCompletionItemProvider
 		// console.log("2.1. tagText is :" + tagText);
 		// console.log("2.2. tag structure is :" + tagStructure.join(", "));
 
-		const tagItem = CMS_ITEMS[tagItemId.toLowerCase()] || makeDummyItem();
+		const tagItem =
+			TAGS[tagItemId.toLowerCase()] || new Tag("", "undefined", "", "", {});
 		const localModifierCompletionItemArr: CompletionItem[] = Object.values(
 			tagItem.modifiers
 		).map((item) => {
-			return new CompletionItem(`${item.name}="${item.value}"`);
+			return new CompletionItem(
+				{
+					label: `${item.name}="${item.value}"`,
+					detail: item.type,
+				},
+				CompletionItemKind.Property
+			);
 		});
 
 		return globalModifierCompletionItemArr.concat(
@@ -96,39 +98,29 @@ export default class MTMLCompletionItemProvider
 	}
 
 	/**
-	 * @param item
+	 * @param tag
 	 * @returns
 	 */
-	private makeTagCompletionItem(item: TItem): string {
-		let prefix = "mt:";
-		if (item.name.search(/mtapp/i) >= 0) {
-			prefix = "mtapp:";
-		}
+	readonly makeTagCompletionItemLabel = (tag: Tag): string => {
+		const prefix = tag.name.search(/mtapp/i) < 0 ? "mt:" : "mtapp:";
 
-		const tagName = item.name.replace(/^mt(app)?:?/i, "");
+		const tagName = tag.name.replace(/^mt(app)?:?/i, "");
 		const completeTagName = prefix + tagName;
 
 		// 必須モディファイアがあったら追加する
-		const requiredModifierArr: TModifier[] = [];
-		Object.values(item.modifiers).forEach((modifier) => {
+		const requiredModifierArr: LocalModifier[] = [];
+		Object.values(tag.modifiers).forEach((modifier) => {
 			if (modifier.description.search("必須です") > -1) {
 				requiredModifierArr.push(modifier);
 			}
 		});
 		const modifierString = requiredModifierArr
 			.map((modifier): string => {
-				return `${modifier.name}="${modifier.value}"`;
+				return ` ${modifier.name}="${modifier.value}"`;
 			})
-			.join(" ");
+			.join("");
+		const blockClosingTag = tag.type === "block" ? `</${completeTagName}>` : "";
 
-		let label =
-			"<" +
-			completeTagName +
-			(modifierString === "" ? "" : " " + modifierString);
-		// ブロックタグなら閉じタグを追加
-		if (item.type === "block") {
-			label += `></${completeTagName}`;
-		}
-		return label + ">";
-	}
+		return `<${completeTagName}${modifierString}>${blockClosingTag}`;
+	};
 }

@@ -35,8 +35,8 @@ export default class MTMLHoverProvider implements HoverProvider {
 		const hoverText = document.getText(hoverRange);
 		const tagText = document.getText(tagRange);
 		const tagStructure = tagText.split(/\s+/);
-		console.log("1.1. hover text is :" + hoverText);
-		console.log("1.2. tag text is   :" + tagText);
+		// console.log("1.1. hover text is :" + hoverText);
+		// console.log("1.2. tag text is   :" + tagText);
 		// console.log("1.3. tag structure is :" + tagStructure.join(", "));
 
 		const tagItemId = tagStructure[0].replace(/[<:$]/g, "");

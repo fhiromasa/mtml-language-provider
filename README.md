@@ -3,7 +3,6 @@
 This extension provide these features.
 
 - highlight
-- snippet
 - hover
 - completion
 
@@ -33,16 +32,6 @@ Highlight in `Dark+(default dark)` vscode theme
 | modifier       | constant.numeric             |
 | ignore         | comment.block                |
 | quoted string  | string.quoted                |
-
-### Snippets
-
-I will probably remove this feature.
-
-- Movable Type
-- Movable Type.net
-- PowerCMS
-
-![screencapture2022-09-07T11.19.24](./images/screencapture2022-09-07T11.19.24.gif "screencapture2022-09-07T11.19.24")
 
 ### Hover
 
@@ -92,7 +81,3 @@ This extension contributes the following settings:
 
 - Syntax Highlighting - [yupyom/vscode-movabletype](https://github.com/yupyom/vscode-movabletype/tree/0.1.0)
 - Snippets - [hei-a/html.json](https://gist.github.com/hei-a/73c9ccdad642b64d6d1c03b629ee14c7)
-
-## beta features
-
-[https://marketplace.visualstudio.com/items?itemName=fhiromasa.mtml-language-feature](https://marketplace.visualstudio.com/items?itemName=fhiromasa.mtml-language-feature)

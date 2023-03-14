@@ -58,12 +58,6 @@
 				"path": "./syntaxes/mtml.embedded.tmLanguage.json"
 			}
 		],
-		"snippets": [
-			{
-				"language": "mtml",
-				"path": "./snippets/snippets.jsonc"
-			}
-		],
 		"configuration": {
 			"title": "",
 			"type": "",

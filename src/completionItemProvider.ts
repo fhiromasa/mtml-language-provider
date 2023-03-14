@@ -9,6 +9,7 @@ import {
 	CompletionContext,
 	CompletionItem,
 	CompletionItemKind,
+	CompletionItemTag,
 } from "vscode";
 
 export default class MTMLCompletionItemProvider
@@ -55,14 +56,17 @@ export default class MTMLCompletionItemProvider
 					label = label.replace(/^</, "").replace(/>$/, "");
 				}
 
-				return new CompletionItem(label, CompletionItemKind.Class);
+				return new CompletionItem(
+					{ label: label, detail: tag.type },
+					CompletionItemKind.Class
+				);
 			});
 		}
 
 		const globalModifierCompletionItemArr: CompletionItem[] =
 			GLOBAL_MODIFIER_ARR.map((modifier) => {
 				return new CompletionItem(
-					`${modifier.name}=""`,
+					{ label: `${modifier.name}=""`, detail: modifier.type },
 					CompletionItemKind.Field
 				);
 			});
@@ -79,7 +83,13 @@ export default class MTMLCompletionItemProvider
 		const localModifierCompletionItemArr: CompletionItem[] = Object.values(
 			tagItem.modifiers
 		).map((item) => {
-			return new CompletionItem(`${item.name}="${item.value}"`);
+			return new CompletionItem(
+				{
+					label: `${item.name}="${item.value}"`,
+					detail: item.type,
+				},
+				CompletionItemKind.Property
+			);
 		});
 
 		return globalModifierCompletionItemArr.concat(

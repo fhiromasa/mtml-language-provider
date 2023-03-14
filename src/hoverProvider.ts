@@ -57,8 +57,7 @@ export default class MTMLHoverProvider implements HoverProvider {
 		if (hoverText.match(/=$/)) {
 			const modifierItemId = hoverText.replace(/(:\w+)?=$/, "").toLowerCase();
 			// console.log("1.6. modifier item id is :" + modifierItemId);
-			modifierItem;
-			GLOBAL_MODIFIERS[modifierItemId];
+			modifierItem = GLOBAL_MODIFIERS[modifierItemId];
 			// console.log("1.7. modifierItem is :", modifierItem.name);
 		}
 

@@ -8,24 +8,16 @@ import powercms_xTag from "./data/powercms_x/tag.json";
 import powercms_xModifier from "./data/powercms_x/modifier.json";
 import { TItems, Tag } from "./Item";
 
-const MOVABLETYPE_ITEMS: TItems = [movabletypeTag, movabletypeModifier];
-const MOVABLETYPE_NET_ITEMS: TItems = [
-	movabletype_netTag,
-	movabletype_netModifier,
-];
-const POWERCMS_ITEMS: TItems = [powercmsTag, powercmsModifier];
-const POWERCMS_X_ITEMS: TItems = [powercms_xTag, powercms_xModifier];
-
 export const getCmsItems = (cmsName: TCms): TItems => {
 	switch (cmsName) {
 		case "Movable Type.net":
-			return MOVABLETYPE_NET_ITEMS;
+			return [movabletype_netTag, movabletype_netModifier];
 		case "PowerCMS":
-			return POWERCMS_ITEMS;
+			return [powercmsTag, powercmsModifier];
 		case "PowerCMS X":
-			return POWERCMS_X_ITEMS;
+			return [powercms_xTag, powercms_xModifier];
 		default:
-			return MOVABLETYPE_ITEMS;
+			return [movabletypeTag, movabletypeModifier];
 	}
 };
 

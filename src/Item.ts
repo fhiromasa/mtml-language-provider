@@ -13,7 +13,7 @@ type TFunctionTagType = "function";
 type TGlobalModifierType = "global";
 type TTagModifierType = "local";
 
-type TTagModifiers = {
+type TLocalModifiers = {
 	[name: string]: LocalModifier;
 };
 
@@ -22,14 +22,14 @@ export class Tag implements IItem {
 	type: TTagType | string;
 	description: string;
 	url: string;
-	modifiers: TTagModifiers;
+	modifiers: TLocalModifiers;
 
 	constructor(
 		name: string,
 		type: TTagType,
 		description: string,
 		url: string,
-		modifiers: TTagModifiers
+		modifiers: TLocalModifiers
 	) {
 		this.name = name;
 		this.type = type;
@@ -44,7 +44,7 @@ export class FunctionTag extends Tag {
 		name: string,
 		description: string,
 		url: string,
-		modifiers: TTagModifiers
+		modifiers: TLocalModifiers
 	) {
 		super(name, "function", description, url, modifiers);
 	}
@@ -54,7 +54,7 @@ export class BlockTag extends Tag {
 		name: string,
 		description: string,
 		url: string,
-		modifiers: TTagModifiers
+		modifiers: TLocalModifiers
 	) {
 		super(name, "block", description, url, modifiers);
 	}

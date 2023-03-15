@@ -56,6 +56,10 @@
 				],
 				"scopeName": "source.mtml.embedded",
 				"path": "./syntaxes/mtml.embedded.tmLanguage.json"
+			},
+			{
+				"scopeName": "source.mtml.ingnoreDoc",
+				"path": "./syntaxes/mtml.ignoreDoc.tmLanguage.json"
 			}
 		],
 		"configuration": {

@@ -14,7 +14,8 @@
 		"ignore-tag": {
 			"begin": "(?i)<mt:?ignore",
 			"end": "(?i)</mt:?ignore>",
-			"name": "comment.block.mtml"
+			"name": "comment.block.mtml",
+			"patterns": [{ "include": "source.mtml.ingnoreDoc" }]
 		},
 		"tags": {
 			"patterns": [

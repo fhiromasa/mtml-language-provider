@@ -1,0 +1,21 @@
+{
+	"$schema": "https://raw.githubusercontent.com/martinring/tmlanguage/master/tmlanguage.json",
+	"scopeName": "source.mtml.ingnoreDoc",
+	"patterns": [
+		{
+			"begin": "/\\*\\*",
+			"end": "\\*/",
+			"name": "comment.block.documentation.mtmldoc",
+			"patterns": [{ "include": "#@" }]
+		}
+	],
+	"repository": {
+		"@": {
+			"match": "(@)(.*)",
+			"name": "storage.type.class.mtmldoc",
+			"captures": {
+				"1": { "name": "punctuation.definition.block.tag.mtmldoc" }
+			}
+		}
+	}
+}

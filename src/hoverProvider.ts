@@ -1,4 +1,5 @@
-import { GlobalModifier, Tag } from "./Item";
+import * as CodeBlock from "./codeBlock";
+import { GlobalModifier, Tag } from "./item";
 import { getCmsItems, TCms, tagRegex } from "./utils";
 import {
 	HoverProvider,
@@ -69,25 +70,19 @@ export default class MTMLHoverProvider implements HoverProvider {
 		cmsName: TCms
 	): MarkdownString => {
 		const markdownString = new MarkdownString();
-		const prefix = tag.name.search(/mtapp/i) < 0 ? "mt:" : "mtapp:";
-		const tagName = tag.name.replace(/^mt(app)?:?/i, "");
-		const completeTagName = prefix + tagName;
 		const tagModifiers = Object.values(tag.modifiers);
 
-		const blockClosingTag = tag.type === "block" ? `</${completeTagName}>` : "";
-		const modifierString = globalModifier ? ` ${globalModifier.name}=""` : "";
-		const codeBlock = `<${completeTagName}${modifierString}>${blockClosingTag}`;
-
-		markdownString.appendCodeblock(codeBlock);
 		// グローバルモディファイアの表示
 		if (globalModifier) {
+			markdownString.appendCodeblock(
+				CodeBlock.withGlobalModifier(tag, globalModifier)
+			);
 			markdownString.appendMarkdown(
 				`${globalModifier.description}` +
 					`\n\n[${cmsName} ${globalModifier.name} Reference](${globalModifier.url})`
 			);
-			markdownString.appendCodeblock(codeBlock.replace(modifierString, ""));
 		}
-
+		markdownString.appendCodeblock(CodeBlock.codeBlock(tag));
 		markdownString.appendMarkdown(`\n${tag.description}`);
 
 		if (tagModifiers.length > 0) {
@@ -96,7 +91,7 @@ export default class MTMLHoverProvider implements HoverProvider {
 				tagModifiers
 					.map((modifier) => {
 						return (
-							`\n- ${modifier.name}=${modifier.value}` +
+							`\n- ${CodeBlock.localModifier(modifier)}` +
 							`\n\t- ${
 								modifier.description === ""
 									? "no description"

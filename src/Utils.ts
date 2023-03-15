@@ -6,9 +6,9 @@ import powercmsTag from "./data/powercms/tag.json";
 import powercmsModifier from "./data/powercms/modifier.json";
 import powercms_xTag from "./data/powercms_x/tag.json";
 import powercms_xModifier from "./data/powercms_x/modifier.json";
-import { TItems, Tag } from "./Item";
+import { TTags, TGlobalModifiers } from "./item";
 
-export const getCmsItems = (cmsName: TCms): TItems => {
+export const getCmsItems = (cmsName: TCms): [TTags, TGlobalModifiers] => {
 	switch (cmsName) {
 		case "Movable Type.net":
 			return [movabletype_netTag, movabletype_netModifier];

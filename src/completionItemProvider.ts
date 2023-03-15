@@ -1,5 +1,6 @@
 import { getCmsItems, TCms, tagRegex } from "./utils";
-import { Tag, LocalModifier } from "./Item";
+import { Tag } from "./item";
+import * as CodeBlock from "./codeBlock";
 import {
 	CompletionItemProvider,
 	TextDocument,
@@ -9,7 +10,6 @@ import {
 	CompletionContext,
 	CompletionItem,
 	CompletionItemKind,
-	CompletionItemTag,
 } from "vscode";
 
 export default class MTMLCompletionItemProvider
@@ -26,8 +26,6 @@ export default class MTMLCompletionItemProvider
 			.getConfiguration("mtml")
 			.get<TCms>("cms.name", "Movable Type");
 		const [TAGS, GLOBAL_MODIFIERS] = getCmsItems(CMS_NAME);
-		const TAGS_ARR = Object.values(TAGS);
-		const GLOBAL_MODIFIER_ARR = Object.values(GLOBAL_MODIFIERS);
 
 		const pointerRegex = /[0-9a-zA-Z<:_]+=?/i;
 
@@ -48,28 +46,28 @@ export default class MTMLCompletionItemProvider
 
 		if (!tagRange) {
 			// タグの外側、タグの補完をする
-			return TAGS_ARR.map((tag) => {
-				let label = this.makeTagCompletionItemLabel(tag);
-
-				// "<"がすでにあるときは消す
-				if (pointerText.search(/^</) > -1) {
-					label = label.replace(/^</, "").replace(/>$/, "");
-				}
-
+			return Object.values(TAGS).map((tag) => {
 				return new CompletionItem(
-					{ label: label, detail: tag.type },
+					{
+						label: CodeBlock.withRequiredModifiers(tag),
+						detail: tag.type,
+					},
 					CompletionItemKind.Class
 				);
 			});
 		}
 
-		const globalModifierCompletionItemArr: CompletionItem[] =
-			GLOBAL_MODIFIER_ARR.map((modifier) => {
-				return new CompletionItem(
-					{ label: `${modifier.name}=""`, detail: modifier.type },
-					CompletionItemKind.Field
-				);
-			});
+		const globalModifierCompletionItemArr: CompletionItem[] = Object.values(
+			GLOBAL_MODIFIERS
+		).map((modifier) => {
+			return new CompletionItem(
+				{
+					label: CodeBlock.globalModifier(modifier),
+					detail: modifier.type,
+				},
+				CompletionItemKind.Field
+			);
+		});
 
 		// タグの内側、グローバルモディファイアとタグのモディファイアを補完する
 		const tagText = document.getText(tagRange);
@@ -82,11 +80,11 @@ export default class MTMLCompletionItemProvider
 			TAGS[tagItemId.toLowerCase()] || new Tag("", "undefined", "", "", {});
 		const localModifierCompletionItemArr: CompletionItem[] = Object.values(
 			tagItem.modifiers
-		).map((item) => {
+		).map((modifier) => {
 			return new CompletionItem(
 				{
-					label: `${item.name}="${item.value}"`,
-					detail: item.type,
+					label: CodeBlock.localModifier(modifier),
+					detail: modifier.type,
 				},
 				CompletionItemKind.Property
 			);
@@ -96,31 +94,4 @@ export default class MTMLCompletionItemProvider
 			localModifierCompletionItemArr
 		);
 	}
-
-	/**
-	 * @param tag
-	 * @returns
-	 */
-	readonly makeTagCompletionItemLabel = (tag: Tag): string => {
-		const prefix = tag.name.search(/mtapp/i) < 0 ? "mt:" : "mtapp:";
-
-		const tagName = tag.name.replace(/^mt(app)?:?/i, "");
-		const completeTagName = prefix + tagName;
-
-		// 必須モディファイアがあったら追加する
-		const requiredModifierArr: LocalModifier[] = [];
-		Object.values(tag.modifiers).forEach((modifier) => {
-			if (modifier.description.search("必須です") > -1) {
-				requiredModifierArr.push(modifier);
-			}
-		});
-		const modifierString = requiredModifierArr
-			.map((modifier): string => {
-				return ` ${modifier.name}="${modifier.value}"`;
-			})
-			.join("");
-		const blockClosingTag = tag.type === "block" ? `</${completeTagName}>` : "";
-
-		return `<${completeTagName}${modifierString}>${blockClosingTag}`;
-	};
 }

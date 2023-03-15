@@ -85,7 +85,6 @@ export class LocalModifier implements IItem {
 }
 
 export type TItem = Tag | GlobalModifier;
-export type TItems = [TTags, TGlobalModifiers];
 export type TTags = {
 	[name: string]: Tag;
 };

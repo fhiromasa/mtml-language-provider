@@ -1,8 +1,15 @@
 {
-  "$schema": "https://raw.githubusercontent.com/martinring/tmlanguage/master/tmlanguage.json",
-  "name": "MTML",
-  "patterns": [{
-      "include": "text.html.derivative"
-  }],
-  "scopeName": "source.mtml"
+	"$schema": "https://raw.githubusercontent.com/martinring/tmlanguage/master/tmlanguage.json",
+	"name": "MTML",
+	"patterns": [
+		{
+			"begin": "<\\?php",
+			"end": "\\?>",
+			"patterns": [{ "include": "source.php" }]
+		},
+		{
+			"include": "text.html.derivative"
+		}
+	],
+	"scopeName": "source.mtml"
 }

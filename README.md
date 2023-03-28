@@ -37,11 +37,11 @@ Highlight in `Dark+(default dark)` vscode theme.(Dark＋(規定のDark)でのハ
 
 Display the tag description when the cursor hovers over the tag.(カーソルがmtタグにホバーした時はタグの説明を表示します。)
 
+Show tag description and global modifier description when the cursor hovers over a global modifier.(カーソルがグローバルモディファイアにホバーした時はモディファイアの説明とタグの説明を表示します。)
+
 If you want to disable this feature, Set `mtml.hover.enable:false` in `.vscode/settings.json`.(この機能をオフにしたければ`mtml.hover.enable:false`を設定ファイルに書いてください。)
 
 ![hover item for tag](./images/hovarImage_onTag.png)
-
-Show tag description and global modifier description when the cursor hovers over a global modifier.(カーソルがグローバルモディファイアにホバーした時はモディファイアの説明とタグの説明を表示します。)
 
 ![hover item for global modifier](./images/hoverImage_onGlobalModifier.png)
 

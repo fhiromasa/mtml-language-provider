@@ -6,7 +6,7 @@ import powercmsTag from "./data/powercms/tag.json";
 import powercmsModifier from "./data/powercms/modifier.json";
 import powercms_xTag from "./data/powercms_x/tag.json";
 import powercms_xModifier from "./data/powercms_x/modifier.json";
-import { TTags, TGlobalModifiers } from "./item";
+import { TTags, TGlobalModifiers } from "./data/item";
 
 export const getCmsItems = (cmsName: TCms): [TTags, TGlobalModifiers] => {
 	switch (cmsName) {

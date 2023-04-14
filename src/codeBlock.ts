@@ -1,4 +1,4 @@
-import { Tag, LocalModifier, GlobalModifier } from "./item";
+import { Tag, LocalModifier, GlobalModifier } from "./data/item";
 
 /**
  * @param tag

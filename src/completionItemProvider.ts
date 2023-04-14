@@ -1,5 +1,5 @@
 import { getCmsItems, TCms, tagRegex } from "./utils";
-import { Tag } from "./item";
+import { Tag } from "./data/item";
 import * as CodeBlock from "./codeBlock";
 import {
 	CompletionItemProvider,

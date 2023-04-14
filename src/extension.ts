@@ -8,6 +8,7 @@ import {
 } from "vscode";
 import MTMLHoverProvider from "./hoverProvider";
 import MTMLCompletionItemProvider from "./completionItemProvider";
+import MTMLDefinitionProvider from "./definitionProvider";
 
 const SEL: DocumentSelector = { scheme: "file", language: "mtml" };
 
@@ -21,6 +22,7 @@ export function activate(context: ExtensionContext): void {
 			languages.registerHoverProvider(SEL, new MTMLHoverProvider())
 		);
 	}
+
 	// Provide Completion
 	if (workspace.getConfiguration("mtml").get<Boolean>("completion.enable")) {
 		context.subscriptions.push(
@@ -31,6 +33,11 @@ export function activate(context: ExtensionContext): void {
 			)
 		);
 	}
+
+	// Provide Definition
+	context.subscriptions.push(
+		languages.registerDefinitionProvider(SEL, new MTMLDefinitionProvider())
+	);
 }
 
 // this method is called when your extension is deactivated

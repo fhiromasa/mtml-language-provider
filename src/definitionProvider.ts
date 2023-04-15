@@ -1,6 +1,4 @@
-import { getCmsItems, TCms, tagRegex } from "./utils";
-import { Tag } from "./data/item";
-import * as CodeBlock from "./codeBlock";
+import { tagRegex } from "./utils";
 import {
 	DefinitionProvider,
 	TextDocument,
@@ -11,6 +9,7 @@ import {
 	LocationLink,
 	ProviderResult,
 	Uri,
+	Range,
 } from "vscode";
 
 export default class MTMLDefinitionProvider implements DefinitionProvider {
@@ -19,35 +18,67 @@ export default class MTMLDefinitionProvider implements DefinitionProvider {
 		position: Position,
 		token: CancellationToken
 	): ProviderResult<Definition | LocationLink[]> {
-		// 設定を使うのならここで読んで設定処理
-		const CMS_NAME = workspace
-			.getConfiguration("mtml")
-			.get<TCms>("cms.name", "Movable Type");
-		const [TAGS, GLOBAL_MODIFIERS] = getCmsItems(CMS_NAME);
 		const workDir = workspace.workspaceFolders || [];
+		const workDirPath = workDir[0].uri.path; //vscodeで開いているディレクトリのフルパス
 
-		const cursorRange = document.getWordRangeAtPosition(position, tagRegex);
-		if (!cursorRange) {
+		// F12を押した時のカーソル位置にmtタグがあるか確認
+		const pointerRange = document.getWordRangeAtPosition(position, tagRegex);
+		if (!pointerRange) {
 			return;
 		}
-		const text = document.getText(cursorRange);
-		console.log(text);
-		// mtタグの中で何かしらの要素にホバーしている状況
-		const cursorText = document.getText(cursorRange);
-		const tagStructure = cursorText.split(/\s+/);
-		// console.log("1.1. hover text is :" + hoverText);
-		// console.log("1.2. tag text is   :" + tagText);
-		// console.log("1.3. tag structure is :" + tagStructure.join(", "));
 
-		const tagItemId = tagStructure[0].replace(/[<:$]/g, "");
-		// console.log("1.4. tag item id is :" + tagItemId);
-		console.log(workDir[0].uri.path);
-		console.log(document.fileName);
+		const pointerText = document.getText(pointerRange);
+		const tagStructure = pointerText.split(/\s+/);
+		// console.log("1.1. pointer text is :" + pointerText);
+		// console.log("1.2. tag structure is :" + tagStructure.join(", "));
 
-		const link: LocationLink[] = [
-			{ targetUri: Uri.file(document.fileName), targetRange: cursorRange },
-		];
+		// tagStructureから"name" or "var" のローカルモディファイアを探す
+		// これらモディファイアの値を定義の名前として使う
+		let definitionName = "";
+		tagStructure.forEach((structure) => {
+			if (structure.search(/(name|var)=/i) > -1) {
+				// console.log(`2.1. var,name modifier: ${structure}`);
+				definitionName = structure
+					.split("=")[1]
+					.replace(/"/g, "")
+					.replace(/\{[_\w\d\$]*\}/i, "")
+					.replace(/\[[_\w\d\$]*\]/i, "");
+			}
+		});
+		// name,varモディファイアがなければ終わり
+		if (definitionName === "") {
+			// console.log(`2.1. no definition`);
+			return;
+		}
+		// console.log(`1.3. definitionName: ${definitionName}`);
 
-		return link;
+		// documentの全行からname,var モディファイアの値がdefinitionNameと一致するものを探す
+		// FIX: 各行1個づつの定義しか見つけられない。
+		const definitionRegex = new RegExp(
+			`((name|var)="${definitionName})({[_\\$\\d\\w]+})?(\\[\\d+\\])?"`,
+			"i"
+		);
+		const definitionRangeArr: Range[] = [];
+		for (let lineNum = 0; lineNum < document.lineCount; lineNum++) {
+			const lineText = document.lineAt(lineNum).text;
+
+			const charStartNum = lineText.search(definitionRegex);
+			const matchedWord = lineText.match(definitionRegex);
+			if (charStartNum > -1 && matchedWord) {
+				definitionRangeArr.push(
+					new Range(
+						new Position(lineNum, charStartNum),
+						new Position(lineNum, charStartNum + matchedWord[0].length)
+					)
+				);
+			}
+		}
+
+		return definitionRangeArr.map((range): LocationLink => {
+			return {
+				targetUri: Uri.file(document.fileName),
+				targetRange: range,
+			};
+		});
 	}
 }

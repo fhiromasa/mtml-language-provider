@@ -77,6 +77,11 @@
 					"default": true,
 					"description": "Do you want a completion feature? default true.\nRequires reload after change"
 				},
+				"mtml.definition.enable": {
+					"type": "boolean",
+					"default": false,
+					"description": "Do you want a definition feature? default false.\nRequires reload after change"
+				},
 				"mtml.cms.name": {
 					"type": "string",
 					"enum": [

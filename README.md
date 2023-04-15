@@ -5,6 +5,7 @@ This extension provide these features. (この拡張機能は以下の機能を�
 - highlight
 - hover
 - completion
+- definition(beta)
 
 You can use these CMS' tags and modifiers. (以下の CMS の mt タグ、モディファイアを使用できます。)
 
@@ -57,6 +58,16 @@ If you want to disable this feature, Set `mtml.completion.enable:false` in `.vsc
 
 ![completion item for global modifier](./images/completionImage_globalModifier.png)
 
+### Definition
+
+This feature is in beta. (この機能はベータ版です。)
+
+Jump to user variables with variable definition tags such as MTVar. (MTVar などの変数定義タグによるユーザー変数へジャンプします。)
+
+Only variables within the same file can be jumped. (同一ファイル内の変数のみジャンプのみ可能です。)
+
+This feature is turned off by default. If you want to enable this feature, Set `mtml.definition.enable:true` in `.vscode/settings.json`. (この機能はデフォルトでオフになっています。使いたい場合は`mtml.definition.enable:true`を設定ファイルに書いてください。)
+
 ## Extension Settings
 
 This extension contributes the following settings(この拡張機能は以下の設定をサポートします):
@@ -65,6 +76,9 @@ This extension contributes the following settings(この拡張機能は以下の
   - true: enable
   - false: disable
 - `mtml.completion.enable`: completion feature
+  - true: enable
+  - false: disable
+- `mtml.definition.enable`: definition feature
   - true: enable
   - false: disable
 - `mtml.cms.type`: What is your CMS? Select after.
@@ -76,6 +90,7 @@ This extension contributes the following settings(この拡張機能は以下の
 ## Super Thanks
 
 - Syntax Highlighting - [yupyom/vscode-movabletype](https://github.com/yupyom/vscode-movabletype/tree/0.1.0)
+- My sponsors - [github sponsors](https://github.com/sponsors/fhiromasa)
 
 ## About Data
 

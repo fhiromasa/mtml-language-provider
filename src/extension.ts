@@ -35,9 +35,11 @@ export function activate(context: ExtensionContext): void {
 	}
 
 	// Provide Definition
-	context.subscriptions.push(
-		languages.registerDefinitionProvider(SEL, new MTMLDefinitionProvider())
-	);
+	if (workspace.getConfiguration("mtml").get<Boolean>("definition.enable")) {
+		context.subscriptions.push(
+			languages.registerDefinitionProvider(SEL, new MTMLDefinitionProvider())
+		);
+	}
 }
 
 // this method is called when your extension is deactivated

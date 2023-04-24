@@ -36,7 +36,7 @@ export default class MTMLDefinitionProvider implements DefinitionProvider {
 		// これらモディファイアの値を定義の名前として使う
 		let definitionName = "";
 		tagStructure.forEach((structure) => {
-			if (structure.search(/(name|var)=/i) > -1) {
+			if (structure.search(/(name|(set)?var)=/i) > -1) {
 				// console.log(`2.1. var,name modifier: ${structure}`);
 				definitionName = structure
 					.split("=")[1]
@@ -55,7 +55,11 @@ export default class MTMLDefinitionProvider implements DefinitionProvider {
 		// documentの全行からname,var モディファイアの値がdefinitionNameと一致するものを探す
 		// FIX: 各行1個づつの定義しか見つけられない。
 		const definitionRegex = new RegExp(
-			`((name|var)="${definitionName})({[_\\$\\d\\w]+})?(\\[\\d+\\])?"`,
+			[
+				`((name|(set)?var)="${definitionName})`, // 基本形
+				`({[_\\$\\d\\w]+})?`, // ハッシュのkey指定
+				`(\\[\\d+\\])?"`, // 配列のindex指定
+			].join(""),
 			"i"
 		);
 		const definitionRangeArr: Range[] = [];

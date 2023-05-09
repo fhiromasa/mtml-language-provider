@@ -6,9 +6,9 @@ import {
 	ExtensionContext,
 	languages,
 } from "vscode";
-import MTMLHoverProvider from "./hoverProvider";
-import MTMLCompletionItemProvider from "./completionItemProvider";
-import MTMLDefinitionProvider from "./definitionProvider";
+import MTMLHoverProvider from "./providers/hoverProvider";
+import MTMLCompletionItemProvider from "./providers/completionItemProvider";
+import MTMLDefinitionProvider from "./providers/definitionProvider";
 
 const SEL: DocumentSelector = { scheme: "file", language: "mtml" };
 

@@ -1,6 +1,6 @@
-import { getCmsItems, TCms, tagRegex } from "./utils";
-import { Tag } from "./data/item";
-import * as CodeBlock from "./codeBlock";
+import { getCmsItems, TCms, tagRegex } from "../utils";
+import { Tag } from "../data/item";
+import * as CodeBlock from "../codeBlock";
 import {
 	CompletionItemProvider,
 	TextDocument,

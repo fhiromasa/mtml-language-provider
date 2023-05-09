@@ -1,6 +1,6 @@
-import * as CodeBlock from "./codeBlock";
-import { GlobalModifier, Tag } from "./data/item";
-import { getCmsItems, TCms, tagRegex } from "./utils";
+import * as CodeBlock from "../codeBlock";
+import { GlobalModifier, Tag } from "../data/item";
+import { getCmsItems, TCms, tagRegex } from "../utils";
 import {
 	HoverProvider,
 	Hover,

@@ -1,4 +1,4 @@
-import { tagRegex } from "./utils";
+import { tagRegex } from "../utils";
 import {
 	DefinitionProvider,
 	TextDocument,

@@ -1,6 +1,5 @@
-import * as CodeBlock from "../codeBlock";
 import { GlobalModifier, Tag } from "../data/item";
-import { getCmsItems, TCms, tagRegex } from "../utils";
+import { getCmsItems, tagRegex, config, codeBlock } from "../utils";
 import {
 	HoverProvider,
 	Hover,
@@ -27,10 +26,7 @@ export default class MTMLHoverProvider implements HoverProvider {
 			return undefined;
 		}
 		// 設定を使うのならここで読んで設定処理
-		const CMS_NAME = workspace
-			.getConfiguration("mtml")
-			.get<TCms>("cms.name", "Movable Type");
-		const [TAGS, GLOBAL_MODIFIERS] = getCmsItems(CMS_NAME);
+		const [TAGS, GLOBAL_MODIFIERS] = getCmsItems();
 
 		// mtタグの中で何かしらの要素にホバーしている状況
 		const hoverText = document.getText(hoverRange);
@@ -61,13 +57,12 @@ export default class MTMLHoverProvider implements HoverProvider {
 			// console.log("1.7. modifierItem is :", modifierItem.name);
 		}
 
-		return new Hover(this.makeMarkdownString(tagItem, modifierItem, CMS_NAME));
+		return new Hover(this.makeMarkdownString(tagItem, modifierItem));
 	}
 
 	readonly makeMarkdownString = (
 		tag: Tag,
-		globalModifier: GlobalModifier | undefined,
-		cmsName: TCms
+		globalModifier: GlobalModifier | undefined
 	): MarkdownString => {
 		const markdownString = new MarkdownString();
 		const tagModifiers = Object.values(tag.modifiers);
@@ -75,14 +70,16 @@ export default class MTMLHoverProvider implements HoverProvider {
 		// グローバルモディファイアの表示
 		if (globalModifier) {
 			markdownString.appendCodeblock(
-				CodeBlock.withGlobalModifier(tag, globalModifier)
+				codeBlock.withGlobalModifier(tag, globalModifier)
 			);
 			markdownString.appendMarkdown(
 				`${globalModifier.description}` +
-					`\n\n[${cmsName} ${globalModifier.name} Reference](${globalModifier.url})`
+					`\n\n[${config.CMS.getName()} ${globalModifier.name} Reference](${
+						globalModifier.url
+					})`
 			);
 		}
-		markdownString.appendCodeblock(CodeBlock.codeBlock(tag));
+		markdownString.appendCodeblock(codeBlock.codeBlock(tag));
 		markdownString.appendMarkdown(`\n${tag.description}`);
 
 		if (tagModifiers.length > 0) {
@@ -91,7 +88,7 @@ export default class MTMLHoverProvider implements HoverProvider {
 				tagModifiers
 					.map((modifier) => {
 						return (
-							`\n- ${CodeBlock.localModifier(modifier)}` +
+							`\n- ${codeBlock.localModifier(modifier)}` +
 							`\n\t- ${
 								modifier.description === ""
 									? "no description"
@@ -104,7 +101,7 @@ export default class MTMLHoverProvider implements HoverProvider {
 		}
 
 		markdownString.appendMarkdown(
-			`\n\n[${cmsName} ${tag.name} Reference](${tag.url})`
+			`\n\n[${config.CMS.getName()} ${tag.name} Reference](${tag.url})`
 		);
 		// console.log("makeMarkdownString :" + markdownString.value);
 

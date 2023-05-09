@@ -1,12 +1,10 @@
-import { getCmsItems, TCms, tagRegex } from "../utils";
 import { Tag } from "../data/item";
-import * as CodeBlock from "../codeBlock";
+import { getCmsItems, tagRegex, codeBlock } from "../utils";
 import {
 	CompletionItemProvider,
 	TextDocument,
 	CancellationToken,
 	Position,
-	workspace,
 	CompletionContext,
 	CompletionItem,
 	CompletionItemKind,
@@ -22,10 +20,7 @@ export default class MTMLCompletionItemProvider
 		context: CompletionContext
 	): CompletionItem[] | undefined {
 		// 設定を使うのならここで読んで設定処理
-		const CMS_NAME = workspace
-			.getConfiguration("mtml")
-			.get<TCms>("cms.name", "Movable Type");
-		const [TAGS, GLOBAL_MODIFIERS] = getCmsItems(CMS_NAME);
+		const [TAGS, GLOBAL_MODIFIERS] = getCmsItems();
 
 		const pointerRegex = /[0-9a-zA-Z<:_]+=?/i;
 
@@ -49,7 +44,7 @@ export default class MTMLCompletionItemProvider
 			return Object.values(TAGS).map((tag) => {
 				return new CompletionItem(
 					{
-						label: CodeBlock.withRequiredModifiers(tag),
+						label: codeBlock.withRequiredModifiers(tag),
 						detail: tag.type,
 					},
 					CompletionItemKind.Class
@@ -62,7 +57,7 @@ export default class MTMLCompletionItemProvider
 		).map((modifier) => {
 			return new CompletionItem(
 				{
-					label: CodeBlock.globalModifier(modifier),
+					label: codeBlock.globalModifier(modifier),
 					detail: modifier.type,
 				},
 				CompletionItemKind.Field
@@ -83,7 +78,7 @@ export default class MTMLCompletionItemProvider
 		).map((modifier) => {
 			return new CompletionItem(
 				{
-					label: CodeBlock.localModifier(modifier),
+					label: codeBlock.localModifier(modifier),
 					detail: modifier.type,
 				},
 				CompletionItemKind.Property

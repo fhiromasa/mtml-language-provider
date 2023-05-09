@@ -7,8 +7,18 @@ import powercmsModifier from "./data/powercms/modifier.json";
 import powercms_xTag from "./data/powercms_x/tag.json";
 import powercms_xModifier from "./data/powercms_x/modifier.json";
 import { TTags, TGlobalModifiers } from "./data/item";
+import * as Config from "./config";
+import * as CodeBlock from "./codeBlock";
 
-export const getCmsItems = (cmsName: TCms): [TTags, TGlobalModifiers] => {
+/**
+ * code blockを生成するモジュール
+ */
+export const codeBlock = CodeBlock;
+
+export const config = Config;
+
+export const getCmsItems = (): [TTags, TGlobalModifiers] => {
+	const cmsName = Config.CMS.getName();
 	switch (cmsName) {
 		case "Movable Type.net":
 			return [movabletype_netTag, movabletype_netModifier];
@@ -20,12 +30,6 @@ export const getCmsItems = (cmsName: TCms): [TTags, TGlobalModifiers] => {
 			return [movabletypeTag, movabletypeModifier];
 	}
 };
-
-export type TCms =
-	| "Movable Type"
-	| "Movable Type.net"
-	| "PowerCMS"
-	| "PowerCMS X";
 
 // 正規表現だと改行を取れないらしい
 export const tagRegex = /<\$?mt(app)?:?[^>]+/i;

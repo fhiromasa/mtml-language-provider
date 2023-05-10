@@ -1,5 +1,5 @@
 import { Tag } from "../data/item";
-import { getCmsItems, tagRegex, codeBlock } from "../utils";
+import { Data, tagRegex, CodeBlock } from "../utils";
 import {
 	CompletionItemProvider,
 	TextDocument,
@@ -20,7 +20,7 @@ export default class MTMLCompletionItemProvider
 		context: CompletionContext
 	): CompletionItem[] | undefined {
 		// 設定を使うのならここで読んで設定処理
-		const [TAGS, GLOBAL_MODIFIERS] = getCmsItems();
+		const [TAGS, GLOBAL_MODIFIERS] = Data.getCmsItems();
 
 		const pointerRegex = /[0-9a-zA-Z<:_]+=?/i;
 
@@ -44,7 +44,7 @@ export default class MTMLCompletionItemProvider
 			return Object.values(TAGS).map((tag) => {
 				return new CompletionItem(
 					{
-						label: codeBlock.withRequiredModifiers(tag),
+						label: CodeBlock.withRequiredModifiers(tag),
 						detail: tag.type,
 					},
 					CompletionItemKind.Class
@@ -57,7 +57,7 @@ export default class MTMLCompletionItemProvider
 		).map((modifier) => {
 			return new CompletionItem(
 				{
-					label: codeBlock.globalModifier(modifier),
+					label: CodeBlock.globalModifier(modifier),
 					detail: modifier.type,
 				},
 				CompletionItemKind.Field
@@ -78,7 +78,7 @@ export default class MTMLCompletionItemProvider
 		).map((modifier) => {
 			return new CompletionItem(
 				{
-					label: codeBlock.localModifier(modifier),
+					label: CodeBlock.localModifier(modifier),
 					detail: modifier.type,
 				},
 				CompletionItemKind.Property

@@ -1,5 +1,5 @@
 import { GlobalModifier, Tag } from "../data/item";
-import { getCmsItems, tagRegex, config, codeBlock } from "../utils";
+import { Data, tagRegex, Config, CodeBlock } from "../utils";
 import {
 	HoverProvider,
 	Hover,
@@ -7,7 +7,6 @@ import {
 	CancellationToken,
 	Position,
 	MarkdownString,
-	workspace,
 } from "vscode";
 
 export default class MTMLHoverProvider implements HoverProvider {
@@ -25,8 +24,6 @@ export default class MTMLHoverProvider implements HoverProvider {
 			//どちらかがundefinedだった時点で終了
 			return undefined;
 		}
-		// 設定を使うのならここで読んで設定処理
-		const [TAGS, GLOBAL_MODIFIERS] = getCmsItems();
 
 		// mtタグの中で何かしらの要素にホバーしている状況
 		const hoverText = document.getText(hoverRange);
@@ -38,24 +35,12 @@ export default class MTMLHoverProvider implements HoverProvider {
 
 		const tagItemId = tagStructure[0].replace(/[<:$]/g, "");
 		// console.log("1.4. tag item id is :" + tagItemId);
-		let tagItem =
-			TAGS[tagItemId.toLowerCase()] ||
-			new Tag(
-				tagItemId,
-				"undefined",
-				"This tag is not included in the reference.",
-				"",
-				{}
-			);
+		let tagItem = Data.getTagById(tagItemId);
 		// console.log("1.5. tagItem is :", tagItem.name);
 
-		let modifierItem: GlobalModifier | undefined;
-		if (hoverText.match(/=$/)) {
-			const modifierItemId = hoverText.replace(/(:\w+)?=$/, "").toLowerCase();
-			// console.log("1.6. modifier item id is :" + modifierItemId);
-			modifierItem = GLOBAL_MODIFIERS[modifierItemId];
-			// console.log("1.7. modifierItem is :", modifierItem.name);
-		}
+		let modifierItem = Data.getGlobalModifierById(
+			hoverText.replace(/(:\w+)?=$/, "").toLowerCase()
+		);
 
 		return new Hover(this.makeMarkdownString(tagItem, modifierItem));
 	}
@@ -70,16 +55,16 @@ export default class MTMLHoverProvider implements HoverProvider {
 		// グローバルモディファイアの表示
 		if (globalModifier) {
 			markdownString.appendCodeblock(
-				codeBlock.withGlobalModifier(tag, globalModifier)
+				CodeBlock.withGlobalModifier(tag, globalModifier)
 			);
 			markdownString.appendMarkdown(
 				`${globalModifier.description}` +
-					`\n\n[${config.CMS.getName()} ${globalModifier.name} Reference](${
+					`\n\n[${Config.CMS.getName()} ${globalModifier.name} Reference](${
 						globalModifier.url
 					})`
 			);
 		}
-		markdownString.appendCodeblock(codeBlock.codeBlock(tag));
+		markdownString.appendCodeblock(CodeBlock.codeBlock(tag));
 		markdownString.appendMarkdown(`\n${tag.description}`);
 
 		if (tagModifiers.length > 0) {
@@ -88,7 +73,7 @@ export default class MTMLHoverProvider implements HoverProvider {
 				tagModifiers
 					.map((modifier) => {
 						return (
-							`\n- ${codeBlock.localModifier(modifier)}` +
+							`\n- ${CodeBlock.localModifier(modifier)}` +
 							`\n\t- ${
 								modifier.description === ""
 									? "no description"
@@ -101,7 +86,7 @@ export default class MTMLHoverProvider implements HoverProvider {
 		}
 
 		markdownString.appendMarkdown(
-			`\n\n[${config.CMS.getName()} ${tag.name} Reference](${tag.url})`
+			`\n\n[${Config.CMS.getName()} ${tag.name} Reference](${tag.url})`
 		);
 		// console.log("makeMarkdownString :" + markdownString.value);
 

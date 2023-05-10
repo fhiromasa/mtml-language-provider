@@ -24,7 +24,7 @@ export class Definition {
 
 export class CMS {
 	static getName() {
-		return CONF.get<TCms>("cmsName", "Movable Type");
+		return CONF.get<TCms>("cms.name", "Movable Type");
 	}
 }
 

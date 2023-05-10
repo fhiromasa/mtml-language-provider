@@ -7,8 +7,8 @@ import powercmsModifier from "./data/powercms/modifier.json";
 import powercms_xTag from "./data/powercms_x/tag.json";
 import powercms_xModifier from "./data/powercms_x/modifier.json";
 import { TTags, TGlobalModifiers } from "./data/item";
-import * as Config from "./config";
-import * as CodeBlock from "./codeBlock";
+import * as Config from "./utils/config";
+import * as CodeBlock from "./utils/codeBlock";
 
 /**
  * code blockを生成するモジュール

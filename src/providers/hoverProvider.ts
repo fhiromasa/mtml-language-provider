@@ -26,7 +26,8 @@ export default class MTMLHoverProvider implements HoverProvider {
 
 		const tagText = document.getText(tagRange);
 		const modifierText = document.getText(modifierRange);
-		// console.log("1.2. tag text is   :" + tagText);
+		// console.log("1.1. tag text is   :" + tagText);
+		// console.log("1.2. modifier text is   :" + modifierText);
 
 		const tagStructure = tagText.split(/\s+/);
 		// console.log("1.3. tag structure is :" + tagStructure.join(", "));
@@ -102,52 +103,4 @@ export default class MTMLHoverProvider implements HoverProvider {
 
 		return ms;
 	}
-
-	readonly makeMarkdownString = (
-		tag: Tag,
-		globalModifier: GlobalModifier | undefined
-	): MarkdownString => {
-		const markdownString = new MarkdownString();
-		const tagModifiers = Object.values(tag.modifiers);
-
-		// グローバルモディファイアの表示
-		if (globalModifier) {
-			markdownString.appendCodeblock(
-				CodeBlock.withGlobalModifier(tag, globalModifier)
-			);
-			markdownString.appendMarkdown(
-				`${globalModifier.description}` +
-					`\n\n[${Config.CMS.getName()} ${globalModifier.name} Reference](${
-						globalModifier.url
-					})`
-			);
-		}
-		markdownString.appendCodeblock(CodeBlock.codeBlock(tag));
-		markdownString.appendMarkdown(`\n${tag.description}`);
-
-		if (tagModifiers.length > 0) {
-			markdownString.appendMarkdown(`\n\nmodifiers`);
-			markdownString.appendMarkdown(
-				tagModifiers
-					.map((modifier) => {
-						return (
-							`\n- ${CodeBlock.localModifier(modifier)}` +
-							`\n\t- ${
-								modifier.description === ""
-									? "no description"
-									: modifier.description
-							}`
-						);
-					})
-					.join("")
-			);
-		}
-
-		markdownString.appendMarkdown(
-			`\n\n[${Config.CMS.getName()} ${tag.name} Reference](${tag.url})`
-		);
-		// console.log("makeMarkdownString :" + markdownString.value);
-
-		return markdownString;
-	};
 }

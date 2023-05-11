@@ -40,7 +40,7 @@ Display the tag description when the cursor hovers over the tag. (カーソル�
 
 Show tag description and global modifier description when the cursor hovers over a global modifier. (カーソルがグローバルモディファイアにホバーした時はモディファイアの説明とタグの説明を表示します。)
 
-If you want to disable this feature, Set `mtml.hover.enable:false` in `.vscode/settings.json`. (この機能をオフにしたければ`mtml.hover.enable:false`を設定ファイルに書いてください。)
+If you want to disable this feature, Set `editor.hover.enable:false` in `.vscode/settings.json`. (この機能をオフにしたければ`editor.hover.enable:false`を設定ファイルに書いてください。)
 
 ![hover item for tag](./images/hovarImage_onTag.png)
 

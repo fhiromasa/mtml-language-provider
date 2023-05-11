@@ -6,9 +6,9 @@ import {
 	ExtensionContext,
 	languages,
 } from "vscode";
-import MTMLHoverProvider from "./hoverProvider";
-import MTMLCompletionItemProvider from "./completionItemProvider";
-import MTMLDefinitionProvider from "./definitionProvider";
+import MTMLHoverProvider from "./providers/hoverProvider";
+import MTMLCompletionItemProvider from "./providers/completionItemProvider";
+import MTMLDefinitionProvider from "./providers/definitionProvider";
 
 const SEL: DocumentSelector = { scheme: "file", language: "mtml" };
 
@@ -16,12 +16,9 @@ const SEL: DocumentSelector = { scheme: "file", language: "mtml" };
 // your extension is activated the very first time the command is executed
 export function activate(context: ExtensionContext): void {
 	// hover機能の提供開始
-	if (workspace.getConfiguration("mtml").get<Boolean>("hover.enable")) {
-		// console.log("settings of mtml.hover.enable is true");
-		context.subscriptions.push(
-			languages.registerHoverProvider(SEL, new MTMLHoverProvider())
-		);
-	}
+	context.subscriptions.push(
+		languages.registerHoverProvider(SEL, new MTMLHoverProvider())
+	);
 
 	// Provide Completion
 	if (workspace.getConfiguration("mtml").get<Boolean>("completion.enable")) {

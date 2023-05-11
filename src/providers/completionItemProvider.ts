@@ -1,12 +1,10 @@
-import { getCmsItems, TCms, tagRegex } from "./utils";
-import { Tag } from "./data/item";
-import * as CodeBlock from "./codeBlock";
+import { Tag } from "../data/item";
+import { Data, tagRegex, CodeBlock } from "../utils";
 import {
 	CompletionItemProvider,
 	TextDocument,
 	CancellationToken,
 	Position,
-	workspace,
 	CompletionContext,
 	CompletionItem,
 	CompletionItemKind,
@@ -22,10 +20,7 @@ export default class MTMLCompletionItemProvider
 		context: CompletionContext
 	): CompletionItem[] | undefined {
 		// 設定を使うのならここで読んで設定処理
-		const CMS_NAME = workspace
-			.getConfiguration("mtml")
-			.get<TCms>("cms.name", "Movable Type");
-		const [TAGS, GLOBAL_MODIFIERS] = getCmsItems(CMS_NAME);
+		const [TAGS, GLOBAL_MODIFIERS] = Data.getCmsItems();
 
 		const pointerRegex = /[0-9a-zA-Z<:_]+=?/i;
 

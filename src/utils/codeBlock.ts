@@ -87,7 +87,10 @@ export const localModifier = (modifier: LocalModifier): string => {
 export const localModifiersToString = (modifiers: TLocalModifiers): string => {
 	const modifierArr = Object.values(modifiers);
 	const modifierStringArr = modifierArr.map((modifier) => {
-		return `- ${modifier.name}\n  - ${modifier.description}`;
+		return [
+			`- ${modifier.name}`,
+			`  - ${modifier.description || "no description"}`,
+		].join("\n");
 	});
 	return modifierStringArr.join("\n");
 };

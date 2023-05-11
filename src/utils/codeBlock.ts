@@ -1,4 +1,9 @@
-import { Tag, LocalModifier, GlobalModifier } from "../data/item";
+import {
+	Tag,
+	LocalModifier,
+	GlobalModifier,
+	TLocalModifiers,
+} from "../data/item";
 
 /**
  * @param tag
@@ -63,4 +68,26 @@ export const globalModifier = (modifier: GlobalModifier): string => {
  */
 export const localModifier = (modifier: LocalModifier): string => {
 	return `${modifier.name}="${modifier.value}"`;
+};
+
+/**
+ * マークダウン形式のリストとして返す
+ *
+ * ex)
+ * ```
+ * - key
+ *   - description
+ * - key
+ *   - description
+ * ```
+ *
+ * @param modifiers
+ * @returns
+ */
+export const localModifiersToString = (modifiers: TLocalModifiers): string => {
+	const modifierArr = Object.values(modifiers);
+	const modifierStringArr = modifierArr.map((modifier) => {
+		return `- ${modifier.name}\n  - ${modifier.description}`;
+	});
+	return modifierStringArr.join("\n");
 };

@@ -50,8 +50,9 @@ export default class MTMLHoverProvider implements HoverProvider {
 	/**
 	 * ex)
 	 * ```
+	 * .```
 	 * <mt:TagName>
-	 * ```
+	 * .```
 	 *
 	 * description
 	 *
@@ -60,6 +61,7 @@ export default class MTMLHoverProvider implements HoverProvider {
 	 * モディファイア
 	 * - key
 	 *   - description
+	 * ```
 	 */
 	public makeMSByTag(tag: Tag): MarkdownString {
 		const ms = new MarkdownString();
@@ -80,12 +82,14 @@ export default class MTMLHoverProvider implements HoverProvider {
 	/**
 	 * ex)
 	 * ```
+	 * .```
 	 * <mt:TagName global="">
-	 * ```
+	 * .```
 	 *
 	 * description
 	 *
 	 * [リンク](https)
+	 * ```
 	 */
 	public makeMSGlobalModifier(
 		tag: Tag,

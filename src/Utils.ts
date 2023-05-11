@@ -1,6 +1,6 @@
-export * as Config from "./utils/config";
-export * as CodeBlock from "./utils/codeBlock";
-export * as Data from "./utils/data";
+export * as Config from "./utilities/config";
+export * as CodeBlock from "./utilities/codeBlock";
+export * as Data from "./utilities/data";
 
 // 正規表現だと改行を取れないらしい
 export const tagRegex = /<\$?mt(app)?:?[^>]+/i;

@@ -5,11 +5,7 @@ import { workspace } from "vscode";
 
 const CONF = workspace.getConfiguration("mtml");
 
-export class Hover {
-	static isEnable(): boolean {
-		return CONF.get<boolean>("hover.enable", true);
-	}
-}
+export class Hover {}
 
 export class Completion {
 	static isEnable() {

@@ -1,5 +1,5 @@
 import { GlobalModifier, Tag } from "../data/item";
-import { Data, tagRegex, Config, CodeBlock, modifierRegex } from "../utils";
+import { tagRegex, modifierRegex, Data, CodeBlock, Config } from "../utils";
 import {
 	HoverProvider,
 	Hover,

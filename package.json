@@ -67,11 +67,6 @@
 			"type": "",
 			"order": 20,
 			"properties": {
-				"mtml.hover.enable": {
-					"type": "boolean",
-					"default": true,
-					"description": "Do you want a hover feature? default true.\nRequires reload after change"
-				},
 				"mtml.completion.enable": {
 					"type": "boolean",
 					"default": true,

@@ -1,5 +1,5 @@
 import { Tag } from "../data/item";
-import { Data, tagRegex, CodeBlock } from "../utils";
+import { Data, tagRegex, CodeBlock, modifierRegex } from "../utils";
 import {
 	CompletionItemProvider,
 	TextDocument,
@@ -10,9 +10,7 @@ import {
 	CompletionItemKind,
 } from "vscode";
 
-export default class MTMLCompletionItemProvider
-	implements CompletionItemProvider
-{
+export class MTMLCompletionItemProvider implements CompletionItemProvider {
 	public provideCompletionItems(
 		document: TextDocument,
 		position: Position,
@@ -88,5 +86,59 @@ export default class MTMLCompletionItemProvider
 		return globalModifierCompletionItemArr.concat(
 			localModifierCompletionItemArr
 		);
+	}
+}
+
+/**
+ * 何もないところでタグの基本形を補完する。
+ * 必須モディファイアを付属させる。
+ */
+export class TagCompletion implements CompletionItemProvider {
+	provideCompletionItems(
+		document: TextDocument,
+		position: Position,
+		token: CancellationToken,
+		context: CompletionContext
+	): CompletionItem[] | undefined {
+		const tagRange = document.getWordRangeAtPosition(position, tagRegex);
+		if (tagRange) {
+			return;
+		}
+		const tagArr = Object.values(Data.getTagItems());
+		const completionItemArr = tagArr.map((tag) => {
+			return new CompletionItem(
+				{
+					label: CodeBlock.withRequiredModifiers(tag),
+					detail: tag.type,
+				},
+				CompletionItemKind.Class
+			);
+		});
+		return completionItemArr;
+	}
+}
+
+// タグのモディファイアとグローバルモディファイアのIDを補完する
+// タグの内部で働く。
+export class ModifierCompletion implements CompletionItemProvider {
+	provideCompletionItems(
+		document: TextDocument,
+		position: Position,
+		token: CancellationToken,
+		context: CompletionContext
+	): CompletionItem[] {
+		throw new Error("Method not implemented.");
+	}
+}
+
+// モディファイアIDの後ろで "=" を打ったときにモディファイアがとりうる値を補完する
+export class ModifierValueCompletion implements CompletionItemProvider {
+	provideCompletionItems(
+		document: TextDocument,
+		position: Position,
+		token: CancellationToken,
+		context: CompletionContext
+	): CompletionItem[] {
+		throw new Error("Method not implemented.");
 	}
 }

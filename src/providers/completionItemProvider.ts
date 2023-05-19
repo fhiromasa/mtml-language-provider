@@ -118,20 +118,62 @@ export class TagCompletion implements CompletionItemProvider {
 	}
 }
 
-// タグのモディファイアとグローバルモディファイアのIDを補完する
-// タグの内部で働く。
+/**
+ * タグのモディファイアとグローバルモディファイアのIDを補完する。
+ * タグの内部で働く。
+ */
 export class ModifierCompletion implements CompletionItemProvider {
 	provideCompletionItems(
 		document: TextDocument,
 		position: Position,
 		token: CancellationToken,
 		context: CompletionContext
-	): CompletionItem[] {
-		throw new Error("Method not implemented.");
+	): CompletionItem[] | undefined {
+		const tagRange = document.getWordRangeAtPosition(position, tagRegex);
+		if (!tagRange) {
+			// タグの外側
+			return;
+		}
+		const tagText = document.getText(tagRange);
+		// console.log(modifierRegex.exec(tagText));
+		// if () {
+		// 	// TODO: modifierのうちがわを検出して補完しないようにする
+		// 	// console.log("inner modifier");
+		// 	return;
+		// }
+		const tagStructure = tagText.split(/\s+/);
+		const tagId = tagStructure[0].replace(/[<:$]/g, "");
+		// console.log(`1.2 tag id: ${tagId}`);
+		const tag = Data.getTagById(tagId);
+		const lModArr = Object.values(tag.modifiers);
+		const lModItemArr = lModArr.map((mod) => {
+			return new CompletionItem(
+				{
+					label: CodeBlock.localModifier(mod),
+					detail: mod.type,
+				},
+				CompletionItemKind.Property
+			);
+		});
+
+		const gModArr = Object.values(Data.getGlobalModifierItems());
+		const gModItemArr = gModArr.map((mod) => {
+			return new CompletionItem(
+				{
+					label: CodeBlock.globalModifier(mod),
+					detail: mod.type,
+				},
+				CompletionItemKind.Field
+			);
+		});
+
+		return [...lModItemArr, ...gModItemArr];
 	}
 }
 
-// モディファイアIDの後ろで "=" を打ったときにモディファイアがとりうる値を補完する
+/**
+ * モディファイアIDの後ろで "=" を打ったときにモディファイアがとりうる値を補完する
+ */
 export class ModifierValueCompletion implements CompletionItemProvider {
 	provideCompletionItems(
 		document: TextDocument,

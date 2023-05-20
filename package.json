@@ -67,11 +67,6 @@
 			"type": "",
 			"order": 20,
 			"properties": {
-				"mtml.hover.enable": {
-					"type": "boolean",
-					"default": true,
-					"description": "Do you want a hover feature? default true.\nRequires reload after change"
-				},
 				"mtml.completion.enable": {
 					"type": "boolean",
 					"default": true,
@@ -108,7 +103,7 @@
 	},
 	"scripts": {
 		"vscode:prepublish": "npm run compile",
-		"compile": "tsc -p ./",
+		"compile": "rm -rf ./out/ && tsc -p ./",
 		"watch": "tsc -watch -p ./",
 		"pretest": "npm run compile && npm run lint",
 		"lint": "eslint src --ext ts",

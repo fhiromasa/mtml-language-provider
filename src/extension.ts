@@ -8,7 +8,6 @@ import {
 } from "vscode";
 import MTMLHoverProvider from "./providers/hoverProvider";
 import {
-	MTMLCompletionItemProvider,
 	TagCompletion,
 	ModifierCompletion,
 	ModifierValueCompletion,
@@ -28,13 +27,6 @@ export function activate(context: ExtensionContext): void {
 
 	// Provide Completion
 	if (Config.Completion.isEnable()) {
-		// context.subscriptions.push(
-		// 	languages.registerCompletionItemProvider(
-		// 		SEL,
-		// 		new MTMLCompletionItemProvider(),
-		// 		"<"
-		// 	)
-		// );
 		context.subscriptions.push(
 			languages.registerCompletionItemProvider(SEL, new TagCompletion(), `:`),
 			languages.registerCompletionItemProvider(SEL, new ModifierCompletion(), " "),

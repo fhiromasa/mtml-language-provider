@@ -7,6 +7,7 @@ import {
 	CompletionContext,
 	CompletionItem,
 	CompletionItemKind,
+	SnippetString,
 } from "vscode";
 
 /**
@@ -67,24 +68,29 @@ export class ModifierCompletion implements CompletionItemProvider {
 		const tag = Data.getTagById(tagId);
 		const lModArr = Object.values(tag.modifiers);
 		const lModItemArr = lModArr.map((mod) => {
-			return new CompletionItem(
+			const item = new CompletionItem(
 				{
-					label: CodeBlock.localModifier(mod),
-					detail: mod.type,
+					label: mod.name,
+					description: mod.type,
 				},
 				CompletionItemKind.Property
 			);
+			item.documentation = mod.description;
+			return item;
 		});
 
 		const gModArr = Object.values(Data.getGlobalModifierItems());
 		const gModItemArr = gModArr.map((mod) => {
-			return new CompletionItem(
+			const item = new CompletionItem(
 				{
-					label: CodeBlock.globalModifier(mod),
-					detail: mod.type,
+					label: mod.name,
+					description: mod.type,
 				},
 				CompletionItemKind.Field
 			);
+			item.documentation = mod.description;
+			item.insertText = CodeBlock.globalModifier(mod);
+			return item;
 		});
 
 		return [...lModItemArr, ...gModItemArr];
@@ -119,16 +125,25 @@ export class ModifierValueCompletion implements CompletionItemProvider {
 
 		const tag = Data.getTagById(tagId);
 		const lMod = tag.modifiers[modId];
-		if (!lMod) {
-			// console.log("モディファイアなし");
-			return;
+
+		const valuesItem: CompletionItem[] = [];
+		if (lMod) {
+			const values = lMod.value.replace(/\s/g, "").split("|");
+			// console.log(`1.5 values: ${values}`);
+
+			values.forEach((val) => {
+				valuesItem.push(
+					new CompletionItem(`"${val}"`, CompletionItemKind.EnumMember)
+				);
+			});
 		}
 
-		const values = lMod.value.replace(/\s/g, "").split("|");
-		// console.log(`1.4 values: ${values}`);
+		const noneItem = new CompletionItem(
+			{ label: `none` },
+			CompletionItemKind.EnumMember
+		);
+		noneItem.insertText = new SnippetString(`"$1"`);
 
-		return values.map((val) => {
-			return new CompletionItem(`"${val}"`, CompletionItemKind.EnumMember);
-		});
+		return [noneItem, ...valuesItem];
 	}
 }

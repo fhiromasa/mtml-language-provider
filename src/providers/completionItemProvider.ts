@@ -180,7 +180,35 @@ export class ModifierValueCompletion implements CompletionItemProvider {
 		position: Position,
 		token: CancellationToken,
 		context: CompletionContext
-	): CompletionItem[] {
-		throw new Error("Method not implemented.");
+	): CompletionItem[] | undefined {
+		const tagRange = document.getWordRangeAtPosition(position, tagRegex);
+		const modRange = document.getWordRangeAtPosition(position, modifierRegex);
+		if (!tagRange) {
+			// タグの外側
+			return;
+		}
+		const tagText = document.getText(tagRange);
+		const tagStructure = tagText.split(/\s+/);
+		const tagId = tagStructure[0].replace(/[<:$]/g, "");
+		// console.log(`1.2 tag id: ${tagId}`);
+
+		const modText = document.getText(modRange);
+		const modStructure = modText.split(/[=:]/);
+		const modId = modStructure[0];
+		// console.log(`1.3 mod id: ${modId}`);
+
+		const tag = Data.getTagById(tagId);
+		const lMod = tag.modifiers[modId];
+		if (!lMod) {
+			// console.log("モディファイアなし");
+			return;
+		}
+
+		const values = lMod.value.replace(/\s/g, "").split("|");
+		// console.log(`1.4 values: ${values}`);
+
+		return values.map((val) => {
+			return new CompletionItem(`"${val}"`, CompletionItemKind.EnumMember);
+		});
 	}
 }

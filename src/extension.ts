@@ -38,7 +38,7 @@ export function activate(context: ExtensionContext): void {
 		context.subscriptions.push(
 			languages.registerCompletionItemProvider(SEL, new TagCompletion(), `:`),
 			languages.registerCompletionItemProvider(SEL, new ModifierCompletion(), " "),
-			languages.registerCompletionItemProvider(SEL, new ModifierValueCompletion())
+			languages.registerCompletionItemProvider(SEL, new ModifierValueCompletion(), "=")
 		);
 	}
 

@@ -7,8 +7,13 @@ import {
 	languages,
 } from "vscode";
 import MTMLHoverProvider from "./providers/hoverProvider";
-import MTMLCompletionItemProvider from "./providers/completionItemProvider";
+import {
+	TagCompletion,
+	ModifierCompletion,
+	ModifierValueCompletion,
+} from "./providers/completionItemProvider";
 import MTMLDefinitionProvider from "./providers/definitionProvider";
+import { Config } from "./utils";
 
 const SEL: DocumentSelector = { scheme: "file", language: "mtml" };
 
@@ -21,13 +26,11 @@ export function activate(context: ExtensionContext): void {
 	);
 
 	// Provide Completion
-	if (workspace.getConfiguration("mtml").get<Boolean>("completion.enable")) {
+	if (Config.Completion.isEnable()) {
 		context.subscriptions.push(
-			languages.registerCompletionItemProvider(
-				SEL,
-				new MTMLCompletionItemProvider(),
-				"<"
-			)
+			languages.registerCompletionItemProvider(SEL, new TagCompletion(), `:`),
+			languages.registerCompletionItemProvider(SEL, new ModifierCompletion(), " "),
+			languages.registerCompletionItemProvider(SEL, new ModifierValueCompletion(), "=")
 		);
 	}
 

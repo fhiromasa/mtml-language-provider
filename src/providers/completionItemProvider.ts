@@ -147,3 +147,70 @@ export class ModifierValueCompletion implements CompletionItemProvider {
 		return [noneItem, ...valuesItem];
 	}
 }
+
+/**
+ * 1. モディファイアの "" の中で $ を打ったときに変数名を補完する。
+ * 2. name, var モディファイアの後ろで "=" を打ったときに変数名を補完する。
+ */
+export class VariablesCompletion implements CompletionItemProvider {
+	provideCompletionItems(
+		document: TextDocument,
+		position: Position,
+		token: CancellationToken,
+		context: CompletionContext
+	): CompletionItem[] | undefined {
+		console.log(this);
+		const tagRange = document.getWordRangeAtPosition(position, tagRegex);
+		const modRange = document.getWordRangeAtPosition(position, modifierRegex);
+		if (!tagRange && !modRange) {
+			// タグの外側
+			return;
+		}
+		const tagText = document.getText(tagRange);
+		const tagStructure = tagText.split(/\s+/);
+		const tagId = tagStructure[0].replace(/[<:$]/g, "");
+		// console.log(`1.2 tag id: ${tagId}`);
+
+		const modText = document.getText(modRange);
+		const modStructure = modText.split(/[=:]/);
+		const modId = modStructure[0];
+		console.log(`1.3 mod structure: ${modStructure}`);
+		console.log(`1.3 mod id: ${modId}`);
+
+		const tag = Data.getTagById(tagId);
+		const lMod = tag.modifiers[modId];
+		const gMod = Data.getGlobalModifierById(modId);
+
+		if (!lMod && !gMod) {
+			// console.log("よくわからんモディファイア");
+			return;
+		}
+		const variables: string[] = ["var1", "var2", "var3"];
+
+		// context が = だった時
+		if (context.triggerCharacter === "=") {
+			// モディファイアが name, var, setvar だったとき "" で囲む
+			if (
+				(lMod && (lMod.name === "name" || lMod.name === "var")) ||
+				(gMod && gMod.name === "setvar")
+			) {
+				variables.forEach((variable, index) => {
+					variables[index] = `"${variable}"`;
+				});
+			}
+		}
+		// console.log(`variables: ${variables}`);
+
+		const variablesItem = variables.map((variable) => {
+			const item = new CompletionItem(
+				{ label: variable.replace(/"/g, "") },
+				CompletionItemKind.Variable
+			);
+			item.insertText = variable;
+
+			return item;
+		});
+
+		return [...variablesItem];
+	}
+}

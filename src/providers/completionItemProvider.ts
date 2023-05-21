@@ -1,4 +1,4 @@
-import { Data, tagRegex, CodeBlock, modifierRegex } from "../utils";
+import { Data, tagRegex, CodeBlock, modifierRegex, Variable } from "../utils";
 import {
 	CompletionItemProvider,
 	TextDocument,
@@ -174,18 +174,18 @@ export class VariablesCompletion implements CompletionItemProvider {
 		const modText = document.getText(modRange);
 		const modStructure = modText.split(/[=:]/);
 		const modId = modStructure[0];
-		console.log(`1.3 mod structure: ${modStructure}`);
-		console.log(`1.3 mod id: ${modId}`);
+		// console.log(`1.3 mod structure: ${modStructure}`);
+		// console.log(`1.3 mod id: ${modId}`);
 
 		const tag = Data.getTagById(tagId);
 		const lMod = tag.modifiers[modId];
 		const gMod = Data.getGlobalModifierById(modId);
 
-		if (!lMod && !gMod) {
-			// console.log("よくわからんモディファイア");
+		const variables = Variable.collectVariables(document.getText());
+		if (variables.length === 0) {
+			// console.log("変数なし");
 			return;
 		}
-		const variables: string[] = ["var1", "var2", "var3"];
 
 		// context が = だった時
 		if (context.triggerCharacter === "=") {
@@ -197,6 +197,8 @@ export class VariablesCompletion implements CompletionItemProvider {
 				variables.forEach((variable, index) => {
 					variables[index] = `"${variable}"`;
 				});
+			} else {
+				return;
 			}
 		}
 		// console.log(`variables: ${variables}`);
@@ -211,6 +213,6 @@ export class VariablesCompletion implements CompletionItemProvider {
 			return item;
 		});
 
-		return [...variablesItem];
+		return variablesItem;
 	}
 }

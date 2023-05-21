@@ -50,13 +50,17 @@ If you want to disable this feature, Set `editor.hover.enable:false` in `.vscode
 
 Outside the tag, the tag is given as a completion candidate. (タグの外側では MT タグを補完候補として挙げます。)
 
-Inside the tag, tag modifiers and global modifiers are given as completion candidates. (タグの内側では MT タグのモディファイアとグローバルモディファイアを補完候補として挙げます。)
+When you hit a `half-width` space inside the tag, MT tag modifiers and global modifiers are listed as completion candidates.(タグの内側で半角スペースを打ったときに MT タグのモディファイアとグローバルモディファイアを補完候補として挙げます。)
+
+When you hit `=` after the modifier, the possible values ​​of the modifier are given as completion candidates. Also, when the modifier is name, var, setvar, the variable name in the file is also given as a completion candidate. Furthermore, when you hit `$` in the modifier's `""`, the variable names in the file are also given as completion candidates. (モディファイアの後ろで = を打ったときにモディファイアのとりうる値を補完候補としてあげます。また、モディファイアが name, var, setvar だったときにはファイル内の変数名も一緒に補完候補としてあげます。さらに、モディファイアの "" のなかで $ を打ったときも同様にファイル内の変数名を補完候補としてあげます。)
 
 If you want to disable this feature, Set `mtml.completion.enable:false` in `.vscode/settings.json`. (この機能をオフにしたければ`mtml.completion.enable:false`を設定ファイルに書いてください。)
 
 ![completion item for tag](./images/completionImage_tag.png)
 
-![completion item for global modifier](./images/completionImage_globalModifier.png)
+![completion item for global modifier](./images/completionImage_Modifier.png)
+
+![completion item for global modifier](./images/completionImage_ModifierValue.png)
 
 ### Definition
 

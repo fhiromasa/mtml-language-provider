@@ -1,5 +1,5 @@
 import * as assert from "assert";
-import { Codeblock } from "../../utils";
+import * as Codeblock from "../../utilities/codeblock";
 
 import {
 	BlockTag,

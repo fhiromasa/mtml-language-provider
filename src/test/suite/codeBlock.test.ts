@@ -1,5 +1,5 @@
 import * as assert from "assert";
-import * as codeBlock from "../../utilities/codeBlock";
+import { Codeblock } from "../../utils";
 
 import {
 	BlockTag,
@@ -21,7 +21,7 @@ suite("codeBlock Test Suite", () => {
 		);
 		const expected = `<mt:${tag.name}>`;
 		// execute
-		const actual = codeBlock.codeBlock(tag);
+		const actual = Codeblock.codeblock(tag);
 		// assert
 		assert.strictEqual(actual, expected);
 	});
@@ -36,7 +36,7 @@ suite("codeBlock Test Suite", () => {
 		);
 		const expected = `<mt:${tag.name}></mt:${tag.name}>`;
 		// execute
-		const actual = codeBlock.codeBlock(tag);
+		const actual = Codeblock.codeblock(tag);
 		// assert
 		assert.strictEqual(actual, expected);
 	});
@@ -56,7 +56,7 @@ suite("codeBlock Test Suite", () => {
 		);
 		const expected = `<mt:${tag.name}></mt:${tag.name}>`;
 		// execute
-		const actual = codeBlock.withRequiredModifiers(tag);
+		const actual = Codeblock.withRequiredModifiers(tag);
 		// assert
 		assert.strictEqual(actual, expected);
 	});
@@ -72,7 +72,7 @@ suite("codeBlock Test Suite", () => {
 		);
 		const expected = `<mt:${tag.name} ${requierdModifier.name}="${requierdModifier.value}"></mt:${tag.name}>`;
 		// execute
-		const actual = codeBlock.withRequiredModifiers(tag);
+		const actual = Codeblock.withRequiredModifiers(tag);
 		// assert
 		assert.strictEqual(actual, expected);
 	});
@@ -92,7 +92,7 @@ suite("codeBlock Test Suite", () => {
 		);
 		const expected = `<mt:${tag.name} ${globalModifier.name}=""></mt:${tag.name}>`;
 		// execute
-		const actual = codeBlock.withGlobalModifier(tag, globalModifier);
+		const actual = Codeblock.withGlobalModifier(tag, globalModifier);
 		// assert
 		assert.strictEqual(actual, expected);
 	});
@@ -106,7 +106,7 @@ suite("codeBlock Test Suite", () => {
 		);
 		const expected = `${globalModifier.name}=""`;
 		// execute
-		const actual = codeBlock.globalModifier(globalModifier);
+		const actual = Codeblock.globalModifier(globalModifier);
 		// assert
 		assert.strictEqual(actual, expected);
 	});
@@ -126,8 +126,8 @@ suite("codeBlock Test Suite", () => {
 		const expected1 = `${globalModifier1.name}="",""`;
 		const expected2 = `${globalModifier2.name}="",""`;
 		// execute
-		const actual1 = codeBlock.globalModifier(globalModifier1);
-		const actual2 = codeBlock.globalModifier(globalModifier2);
+		const actual1 = Codeblock.globalModifier(globalModifier1);
+		const actual2 = Codeblock.globalModifier(globalModifier2);
 		// assert
 		assert.strictEqual(actual1, expected1);
 		assert.strictEqual(actual2, expected2);
@@ -142,7 +142,7 @@ suite("codeBlock Test Suite", () => {
 		);
 		const expected = `${localModifier.name}="${localModifier.value}"`;
 		// execute
-		const actual = codeBlock.localModifier(localModifier);
+		const actual = Codeblock.localModifier(localModifier);
 		// assert
 		assert.strictEqual(actual, expected);
 	});
@@ -166,7 +166,7 @@ suite("codeBlock Test Suite", () => {
 			`  - ${modifiers.four.description}`,
 		].join("\n");
 		// execute
-		const actual = codeBlock.localModifiersToMarkdownList(modifiers);
+		const actual = Codeblock.localModifiersToMarkdownList(modifiers);
 		// assert
 		assert.strictEqual(actual, expected);
 	});

@@ -6,6 +6,7 @@ import {
 	FunctionTag,
 	GlobalModifier,
 	LocalModifier,
+	TLocalModifiers,
 } from "../../data/item";
 // import * as myExtension from '../../extension';
 
@@ -142,6 +143,30 @@ suite("codeBlock Test Suite", () => {
 		const expected = `${localModifier.name}="${localModifier.value}"`;
 		// execute
 		const actual = codeBlock.localModifier(localModifier);
+		// assert
+		assert.strictEqual(actual, expected);
+	});
+
+	test("test localModifiersToMarkdownList()", () => {
+		// prepare
+		const modifiers: TLocalModifiers = {
+			one: new LocalModifier("one", "one description", "one | val"),
+			two: new LocalModifier("two", "two description", "two | val"),
+			three: new LocalModifier("three", "three description", "three | val"),
+			four: new LocalModifier("four", "four description", "four | val"),
+		};
+		const expected = [
+			`- ${modifiers.one.name}`,
+			`  - ${modifiers.one.description}`,
+			`- ${modifiers.two.name}`,
+			`  - ${modifiers.two.description}`,
+			`- ${modifiers.three.name}`,
+			`  - ${modifiers.three.description}`,
+			`- ${modifiers.four.name}`,
+			`  - ${modifiers.four.description}`,
+		].join("\n");
+		// execute
+		const actual = codeBlock.localModifiersToMarkdownList(modifiers);
 		// assert
 		assert.strictEqual(actual, expected);
 	});

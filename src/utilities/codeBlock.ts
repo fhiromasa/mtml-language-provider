@@ -84,7 +84,9 @@ export const localModifier = (modifier: LocalModifier): string => {
  * @param modifiers
  * @returns
  */
-export const localModifiersToString = (modifiers: TLocalModifiers): string => {
+export const localModifiersToMarkdownList = (
+	modifiers: TLocalModifiers
+): string => {
 	const modifierArr = Object.values(modifiers);
 	const modifierStringArr = modifierArr.map((modifier) => {
 		return [

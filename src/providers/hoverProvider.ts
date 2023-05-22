@@ -74,7 +74,7 @@ export default class MTMLHoverProvider implements HoverProvider {
 		}
 		if (Object.values(tag.modifiers).length > 0) {
 			ms.appendText("\nモディファイア\n");
-			ms.appendMarkdown(CodeBlock.localModifiersToString(tag.modifiers));
+			ms.appendMarkdown(CodeBlock.localModifiersToMarkdownList(tag.modifiers));
 		}
 		return ms;
 	}

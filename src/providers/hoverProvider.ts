@@ -1,5 +1,5 @@
 import { GlobalModifier, Tag } from "../data/item";
-import { tagRegex, modifierRegex, Data, Codeblock, Config } from "../utils";
+import { tagRegex, modifierRegex, Data, Codeblock, Setting } from "../utils";
 import {
 	HoverProvider,
 	Hover,
@@ -19,6 +19,7 @@ export default class MTMLHoverProvider implements HoverProvider {
 		if (!tagRange) {
 			return undefined;
 		}
+		const cms = Setting.CMS.getName();
 		const modifierRange = document.getWordRangeAtPosition(
 			position,
 			modifierRegex
@@ -34,11 +35,12 @@ export default class MTMLHoverProvider implements HoverProvider {
 
 		const tagItemId = tagStructure[0].replace(/[<:$]/g, "");
 		// console.log("1.4. tag item id is :" + tagItemId);
-		const tagItem = Data.getTagById(tagItemId);
+		const tagItem = Data.getTagById(tagItemId, cms);
 		// console.log("1.5. tagItem is :", tagItem.name);
 
 		const modifierItem = Data.getGlobalModifierById(
-			modifierText.replace(/(:\w+)?=$/, "")
+			modifierText.replace(/(:\w+)?=$/, ""),
+			cms
 		);
 
 		const tagMS = this.makeMSByTag(tagItem);
@@ -69,7 +71,7 @@ export default class MTMLHoverProvider implements HoverProvider {
 		ms.appendText(tag.description + "\n");
 		if (tag.url !== "") {
 			ms.appendMarkdown(
-				`[${tag.name}](${tag.url}) link to ${Config.CMS.getName()}\n`
+				`[${tag.name}](${tag.url}) link to ${Setting.CMS.getName()}\n`
 			);
 		}
 		if (Object.values(tag.modifiers).length > 0) {
@@ -102,7 +104,7 @@ export default class MTMLHoverProvider implements HoverProvider {
 		ms.appendCodeblock(Codeblock.withGlobalModifier(tag, modifier));
 		ms.appendText(modifier.description + "\n");
 		ms.appendMarkdown(
-			`[${modifier.name}](${modifier.url}) link to ${Config.CMS.getName()}`
+			`[${modifier.name}](${modifier.url}) link to ${Setting.CMS.getName()}`
 		);
 
 		return ms;

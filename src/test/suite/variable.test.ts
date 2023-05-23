@@ -27,7 +27,7 @@ suite("variable Test Suite", () => {
 				"setVarsName4",
 				"varName",
 				"setVarName",
-				"getvarName",
+				"getVarName",
 				"setVarBlockName",
 				"setVarTemplateName",
 				"varArr",

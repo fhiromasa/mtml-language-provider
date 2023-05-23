@@ -7,22 +7,23 @@ import powercmsModifier from "../data/powercms/modifier.json";
 import powercms_xTag from "../data/powercms_x/tag.json";
 import powercms_xModifier from "../data/powercms_x/modifier.json";
 import { TTags, TGlobalModifiers, Tag, GlobalModifier } from "../data/item";
-import * as Config from "./config";
+import * as Required from "./required";
 
 /**
  * 設定からCMSを読み取って、それのデータを返す
  * @returns
  */
-export const getCmsItems = (): [TTags, TGlobalModifiers] => {
-	return [getTagItems(), getGlobalModifierItems()];
+export const getCmsItems = (
+	cmsName: Required.TCms
+): [TTags, TGlobalModifiers] => {
+	return [getTagItems(cmsName), getGlobalModifierItems(cmsName)];
 };
 
 /**
  * 設定からCMSを読み取って、それのデータを返す
  * @returns
  */
-export const getTagItems = (): TTags => {
-	const cmsName = Config.CMS.getName();
+export const getTagItems = (cmsName: Required.TCms): TTags => {
 	switch (cmsName) {
 		case "Movable Type.net":
 			return movabletype_netTag;
@@ -39,8 +40,9 @@ export const getTagItems = (): TTags => {
  * 設定からCMSを読み取って、それのデータを返す
  * @returns
  */
-export const getGlobalModifierItems = (): TGlobalModifiers => {
-	const cmsName = Config.CMS.getName();
+export const getGlobalModifierItems = (
+	cmsName: Required.TCms
+): TGlobalModifiers => {
 	switch (cmsName) {
 		case "Movable Type.net":
 			return movabletype_netModifier;
@@ -74,8 +76,8 @@ export const makeUndefinedTag = (id: string): Tag => {
  * @param id タグのID <mt:TagName> の "TagName"
  * @returns
  */
-export const getTagById = (id: string): Tag => {
-	const TAGS = getTagItems();
+export const getTagById = (id: string, cmsName: Required.TCms): Tag => {
+	const TAGS = getTagItems(cmsName);
 	const lowerId = id.toLowerCase();
 	return TAGS[lowerId] || makeUndefinedTag(id);
 };
@@ -88,9 +90,10 @@ export const getTagById = (id: string): Tag => {
  * @returns
  */
 export const getGlobalModifierById = (
-	id: string
+	id: string,
+	cmsName: Required.TCms
 ): GlobalModifier | undefined => {
-	const MODIFIERS = getGlobalModifierItems();
+	const MODIFIERS = getGlobalModifierItems(cmsName);
 	const lowerId = id.toLowerCase().replace(/=.*/g, "");
 	return MODIFIERS[lowerId] || undefined;
 };

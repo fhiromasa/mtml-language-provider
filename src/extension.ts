@@ -11,10 +11,10 @@ import {
 	TagCompletion,
 	ModifierCompletion,
 	ModifierValueCompletion,
-	VariablesCompletion
+	VariablesCompletion,
 } from "./providers/completionItemProvider";
 import MTMLDefinitionProvider from "./providers/definitionProvider";
-import { Config } from "./utils";
+import { Setting } from "./utils";
 
 const SEL: DocumentSelector = { scheme: "file", language: "mtml" };
 
@@ -27,7 +27,7 @@ export function activate(context: ExtensionContext): void {
 	);
 
 	// Provide Completion
-	if (Config.Completion.isEnable()) {
+	if (Setting.Completion.isEnable()) {
 		context.subscriptions.push(
 			languages.registerCompletionItemProvider(SEL, new TagCompletion()),
 			languages.registerCompletionItemProvider(SEL, new ModifierCompletion(), " "),

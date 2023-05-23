@@ -7,12 +7,12 @@ import * as path from "path";
 suite("variable Test Suite", () => {
 	test("collectVariables", () => {
 		// prepare
-		const testfile = path.resolve(
+		const filepath = path.resolve(
 			__dirname,
 			"../../../",
 			"testfiles/variable.data.mtml"
 		);
-		const document = readFileSync(testfile, "utf-8");
+		const document = readFileSync(filepath, "utf-8");
 
 		// execute
 		const actual = Variable.collectVariables(document);

@@ -63,14 +63,14 @@ suite("codeBlock Test Suite", () => {
 
 	test("func withRequiredModifiers() with required modifier", () => {
 		// prepare
-		const requierdModifier = new LocalModifier("require", "必須です。", "");
+		const requiredModifier = new LocalModifier("require", "必須です。", "");
 		const tag = new BlockTag(
 			"BlockTag",
 			"Block tag description",
 			"https://example.com/",
-			{ require: requierdModifier }
+			{ require: requiredModifier }
 		);
-		const expected = `<mt:${tag.name} ${requierdModifier.name}="${requierdModifier.value}"></mt:${tag.name}>`;
+		const expected = `<mt:${tag.name} ${requiredModifier.name}="${requiredModifier.value}"></mt:${tag.name}>`;
 		// execute
 		const actual = Codeblock.withRequiredModifiers(tag);
 		// assert

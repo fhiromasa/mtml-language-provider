@@ -7,12 +7,12 @@ import * as path from "path";
 suite("variable Test Suite", () => {
 	test("collectVariables", () => {
 		// prepare
-		const testfile = path.resolve(
+		const filepath = path.resolve(
 			__dirname,
 			"../../../",
 			"testfiles/variable.data.mtml"
 		);
-		const document = readFileSync(testfile, "utf-8");
+		const document = readFileSync(filepath, "utf-8");
 
 		// execute
 		const actual = Variable.collectVariables(document);
@@ -21,21 +21,21 @@ suite("variable Test Suite", () => {
 		assert.strictEqual(
 			actual.join(),
 			[
-				"setvarsname1",
-				"setvarsname2",
-				"setvarsname3",
-				"setvarsname4",
-				"setvar_modifier",
-				"varname",
-				"setvarname",
-				"getvarname",
-				"setvarblockname",
-				"setvartemplatename",
-				"vararr",
-				"sethashvarname",
-				"sethashvarname2",
-				"hashkey",
-				"arrindex",
+				"setVarsName1",
+				"setVarsName2",
+				"setVarsName3",
+				"setVarsName4",
+				"varName",
+				"setVarName",
+				"getVarName",
+				"setVarBlockName",
+				"setVarTemplateName",
+				"varArr",
+				"SetHashVarName",
+				"SetHashVarName2",
+				"setVar_modifier",
+				"hashKey",
+				"arrIndex",
 			].join()
 		);
 	});

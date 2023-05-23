@@ -10,6 +10,17 @@
 	"[json]": {
 		"editor.formatOnSave": false
 	},
-	"cSpell.words": ["functiontag", "localname", "mtml", "mtapp"],
-	"cSpell.files": ["src/*Provider.ts", "src/Utils.ts"]
+	"cSpell.words": [
+		"functiontag",
+		"localname",
+		"mtapp",
+		"mtml",
+		"mtvar",
+		"notrequire",
+		"powercmsx",
+		"setvar",
+		"setvars",
+		"testfiles",
+		"yupyom"
+	]
 }

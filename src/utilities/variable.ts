@@ -28,7 +28,7 @@ export function collectVariables(document: string): string[] {
 
 	// MTSetVars の変数宣言を探す
 	for (const setvarsMatches of document.matchAll(setvarsRegex)) {
-		console.log(setvarsMatches);
+		// console.log(setvarsMatches);
 		const declarations = setvarsMatches[1].split(/\n/);
 
 		declarations.forEach((declaration) => {

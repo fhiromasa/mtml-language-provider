@@ -162,7 +162,7 @@ export class VariablesCompletion implements CompletionItemProvider {
 		token: CancellationToken,
 		context: CompletionContext
 	): CompletionItem[] | undefined {
-		console.log(this);
+		// console.log(this);
 		const tagRange = document.getWordRangeAtPosition(position, tagRegex);
 		const modRange = document.getWordRangeAtPosition(position, modifierRegex);
 		if (!tagRange && !modRange) {

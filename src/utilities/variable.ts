@@ -9,6 +9,26 @@ const setvarsRegex = new RegExp(
 export function collectVariables(document: string): string[] {
 	const variableNames: string[] = [];
 
+	// MTSetVars の変数宣言を探す
+	for (const setvarsMatches of document.matchAll(setvarsRegex)) {
+		// console.log(setvarsMatches);
+		const declarations = setvarsMatches[1].split(/\n/);
+		// console.log(declarations);
+
+		declarations.forEach((declaration) => {
+			const varName = declaration.replace(/\s*/, "").split(/=/)[0];
+			// 空文字は返さない
+			if (varName === "") {
+				return;
+			}
+
+			// 同じ変数名は返さなくていい
+			if (!variableNames.includes(varName)) {
+				variableNames.push(varName);
+			}
+		});
+	}
+
 	// 通常の変数宣言を探す
 	for (const matches of document.matchAll(variableRegex)) {
 		// console.log(matches);
@@ -25,21 +45,6 @@ export function collectVariables(document: string): string[] {
 		}
 	}
 	// console.log(variableNames);
-
-	// MTSetVars の変数宣言を探す
-	for (const setvarsMatches of document.matchAll(setvarsRegex)) {
-		// console.log(setvarsMatches);
-		const declarations = setvarsMatches[1].split(/\n/);
-
-		declarations.forEach((declaration) => {
-			const varName = declaration.replace(/\s*/, "").split(/=/)[0];
-
-			// 同じ変数名は返さなくていい
-			if (!variableNames.includes(varName)) {
-				variableNames.push(varName);
-			}
-		});
-	}
 
 	return variableNames;
 }

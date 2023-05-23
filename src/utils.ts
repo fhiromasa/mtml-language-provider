@@ -1,5 +1,5 @@
 export * as Config from "./utilities/config";
-export * as CodeBlock from "./utilities/codeBlock";
+export * as Codeblock from "./utilities/codeblock";
 export * as Data from "./utilities/data";
 export * as Variable from "./utilities/variable";
 

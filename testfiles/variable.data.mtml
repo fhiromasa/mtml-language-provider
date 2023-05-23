@@ -2,66 +2,66 @@
 <mt:Include module="sample">
 
 <mt:Ignore> 変数定義 </mt:Ignore>
-<mt:EntryTitle setvar="setvar_modifier">
-<mt:Var name="varname" value="値">
-<mt:SetVar name="setvarname">
-<mt:GetVar var="getvarname">
-<mt:SetVarBlock var="setvarblockname">nnnnnnnnnnnnn</mt:SetVarBlock>
-<mt:SetVars>
-  setvarsname1=setvarsvalue1
-  setvarsname2=setvarsvalue2
-  setvarsname3=setvarsvalue3
-  setvarsname4=setvarsvalue4
-</mt:SetVars>
-<mt:SetVarTemplate var="setvartemplatename">
-  setvartemplatevalue
-</mt:SetVarTemplate>
-<mt:Var var="vararr" index="0" value="vararrvalue">
-<mt:SetHashVar var="sethashvarname">
-  sethashvarkey1=sethashvarvalue1
-  sethashvarkey2=sethashvarvalue2
-  sethashvarkey3=sethashvarvalue3
-  sethashvarkey4=sethashvarvalue4
+<mt:EntryTitle setVar="setVar_modifier">
+<mt:Var name="varName" value="値">
+<mt:setVar name="setVarName">
+<mt:GetVar var="getvarName">
+<mt:setVarBlock var="setVarBlockName">nnnnnnnnnnnnn</mt:setVarBlock>
+<mt:setVars>
+  setVarsName1=setVarsValue1
+  setVarsName2=setVarsValue2
+  setVarsName3=setVarsValue3
+  setVarsName4=setVarsValue4
+</mt:setVars>
+<mt:setVarTemplate var="setVarTemplateName">
+  setVarTemplateValue
+</mt:setVarTemplate>
+<mt:Var var="varArr" index="0" value="varArrValue">
+<mt:SetHashVar var="SetHashVarName">
+  SetHashVarKey1=SetHashVarValue1
+  SetHashVarKey2=SetHashVarValue2
+  SetHashVarKey3=SetHashVarValue3
+  SetHashVarKey4=SetHashVarValue4
 </mt:SetHashVar>
-<mt:SetHashVar var="sethashvarname2">
-  sethashvarkey1=sethashvarvalue1
-  sethashvarkey2=sethashvarvalue2
-  sethashvarkey3=sethashvarvalue3
-  sethashvarkey4=sethashvarvalue4
+<mt:SetHashVar var="SetHashVarName2">
+  SetHashVarKey1=SetHashVarValue1
+  SetHashVarKey2=SetHashVarValue2
+  SetHashVarKey3=SetHashVarValue3
+  SetHashVarKey4=SetHashVarValue4
 </mt:SetHashVar>
 
 <mt:Ignore> 配列、ハッシュ without 'index' and 'key' modifier </mt:Ignore>
-<mt:Var var="vararr[0]" value="vararrvalue0">
-<mt:Var var="sethashvarname{sethashvarkey1}" value="sethashvarvalue1___">
-<mt:Var var="sethashvarname{sethashvarkey2}" value="sethashvarvalue2___">
-<mt:Var var="sethashvarname{sethashvarkey3}" value="sethashvarvalue3___">
-<mt:Var var="sethashvarname{sethashvarkey4}" value="sethashvarvalue4___">
+<mt:Var var="varArr[0]" value="varArrValue0">
+<mt:Var var="SetHashVarName{SetHashVarKey1}" value="SetHashVarValue1___">
+<mt:Var var="SetHashVarName{SetHashVarKey2}" value="SetHashVarValue2___">
+<mt:Var var="SetHashVarName{SetHashVarKey3}" value="SetHashVarValue3___">
+<mt:Var var="SetHashVarName{SetHashVarKey4}" value="SetHashVarValue4___">
 
 <mt:Ignore> 呼び出し </mt:Ignore>
-<mt:Var var="setvar_modifier">
-<mt:Var name="varname">
-<mt:Var name="setvarname">
-<mt:Var var="getvarname">
-<mt:Var var="setvarblockname">
-<mt:Var var="setvarsname1">
-<mt:Var var="setvartemplatename">
-<mt:Var var="sethashvarname">
-  <mt:Var var="hashkey" value="sethashvarkey1">
-  <mt:Var var="sethashvarname{$hashkey}">
-<mt:Var var="vararr">
-  <mt:Var var="arrindex" value="0">
-  <mt:Var var="vararr[$arrindex]">
+<mt:Var var="setVar_modifier">
+<mt:Var name="varName">
+<mt:Var name="setVarName">
+<mt:Var var="getvarName">
+<mt:Var var="setVarBlockName">
+<mt:Var var="setVarsName1">
+<mt:Var var="setVarTemplateName">
+<mt:Var var="SetHashVarName">
+  <mt:Var var="hashKey" value="SetHashVarKey1">
+  <mt:Var var="SetHashVarName{$hashKey}">
+<mt:Var var="varArr">
+  <mt:Var var="arrIndex" value="0">
+  <mt:Var var="varArr[$arrIndex]">
 
 <mt:Ignore> ループ </mt:Ignore>
-<mt:Loop name="sethashvarname">
+<mt:Loop name="SetHashVarName">
   <mt:Var var="$__key__">
-  <mt:Var var="sethashvarname2{$__key__}">
+  <mt:Var var="SetHashVarName2{$__key__}">
   <mt:Var var="$__value__">
 </mt:Loop>
-<mt:Loop name="vararr">
+<mt:Loop name="varArr">
 </mt:Loop>
 
 <mt:Ignore> ifの比較演算子 </mt:Ignore>
-<mt:If name="vararr[0]" eq="sethashvarname{sethashvarkey4}"></mt:If>
+<mt:If name="varArr[0]" eq="SetHashVarName{SetHashVarKey4}"></mt:If>
 
-<mt:If name="vararr" eq="$" ne=  ></mt:If>
+<mt:If name="varArr" eq="$" ne=  ></mt:If>

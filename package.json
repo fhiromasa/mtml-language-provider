@@ -108,7 +108,8 @@
 		"pretest": "npm run compile && npm run lint",
 		"lint": "eslint src --ext ts",
 		"test": "node ./out/test/runTest.js",
-		"package": "npm run compile && npx vsce package"
+		"package": "npm run compile && npx vsce package",
+		"test:unit": "node out/test/runUnitTest.js"
 	},
 	"devDependencies": {
 		"@types/vscode": "^1.67.0",

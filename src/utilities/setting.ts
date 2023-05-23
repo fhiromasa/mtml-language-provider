@@ -2,6 +2,7 @@
  * vscode のワークスペースセッティングをラップするモジュール
  */
 import { workspace } from "vscode";
+import { TCms } from "./constant";
 
 const CONF = workspace.getConfiguration("mtml");
 
@@ -23,9 +24,3 @@ export class CMS {
 		return CONF.get<TCms>("cms.name", "Movable Type");
 	}
 }
-
-export type TCms =
-	| "Movable Type"
-	| "Movable Type.net"
-	| "PowerCMS"
-	| "PowerCMS X";

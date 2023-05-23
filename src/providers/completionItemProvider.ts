@@ -1,4 +1,4 @@
-import { Data, tagRegex, CodeBlock, modifierRegex, Variable } from "../utils";
+import { Data, tagRegex, Codeblock, modifierRegex, Variable, Setting,} from "../utils";
 import {
 	CompletionItemProvider,
 	TextDocument,
@@ -25,11 +25,12 @@ export class TagCompletion implements CompletionItemProvider {
 		if (tagRange) {
 			return;
 		}
-		const tagArr = Object.values(Data.getTagItems());
+		const cms = Setting.CMS.getName();
+		const tagArr = Object.values(Data.getTagItems(cms));
 		const completionItemArr = tagArr.map((tag) => {
 			return new CompletionItem(
 				{
-					label: CodeBlock.withRequiredModifiers(tag),
+					label: Codeblock.withRequiredModifiers(tag),
 					detail: tag.type,
 				},
 				CompletionItemKind.Class
@@ -62,10 +63,11 @@ export class ModifierCompletion implements CompletionItemProvider {
 		// 	// console.log("inner modifier");
 		// 	return;
 		// }
+		const cms = Setting.CMS.getName();
 		const tagStructure = tagText.split(/\s+/);
 		const tagId = tagStructure[0].replace(/[<:$]/g, "");
 		// console.log(`1.2 tag id: ${tagId}`);
-		const tag = Data.getTagById(tagId);
+		const tag = Data.getTagById(tagId, cms);
 		const lModArr = Object.values(tag.modifiers);
 		const lModItemArr = lModArr.map((mod) => {
 			const item = new CompletionItem(
@@ -79,7 +81,7 @@ export class ModifierCompletion implements CompletionItemProvider {
 			return item;
 		});
 
-		const gModArr = Object.values(Data.getGlobalModifierItems());
+		const gModArr = Object.values(Data.getGlobalModifierItems(cms));
 		const gModItemArr = gModArr.map((mod) => {
 			const item = new CompletionItem(
 				{
@@ -89,7 +91,7 @@ export class ModifierCompletion implements CompletionItemProvider {
 				CompletionItemKind.Field
 			);
 			item.documentation = mod.description;
-			item.insertText = CodeBlock.globalModifier(mod);
+			item.insertText = Codeblock.globalModifier(mod);
 			return item;
 		});
 
@@ -113,6 +115,7 @@ export class ModifierValueCompletion implements CompletionItemProvider {
 			// タグの外側
 			return;
 		}
+		const cms = Setting.CMS.getName();
 		const tagText = document.getText(tagRange);
 		const tagStructure = tagText.split(/\s+/);
 		const tagId = tagStructure[0].replace(/[<:$]/g, "");
@@ -123,7 +126,7 @@ export class ModifierValueCompletion implements CompletionItemProvider {
 		const modId = modStructure[0];
 		// console.log(`1.3 mod id: ${modId}`);
 
-		const tag = Data.getTagById(tagId);
+		const tag = Data.getTagById(tagId, cms);
 		const lMod = tag.modifiers[modId];
 
 		const valuesItem: CompletionItem[] = [];
@@ -159,13 +162,14 @@ export class VariablesCompletion implements CompletionItemProvider {
 		token: CancellationToken,
 		context: CompletionContext
 	): CompletionItem[] | undefined {
-		console.log(this);
+		// console.log(this);
 		const tagRange = document.getWordRangeAtPosition(position, tagRegex);
 		const modRange = document.getWordRangeAtPosition(position, modifierRegex);
 		if (!tagRange && !modRange) {
 			// タグの外側
 			return;
 		}
+		const cms = Setting.CMS.getName();
 		const tagText = document.getText(tagRange);
 		const tagStructure = tagText.split(/\s+/);
 		const tagId = tagStructure[0].replace(/[<:$]/g, "");
@@ -177,9 +181,9 @@ export class VariablesCompletion implements CompletionItemProvider {
 		// console.log(`1.3 mod structure: ${modStructure}`);
 		// console.log(`1.3 mod id: ${modId}`);
 
-		const tag = Data.getTagById(tagId);
+		const tag = Data.getTagById(tagId, cms);
 		const lMod = tag.modifiers[modId];
-		const gMod = Data.getGlobalModifierById(modId);
+		const gMod = Data.getGlobalModifierById(modId, cms);
 
 		const variables = Variable.collectVariables(document.getText());
 		if (variables.length === 0) {

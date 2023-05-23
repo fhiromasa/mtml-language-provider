@@ -1,0 +1,67 @@
+<mt:Ignore> sampleをインクルード </mt:Ignore>
+<mt:Include module="sample">
+
+<mt:Ignore> 変数定義 </mt:Ignore>
+<mt:EntryTitle setvar="setvar_modifier">
+<mt:Var name="varname" value="値">
+<mt:SetVar name="setvarname">
+<mt:GetVar var="getvarname">
+<mt:SetVarBlock var="setvarblockname">nnnnnnnnnnnnn</mt:SetVarBlock>
+<mt:SetVars>
+  setvarsname1=setvarsvalue1
+  setvarsname2=setvarsvalue2
+  setvarsname3=setvarsvalue3
+  setvarsname4=setvarsvalue4
+</mt:SetVars>
+<mt:SetVarTemplate var="setvartemplatename">
+  setvartemplatevalue
+</mt:SetVarTemplate>
+<mt:Var var="vararr" index="0" value="vararrvalue">
+<mt:SetHashVar var="sethashvarname">
+  sethashvarkey1=sethashvarvalue1
+  sethashvarkey2=sethashvarvalue2
+  sethashvarkey3=sethashvarvalue3
+  sethashvarkey4=sethashvarvalue4
+</mt:SetHashVar>
+<mt:SetHashVar var="sethashvarname2">
+  sethashvarkey1=sethashvarvalue1
+  sethashvarkey2=sethashvarvalue2
+  sethashvarkey3=sethashvarvalue3
+  sethashvarkey4=sethashvarvalue4
+</mt:SetHashVar>
+
+<mt:Ignore> 配列、ハッシュ without 'index' and 'key' modifier </mt:Ignore>
+<mt:Var var="vararr[0]" value="vararrvalue0">
+<mt:Var var="sethashvarname{sethashvarkey1}" value="sethashvarvalue1___">
+<mt:Var var="sethashvarname{sethashvarkey2}" value="sethashvarvalue2___">
+<mt:Var var="sethashvarname{sethashvarkey3}" value="sethashvarvalue3___">
+<mt:Var var="sethashvarname{sethashvarkey4}" value="sethashvarvalue4___">
+
+<mt:Ignore> 呼び出し </mt:Ignore>
+<mt:Var var="setvar_modifier">
+<mt:Var name="varname">
+<mt:Var name="setvarname">
+<mt:Var var="getvarname">
+<mt:Var var="setvarblockname">
+<mt:Var var="setvarsname1">
+<mt:Var var="setvartemplatename">
+<mt:Var var="sethashvarname">
+  <mt:Var var="hashkey" value="sethashvarkey1">
+  <mt:Var var="sethashvarname{$hashkey}">
+<mt:Var var="vararr">
+  <mt:Var var="arrindex" value="0">
+  <mt:Var var="vararr[$arrindex]">
+
+<mt:Ignore> ループ </mt:Ignore>
+<mt:Loop name="sethashvarname">
+  <mt:Var var="$__key__">
+  <mt:Var var="sethashvarname2{$__key__}">
+  <mt:Var var="$__value__">
+</mt:Loop>
+<mt:Loop name="vararr">
+</mt:Loop>
+
+<mt:Ignore> ifの比較演算子 </mt:Ignore>
+<mt:If name="vararr[0]" eq="sethashvarname{sethashvarkey4}"></mt:If>
+
+<mt:If name="vararr" eq="$" ne=  ></mt:If>

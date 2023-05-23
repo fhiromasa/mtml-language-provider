@@ -2,7 +2,7 @@
  * vscode のワークスペースセッティングをラップするモジュール
  */
 import { workspace } from "vscode";
-import { TCms } from "./required";
+import { TCms } from "./constant";
 
 const CONF = workspace.getConfiguration("mtml");
 

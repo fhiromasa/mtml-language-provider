@@ -7,15 +7,13 @@ import powercmsModifier from "../data/powercms/modifier.json";
 import powercms_xTag from "../data/powercms_x/tag.json";
 import powercms_xModifier from "../data/powercms_x/modifier.json";
 import { TTags, TGlobalModifiers, Tag, GlobalModifier } from "../data/item";
-import * as Required from "./required";
+import { TCms } from "./constant";
 
 /**
  * 設定からCMSを読み取って、それのデータを返す
  * @returns
  */
-export const getCmsItems = (
-	cmsName: Required.TCms
-): [TTags, TGlobalModifiers] => {
+export const getCmsItems = (cmsName: TCms): [TTags, TGlobalModifiers] => {
 	return [getTagItems(cmsName), getGlobalModifierItems(cmsName)];
 };
 
@@ -23,7 +21,7 @@ export const getCmsItems = (
  * 設定からCMSを読み取って、それのデータを返す
  * @returns
  */
-export const getTagItems = (cmsName: Required.TCms): TTags => {
+export const getTagItems = (cmsName: TCms): TTags => {
 	switch (cmsName) {
 		case "Movable Type.net":
 			return movabletype_netTag;
@@ -40,9 +38,7 @@ export const getTagItems = (cmsName: Required.TCms): TTags => {
  * 設定からCMSを読み取って、それのデータを返す
  * @returns
  */
-export const getGlobalModifierItems = (
-	cmsName: Required.TCms
-): TGlobalModifiers => {
+export const getGlobalModifierItems = (cmsName: TCms): TGlobalModifiers => {
 	switch (cmsName) {
 		case "Movable Type.net":
 			return movabletype_netModifier;
@@ -76,7 +72,7 @@ export const makeUndefinedTag = (id: string): Tag => {
  * @param id タグのID <mt:TagName> の "TagName"
  * @returns
  */
-export const getTagById = (id: string, cmsName: Required.TCms): Tag => {
+export const getTagById = (id: string, cmsName: TCms): Tag => {
 	const TAGS = getTagItems(cmsName);
 	const lowerId = id.toLowerCase();
 	return TAGS[lowerId] || makeUndefinedTag(id);
@@ -91,7 +87,7 @@ export const getTagById = (id: string, cmsName: Required.TCms): Tag => {
  */
 export const getGlobalModifierById = (
 	id: string,
-	cmsName: Required.TCms
+	cmsName: TCms
 ): GlobalModifier | undefined => {
 	const MODIFIERS = getGlobalModifierItems(cmsName);
 	const lowerId = id.toLowerCase().replace(/=.*/g, "");

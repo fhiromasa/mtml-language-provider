@@ -1,5 +1,5 @@
 import { GlobalModifier, Tag } from "../data/item";
-import { tagRegex, modifierRegex, Data, Codeblock, Setting } from "../utils";
+import { tagRegex, modifierRegex, Data, Codegen, Setting } from "../utils";
 import {
 	HoverProvider,
 	Hover,
@@ -67,7 +67,7 @@ export default class MTMLHoverProvider implements HoverProvider {
 	 */
 	public makeMSByTag(tag: Tag): MarkdownString {
 		const ms = new MarkdownString();
-		ms.appendCodeblock(Codeblock.codeblock(tag));
+		ms.appendCodeblock(Codegen.generate(tag));
 		ms.appendText(tag.description + "\n");
 		if (tag.url !== "") {
 			ms.appendMarkdown(
@@ -76,7 +76,7 @@ export default class MTMLHoverProvider implements HoverProvider {
 		}
 		if (Object.values(tag.modifiers).length > 0) {
 			ms.appendText("\nモディファイア\n");
-			ms.appendMarkdown(Codeblock.localModifiersToMarkdownList(tag.modifiers));
+			ms.appendMarkdown(Codegen.localModifiersToMarkdownList(tag.modifiers));
 		}
 		return ms;
 	}
@@ -101,7 +101,7 @@ export default class MTMLHoverProvider implements HoverProvider {
 		if (!modifier) {
 			return ms;
 		}
-		ms.appendCodeblock(Codeblock.withGlobalModifier(tag, modifier));
+		ms.appendCodeblock(Codegen.withGlobalModifier(tag, modifier));
 		ms.appendText(modifier.description + "\n");
 		ms.appendMarkdown(
 			`[${modifier.name}](${modifier.url}) link to ${Setting.CMS.getName()}`

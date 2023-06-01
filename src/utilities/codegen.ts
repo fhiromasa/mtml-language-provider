@@ -10,7 +10,7 @@ import {
  * @param modifierString
  * @returns <mt:TagName ${modifierString}>
  */
-export const codeblock = (tag: Tag, modifierString?: string): string => {
+export const generate = (tag: Tag, modifierString?: string): string => {
 	const prefix = tag.name.search(/mtapp/i) < 0 ? "mt:" : "mtapp:";
 	const tagName = tag.name.replace(/^mt(app)?:?/i, "");
 	const completeTagName = prefix + tagName;
@@ -37,7 +37,7 @@ export const withRequiredModifiers = (tag: Tag): string => {
 			return `${localModifier(modifier)}`;
 		})
 		.join(" ");
-	return codeblock(tag, modifierString);
+	return generate(tag, modifierString);
 };
 
 /**
@@ -49,7 +49,7 @@ export const withGlobalModifier = (
 	tag: Tag,
 	modifier: GlobalModifier
 ): string => {
-	return codeblock(tag, globalModifier(modifier));
+	return generate(tag, globalModifier(modifier));
 };
 
 /**

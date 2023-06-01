@@ -1,4 +1,11 @@
-import { Data, tagRegex, Codeblock, modifierRegex, Variable, Setting,} from "../utils";
+import {
+	Data,
+	tagRegex,
+	Codegen,
+	modifierRegex,
+	Variable,
+	Setting,
+} from "../utils";
 import {
 	CompletionItemProvider,
 	TextDocument,
@@ -30,7 +37,7 @@ export class TagCompletion implements CompletionItemProvider {
 		const completionItemArr = tagArr.map((tag) => {
 			return new CompletionItem(
 				{
-					label: Codeblock.withRequiredModifiers(tag),
+					label: Codegen.withRequiredModifiers(tag),
 					detail: tag.type,
 				},
 				CompletionItemKind.Class
@@ -91,7 +98,7 @@ export class ModifierCompletion implements CompletionItemProvider {
 				CompletionItemKind.Field
 			);
 			item.documentation = mod.description;
-			item.insertText = Codeblock.globalModifier(mod);
+			item.insertText = Codegen.globalModifier(mod);
 			return item;
 		});
 

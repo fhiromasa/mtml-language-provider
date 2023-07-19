@@ -58,7 +58,7 @@
 				"path": "./syntaxes/mtml.embedded.tmLanguage.json"
 			},
 			{
-				"scopeName": "source.mtml.ingnoreDoc",
+				"scopeName": "source.mtml.ignoreDoc",
 				"path": "./syntaxes/mtml.ignoreDoc.tmLanguage.json"
 			}
 		],

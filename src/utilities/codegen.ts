@@ -1,16 +1,11 @@
-import {
-	Tag,
-	LocalModifier,
-	GlobalModifier,
-	TLocalModifiers,
-} from "../data/item";
+import { Tag, LocalModifier, GlobalModifier } from "../data/item";
 
 /**
  * @param tag
  * @param modifierString
  * @returns <mt:TagName ${modifierString}>
  */
-export const codeblock = (tag: Tag, modifierString?: string): string => {
+export const generate = (tag: Tag, modifierString?: string): string => {
 	const prefix = tag.name.search(/mtapp/i) < 0 ? "mt:" : "mtapp:";
 	const tagName = tag.name.replace(/^mt(app)?:?/i, "");
 	const completeTagName = prefix + tagName;
@@ -37,7 +32,7 @@ export const withRequiredModifiers = (tag: Tag): string => {
 			return `${localModifier(modifier)}`;
 		})
 		.join(" ");
-	return codeblock(tag, modifierString);
+	return generate(tag, modifierString);
 };
 
 /**
@@ -49,7 +44,7 @@ export const withGlobalModifier = (
 	tag: Tag,
 	modifier: GlobalModifier
 ): string => {
-	return codeblock(tag, globalModifier(modifier));
+	return generate(tag, globalModifier(modifier));
 };
 
 /**
@@ -68,31 +63,4 @@ export const globalModifier = (modifier: GlobalModifier): string => {
  */
 export const localModifier = (modifier: LocalModifier): string => {
 	return `${modifier.name}="${modifier.value}"`;
-};
-
-/**
- * マークダウン形式のリストとして返す
- *
- * ex)
- * ```
- * - key
- *   - description
- * - key
- *   - description
- * ```
- *
- * @param modifiers
- * @returns
- */
-export const localModifiersToMarkdownList = (
-	modifiers: TLocalModifiers
-): string => {
-	const modifierArr = Object.values(modifiers);
-	const modifierStringArr = modifierArr.map((modifier) => {
-		return [
-			`- ${modifier.name}`,
-			`  - ${modifier.description || "no description"}`,
-		].join("\n");
-	});
-	return modifierStringArr.join("\n");
 };

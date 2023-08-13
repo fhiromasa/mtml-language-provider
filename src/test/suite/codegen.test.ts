@@ -1,17 +1,16 @@
 import * as assert from "assert";
-import * as Codeblock from "../../utilities/codeblock";
+import * as Codegen from "../../utilities/codegen";
 
 import {
 	BlockTag,
 	FunctionTag,
 	GlobalModifier,
 	LocalModifier,
-	TLocalModifiers,
 } from "../../data/item";
 // import * as myExtension from '../../extension';
 
-suite("codeBlock Test Suite", () => {
-	test("func codeBlock() function tag", () => {
+suite("Codegen Test Suite", () => {
+	test("func generate() function tag", () => {
 		// prepare
 		const tag = new FunctionTag(
 			"FunctionTag",
@@ -21,12 +20,12 @@ suite("codeBlock Test Suite", () => {
 		);
 		const expected = `<mt:${tag.name}>`;
 		// execute
-		const actual = Codeblock.codeblock(tag);
+		const actual = Codegen.generate(tag);
 		// assert
 		assert.strictEqual(actual, expected);
 	});
 
-	test("func codeBlock() block tag", () => {
+	test("func generate() block tag", () => {
 		// prepare
 		const tag = new BlockTag(
 			"BlockTag",
@@ -36,7 +35,7 @@ suite("codeBlock Test Suite", () => {
 		);
 		const expected = `<mt:${tag.name}></mt:${tag.name}>`;
 		// execute
-		const actual = Codeblock.codeblock(tag);
+		const actual = Codegen.generate(tag);
 		// assert
 		assert.strictEqual(actual, expected);
 	});
@@ -56,7 +55,7 @@ suite("codeBlock Test Suite", () => {
 		);
 		const expected = `<mt:${tag.name}></mt:${tag.name}>`;
 		// execute
-		const actual = Codeblock.withRequiredModifiers(tag);
+		const actual = Codegen.withRequiredModifiers(tag);
 		// assert
 		assert.strictEqual(actual, expected);
 	});
@@ -72,7 +71,7 @@ suite("codeBlock Test Suite", () => {
 		);
 		const expected = `<mt:${tag.name} ${requiredModifier.name}="${requiredModifier.value}"></mt:${tag.name}>`;
 		// execute
-		const actual = Codeblock.withRequiredModifiers(tag);
+		const actual = Codegen.withRequiredModifiers(tag);
 		// assert
 		assert.strictEqual(actual, expected);
 	});
@@ -92,7 +91,7 @@ suite("codeBlock Test Suite", () => {
 		);
 		const expected = `<mt:${tag.name} ${globalModifier.name}=""></mt:${tag.name}>`;
 		// execute
-		const actual = Codeblock.withGlobalModifier(tag, globalModifier);
+		const actual = Codegen.withGlobalModifier(tag, globalModifier);
 		// assert
 		assert.strictEqual(actual, expected);
 	});
@@ -106,7 +105,7 @@ suite("codeBlock Test Suite", () => {
 		);
 		const expected = `${globalModifier.name}=""`;
 		// execute
-		const actual = Codeblock.globalModifier(globalModifier);
+		const actual = Codegen.globalModifier(globalModifier);
 		// assert
 		assert.strictEqual(actual, expected);
 	});
@@ -126,8 +125,8 @@ suite("codeBlock Test Suite", () => {
 		const expected1 = `${globalModifier1.name}="",""`;
 		const expected2 = `${globalModifier2.name}="",""`;
 		// execute
-		const actual1 = Codeblock.globalModifier(globalModifier1);
-		const actual2 = Codeblock.globalModifier(globalModifier2);
+		const actual1 = Codegen.globalModifier(globalModifier1);
+		const actual2 = Codegen.globalModifier(globalModifier2);
 		// assert
 		assert.strictEqual(actual1, expected1);
 		assert.strictEqual(actual2, expected2);
@@ -142,31 +141,7 @@ suite("codeBlock Test Suite", () => {
 		);
 		const expected = `${localModifier.name}="${localModifier.value}"`;
 		// execute
-		const actual = Codeblock.localModifier(localModifier);
-		// assert
-		assert.strictEqual(actual, expected);
-	});
-
-	test("test localModifiersToMarkdownList()", () => {
-		// prepare
-		const modifiers: TLocalModifiers = {
-			one: new LocalModifier("one", "one description", "one | val"),
-			two: new LocalModifier("two", "two description", "two | val"),
-			three: new LocalModifier("three", "three description", "three | val"),
-			four: new LocalModifier("four", "four description", "four | val"),
-		};
-		const expected = [
-			`- ${modifiers.one.name}`,
-			`  - ${modifiers.one.description}`,
-			`- ${modifiers.two.name}`,
-			`  - ${modifiers.two.description}`,
-			`- ${modifiers.three.name}`,
-			`  - ${modifiers.three.description}`,
-			`- ${modifiers.four.name}`,
-			`  - ${modifiers.four.description}`,
-		].join("\n");
-		// execute
-		const actual = Codeblock.localModifiersToMarkdownList(modifiers);
+		const actual = Codegen.localModifier(localModifier);
 		// assert
 		assert.strictEqual(actual, expected);
 	});

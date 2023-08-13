@@ -1,5 +1,4 @@
-import { GlobalModifier, Tag } from "../data/item";
-import { tagRegex, modifierRegex, Data, Codeblock, Setting } from "../utils";
+import { tagRegex, modifierRegex, Data, Setting, Markdown } from "../utils";
 import {
 	HoverProvider,
 	Hover,
@@ -43,70 +42,9 @@ export default class MTMLHoverProvider implements HoverProvider {
 			cms
 		);
 
-		const tagMS = this.makeMSByTag(tagItem);
-		const modifierMS = this.makeMSGlobalModifier(tagItem, modifierItem);
-
-		return new Hover([modifierMS, tagMS]);
-	}
-
-	/**
-	 * ex)
-	 * ```
-	 * .```
-	 * <mt:TagName>
-	 * .```
-	 *
-	 * description
-	 *
-	 * [リンク](https)
-	 *
-	 * モディファイア
-	 * - key
-	 *   - description
-	 * ```
-	 */
-	public makeMSByTag(tag: Tag): MarkdownString {
-		const ms = new MarkdownString();
-		ms.appendCodeblock(Codeblock.codeblock(tag));
-		ms.appendText(tag.description + "\n");
-		if (tag.url !== "") {
-			ms.appendMarkdown(
-				`[${tag.name}](${tag.url}) link to ${Setting.CMS.getName()}\n`
-			);
-		}
-		if (Object.values(tag.modifiers).length > 0) {
-			ms.appendText("\nモディファイア\n");
-			ms.appendMarkdown(Codeblock.localModifiersToMarkdownList(tag.modifiers));
-		}
-		return ms;
-	}
-
-	/**
-	 * ex)
-	 * ```
-	 * .```
-	 * <mt:TagName global="">
-	 * .```
-	 *
-	 * description
-	 *
-	 * [リンク](https)
-	 * ```
-	 */
-	public makeMSGlobalModifier(
-		tag: Tag,
-		modifier: GlobalModifier | undefined
-	): MarkdownString {
-		const ms = new MarkdownString();
-		if (!modifier) {
-			return ms;
-		}
-		ms.appendCodeblock(Codeblock.withGlobalModifier(tag, modifier));
-		ms.appendText(modifier.description + "\n");
-		ms.appendMarkdown(
-			`[${modifier.name}](${modifier.url}) link to ${Setting.CMS.getName()}`
-		);
-
-		return ms;
+		return new Hover([
+			new MarkdownString(Markdown.globalModifierHover(tagItem, modifierItem)),
+			new MarkdownString(Markdown.tagHover(tagItem)),
+		]);
 	}
 }

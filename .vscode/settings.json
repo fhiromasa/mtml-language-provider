@@ -21,6 +21,7 @@
 		"setvar",
 		"setvars",
 		"testfiles",
-		"yupyom"
+		"yupyom",
+		"codegen"
 	]
 }

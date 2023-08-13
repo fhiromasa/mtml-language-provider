@@ -1,0 +1,34 @@
+on:
+  pull_request:
+    branches:
+      - main
+    types: [closed]
+
+name: Deploy Extension
+jobs:
+  deploy:
+    runs-on: ubuntu-latest
+
+    steps:
+      - uses: actions/checkout@v3
+        with:
+          submodules: "true"
+      - name: Update Major Tag
+        run: |
+          MAJOR_VERSION=$(git describe --tags | grep -o "v[0-9]*")
+          git config --global user.name 'fhiromasa'
+          git config --global user.email '74556046+fhiromasa@users.noreply.github.com'
+      - name: Setup Node.js
+        uses: actions/setup-node@v3.7.0
+        with:
+          node-version: 16.x
+      - name: node modules install
+        run: npm ci
+      - name: compile ts to js
+        run: npm run compile
+      - name: unit test
+        run: npm run test:unit
+      - name: Publish to Visual Studio Marketplace
+        run: npx vsce publish patch -p ${{ secrets.VSCE_TOKEN }}
+      - name: Push
+        run: git push --tags --force

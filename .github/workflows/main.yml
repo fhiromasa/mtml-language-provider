@@ -28,8 +28,6 @@ jobs:
       - name: unit test
         run: npm run test:unit
       - name: Publish to Visual Studio Marketplace
-        run: npx @vscode/vsce publish patch -p ${{ secrets.VSCE_TOKEN }}
-      - name: Push file change and tags
-        run: |
-          git push --force origin/release main
-          git push --tags --force
+        run: npx @vscode/vsce publish -p ${{ secrets.VSCE_TOKEN }}
+      - name: Push tag
+        run: git push --tags --force

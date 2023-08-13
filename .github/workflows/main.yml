@@ -31,5 +31,5 @@ jobs:
         run: npx @vscode/vsce publish patch -p ${{ secrets.VSCE_TOKEN }}
       - name: Push file change and tags
         run: |
-          git push --force
+          git push --force origin main
           git push --tags --force

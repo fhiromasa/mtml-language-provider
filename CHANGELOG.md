@@ -7,6 +7,13 @@
 - Changed
 - Security
 
+## 1.1.2 - 2023-08-13
+
+### Fixed
+
+- Modularized markdown generator
+- Improved readability of mtIgnore comment text
+
 ## 1.1.1 - 2023-05-23
 
 ### Added

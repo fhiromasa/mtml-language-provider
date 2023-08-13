@@ -15,7 +15,6 @@ jobs:
           submodules: "true"
       - name: Update Major Tag
         run: |
-          MAJOR_VERSION=$(git describe --tags | grep -o "v[0-9]*")
           git config --global user.name 'fhiromasa'
           git config --global user.email '74556046+fhiromasa@users.noreply.github.com'
       - name: Setup Node.js

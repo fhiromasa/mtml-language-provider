@@ -29,4 +29,7 @@ jobs:
       - name: Publish to Visual Studio Marketplace
         run: npx @vscode/vsce publish -p ${{ secrets.VSCE_TOKEN }}
       - name: Push tag
-        run: git push --tags --force
+        run: |
+          VERSION=$( node -e "console.log('v'+require('./package.json').version)" )
+          git tag $VERSION
+          git push --tags --force

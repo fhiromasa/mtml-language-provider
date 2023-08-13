@@ -6,9 +6,8 @@ on:
 
 name: Deploy Extension
 jobs:
-  deploy:
+  build:
     runs-on: ubuntu-latest
-
     steps:
       - uses: actions/checkout@v3
         with:
@@ -25,8 +24,18 @@ jobs:
         run: npm ci
       - name: compile ts to js
         run: npm run compile
+
+  test:
+    runs-on: ubuntu-latest
+    needs: build
+    steps:
       - name: unit test
         run: npm run test:unit
+
+  deploy:
+    runs-on: ubuntu-latest
+    needs: test
+    steps:
       - name: Publish to Visual Studio Marketplace
         run: npx @vscode/vsce publish -p ${{ secrets.VSCE_TOKEN }}
       - name: Push tag

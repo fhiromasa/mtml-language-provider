@@ -7,7 +7,19 @@
 - Changed
 - Security
 
-## 1.1.6 - 2023-08-13
+## 1.1.8 - 2023-08-14
+
+### Changed
+
+- update tag's data
+
+## 1.1.3 ~ 1.1.7 - 2023-08-13
+
+### Added
+
+- Unavoidable deployment when creating a "github actions"
+
+## 1.1.2 - 2023-08-13
 
 ### Fixed
 

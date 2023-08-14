@@ -6,16 +6,12 @@ on:
 
 name: Deploy Extension
 jobs:
-  build:
+  deploy:
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v3
         with:
           submodules: "true"
-      - name: Update Major Tag
-        run: |
-          git config --global user.name 'fhiromasa'
-          git config --global user.email '74556046+fhiromasa@users.noreply.github.com'
       - name: Setup Node.js
         uses: actions/setup-node@v3.7.0
         with:
@@ -30,6 +26,8 @@ jobs:
         run: npx @vscode/vsce publish -p ${{ secrets.VSCE_TOKEN }}
       - name: Push tag
         run: |
+          git config --global user.name 'fhiromasa'
+          git config --global user.email '74556046+fhiromasa@users.noreply.github.com'
           VERSION=$( node -e "console.log('v'+require('./package.json').version)" )
           git tag $VERSION
           git push --tags --force

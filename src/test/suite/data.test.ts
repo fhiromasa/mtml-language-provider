@@ -121,7 +121,7 @@ suite("data Test Suite", () => {
 		assert.strictEqual(actual.name, id);
 		assert.strictEqual(
 			actual.url,
-			"https://www.movabletype.jp/documentation/appendices/modifiers/replace.html"
+			"https://movabletype.jp/documentation/appendices/modifiers/replace.html"
 		);
 		assert.strictEqual(actual.type, "global");
 	});

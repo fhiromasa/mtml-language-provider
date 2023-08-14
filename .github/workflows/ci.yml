@@ -1,0 +1,22 @@
+on:
+  pull_request:
+
+name: unit test
+
+jobs:
+  test:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v3
+        with:
+          submodules: "true"
+      - name: Setup Node.js
+        uses: actions/setup-node@v3.7.0
+        with:
+          node-version: 16.x
+      - name: node modules install
+        run: npm ci
+      - name: compile ts to js
+        run: npm run compile
+      - name: unit test
+        run: npm run test:unit

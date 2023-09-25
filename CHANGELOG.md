@@ -7,6 +7,13 @@
 - Changed
 - Security
 
+## 1.1.9 - 2023-09-25
+
+### Fixed
+
+- Highlighting in HTML attributes is fixed, but the fix in v1.1.2 is no longer valid.
+- fixed function tags to have self-closing slashes
+
 ## 1.1.8 - 2023-08-14
 
 ### Changed

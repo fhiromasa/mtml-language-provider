@@ -12,8 +12,9 @@ export const generate = (tag: Tag, modifierString?: string): string => {
 
 	const blockClosingTag = tag.type === "block" ? `</${completeTagName}>` : "";
 	const modifierStr = modifierString ? ` ${modifierString}` : "";
+	const functionSelfClosing = tag.type === "function" ? " /" : "";
 
-	return `<${completeTagName}${modifierStr}>${blockClosingTag}`;
+	return `<${completeTagName}${modifierStr}${functionSelfClosing}>${blockClosingTag}`;
 };
 
 /**

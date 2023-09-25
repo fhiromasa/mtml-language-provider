@@ -18,7 +18,7 @@ suite("Codegen Test Suite", () => {
 			"https://example.com/",
 			{}
 		);
-		const expected = `<mt:${tag.name}>`;
+		const expected = `<mt:${tag.name} />`;
 		// execute
 		const actual = Codegen.generate(tag);
 		// assert

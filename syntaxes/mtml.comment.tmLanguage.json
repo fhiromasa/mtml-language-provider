@@ -1,0 +1,17 @@
+{
+	"$schema": "https://raw.githubusercontent.com/martinring/tmlanguage/master/tmlanguage.json",
+	"injectionSelector": "L:source.mtml",
+	"scopeName": "text.comment.mtml",
+	"patterns": [
+		{
+			"include": "#ignore-tag"
+		}
+	],
+	"repository": {
+		"ignore-tag": {
+			"begin": "(?i)<mt:?ignore",
+			"end": "(?i)</mt:?ignore>",
+			"name": "comment.block.mtml"
+		}
+	}
+}

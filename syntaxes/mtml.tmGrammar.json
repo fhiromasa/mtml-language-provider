@@ -1,15 +1,21 @@
 {
 	"$schema": "https://raw.githubusercontent.com/martinring/tmlanguage/master/tmlanguage.json",
 	"name": "MTML",
+	"scopeName": "source.mtml",
 	"patterns": [
 		{
 			"begin": "<\\?php",
 			"end": "\\?>",
+			"beginCaptures": {
+				"0": { "name": "punctuation.section.embedded.begin.php" }
+			},
+			"endCaptures": {
+				"0": { "name": "punctuation.section.embedded.end.php" }
+			},
 			"patterns": [{ "include": "source.php" }]
 		},
 		{
 			"include": "text.html.derivative"
 		}
-	],
-	"scopeName": "source.mtml"
+	]
 }

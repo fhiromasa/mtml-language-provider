@@ -29,7 +29,7 @@ export function tagHover(tag: Tag): string {
 		anchor(tag),
 		localModifiersList(tag.modifiers),
 	].join("\n");
-	console.log(str);
+	// console.log(str);
 	return str;
 }
 

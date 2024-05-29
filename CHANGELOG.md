@@ -7,6 +7,12 @@
 - Changed
 - Security
 
+## 1.1.10 - 2024-05-29
+
+### Fixed
+
+- Suppressed hovering outside of tags and global modifiers
+
 ## 1.1.9 - 2023-09-25
 
 ### Fixed

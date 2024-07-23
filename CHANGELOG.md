@@ -7,6 +7,12 @@
 - Changed
 - Security
 
+## 1.1.10 - 2024-07-23
+
+### Security
+
+- Update Dependency
+
 ## 1.1.10 - 2024-05-29
 
 ### Fixed

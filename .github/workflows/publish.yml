@@ -2,10 +2,12 @@ name: Deploy Extension
 
 on:
   push:
-    branches:
-      - main
     tags:
       - 'v\d+\.\d+\.\d+'
+  workflow_dispatch:
+
+permissions:
+  contents: read
 
 env:
   NODE_VERSION: 20.10.0
@@ -14,6 +16,12 @@ jobs:
   publish:
     runs-on: ubuntu-slim
     steps:
+      - name: Check branch
+        run: |
+          if [ "$GITHUB_REF" != "refs/heads/main" ]; then
+            echo "Not on main branch"
+            exit 1
+          fi
       - uses: actions/checkout@v6
         with:
           submodules: "true"

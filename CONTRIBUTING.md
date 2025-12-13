@@ -14,7 +14,7 @@ git submodule update --init --recursive
 
 ## Prerequisites
 
-- Nodejs@20.10.0
+- Nodejs@22.21.1
 - npm
 
 ### Install Dependencies

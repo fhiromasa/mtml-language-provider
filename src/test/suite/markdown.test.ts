@@ -1,11 +1,11 @@
-import * as assert from "assert";
-import * as Markdown from "../../utilities/markdown";
+import * as assert from "node:assert";
 import {
 	GlobalModifier,
 	LocalModifier,
-	TLocalModifiers,
 	Tag,
+	type TLocalModifiers,
 } from "../../data/item";
+import * as Markdown from "../../utilities/markdown";
 
 suite("Markdown test suite", () => {
 	test("globalModifierHover test, passed undefined", () => {
@@ -39,7 +39,7 @@ suite("Markdown test suite", () => {
 			"block",
 			"description\n text\n with\n crlf.",
 			"",
-			{}
+			{},
 		);
 		const expected = "description\n text\n with\n crlf.\n";
 

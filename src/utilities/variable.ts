@@ -1,6 +1,6 @@
 const variableRegex = new RegExp(/(name|(set)?var)=("[^"]*")/g);
 const setvarsRegex = new RegExp(
-	/<mt:?SetVars>([\n\s\t\w\d=]*)<\/mt:?SetVars>/gi
+	/<mt:?SetVars>([\n\s\t\w\d=]*)<\/mt:?SetVars>/gi,
 );
 
 /**
@@ -37,10 +37,7 @@ export function collectVariables(document: string): string[] {
 		// 同じ変数名は返さなくていい
 		// $__key__ みたいな $ が含まれるものは返さなくていい
 		// hash{key}, array[index] みたいな添字付きのハッシュ、配列は返さなくていい
-		if (
-			!variableNames.includes(varNames) &&
-			varNames.match(/[\$\[\{]/) === null
-		) {
+		if (!variableNames.includes(varNames) && varNames.match(/[$[{]/) === null) {
 			variableNames.push(varNames);
 		}
 	}

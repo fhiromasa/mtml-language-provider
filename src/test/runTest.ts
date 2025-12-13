@@ -1,6 +1,5 @@
-import * as path from "path";
-
-import { runTests, downloadAndUnzipVSCode } from "@vscode/test-electron";
+import * as path from "node:path";
+import { downloadAndUnzipVSCode, runTests } from "@vscode/test-electron";
 
 async function main() {
 	try {
@@ -13,7 +12,7 @@ async function main() {
 		const extensionTestsPath = path.resolve(__dirname, "./suite/index");
 
 		const testWorkspace = path.resolve(__dirname, "../../testFixture");
-		const vscodeExecutablePath = await downloadAndUnzipVSCode("1.67.0");
+		const vscodeExecutablePath = await downloadAndUnzipVSCode("1.75.0");
 
 		// Download VS Code, unzip it and run the integration test
 		console.log("test start");

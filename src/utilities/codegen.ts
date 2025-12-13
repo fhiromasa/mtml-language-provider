@@ -1,4 +1,4 @@
-import { Tag, LocalModifier, GlobalModifier } from "../data/item";
+import type { GlobalModifier, LocalModifier, Tag } from "../data/item";
 
 /**
  * @param tag
@@ -43,7 +43,7 @@ export const withRequiredModifiers = (tag: Tag): string => {
  */
 export const withGlobalModifier = (
 	tag: Tag,
-	modifier: GlobalModifier
+	modifier: GlobalModifier,
 ): string => {
 	return generate(tag, globalModifier(modifier));
 };

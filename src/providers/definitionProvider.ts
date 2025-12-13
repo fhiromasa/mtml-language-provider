@@ -1,22 +1,22 @@
-import { tagRegex } from "../utils";
 import {
-	DefinitionProvider,
-	TextDocument,
-	CancellationToken,
+	type CancellationToken,
+	type Definition,
+	type DefinitionProvider,
+	type LocationLink,
 	Position,
-	workspace,
-	Definition,
-	LocationLink,
-	ProviderResult,
-	Uri,
+	type ProviderResult,
 	Range,
+	type TextDocument,
+	Uri,
+	workspace,
 } from "vscode";
+import { tagRegex } from "../utils";
 
 export default class MTMLDefinitionProvider implements DefinitionProvider {
 	public provideDefinition(
 		document: TextDocument,
 		position: Position,
-		token: CancellationToken
+		token: CancellationToken,
 	): ProviderResult<Definition | LocationLink[]> {
 		const workDir = workspace.workspaceFolders || [];
 		const workDirPath = workDir[0].uri.path; //vscodeで開いているディレクトリのフルパス
@@ -41,8 +41,8 @@ export default class MTMLDefinitionProvider implements DefinitionProvider {
 				definitionName = structure
 					.split("=")[1]
 					.replace(/"/g, "")
-					.replace(/\{[_\w\d\$]*\}/i, "")
-					.replace(/\[[_\w\d\$]*\]/i, "");
+					.replace(/\{[_\w\d$]*\}/i, "")
+					.replace(/\[[_\w\d$]*\]/i, "");
 			}
 		});
 		// name,varモディファイアがなければ終わり
@@ -60,7 +60,7 @@ export default class MTMLDefinitionProvider implements DefinitionProvider {
 				`({[_\\$\\d\\w]+})?`, // ハッシュのkey指定
 				`(\\[\\d+\\])?"`, // 配列のindex指定
 			].join(""),
-			"i"
+			"i",
 		);
 		const definitionRangeArr: Range[] = [];
 		for (let lineNum = 0; lineNum < document.lineCount; lineNum++) {
@@ -72,8 +72,8 @@ export default class MTMLDefinitionProvider implements DefinitionProvider {
 				definitionRangeArr.push(
 					new Range(
 						new Position(lineNum, charStartNum),
-						new Position(lineNum, charStartNum + matchedWord[0].length)
-					)
+						new Position(lineNum, charStartNum + matchedWord[0].length),
+					),
 				);
 			}
 		}

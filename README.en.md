@@ -74,17 +74,3 @@ This extension contributes the following settings:
 
 - Syntax Highlighting - [yupyom/vscode-movabletype](https://github.com/yupyom/vscode-movabletype/tree/0.1.0)
 - My sponsors - [github sponsors](https://github.com/sponsors/fhiromasa)
-
-## About Data
-
-The json file in src/data was created in the [mtmlItemMaker repository](https://github.com/fhiromasa/mtmlItemMaker).
-I don't use anything other than `item.ts or json` for this extension.
-Since mtmlItemMaker repository is used as a submodule, it is necessary to update it with the following command.
-
-`src/data/**/*.json` ファイルは [mtmlItemMaker](https://github.com/fhiromasa/mtmlItemMaker) のリポジトリで作ったものです。
-`item.ts と json` 以外はこの拡張機能として使っていません。
-このリポジトリをサブモジュールとして使っているので以下のコマンドでたまにアップデートが必要です？
-
-```sh
-$ git submodule update
-```

@@ -37,8 +37,8 @@
 				],
 				"configuration": "./language-configuration.json",
 				"icon": {
-					"light": "./images/light.png",
-					"dark": "./images/dark.png"
+					"light": "./images/icon.png",
+					"dark": "./images/icon.png"
 				}
 			}
 		],

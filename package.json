@@ -100,7 +100,10 @@
 		"compile": "rm -rf ./out/ && tsc -p ./",
 		"watch": "tsc -watch -p ./",
 		"pretest": "npm run compile && npm run lint",
-		"lint": "eslint src --ext ts",
+		"lint": "biome lint",
+		"lint:write": "biome lint --write",
+		"format": "biome format",
+		"format:write": "biome format --write",
 		"test": "node ./out/test/runTest.js",
 		"package": "npm run compile && npx vsce package",
 		"test:unit": "node out/test/runUnitTest.js"

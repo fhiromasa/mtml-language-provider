@@ -15,6 +15,7 @@
 	},
 	"linter": {
 		"enabled": true,
+		"includes": ["!src/data/*"],
 		"rules": {
 			"recommended": true
 		}
@@ -26,6 +27,7 @@
 	},
 	"assist": {
 		"enabled": true,
+		"includes": ["!src/data/*"],
 		"actions": {
 			"source": {
 				"organizeImports": "on"

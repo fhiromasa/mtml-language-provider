@@ -1,7 +1,6 @@
-import * as assert from "assert";
+import { deepStrictEqual, equal, fail, match, strictEqual } from "node:assert";
+import type { TCms } from "../../utilities/constant";
 import * as Data from "../../utilities/data";
-
-import { TCms } from "../../utilities/constant";
 
 const host = (cms: TCms) => {
 	switch (cms) {
@@ -26,8 +25,8 @@ suite("data Test Suite", () => {
 		const [tag, gMod] = Data.getCmsItems(cmsName);
 
 		// assert
-		assert.match(tag["mtvar"].url, new RegExp(host(cmsName)));
-		assert.match(gMod["setvar"].url, new RegExp(host(cmsName)));
+		match(tag["mtvar"].url, new RegExp(host(cmsName)));
+		match(gMod["setvar"].url, new RegExp(host(cmsName)));
 	}
 
 	/**
@@ -62,10 +61,10 @@ suite("data Test Suite", () => {
 		const actual = Data.makeUndefinedTag(id);
 
 		// assert
-		assert.strictEqual(actual.name, id);
-		assert.strictEqual(actual.url, "");
-		assert.strictEqual(actual.type, "undefined");
-		assert.deepStrictEqual(actual.modifiers, {});
+		strictEqual(actual.name, id);
+		strictEqual(actual.url, "");
+		strictEqual(actual.type, "undefined");
+		deepStrictEqual(actual.modifiers, {});
 	});
 
 	test("getTagById", () => {
@@ -76,13 +75,13 @@ suite("data Test Suite", () => {
 		const actual = Data.getTagById(id, "Movable Type");
 
 		// assert
-		assert.strictEqual(actual.name, id);
-		assert.strictEqual(
+		strictEqual(actual.name, id);
+		strictEqual(
 			actual.url,
-			"https://movabletype.jp/documentation/appendices/tags/var.html"
+			"https://movabletype.jp/documentation/appendices/tags/var.html",
 		);
-		assert.strictEqual(actual.type, "function");
-		assert.deepStrictEqual(Object.keys(actual.modifiers), [
+		strictEqual(actual.type, "function");
+		deepStrictEqual(Object.keys(actual.modifiers), [
 			"name",
 			"var",
 			"value",
@@ -101,10 +100,10 @@ suite("data Test Suite", () => {
 		const actual = Data.getTagById(id, "Movable Type");
 
 		// assert
-		assert.strictEqual(actual.name, id);
-		assert.strictEqual(actual.url, "");
-		assert.strictEqual(actual.type, "undefined");
-		assert.deepStrictEqual(actual.modifiers, {});
+		strictEqual(actual.name, id);
+		strictEqual(actual.url, "");
+		strictEqual(actual.type, "undefined");
+		deepStrictEqual(actual.modifiers, {});
 	});
 
 	test("getGlobalModifierById", () => {
@@ -116,14 +115,14 @@ suite("data Test Suite", () => {
 
 		// assert
 		if (!actual) {
-			assert.fail();
+			fail();
 		}
-		assert.strictEqual(actual.name, id);
-		assert.strictEqual(
+		strictEqual(actual.name, id);
+		strictEqual(
 			actual.url,
-			"https://movabletype.jp/documentation/appendices/modifiers/replace.html"
+			"https://movabletype.jp/documentation/appendices/modifiers/replace.html",
 		);
-		assert.strictEqual(actual.type, "global");
+		strictEqual(actual.type, "global");
 	});
 
 	test("getGlobalModifierById not exist", () => {
@@ -134,6 +133,6 @@ suite("data Test Suite", () => {
 		const actual = Data.getGlobalModifierById(id, "Movable Type");
 
 		// assert
-		assert.equal(actual, undefined);
+		equal(actual, undefined);
 	});
 });

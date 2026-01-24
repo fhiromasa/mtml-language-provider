@@ -1,12 +1,12 @@
-import * as assert from "assert";
-import * as Codegen from "../../utilities/codegen";
-
+import { strictEqual } from "node:assert";
 import {
 	BlockTag,
 	FunctionTag,
 	GlobalModifier,
 	LocalModifier,
 } from "../../data/item";
+import * as Codegen from "../../utilities/codegen";
+
 // import * as myExtension from '../../extension';
 
 suite("Codegen Test Suite", () => {
@@ -16,13 +16,13 @@ suite("Codegen Test Suite", () => {
 			"FunctionTag",
 			"function tag description",
 			"https://example.com/",
-			{}
+			{},
 		);
 		const expected = `<mt:${tag.name} />`;
 		// execute
 		const actual = Codegen.generate(tag);
 		// assert
-		assert.strictEqual(actual, expected);
+		strictEqual(actual, expected);
 	});
 
 	test("func generate() block tag", () => {
@@ -31,13 +31,13 @@ suite("Codegen Test Suite", () => {
 			"BlockTag",
 			"Block tag description",
 			"https://example.com/",
-			{}
+			{},
 		);
 		const expected = `<mt:${tag.name}></mt:${tag.name}>`;
 		// execute
 		const actual = Codegen.generate(tag);
 		// assert
-		assert.strictEqual(actual, expected);
+		strictEqual(actual, expected);
 	});
 
 	test("func withRequiredModifiers() without required modifier", () => {
@@ -45,19 +45,19 @@ suite("Codegen Test Suite", () => {
 		const notRequiredModifier = new LocalModifier(
 			"notrequire",
 			"not required",
-			""
+			"",
 		);
 		const tag = new BlockTag(
 			"BlockTag",
 			"Block tag description",
 			"https://example.com/",
-			{ notrequire: notRequiredModifier }
+			{ notrequire: notRequiredModifier },
 		);
 		const expected = `<mt:${tag.name}></mt:${tag.name}>`;
 		// execute
 		const actual = Codegen.withRequiredModifiers(tag);
 		// assert
-		assert.strictEqual(actual, expected);
+		strictEqual(actual, expected);
 	});
 
 	test("func withRequiredModifiers() with required modifier", () => {
@@ -67,13 +67,13 @@ suite("Codegen Test Suite", () => {
 			"BlockTag",
 			"Block tag description",
 			"https://example.com/",
-			{ require: requiredModifier }
+			{ require: requiredModifier },
 		);
 		const expected = `<mt:${tag.name} ${requiredModifier.name}="${requiredModifier.value}"></mt:${tag.name}>`;
 		// execute
 		const actual = Codegen.withRequiredModifiers(tag);
 		// assert
-		assert.strictEqual(actual, expected);
+		strictEqual(actual, expected);
 	});
 
 	test("func withGlobalModifier()", () => {
@@ -81,19 +81,19 @@ suite("Codegen Test Suite", () => {
 		const globalModifier = new GlobalModifier(
 			"global",
 			"global modifier description",
-			"http://example.com/"
+			"http://example.com/",
 		);
 		const tag = new BlockTag(
 			"BlockTag",
 			"Block tag description",
 			"https://example.com/",
-			{}
+			{},
 		);
 		const expected = `<mt:${tag.name} ${globalModifier.name}=""></mt:${tag.name}>`;
 		// execute
 		const actual = Codegen.withGlobalModifier(tag, globalModifier);
 		// assert
-		assert.strictEqual(actual, expected);
+		strictEqual(actual, expected);
 	});
 
 	test("func globalModifier()", () => {
@@ -101,13 +101,13 @@ suite("Codegen Test Suite", () => {
 		const globalModifier = new GlobalModifier(
 			"global",
 			"global modifier description",
-			"http://example.com/"
+			"http://example.com/",
 		);
 		const expected = `${globalModifier.name}=""`;
 		// execute
 		const actual = Codegen.globalModifier(globalModifier);
 		// assert
-		assert.strictEqual(actual, expected);
+		strictEqual(actual, expected);
 	});
 
 	test("func globalModifier() with replace", () => {
@@ -115,12 +115,12 @@ suite("Codegen Test Suite", () => {
 		const globalModifier1 = new GlobalModifier(
 			"replace",
 			"global modifier description",
-			"http://example.com/"
+			"http://example.com/",
 		);
 		const globalModifier2 = new GlobalModifier(
 			"regex_replace",
 			"global modifier description",
-			"http://example.com/"
+			"http://example.com/",
 		);
 		const expected1 = `${globalModifier1.name}="",""`;
 		const expected2 = `${globalModifier2.name}="",""`;
@@ -128,8 +128,8 @@ suite("Codegen Test Suite", () => {
 		const actual1 = Codegen.globalModifier(globalModifier1);
 		const actual2 = Codegen.globalModifier(globalModifier2);
 		// assert
-		assert.strictEqual(actual1, expected1);
-		assert.strictEqual(actual2, expected2);
+		strictEqual(actual1, expected1);
+		strictEqual(actual2, expected2);
 	});
 
 	test("func localModifier()", () => {
@@ -137,12 +137,12 @@ suite("Codegen Test Suite", () => {
 		const localModifier = new LocalModifier(
 			"local",
 			"local modifier description",
-			"local | modifier | value"
+			"local | modifier | value",
 		);
 		const expected = `${localModifier.name}="${localModifier.value}"`;
 		// execute
 		const actual = Codegen.localModifier(localModifier);
 		// assert
-		assert.strictEqual(actual, expected);
+		strictEqual(actual, expected);
 	});
 });

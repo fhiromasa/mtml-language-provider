@@ -1,8 +1,7 @@
+import * as assert from "node:assert";
+import { readFileSync } from "node:fs";
+import * as path from "node:path";
 import * as Variable from "../../utilities/variable";
-
-import * as assert from "assert";
-import { readFileSync } from "fs";
-import * as path from "path";
 
 suite("variable Test Suite", () => {
 	test("collectVariables", () => {
@@ -10,7 +9,7 @@ suite("variable Test Suite", () => {
 		const filepath = path.resolve(
 			__dirname,
 			"../../../",
-			"testfiles/variable.data.mtml"
+			"testfiles/variable.data.mtml",
 		);
 		const document = readFileSync(filepath, "utf-8");
 
@@ -36,7 +35,7 @@ suite("variable Test Suite", () => {
 				"setVar_modifier",
 				"hashKey",
 				"arrIndex",
-			].join()
+			].join(),
 		);
 	});
 });

@@ -1,0 +1,18 @@
+{
+	"format_on_save": "on",
+	"lsp": {
+		"biome": {
+			"settings": {
+				"require_config_file": true,
+			},
+		},
+	},
+	"code_actions_on_format": {
+		"source.fixAll.biome": true,
+		"source.organizeImports.biome": true,
+	},
+	"file_types": {
+		"JSONC": ["**/language-configuration.json"],
+		"Shell Script": [".env.*"],
+	},
+}

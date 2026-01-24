@@ -1,21 +1,21 @@
-import { tagRegex, tagNameRegex, Data, Setting, Markdown } from "../utils";
 import {
-	HoverProvider,
+	type CancellationToken,
 	Hover,
-	TextDocument,
-	CancellationToken,
-	Position,
+	type HoverProvider,
 	MarkdownString,
+	type Position,
+	type TextDocument,
 } from "vscode";
+import { Data, Markdown, Setting, tagNameRegex, tagRegex } from "../utils";
 
 export default class MTMLHoverProvider implements HoverProvider {
 	public provideHover(
 		document: TextDocument,
 		position: Position,
-		token: CancellationToken
+		_token: CancellationToken,
 	): Hover | undefined {
 		const hoverText = document.getText(
-			document.getWordRangeAtPosition(position)
+			document.getWordRangeAtPosition(position),
 		);
 		console.log(`1.1. hover text : ${hoverText}`);
 		const tagRange = document.getWordRangeAtPosition(position, tagRegex);
@@ -25,7 +25,7 @@ export default class MTMLHoverProvider implements HoverProvider {
 		const cms = Setting.CMS.getName();
 		const tagNameRange = document.getWordRangeAtPosition(
 			position,
-			tagNameRegex
+			tagNameRegex,
 		);
 
 		// タグ全体テキスト
@@ -51,7 +51,7 @@ export default class MTMLHoverProvider implements HoverProvider {
 		// グローバルモディファイアにカーソルがあるかどうか
 		if (modifierItem) {
 			return new Hover(
-				new MarkdownString(Markdown.globalModifierHover(tagItem, modifierItem))
+				new MarkdownString(Markdown.globalModifierHover(tagItem, modifierItem)),
 			);
 		}
 

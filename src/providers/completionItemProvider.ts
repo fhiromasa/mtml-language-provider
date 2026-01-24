@@ -1,21 +1,21 @@
 import {
-	Data,
-	tagRegex,
-	Codegen,
-	modifierRegex,
-	Variable,
-	Setting,
-} from "../utils";
-import {
-	CompletionItemProvider,
-	TextDocument,
-	CancellationToken,
-	Position,
-	CompletionContext,
+	type CancellationToken,
+	type CompletionContext,
 	CompletionItem,
 	CompletionItemKind,
+	type CompletionItemProvider,
+	type Position,
 	SnippetString,
+	type TextDocument,
 } from "vscode";
+import {
+	Codegen,
+	Data,
+	modifierRegex,
+	Setting,
+	tagRegex,
+	Variable,
+} from "../utils";
 
 /**
  * 何もないところでタグの基本形を補完する。
@@ -26,7 +26,7 @@ export class TagCompletion implements CompletionItemProvider {
 		document: TextDocument,
 		position: Position,
 		token: CancellationToken,
-		context: CompletionContext
+		context: CompletionContext,
 	): CompletionItem[] | undefined {
 		const tagRange = document.getWordRangeAtPosition(position, tagRegex);
 		if (tagRange) {
@@ -40,7 +40,7 @@ export class TagCompletion implements CompletionItemProvider {
 					label: Codegen.withRequiredModifiers(tag),
 					detail: tag.type,
 				},
-				CompletionItemKind.Class
+				CompletionItemKind.Class,
 			);
 		});
 		return completionItemArr;
@@ -56,7 +56,7 @@ export class ModifierCompletion implements CompletionItemProvider {
 		document: TextDocument,
 		position: Position,
 		token: CancellationToken,
-		context: CompletionContext
+		context: CompletionContext,
 	): CompletionItem[] | undefined {
 		const tagRange = document.getWordRangeAtPosition(position, tagRegex);
 		if (!tagRange) {
@@ -82,7 +82,7 @@ export class ModifierCompletion implements CompletionItemProvider {
 					label: mod.name,
 					description: mod.type,
 				},
-				CompletionItemKind.Property
+				CompletionItemKind.Property,
 			);
 			item.documentation = mod.description;
 			return item;
@@ -95,7 +95,7 @@ export class ModifierCompletion implements CompletionItemProvider {
 					label: mod.name,
 					description: mod.type,
 				},
-				CompletionItemKind.Field
+				CompletionItemKind.Field,
 			);
 			item.documentation = mod.description;
 			item.insertText = Codegen.globalModifier(mod);
@@ -114,7 +114,7 @@ export class ModifierValueCompletion implements CompletionItemProvider {
 		document: TextDocument,
 		position: Position,
 		token: CancellationToken,
-		context: CompletionContext
+		context: CompletionContext,
 	): CompletionItem[] | undefined {
 		const tagRange = document.getWordRangeAtPosition(position, tagRegex);
 		const modRange = document.getWordRangeAtPosition(position, modifierRegex);
@@ -143,14 +143,14 @@ export class ModifierValueCompletion implements CompletionItemProvider {
 
 			values.forEach((val) => {
 				valuesItem.push(
-					new CompletionItem(`"${val}"`, CompletionItemKind.EnumMember)
+					new CompletionItem(`"${val}"`, CompletionItemKind.EnumMember),
 				);
 			});
 		}
 
 		const noneItem = new CompletionItem(
 			{ label: `none` },
-			CompletionItemKind.EnumMember
+			CompletionItemKind.EnumMember,
 		);
 		noneItem.insertText = new SnippetString(`"$1"`);
 
@@ -167,7 +167,7 @@ export class VariablesCompletion implements CompletionItemProvider {
 		document: TextDocument,
 		position: Position,
 		token: CancellationToken,
-		context: CompletionContext
+		context: CompletionContext,
 	): CompletionItem[] | undefined {
 		// console.log(this);
 		const tagRange = document.getWordRangeAtPosition(position, tagRegex);
@@ -217,7 +217,7 @@ export class VariablesCompletion implements CompletionItemProvider {
 		const variablesItem = variables.map((variable) => {
 			const item = new CompletionItem(
 				{ label: variable.replace(/"/g, "") },
-				CompletionItemKind.Variable
+				CompletionItemKind.Variable,
 			);
 			item.insertText = variable;
 

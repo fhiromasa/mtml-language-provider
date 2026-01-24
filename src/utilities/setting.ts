@@ -2,25 +2,25 @@
  * vscode のワークスペースセッティングをラップするモジュール
  */
 import { workspace } from "vscode";
-import { TCms } from "./constant";
+import type { TCms } from "./constant";
 
 const CONF = workspace.getConfiguration("mtml");
 
-export class Hover {}
+export const Hover = {};
 
-export class Completion {
-	static isEnable() {
+export const Completion = {
+	isEnable: () => {
 		return CONF.get<boolean>("completion.enable", true);
-	}
-}
-export class Definition {
-	static isEnable() {
+	},
+};
+export const Definition = {
+	isEnable: () => {
 		return CONF.get<boolean>("definition.enable", true);
-	}
-}
+	},
+};
 
-export class CMS {
-	static getName() {
+export const CMS = {
+	getName: () => {
 		return CONF.get<TCms>("cms.name", "Movable Type");
-	}
-}
+	},
+};

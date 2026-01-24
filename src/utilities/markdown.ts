@@ -1,4 +1,4 @@
-import { Tag, GlobalModifier, TLocalModifiers } from "../data/item";
+import type { GlobalModifier, Tag, TLocalModifiers } from "../data/item";
 import * as Codegen from "./codegen";
 
 // ホバー、補完が使うはず。
@@ -50,7 +50,7 @@ export function tagHover(tag: Tag): string {
  */
 export function globalModifierHover(
 	tag: Tag,
-	mod: GlobalModifier | undefined
+	mod: GlobalModifier | undefined,
 ): string {
 	if (!mod) {
 		return "";
@@ -66,14 +66,14 @@ export function globalModifierHover(
  * 引数のコード(string)を```で括って返す
  */
 export function codeblock(code: string): string {
-	return "```\n" + code + "\n```\n";
+	return `\`\`\`\n${code}\n\`\`\`\n`;
 }
 
 /**
  * ディスクリプションの最後に改行を追加して返す。
  */
 export function description(item: Tag | GlobalModifier): string {
-	return item.description + "\n";
+	return `${item.description}\n`;
 }
 
 /**
@@ -115,5 +115,5 @@ export function localModifiersList(modifiers: TLocalModifiers): string {
 			`  - ${modifier.description || "no description"}`,
 		].join("\n");
 	});
-	return "モディファイア\n\n" + modifierStringArr.join("\n");
+	return `モディファイア\n\n${modifierStringArr.join("\n")}`;
 }

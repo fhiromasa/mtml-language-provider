@@ -1,15 +1,24 @@
+# editor settings
 .vscode/**
-.vscode-test/**
-.gitignore
-vsc-extension-quickstart.md
+.zed/**
+.editorconfig
 
-src/**
+# testing
+.vscode-test/**
 test/**
 testfiles/**
+
+# git
+.gitignore
+
+# github
+.github/**
+
+# src
+src/**
 build/**
 out/test/**
 .yarnrc
-.editorconfig
 **/tsconfig.json
 **/.eslintrc.json
 **/cgmanifest.json
